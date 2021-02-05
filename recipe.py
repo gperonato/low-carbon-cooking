@@ -30,6 +30,9 @@ class Recipe():
         
     def addIngredient(self,name,quantity):
         self.ingredients[name] = {"quantity": quantity}
+
+    def removeIngredient(self,name):
+        del self.ingredients[name]
         
     def addIngredients(self,ingredients):
         for ingredient in ingredients:

@@ -42,6 +42,10 @@ class Recipe {
     this.ingredients[name] = {"quantity": quantity};
   }
 
+  removeIngredient(name){
+  	delete this.ingredients[name]
+  }
+
   addIngredients(ingredients){
     for (let ingredient of ingredients){
             this.addIngredient(ingredient[0],ingredient[1])
@@ -100,6 +104,7 @@ myRecipe.addIngredients([["Dried pasta, wholemeal, raw", 400],
                           ["Anchovy, in salt (semi-preserved)", 50],
                           ["Romanesco cauliflower or romanesco broccoli, raw", 1000]])
 
+myRecipe.removeIngredient("Olive oil, extra virgin")
 myRecipe.cook();
 
 console.log(myRecipe.name)
