@@ -1,0 +1,54 @@
+<html>
+	<meta charset="UTF-8">
+	<head>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script type="text/javascript" src="recipe.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+		    var wrapper = $(".ingredients");
+		    var add_button = $(".add_form_field");  
+
+			$.get('ingredients.txt', function(txtFile){
+			  ingredients = txtFile.split("\n");
+			  $("#ingredients").autocomplete({
+			    source: ingredients
+			  });
+			});
+
+		    var x = 1;
+		    $(add_button).click(function(e) {
+		        e.preventDefault();
+		            x++;
+
+		            var ingredient = $(`<div><input id="ingredients" type="text" name="ingredient[${x}]"/><input type="text" name="quantity[${x}]" value="100"/><a href="#" class="delete">Delete</a></div`);
+		               ingredient.find('#ingredients').autocomplete({
+		            source: ingredients
+		        }).autocomplete('enable');
+
+		            $(wrapper).append("<div>");
+		            $(wrapper).append(ingredient);
+		            $(wrapper).append("</div>");
+
+		    });
+
+		    $(wrapper).on("click", ".delete", function(e) {
+		        e.preventDefault();
+		        $(this).parent('div').remove();
+		        x--;
+		    })
+		});
+</script>
+
+	</head>
+	<body>
+		<div class="ingredients">
+			<div><input id="ingredients" type="text" name="ingredient[1]">
+				<input type="text" name="quantity[]" value="100"></div>
+		</div>
+		<button class="add_form_field">Add New Field</button>
+		<div>
+			<button class='submit_form' id="submit" onclick="formsubmit()">Submit</button>
+		</div>
+	</body
+</html>
