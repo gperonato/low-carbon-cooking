@@ -1,21 +1,21 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<link href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.css" rel="stylesheet"/>
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>		
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
 		<script type="text/javascript" src="recipe.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function() {
 		    var wrapper = $(".ingredients");
-		    var add_button = $(".add_form_field");  
+		    var add_button = $("#add_form_field");  
 
 			$.get('ingredients.txt', function(txtFile){
 			  ingredients = txtFile.split("\n");
@@ -24,62 +24,103 @@
 			  });
 			});
 
-		    var x = 1;
+		    var x = 0;
 		    $(add_button).click(function(e) {
+		    	console.log("adding");
 		        e.preventDefault();
 		            x++;
 
-		            var ingredient = $(`<div><input id="ingredients" type="text" name="ingredient[${x}]"/> <input type="text" name="quantity[${x}]" value="100" size="3"/><a href="#" class="delete">Delete</a></div`);
+		            var ingredient = $(`<div class="form-group row" id="ingredients[${x}]">
+		            	<div class="col sm">
+		            	<input id="ingredients" type="text" class="form-control input-sm" placeholder="Ingredient" name="ingredient[${x}]"/>
+		            	</div>
+		            	<div class="col sm">
+		            		<div class="input-group">
+								<input type="number" class="form-control input-sm" placeholder="Weight" name="quantity[${x}]" min="0">
+								<div class="input-group-append">
+									<span class="input-group-text"> g </span>
+								</div>
+							</div>
+						</div>
+		            	<div class="col sm">
+						<button id="delete" class="btn btn-primary">Remove</button>
+						</div>
+						</div>`);
 		               ingredient.find('#ingredients').autocomplete({
 		            source: ingredients
 		        }).autocomplete('enable');
 
-		            $(wrapper).append("<div>");
 		            $(wrapper).append(ingredient);
-		            $(wrapper).append("</div>");
 
 		    });
 
-		    $(wrapper).on("click", ".delete", function(e) {
-		        e.preventDefault();
-		        $(this).parent('div').remove();
-		        x--;
+		    $(wrapper).on("click", "#delete", function(e) {
+			    e.preventDefault();
+		    	if (x > 0){
+			        $(this).parent().parent('div').remove();
+			        x--;
+		        }
+		        else {
+		        	console.log("cannot remove first ingredient")
+		        }
 		    })
 		});
-		</script>
+		</script>		
 	</head>
 	<body>
 		
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Low-carbon cooking</a>
-
-</nav>
-
-<div class="container pt-4">
-		<div class="ingredients">
-			<div><input id="ingredients" type="text" name="ingredient[1]">
-			<input type="text" name="quantity[]" value="100" size="3"><a href="#" class="delete">Delete</a></div>
-		</div>
-		<button class="add_form_field">Add New Ingredient</button>
-		<div>
-			<button class='submit_form' id="submit" onclick="formsubmit()">Cook</button>
-		</div>
-</div>
-<div id="results" class="container pt-4" style="visibility: hidden;">
-		<table class="table table-borderless">
-  <tbody>
-    <tr>
-      <th scope="row">Footprint</th>
-      <td id="CO2e"></td>
-      <td id="km"></td>
-    </tr>
-    <tr>
-      <th scope="row">Calories</th>
-      <td id="kcal"></td>
-      <td id="bigmacs"></td>
-    </tr>
-  </tbody>
-</table>
-	</div>
-	</body>
-</html>
+			<a class="navbar-brand" href="#">Low-carbon cooking</a>
+		</nav>
+		<div class="container pt-4">
+			<form>
+				<div class="ingredients">
+					<div class="form-group row">
+						<div class="col sm">
+							<input id="ingredients" class="form-control input-sm" placeholder="Ingredient" type="text" name="ingredient[0]">
+						</div>
+						<div class="col sm">
+							<div class="input-group">
+								<input type="number" class="form-control input-sm" placeholder="Weight" name="quantity[0]" min="0">
+								<div class="input-group-append">
+									<span class="input-group-text"> g </span>
+								</div>
+							</div>
+						</div>
+						
+						<div class="col sm">
+							<button id="delete" class="btn btn-primary">Remove</button>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="form-group row">
+						<div class="col sm">
+							<button id="add_form_field" class="btn btn-primary" style="width: 80px;">Add </button>
+						</div>
+					</div>
+					<div class="form-group row">
+						<div class="col sm">
+							<button type='button' class="btn btn-primary" onclick="formsubmit()"" style="width: 80px;">Cook</button>
+						</div>
+					</div>
+				</div>
+			</form>
+			<div id="results" class="container pt-4" style="visibility: hidden;">
+				<table class="table table-borderless">
+					<tbody>
+						<tr>
+							<th scope="row">Footprint</th>
+							<td id="CO2e"></td>
+							<td id="km"></td>
+						</tr>
+						<tr>
+							<th scope="row">Calories</th>
+							<td id="kcal"></td>
+							<td id="bigmacs"></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</body>
+	</html>
