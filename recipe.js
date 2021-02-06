@@ -127,17 +127,31 @@ function run() {
 					let webRecipe = new Recipe("webRecipe")
 					var ingredients = $('[name^="ingredient"]');
 					var quantities = $('[name^="quantit"]');
-					// console.log(ingredients);
+					console.log(ingredients);
 					var i;
 					for (i = 0; i < ingredients.length; i++) {
 						// console.log(ingredients[i].value, quantities[i].value)
 						webRecipe.addIngredient(ingredients[i].value, quantities[i].value)
 					}
-					let div = document.createElement('div');
 					webRecipe.cook()
-					console.log(webRecipe.CO2e);
-					div.innerHTML = `Footprint: ${webRecipe.CO2e} kg CO2e`;
-					document.body.append(div);
+					// let div = document.createElement('div');
+					// console.log(webRecipe.CO2e);
+					// div.innerHTML = `Footprint: ${webRecipe.CO2e} kg CO2e`;
+					// document.body.append(div);
+
+
+
+					$("#results").css("visibility","visible");
+					// console.log(webRecipe.CO2e);
+					// console.log(webRecipe.content);
+					var km;
+					km = (webRecipe.CO2e/0.193).toFixed(2);
+					var bigmacs;
+					bigmacs = (webRecipe.kcal/550).toFixed(2);
+					$("#CO2e").html(`${webRecipe.CO2e} kgCO2e`);
+					$("#km").html(`${km} km by car`);
+					$("#kcal").html(`${webRecipe.kcal} kcal`);
+					$("#bigmacs").html(`${bigmacs} BigMacs`);
 
 
 					// let div = document.createElement('div');
@@ -162,7 +176,7 @@ function run() {
 }
 
 function formsubmit() {
-
 	run();
+
 
 }
