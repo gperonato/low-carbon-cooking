@@ -6,16 +6,8 @@ Created on Wed Feb  3 21:56:51 2021
 @author: giuseppeperonato
 """
 
-import json
-import pandas as pd
-with open("ecolab-alimentation/data/out/Agribalyse.json", "r") as f:
-    agribalyse = json.loads(f.read())
-    df = pd.DataFrame(agribalyse)
-    
-    
-# .impact_environnemental["Changement climatique"]["synthese"]
-    
-# df.loc[df.LCI_name.str.contains("pasta"),"LCI_name"]
+  
+import csv
 
 
 class Recipe():
@@ -23,10 +15,11 @@ class Recipe():
         self.name = name
         self.ingredients = {}
         self.content = {}
-        with open("ecolab-alimentation/data/out/Agribalyse.json", "r") as f:
-            self.agribalyse = json.loads(f.read())
-        with open("table Ciqual 2020_ENG_2020 07 07.json", "r") as f:
-            self.ciqual = json.loads(f.read())
+        self.db = []
+        with open('data/join.csv') as csvfile:
+            reader = csv.DictReader(csvfile)
+            for row in reader:
+                self.db.append(row)
         
     def addIngredient(self,name,quantity):
         self.ingredients[name] = {"quantity": quantity}
@@ -47,7 +40,7 @@ class Recipe():
             entries = self.add_values(name)
             for key, value in entries.items():
                 self.content[name][key] =  value
-            self.content[name]["CO2e"] =  self.content[name]["ef"] * (self.ingredients[name]["quantity"]/1000)
+            self.content[name]["CO2e"] =  self.content[name]["Changement climatique (kg CO2 eq/kg de produit)"] * (self.ingredients[name]["quantity"]/1000)
             try:
                 self.content[name]["kcal"] =  int(self.content[name]["Energy, Regulation EU No 1169/2011 (kcal/100g)"]) * \
                                                     (self.ingredients[name]["quantity"]/100)
@@ -58,25 +51,15 @@ class Recipe():
             self.kcal += self.content[name]["kcal"]
         self.CO2e = round(self.CO2e,2)
     
-    def query(self,name,parameter):
-        for entry in self.agribalyse:
-            if entry["LCI_name"] == name:
-                code = entry["ciqual_code"]
-                ef = entry["impact_environnemental"][parameter]["synthese"]
-                try:
-                    kcal100g = int(self.ciqual[code]["Energy, Regulation EU No 1169/2011 (kcal/100g)"])
-                except:
-                    kcal100g = 0
-                return code, ef, kcal100g
-            
     def add_values(self,name):
         entries = {}
-        for entry in self.agribalyse:
-            if entry["LCI_name"] == name:
-                entries["code"] = entry["ciqual_code"]
-                entries["ef"] = entry["impact_environnemental"]["Changement climatique"]["synthese"]
-                for key, value in self.ciqual[entries["code"]].items():
-                    entries[key] = value
+        for entry in self.db:
+            if entry["LCI Name"] == name:
+                for key, value in entry.items():
+                    try:
+                        entries[key] = float(value)
+                    except:
+                        pass
                 return entries
 
 
