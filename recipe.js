@@ -29,17 +29,28 @@ function run() {
 
 
 					class Recipe {
-						constructor(name) {
+						constructor(name, country="France") {
 							this.name = name;
 							this.ciqual = ciqual;
 							this.agribalyse = agribalyse;
 							this.ingredients = {};
+							this.cooking_steps = [];
+        					this.country = country;
+
+        					this.energy_ef = {"France":{"Electricity": 0.0498, "Gas": 0.244}};
 						}
 
 						addIngredient(name, quantity) {
 							this.ingredients[name] = {
 								"quantity": parseInt(quantity)
 							};
+						}
+
+						addCookingStep(energy_source,duration,power) {
+							this.cooking_steps.push({"duration": duration,
+                                    "energy_source": energy_source,
+                                    "power": power
+							});
 						}
 
 						removeIngredient(name) {
@@ -52,7 +63,7 @@ function run() {
 							}
 						}
 
-						cook() {
+						mise_en_place() {
 							this.weight = 0
 							this.CO2e = 0
 							this.kcal = 0
@@ -70,9 +81,16 @@ function run() {
 								this.CO2e += this.content[name]["CO2e"]
 								this.kcal += this.content[name]["kcal"]
 							}
-							this.CO2e = parseFloat(this.CO2e.toFixed(2))
-
 						}
+
+						cook() {
+							for (const step of this.cooking_steps) {
+								var energy = step["duration"]/60 * step["power"] / 1000
+								step["CO2e"] = energy * this.energy_ef[this.country][step["energy_source"]]
+								this.CO2e += step["CO2e"] 
+								}
+						}
+
 						add_values(name) {
 							var entries = {
 								name
@@ -99,20 +117,20 @@ function run() {
 					}
 
 					// let myRecipe = new Recipe("Pasta");
-					// myRecipe.addIngredient("Dried pasta, wholemeal, raw", 100)
+					// myRecipe.addIngredient("Dried pasta, wholemeal, raw", 400)
 					// myRecipe.addIngredient("Olive oil, extra virgin", 2)
-					// myRecipe.addIngredient("Anchovy, in salt (semi-preserved)", 15)
-					// myRecipe.addIngredient("Romanesco cauliflower or romanesco broccoli, raw", 200)
+					// myRecipe.addIngredient("Anchovy, in salt (semi-preserved)", 50)
+					// myRecipe.addIngredient("Romanesco cauliflower or romanesco broccoli, raw", 1000)
 
-					// myRecipe.addIngredients([
-					// 	["Dried pasta, wholemeal, raw", 400],
-					// 	["Olive oil, extra virgin", 2],
-					// 	["Anchovy, in salt (semi-preserved)", 50],
-					// 	["Romanesco cauliflower or romanesco broccoli, raw", 1000]
-					// ])
+					// // myRecipe.addIngredients([
+					// // 	["Dried pasta, wholemeal, raw", 400],
+					// // 	["Olive oil, extra virgin", 2],
+					// // 	["Anchovy, in salt (semi-preserved)", 50],
+					// // 	["Romanesco cauliflower or romanesco broccoli, raw", 1000]
+					// // ])
 
-					// myRecipe.removeIngredient("Olive oil, extra virgin")
-					// myRecipe.cook()
+					// // myRecipe.removeIngredient("Olive oil, extra virgin")
+					// myRecipe.mise_en_place()
 
 					// console.log(myRecipe.name)
 					// console.log(myRecipe.ingredients)
@@ -121,17 +139,35 @@ function run() {
 					// console.log(myRecipe.CO2e)
 					// console.log(myRecipe.kcal)
 
+					myRecipe.addCookingStep("Electricity", 15, 2500)
+					console.log(myRecipe.cooking_steps)
+					myRecipe.cook()
+					console.log(myRecipe.CO2e)
+
+
 					// let name = document.getElementById('name').value,
 					// 	quantity = document.getElementById('quantity').value
 
 					let webRecipe = new Recipe("webRecipe")
 					var ingredients = $('[name^="ingredient"]');
 					var quantities = $('[name^="quantit"]');
-					console.log(ingredients);
+					// console.log(ingredients);
 					var i;
 					for (i = 0; i < ingredients.length; i++) {
 						// console.log(ingredients[i].value, quantities[i].value)
 						webRecipe.addIngredient(ingredients[i].value, quantities[i].value)
+					}
+					webRecipe.mise_en_place()
+
+					var sources = $('[name^="energ"]');
+					var times = $('[name^="time"]');
+					var powers = $('[name^="power"]');
+					console.log(sources);
+					var i;
+					for (i = 0; i < sources.length; i++) {
+						if (sources[i].value != "") {
+							webRecipe.addCookingStep(sources[i].value, times[i].value, powers[i].value)
+						}	
 					}
 					webRecipe.cook()
 					// let div = document.createElement('div');
@@ -144,11 +180,10 @@ function run() {
 					$("#results").css("visibility","visible");
 					// console.log(webRecipe.CO2e);
 					// console.log(webRecipe.content);
-					var km;
-					km = (webRecipe.CO2e/0.193).toFixed(2);
-					var bigmacs;
-					bigmacs = (webRecipe.kcal/550).toFixed(2);
-					$("#CO2e").html(`${webRecipe.CO2e} kgCO2e`);
+					var km = (webRecipe.CO2e/0.193).toFixed(2);
+					var bigmacs = (webRecipe.kcal/550).toFixed(2);
+					var CO2e = webRecipe.CO2e.toFixed(2);
+					$("#CO2e").html(`${CO2e} kgCO2e`);
 					$("#km").html(`${km} km by car`);
 					$("#kcal").html(`${webRecipe.kcal} kcal`);
 					$("#bigmacs").html(`${bigmacs} BigMacs`);

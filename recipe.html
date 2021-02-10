@@ -65,6 +65,64 @@
 		        }
 		    })
 		});
+		</script>
+	<script type="text/javascript">
+			$(document).ready(function() {
+		    var wrapper_cooking = $(".cooking-steps");
+		    var add_cooking_button = $("#add-cooking-field");  
+
+
+		    var c = 0;
+		    $(add_cooking_button).click(function(e) {
+		    	console.log("adding");
+		        e.preventDefault();
+		            c++;
+
+		            var cooking = $(`<div class="form-group row id id="cooking[${c}]">
+						<div class="col sm">
+   							<select class="form-control" name="energy[${c}]">
+      							<option></option>
+      							<option>Electricity</option>
+      							<option>Gas</option>
+    						</select>
+						</div>
+						<div class="col sm">
+							<div class="input-group">
+								<input type="number" class="form-control input-sm" placeholder="Time" name="time[${c}]" min="0">
+								<div class="input-group-append">
+									<span class="input-group-text"> min </span>
+								</div>
+							</div>
+						</div>
+						<div class="col sm">
+							<div class="input-group">
+								<input type="number" class="form-control input-sm" placeholder="Power" name="power[${c}]" min="0" value="2500">
+								<div class="input-group-append">
+									<span class="input-group-text"> W </span>
+								</div>
+							</div>
+						</div>				
+						<div class="col sm">
+							<button id="delete-cooking" class="btn btn-primary">Remove</button>
+						</div>
+					</div>`);
+
+
+		            $(wrapper_cooking).append(cooking);
+
+		    });
+
+		    $(wrapper_cooking).on("click", "#delete-cooking", function(e) {
+			    e.preventDefault();
+		    	if (c > 0){
+			        $(this).parent().parent('div').remove();
+			        c--;
+		        }
+		        else {
+		        	console.log("cannot remove first cooking step")
+		        }
+		    })
+		});
 		</script>		
 	</head>
 	<body>
@@ -97,6 +155,48 @@
 					<div class="form-group row">
 						<div class="col sm">
 							<button id="add_form_field" class="btn btn-primary" style="width: 80px;">Add </button>
+						</div>
+					</div>
+					<div class="form-group row">
+						<div class="col sm">
+							<button type='button' class="btn btn-primary" onclick="formsubmit()">Mise en place</button>
+						</div>
+					</div>
+				</div>
+				<div class="cooking-steps">
+					<div class="form-group row">
+						<div class="col sm">
+   							<select class="form-control" name="energy[0]">
+      							<option></option>
+      							<option>Electricity</option>
+      							<option>Gas</option>
+    						</select>
+						</div>
+						<div class="col sm">
+							<div class="input-group">
+								<input type="number" class="form-control input-sm" placeholder="Time" name="time[0]" min="0">
+								<div class="input-group-append">
+									<span class="input-group-text"> min </span>
+								</div>
+							</div>
+						</div>
+						<div class="col sm">
+							<div class="input-group">
+								<input type="number" class="form-control input-sm" placeholder="Power" name="power[0]" min="0" value="2500">
+								<div class="input-group-append">
+									<span class="input-group-text"> kW </span>
+								</div>
+							</div>
+						</div>				
+						<div class="col sm">
+							<button id="delete-cooking" class="btn btn-primary">Remove</button>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="form-group row">
+						<div class="col sm">
+							<button id="add-cooking-field" class="btn btn-primary" style="width: 80px;">Add </button>
 						</div>
 					</div>
 					<div class="form-group row">

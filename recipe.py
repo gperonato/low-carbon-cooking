@@ -15,7 +15,7 @@ class Recipe():
         self.name = name
         self.ingredients = {}
         self.content = {}
-        self.cooking_steps = {}
+        self.cooking_steps = []
         self.db = []
         self.country = country
 
@@ -35,16 +35,16 @@ class Recipe():
         for ingredient in ingredients:
             self.addIngredient(ingredient[0],ingredient[1])
 
-    def addCookingStep(self,name,duration,energy_source,power):
-        self.cooking_steps[name] = {"duration": duration,
+    def addCookingStep(self,energy_source,duration,power):
+        self.cooking_steps.append({"duration": duration,
                                     "energy_source": energy_source,
-                                    "power": power}
+                                    "power": power})
 
     def cook(self):
-        for name in self.cooking_steps.keys():
-            energy = self.cooking_steps[name]["duration"]/60. * self.cooking_steps[name]["power"] / 1000.
-            self.cooking_steps[name]["CO2e"] = energy * self.energy_ef[self.country][self.cooking_steps[name]["energy_source"]]
-            self.CO2e +=  self.cooking_steps[name]["CO2e"] 
+        for step in self.cooking_steps:
+            energy = step["duration"]/60. * step["power"] / 1000.
+            step["CO2e"] = energy * self.energy_ef[self.country][step["energy_source"]]
+            self.CO2e +=  step["CO2e"] 
         # self.CO2e = round(self.CO2e,2)
 
     def mise_en_place(self):
@@ -56,10 +56,10 @@ class Recipe():
             entries = self.add_values(name)
             for key, value in entries.items():
                 self.content[name][key] =  value
-            self.content[name]["CO2e"] =  self.content[name]["Changement climatique (kg CO2 eq/kg de produit)"] * (self.ingredients[name]["quantity"]/1000)
+            self.content[name]["CO2e"] = self.content[name]["Changement climatique (kg CO2 eq/kg de produit)"] * (self.ingredients[name]["quantity"]/1000.)
             try:
                 self.content[name]["kcal"] =  int(self.content[name]["Energy, Regulation EU No 1169/2011 (kcal/100g)"]) * \
-                                                    (self.ingredients[name]["quantity"]/100)
+                                                    (self.ingredients[name]["quantity"]/100.)
             except:
                 self.content[name]["kcal"] = 0
             self.weight += self.ingredients[name]["quantity"]
@@ -90,10 +90,11 @@ my_recipe.addIngredients([("Dried pasta, wholemeal, raw", 400),
 my_recipe.mise_en_place()
 print(my_recipe.name)
 print(my_recipe.ingredients)
+print(my_recipe.content)
 print("Weight",my_recipe.weight,"g")
 print("Footprint",my_recipe.CO2e,"kg CO2e")
 print("Calories",my_recipe.kcal,"kcal")
-my_recipe.addCookingStep("cooking",15,"electricity", 2500)
+my_recipe.addCookingStep("electricity", 15, 2500)
 print(my_recipe.cooking_steps)
 my_recipe.cook()
 print("Footprint",my_recipe.CO2e,"kg CO2e")
