@@ -21,18 +21,17 @@ function getNum(val) {
 }
 
 function run() {
-	loadJSON('table Ciqual 2020_ENG_2020 07 07.json',
-		function(ciqual) {
-
-			loadJSON('ecolab-alimentation/data/out/Agribalyse.json',
-				function(agribalyse) {
+			Papa.parse("data/join.csv", {
+				download: true,
+				header:true,
+			    complete: function(results) {
+			        data = results.data;
 
 
 					class Recipe {
 						constructor(name, country="France") {
 							this.name = name;
-							this.ciqual = ciqual;
-							this.agribalyse = agribalyse;
+							this.data = data;
 							this.ingredients = {};
 							this.cooking_steps = [];
         					this.country = country;
@@ -74,7 +73,7 @@ function run() {
 								for (const [key, value] of Object.entries(entries)) {
 									this.content[name][key] = value
 								}
-								this.content[name]["CO2e"] = this.content[name]["ef"] * (this.ingredients[name]["quantity"] / 1000)
+								this.content[name]["CO2e"] = this.content[name]["Changement climatique (kg CO2 eq/kg de produit)"] * (this.ingredients[name]["quantity"] / 1000)
 
 								this.content[name]["kcal"] = getNum(this.content[name]["Energy, Regulation EU No 1169/2011 (kcal/100g)"]) * (this.ingredients[name]["quantity"] / 100)
 								this.weight += this.ingredients[name]["quantity"]
@@ -85,7 +84,7 @@ function run() {
 
 						cook() {
 							for (const step of this.cooking_steps) {
-								var energy = step["duration"]/60 * step["power"] / 1000
+								var energy = step["duration"]/60. * step["power"] / 1000.
 								step["CO2e"] = energy * this.energy_ef[this.country][step["energy_source"]]
 								this.CO2e += step["CO2e"] 
 								}
@@ -95,12 +94,11 @@ function run() {
 							var entries = {
 								name
 							};
-							for (let entry of this.agribalyse) {
-								if (entry["LCI_name"] == name) {
-									entries["code"] = entry["ciqual_code"]
-									entries["ef"] = entry["impact_environnemental"]["Changement climatique"]["synthese"]
-									for (const [key, value] of Object.entries(this.ciqual[entries["code"]])) {
-										entries[key] = value;
+							for (let entry of this.data) {
+								if (entry["LCI Name"] == name) {
+									for (const [key, value] of Object.entries(entry)) {
+										console.log(value)
+										entries[key] = parseFloat(value);
 									}
 								}
 
@@ -122,14 +120,14 @@ function run() {
 					// myRecipe.addIngredient("Anchovy, in salt (semi-preserved)", 50)
 					// myRecipe.addIngredient("Romanesco cauliflower or romanesco broccoli, raw", 1000)
 
-					// // myRecipe.addIngredients([
-					// // 	["Dried pasta, wholemeal, raw", 400],
-					// // 	["Olive oil, extra virgin", 2],
-					// // 	["Anchovy, in salt (semi-preserved)", 50],
-					// // 	["Romanesco cauliflower or romanesco broccoli, raw", 1000]
-					// // ])
+					// // // myRecipe.addIngredients([
+					// // // 	["Dried pasta, wholemeal, raw", 400],
+					// // // 	["Olive oil, extra virgin", 2],
+					// // // 	["Anchovy, in salt (semi-preserved)", 50],
+					// // // 	["Romanesco cauliflower or romanesco broccoli, raw", 1000]
+					// // // ])
 
-					// // myRecipe.removeIngredient("Olive oil, extra virgin")
+					// // // myRecipe.removeIngredient("Olive oil, extra virgin")
 					// myRecipe.mise_en_place()
 
 					// console.log(myRecipe.name)
@@ -139,14 +137,10 @@ function run() {
 					// console.log(myRecipe.CO2e)
 					// console.log(myRecipe.kcal)
 
-					myRecipe.addCookingStep("Electricity", 15, 2500)
-					console.log(myRecipe.cooking_steps)
-					myRecipe.cook()
-					console.log(myRecipe.CO2e)
-
-
-					// let name = document.getElementById('name').value,
-					// 	quantity = document.getElementById('quantity').value
+					// myRecipe.addCookingStep("Electricity", 15, 2500)
+					// console.log(myRecipe.cooking_steps)
+					// myRecipe.cook()
+					// console.log(myRecipe.CO2e)
 
 					let webRecipe = new Recipe("webRecipe")
 					var ingredients = $('[name^="ingredient"]');
@@ -162,7 +156,7 @@ function run() {
 					var sources = $('[name^="energ"]');
 					var times = $('[name^="time"]');
 					var powers = $('[name^="power"]');
-					console.log(sources);
+					// console.log(sources);
 					var i;
 					for (i = 0; i < sources.length; i++) {
 						if (sources[i].value != "") {
@@ -196,22 +190,16 @@ function run() {
 					// document.body.append(div);
 
 
-				},
-				function(xhr) {
-					console.error(xhr);
-				}
-			);
-
-		},
-		function(xhr) {
-			console.error(xhr);
-		}
-	);
+    }
+});
 
 }
-
 function formsubmit() {
 	run();
-
-
 }
+
+
+ 
+run();
+
+
