@@ -16,7 +16,7 @@
 <script type="text/javascript">
 			$(document).ready(function() {
 		    var wrapper = $(".ingredients");
-		    var add_button = $("#add_form_field");  
+		    var x = 0;
 
 			$.get('ingredients.txt', function(txtFile){
 			  ingredients = txtFile.split("\n");
@@ -25,17 +25,15 @@
 			  });
 			});
 
-		    var x = 0;
-		    $(add_button).click(function(e) {
-		    	console.log("adding");
+		    $(wrapper).on("click", "#add_form_field", function(e) {
 		        e.preventDefault();
+		            $("[name='add["+x+"]']").hide();
 		            x++;
-
 		            var ingredient = $(`<div class="row" id="ingredients[${x}]">
-		            	<div class="col-sm-6 form-group">
+		            	<div class="col-sm-7 form-group">
 		            	<input id="ingredients" type="text" class="form-control input-sm" placeholder="Ingredient" name="ingredient[${x}]"/>
 		            	</div>
-		            	<div class="col-sm-2 form-group">
+		            	<div class="col-sm-3 form-group">
 		            		<div class="input-group">
 								<input type="number" class="form-control input-sm" placeholder="Weight" name="quantity[${x}]" min="0">
 								<div class="input-group-append">
@@ -43,16 +41,18 @@
 								</div>
 							</div>
 						</div>
-		            	<div class="col-sm-2 form-group">
-						<button id="delete" class="btn btn-primary">Remove</button>
+		            	<div class="col-sm-1 form-group">
+						<button id="delete" class="btn btn-primary">-</button>
 						</div>
+								<div class="col-sm-1 form-group">
+									<button id="add_form_field" name="add[${x}]" class="btn btn-primary">+</button>
+								</div>
 						</div>`);
 		               ingredient.find('#ingredients').autocomplete({
 		            source: ingredients
 		        }).autocomplete('enable');
-
 		            $(wrapper).append(ingredient);
-
+		  		    var add_button = $(".add");
 		    });
 
 		    $(wrapper).on("click", "#delete", function(e) {
@@ -60,6 +60,7 @@
 		    	if (x > 0){
 			        $(this).parent().parent('div').remove();
 			        x--;
+			       	$("[name='add["+x+"]']").show();
 		        }
 		        else {
 		        	console.log("cannot remove first ingredient")
@@ -70,24 +71,21 @@
 	<script type="text/javascript">
 			$(document).ready(function() {
 		    var wrapper_cooking = $(".cooking-steps");
-		    var add_cooking_button = $("#add-cooking-field");  
-
 
 		    var c = 0;
-		    $(add_cooking_button).click(function(e) {
-		    	console.log("adding");
+		   $(wrapper_cooking).on("click", "#add-cooking-field", function(e) {
 		        e.preventDefault();
+		            $("[name='add-cf["+c+"]']").hide();
 		            c++;
-
-		            var cooking = $(`<div class="form-group row id id="cooking[${c}]">
-						<div class="col-sm-4">
+		            var cooking = $(`<div class="row" id="cooking[${c}]">
+						<div class="col-sm-4 form-group">
    							<select class="form-control" name="energy[${c}]">
       							<option></option>
       							<option>Electricity</option>
       							<option>Gas</option>
     						</select>
 						</div>
-						<div class="col-sm-2">
+						<div class="col-sm-3 form-group">
 							<div class="input-group">
 								<input type="number" class="form-control input-sm" placeholder="Time" name="time[${c}]" min="0">
 								<div class="input-group-append">
@@ -95,7 +93,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-sm-2">
+						<div class="col-sm-3 form-group">
 							<div class="input-group">
 								<input type="number" class="form-control input-sm" placeholder="Power" name="power[${c}]" min="0" value="2500">
 								<div class="input-group-append">
@@ -103,9 +101,12 @@
 								</div>
 							</div>
 						</div>				
-						<div class="col-sm-2">
-							<button id="delete-cooking" class="btn btn-primary">Remove</button>
+						<div class="col-sm-1 form-group">
+							<button id="delete-cooking" class="btn btn-primary">-</button>
 						</div>
+							<div class="col-sm-1 form-group">
+									<button id="add-cooking-field" name="add-cf[${c}]" class="btn btn-primary">+</button>
+								</div>
 					</div>`);
 
 
@@ -118,6 +119,7 @@
 		    	if (c > 0){
 			        $(this).parent().parent('div').remove();
 			        c--;
+			       	$("[name='add-cf["+c+"]']").show();
 		        }
 		        else {
 		        	console.log("cannot remove first cooking step")
@@ -132,13 +134,14 @@
 				<a class="navbar-brand" href="#">Low-carbon cooking</a>
 			</nav>
 			<div class="container pt-4">
+				<h3>Ingredients</h3>
 				<form>
 					<div class="ingredients">
 						<div class="row">
-						<div class="col-sm-6 form-group">
+						<div class="col-sm-7 form-group">
 							<input id="ingredients" class="form-control input-sm" placeholder="Ingredient" type="text" name="ingredient[0]">
 						</div>
-						<div class="col-sm-2 form-group">
+						<div class="col-sm-3 form-group">
 							<div class="input-group">
 								<input type="number" class="form-control input-sm" placeholder="Weight" name="quantity[0]" min="0">
 								<div class="input-group-append">
@@ -146,33 +149,37 @@
 								</div>
 							</div>
 							
-							<div class="col-sm-2 form-group">
-								<button id="delete" class="btn btn-primary">Remove</button>
+							<div class="col-sm-1 form-group">
+								<button id="delete" class="btn btn-primary">-</button>
 							</div>
+								<div class="col-sm-1 form-group">
+									<button id="add_form_field" name="add[0]" class="btn btn-primary">+</button>
+								</div>
 						</div>
 						</div>
 						<div>
-							<div class="form-group row">
+			<!-- 				<div class="form-group row">
 								<div class="col sm">
 									<button id="add_form_field" class="btn btn-primary" style="width: 80px;">Add </button>
 								</div>
-							</div>
+							</div> -->
 							<div class="form-group row">
 								<div class="col sm">
 									<button type='button' class="btn btn-primary" onclick="formsubmit()">Mise en place</button>
 								</div>
 							</div>
 						</div>
-						<div class="cooking-steps">
-							<div class="form-group row">
-								<div class="col-sm-4">
+						<div class="cooking-steps pt-4">
+							<h3>Cooking steps</h3>
+							<div class="row">
+								<div class="col-sm-4 form-group">
 									<select class="form-control" name="energy[0]">
 										<option></option>
 										<option>Electricity</option>
 										<option>Gas</option>
 									</select>
 								</div>
-								<div class="col-sm-2">
+								<div class="col-sm-3 form-group">
 									<div class="input-group">
 										<input type="number" class="form-control input-sm" placeholder="Time" name="time[0]" min="0">
 										<div class="input-group-append">
@@ -180,7 +187,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="col-sm-2">
+								<div class="col-sm-3 form-group">
 									<div class="input-group">
 										<input type="number" class="form-control input-sm" placeholder="Power" name="power[0]" min="0" value="2500">
 										<div class="input-group-append">
@@ -188,25 +195,23 @@
 										</div>
 									</div>
 								</div>
-								<div class="col-sm-2">
-									<button id="delete-cooking" class="btn btn-primary">Remove</button>
+								<div class="col-sm-1 form-group">
+									<button id="delete-cooking" class="btn btn-primary">-</button>
+								</div>
+								<div class="col-sm-1 form-group">
+									<button id="add-cooking-field" name="add-cf[0]" class="btn btn-primary">+</button>
 								</div>
 							</div>
 						</div>
 						<div>
 							<div class="form-group row">
-								<div class="col sm">
-									<button id="add-cooking-field" class="btn btn-primary" style="width: 80px;">Add </button>
-								</div>
-							</div>
-							<div class="form-group row">
-								<div class="col sm">
-									<button type='button' class="btn btn-primary" onclick="formsubmit()"" style="width: 80px;">Cook</button>
+								<div class="col-sm-1">
+									<button type='button' class="btn btn-primary" style="width: 120px;" onclick="formsubmit()">Cook</button>
 								</div>
 							</div>
 						</div>
 					</form>
-					<div id="results" class="container pt-4" style="visibility: hidden;">
+					<div id="results" style="visibility: hidden;">
 						<table class="table table-borderless">
 							<tbody>
 								<tr>
