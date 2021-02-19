@@ -25,9 +25,9 @@
 			  });
 			});
 
-		    $(wrapper).on("click", "#add_form_field", function(e) {
+		    $(wrapper).on("click", "[name^='add[']", function(e) {
 		        e.preventDefault();
-		            $("[name='add["+x+"]']").hide();
+		            $("[name^='add[']").last().hide();
 		            x++;
 		            var ingredient = $(`<div class="row" id="ingredients[${x}]">
 		            	<div class="col-sm-7 form-group">
@@ -45,7 +45,7 @@
 						<button id="delete" class="btn btn-primary">-</button>
 						</div>
 								<div class="col-sm-1 form-group">
-									<button id="add_form_field" name="add[${x}]" class="btn btn-primary">+</button>
+									<button name="add[${x}]" class="btn btn-primary">+</button>
 								</div>
 						</div>`);
 		               ingredient.find('#ingredients').autocomplete({
@@ -59,8 +59,8 @@
 			    e.preventDefault();
 		    	if (x > 0){
 			        $(this).parent().parent('div').remove();
+			       	$("[name^='add[']").last().show();
 			        x--;
-			       	$("[name='add["+x+"]']").show();
 		        }
 		        else {
 		        	console.log("cannot remove first ingredient")
@@ -73,7 +73,7 @@
 		    var wrapper_cooking = $(".cooking-steps");
 
 		    var c = 0;
-		   $(wrapper_cooking).on("click", "#add-cooking-field", function(e) {
+		   $(wrapper_cooking).on("click", "[name^='add-cf[']", function(e) {
 		        e.preventDefault();
 		            $("[name='add-cf["+c+"]']").hide();
 		            c++;
@@ -105,7 +105,7 @@
 							<button id="delete-cooking" class="btn btn-primary">-</button>
 						</div>
 							<div class="col-sm-1 form-group">
-									<button id="add-cooking-field" name="add-cf[${c}]" class="btn btn-primary">+</button>
+									<button name="add-cf[${c}]" class="btn btn-primary">+</button>
 								</div>
 					</div>`);
 
@@ -118,8 +118,8 @@
 			    e.preventDefault();
 		    	if (c > 0){
 			        $(this).parent().parent('div').remove();
+			       	$("[name^='add-cf[']").last().show();
 			        c--;
-			       	$("[name='add-cf["+c+"]']").show();
 		        }
 		        else {
 		        	console.log("cannot remove first cooking step")
@@ -153,7 +153,7 @@
 								<button id="delete" class="btn btn-primary">-</button>
 							</div>
 								<div class="col-sm-1 form-group">
-									<button id="add_form_field" name="add[0]" class="btn btn-primary">+</button>
+									<button name="add[0]" class="btn btn-primary">+</button>
 								</div>
 						</div>
 						</div>
@@ -199,7 +199,7 @@
 									<button id="delete-cooking" class="btn btn-primary">-</button>
 								</div>
 								<div class="col-sm-1 form-group">
-									<button id="add-cooking-field" name="add-cf[0]" class="btn btn-primary">+</button>
+									<button name="add-cf[0]" class="btn btn-primary">+</button>
 								</div>
 							</div>
 						</div>
