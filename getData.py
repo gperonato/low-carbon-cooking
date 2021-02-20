@@ -21,6 +21,11 @@ from dataflows import (
     duplicate,
     update_resource,
     update_schema,
+    filter_rows,
+    add_computed_field,
+    delete_fields,
+    concatenate,
+    add_field
 )
 
 
@@ -28,7 +33,7 @@ Flow(
     load("Table Ciqual 2020_ENG_2020 07 07.xls"),
     load("Agribalyse_Synthese.csv"),
     update_schema("Table Ciqual 2020_ENG_2020 07 07", missingValues=["-", "None", ""]),
-    duplicate(source="Agribalyse_Synthese", target_name="join", target_path="join.csv"),
+    duplicate(source="Agribalyse_Synthese", target_name="join", target_path="data.csv"),
     join(
         "Table Ciqual 2020_ENG_2020 07 07",  # Source resource
         ["alim_code"],
@@ -69,6 +74,118 @@ Flow(
         regex=False,
         resources=["join"],
     ),
-    update_schema("join", missingValues=[-99, ""]),
-    dump_to_path("data"),
+    update_schema("data", missingValues=[-99, ""]),
+    dump_to_path("data/food"),
 ).process()
+
+
+def g_to_kg(row):
+    row["is_guitarist"] = row["instrument"] == "guitar"
+
+Flow(
+    load("2017_CO2_IntensEL_EEA.csv"),
+    set_type(
+        "Year",
+        type="number",
+        regex=False,
+    ),
+    filter_rows(
+        equals=[{"Year":2017}], 
+    resources=["2017_CO2_IntensEL_EEA"]
+    ),
+    select_fields(
+        [
+            "CountryLong",
+            "ValueNumeric",
+        ],
+        resources=["2017_CO2_IntensEL_EEA"],
+        ),
+    add_field(
+        'Name',
+        type='string',
+        default="Electricity mix",
+        resources=["2017_CO2_IntensEL_EEA"],
+    ),
+    set_type("ValueNumeric", type="number"),
+    lambda row: dict(row, ValueNumeric=row["ValueNumeric"] / 1000),
+
+    load("ademe.xlsx"),
+    select_fields(
+        [
+            "Identifiant de l'ÈlÈment",
+            "Type Ligne",
+            "Nom base anglais",
+            "Nom base franÁais",
+            "Localisation gÈographique",
+            "Total poste non dÈcomposÈ",
+        ],
+        resources=["ademe"],
+    ),
+    filter_rows(
+        equals=[{"Type Ligne":"ElÈment"}],
+        resources=["ademe"],
+        ),
+    add_computed_field([
+        dict(target='id', operation='sum', source=["Identifiant de l'ÈlÈment"]),
+        dict(target='Name_EN', operation='format', with_='{Nom base anglais}'),
+        dict(target='Name_FR', operation='format', with_='{Nom base franÁais}'),
+        dict(target='Location', operation='format', with_='{Localisation gÈographique}'),
+        dict(target='EF', operation='format', with_='{Total poste non dÈcomposÈ}'),
+    ],
+        resources=["ademe"],
+        ),
+    delete_fields(
+        [
+            "Identifiant de l'ÈlÈment",
+            "Type Ligne",
+            "Nom base anglais",
+            "Nom base franÁais",
+            "Localisation gÈographique",
+            "Total poste non dÈcomposÈ",
+        ],
+        resources=["ademe"],
+        ),
+    filter_rows(
+        equals=[
+        {"id":26769}, # Electricity for cooking (France)
+        {"id":13515}], # Gas (Europe)
+        resources=["ademe"],
+        ),
+    set_type(
+        "EF",
+        type="number",
+        decimalChar=",",
+        regex=False,
+        resources=["ademe"],
+    ),
+    find_replace(
+        [
+            {
+                "name": "Name_FR",
+                "patterns": [
+                    {"find": "È", "replace": "é"},
+                ],
+            },
+            {
+                "name": "Name_EN",
+                "patterns": [
+                    {"find": "Electricity", "replace": "Electricity (cooking)"},
+                ],
+            }
+        ],
+        resources=["ademe"],
+    ),
+    # duplicate(source="ademe", target_name="ademe_", target_path="ademe.csv"),
+    # duplicate(source="2017_CO2_IntensEL_EEA", target_name="EEA_", target_path="2017_CO2_IntensEL_EEA.csv"),
+    concatenate(
+        dict(Name_EN=["Name"],
+            Location=["CountryLong"],
+            EF=["ValueNumeric"]),
+        dict(name="ademe_",path="data"),
+    ),
+    add_computed_field([
+        dict(target='Name_Location', operation='format', with_='{Location}: {Name_EN}'),
+        ]
+    ),
+    dump_to_path("data/energy"),
+    ).process()

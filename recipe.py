@@ -11,19 +11,21 @@ import csv
 
 
 class Recipe():
-    def __init__(self, name, country="France"):
+    def __init__(self, name):
         self.name = name
         self.ingredients = {}
         self.content = {}
         self.cooking_steps = []
         self.db = []
-        self.country = country
-
-        self.energy_ef = {"France":{"electricity": 0.0498, "gas": 0.244}}
-        with open('data/join.csv') as csvfile:
+        self.energy_ef= []
+        with open('data/food/data.csv') as csvfile:
             reader = csv.DictReader(csvfile)
             for row in reader:
                 self.db.append(row)
+        with open('data/energy/data.csv') as csvfile:
+            reader = csv.DictReader(csvfile)
+            for row in reader:
+                self.energy_ef.append(row)
         
     def addIngredient(self,name,quantity):
         self.ingredients[name] = {"quantity": quantity}
@@ -43,9 +45,8 @@ class Recipe():
     def cook(self):
         for step in self.cooking_steps:
             energy = step["duration"]/60. * step["power"] / 1000.
-            step["CO2e"] = energy * self.energy_ef[self.country][step["energy_source"]]
+            step["CO2e"] = energy * self.find_EF(step["energy_source"])
             self.CO2e +=  step["CO2e"] 
-        # self.CO2e = round(self.CO2e,2)
 
     def mise_en_place(self):
         self.weight = 0
@@ -77,6 +78,11 @@ class Recipe():
                         pass
                 return entries
 
+    def find_EF(self,energy):
+        for entry in self.energy_ef:
+            if entry["Name_Location"] == energy:
+                return float(entry["EF"])
+
 
 my_recipe = Recipe("Pasta broccoli e aggiughe")
 # my_recipe.addIngredient("Dried pasta, wholemeal, raw", 100)
@@ -94,7 +100,7 @@ print(my_recipe.content)
 print("Weight",my_recipe.weight,"g")
 print("Footprint",my_recipe.CO2e,"kg CO2e")
 print("Calories",my_recipe.kcal,"kcal")
-my_recipe.addCookingStep("electricity", 15, 2500)
+my_recipe.addCookingStep("France continentale: Electricity (cooking)", 15, 2500)
 print(my_recipe.cooking_steps)
 my_recipe.cook()
 print("Footprint",my_recipe.CO2e,"kg CO2e")

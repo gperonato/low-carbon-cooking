@@ -126,18 +126,18 @@
 		        }
 		    })
 		});
-		</script>		
+		</script>			
 	</head>
-		<body>
-			
-			<nav class="navbar navbar-expand-lg navbar-light bg-light">
-				<a class="navbar-brand" href="#">Low-carbon cooking</a>
-			</nav>
-			<div class="container pt-4">
-				<h3>Ingredients</h3>
-				<form>
-					<div class="ingredients">
-						<div class="row">
+	<body>
+		
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="#">Low-carbon cooking</a>
+		</nav>
+		<div class="container pt-4">
+			<h3>Ingredients</h3>
+			<form>
+				<div class="ingredients">
+					<div class="row">
 						<div class="col-sm-7 form-group">
 							<input id="ingredients" class="form-control input-sm" placeholder="Ingredient" type="text" name="ingredient[0]">
 						</div>
@@ -152,80 +152,75 @@
 							<div class="col-sm-1 form-group">
 								<button id="delete" class="btn btn-primary">-</button>
 							</div>
-								<div class="col-sm-1 form-group">
-									<button name="add[0]" class="btn btn-primary">+</button>
-								</div>
-						</div>
-						</div>
-						<div>
-			<!-- 				<div class="form-group row">
-								<div class="col sm">
-									<button id="add_form_field" class="btn btn-primary" style="width: 80px;">Add </button>
-								</div>
-							</div> -->
-							<div class="form-group row">
-								<div class="col sm">
-									<button type='button' class="btn btn-primary" onclick="formsubmit()">Mise en place</button>
-								</div>
+							<div class="col-sm-1 form-group">
+								<button name="add[0]" class="btn btn-primary">+</button>
 							</div>
 						</div>
-						<div class="cooking-steps pt-4">
-							<h3>Cooking steps</h3>
-							<div class="row">
-								<div class="col-sm-4 form-group">
-									<select class="form-control" name="energy[0]">
-										<option></option>
-										<option>Electricity</option>
-										<option>Gas</option>
-									</select>
-								</div>
-								<div class="col-sm-3 form-group">
-									<div class="input-group">
-										<input type="number" class="form-control input-sm" placeholder="Time" name="time[0]" min="0">
-										<div class="input-group-append">
-											<span class="input-group-text"> min </span>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-3 form-group">
-									<div class="input-group">
-										<input type="number" class="form-control input-sm" placeholder="Power" name="power[0]" min="0" value="2500">
-										<div class="input-group-append">
-											<span class="input-group-text"> W </span>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-1 form-group">
-									<button id="delete-cooking" class="btn btn-primary">-</button>
-								</div>
-								<div class="col-sm-1 form-group">
-									<button name="add-cf[0]" class="btn btn-primary">+</button>
-								</div>
-							</div>
-						</div>
-						<div>
-							<div class="form-group row">
-								<div class="col-sm-1">
-									<button type='button' class="btn btn-primary" style="width: 120px;" onclick="formsubmit()">Cook</button>
-								</div>
-							</div>
-						</div>
-					</form>
-					<div id="results" style="visibility: hidden;">
-						<table class="table table-borderless">
-							<tbody>
-								<tr>
-									<th scope="row">Footprint</th>
-									<td id="CO2e"></td>
-									<td id="km"></td>
-								</tr>
-								<tr>
-									<th scope="row">Calories</th>
-									<td id="kcal"></td>
-									<td id="bigmacs"></td>
-								</tr>
-							</tbody>
-						</table>
 					</div>
-				</body>
-			</html>
+					<div>
+						<div class="form-group row">
+							<div class="col sm">
+								<button type='button' class="btn btn-primary" onclick="formsubmit()">Mise en place</button>
+							</div>
+						</div>
+					</div>
+					<div class="cooking-steps pt-4">
+						<h3>Cooking steps</h3>
+						<div class="row">
+							<div class="col-sm-4 form-group">
+								<select class="form-control" name="energy[0]">
+									<option></option>
+									<option>France continentale: Electricity (cooking)</option>
+									<option>Europe: Natural gas</option>
+								</select>
+							</div>
+							<div class="col-sm-3 form-group">
+								<div class="input-group">
+									<input type="number" class="form-control input-sm" placeholder="Time" name="time[0]" min="0">
+									<div class="input-group-append">
+										<span class="input-group-text"> min </span>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-3 form-group">
+								<div class="input-group">
+									<input type="number" class="form-control input-sm" placeholder="Power" name="power[0]" min="0" value="2500">
+									<div class="input-group-append">
+										<span class="input-group-text"> W </span>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-1 form-group">
+								<button id="delete-cooking" class="btn btn-primary">-</button>
+							</div>
+							<div class="col-sm-1 form-group">
+								<button name="add-cf[0]" class="btn btn-primary">+</button>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="form-group row">
+							<div class="col-sm-1">
+								<button type='button' class="btn btn-primary" style="width: 120px;" onclick="formsubmit()">Cook</button>
+							</div>
+						</div>
+					</div>
+				</form>
+				<div id="results" style="visibility: hidden;">
+					<table class="table table-borderless">
+						<tbody>
+							<tr>
+								<th scope="row">Footprint</th>
+								<td id="CO2e"></td>
+								<td id="km"></td>
+							</tr>
+							<tr>
+								<th scope="row">Calories</th>
+								<td id="kcal"></td>
+								<td id="bigmacs"></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</body>
+		</html>

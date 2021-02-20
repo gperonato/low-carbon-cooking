@@ -4,22 +4,26 @@ function getNum(val) {
 }
 
 function run() {
-			Papa.parse("data/join.csv", {
+			Papa.parse("data/food/data.csv", {
 				download: true,
 				header:true,
 			    complete: function(results) {
 			        data = results.data;
 
+			Papa.parse("data/energy/data.csv", {
+				download: true,
+				header:true,
+			    complete: function(results) {
+			        energy_ef = results.data;
+
 
 					class Recipe {
-						constructor(name, country="France") {
+						constructor(name) {
 							this.name = name;
 							this.data = data;
+							this.energy_ef = energy_ef;
 							this.ingredients = {};
 							this.cooking_steps = [];
-        					this.country = country;
-
-        					this.energy_ef = {"France":{"Electricity": 0.0498, "Gas": 0.244}};
 						}
 
 						addIngredient(name, quantity) {
@@ -68,7 +72,7 @@ function run() {
 						cook() {
 							for (const step of this.cooking_steps) {
 								var energy = step["duration"]/60. * step["power"] / 1000.
-								step["CO2e"] = energy * this.energy_ef[this.country][step["energy_source"]]
+								step["CO2e"] = energy * this.find_EF(step["energy_source"])
 								this.CO2e += step["CO2e"] 
 								}
 						}
@@ -80,7 +84,6 @@ function run() {
 							for (let entry of this.data) {
 								if (entry["LCI Name"] == name) {
 									for (const [key, value] of Object.entries(entry)) {
-										console.log(value)
 										entries[key] = parseFloat(value);
 									}
 								}
@@ -94,6 +97,14 @@ function run() {
 								return name;
 							}
 						}
+
+					    find_EF(energy) {
+					        for (let entry of this.energy_ef) {
+					            if (entry["Name_Location"] == energy) {
+										return parseFloat(entry["EF"]);
+									}
+					        }
+					    }
 
 					}
 
@@ -120,7 +131,7 @@ function run() {
 					// console.log(myRecipe.CO2e)
 					// console.log(myRecipe.kcal)
 
-					// myRecipe.addCookingStep("Electricity", 15, 2500)
+					// myRecipe.addCookingStep("France continentale: Electricity (cooking)", 15, 2500)
 					// console.log(myRecipe.cooking_steps)
 					// myRecipe.cook()
 					// console.log(myRecipe.CO2e)
@@ -147,11 +158,6 @@ function run() {
 						}	
 					}
 					webRecipe.cook()
-					// let div = document.createElement('div');
-					// console.log(webRecipe.CO2e);
-					// div.innerHTML = `Footprint: ${webRecipe.CO2e} kg CO2e`;
-					// document.body.append(div);
-
 
 
 					$("#results").css("visibility","visible");
@@ -172,6 +178,9 @@ function run() {
 
 					// document.body.append(div);
 
+
+    }
+});
 
     }
 });
