@@ -184,7 +184,7 @@ Flow(
         dict(name="ademe_",path="data"),
     ),
     add_computed_field([
-        dict(target='Name_Location', operation='format', with_='{Location}: {Name_EN}'),
+        dict(target='Name_Location', operation='format', with_='{Name_EN} - {Location}'),
         ]
     ),
     dump_to_path("data/energy"),

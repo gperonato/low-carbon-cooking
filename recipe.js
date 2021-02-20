@@ -61,7 +61,6 @@ function run() {
 									this.content[name][key] = value
 								}
 								this.content[name]["CO2e"] = this.content[name]["Changement climatique (kg CO2 eq/kg de produit)"] * (this.ingredients[name]["quantity"] / 1000)
-
 								this.content[name]["kcal"] = getNum(this.content[name]["Energy, Regulation EU No 1169/2011 (kcal/100g)"]) * (this.ingredients[name]["quantity"] / 100)
 								this.weight += this.ingredients[name]["quantity"]
 								this.CO2e += this.content[name]["CO2e"]
@@ -131,7 +130,7 @@ function run() {
 					// console.log(myRecipe.CO2e)
 					// console.log(myRecipe.kcal)
 
-					// myRecipe.addCookingStep("France continentale: Electricity (cooking)", 15, 2500)
+					// myRecipe.addCookingStep("Electricity (cooking) - France continentale", 15, 2500)
 					// console.log(myRecipe.cooking_steps)
 					// myRecipe.cook()
 					// console.log(myRecipe.CO2e)
