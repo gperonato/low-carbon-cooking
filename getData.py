@@ -84,29 +84,35 @@ def g_to_kg(row):
 
 Flow(
     load("2017_CO2_IntensEL_EEA.csv"),
+    load("CarbonIntensity_other.csv"),
     set_type(
         "Year",
         type="number",
         regex=False,
+    resources=["2017_CO2_IntensEL_EEA","CarbonIntensity_other"]
     ),
     filter_rows(
         equals=[{"Year":2017}], 
     resources=["2017_CO2_IntensEL_EEA"]
+    ),
+    filter_rows(
+        equals=[{"Year":2014}], 
+    resources=["CarbonIntensity_other"]
     ),
     select_fields(
         [
             "CountryLong",
             "ValueNumeric",
         ],
-        resources=["2017_CO2_IntensEL_EEA"],
+        resources=["2017_CO2_IntensEL_EEA","CarbonIntensity_other"],
         ),
     add_field(
         'Name',
         type='string',
         default="Electricity mix",
-        resources=["2017_CO2_IntensEL_EEA"],
+        resources=["2017_CO2_IntensEL_EEA","CarbonIntensity_other"],
     ),
-    set_type("ValueNumeric", type="number"),
+    set_type("ValueNumeric", type="number", resources=["2017_CO2_IntensEL_EEA","CarbonIntensity_other"]),
     lambda row: dict(row, ValueNumeric=row["ValueNumeric"] / 1000),
 
     load("ademe.xlsx"),
@@ -177,11 +183,12 @@ Flow(
     ),
     # duplicate(source="ademe", target_name="ademe_", target_path="ademe.csv"),
     # duplicate(source="2017_CO2_IntensEL_EEA", target_name="EEA_", target_path="2017_CO2_IntensEL_EEA.csv"),
+    printer(),
     concatenate(
         dict(Name_EN=["Name"],
             Location=["CountryLong"],
             EF=["ValueNumeric"]),
-        dict(name="ademe_",path="data"),
+        dict(name="ademe",path="data"),
     ),
     add_computed_field([
         dict(target='Name_Location', operation='format', with_='{Name_EN} - {Location}'),
