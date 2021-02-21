@@ -18,6 +18,7 @@ class Recipe():
         self.cooking_steps = []
         self.db = []
         self.energy_ef= []
+
         with open('data/food/data.csv') as csvfile:
             reader = csv.DictReader(csvfile)
             for row in reader:
@@ -26,7 +27,12 @@ class Recipe():
             reader = csv.DictReader(csvfile)
             for row in reader:
                 self.energy_ef.append(row)
-        
+
+        self.total_content = {}
+        for key in list(self.db[0].keys())[1:]:
+            self.total_content[key.split(" (")[0]] = {"value":0,
+                                                        "unit":key.split(" (")[1].split("/")[0]}
+         
     def addIngredient(self,name,quantity):
         self.ingredients[name] = {"quantity": quantity}
 
@@ -46,26 +52,23 @@ class Recipe():
         for step in self.cooking_steps:
             energy = step["duration"]/60. * step["power"] / 1000.
             step["CO2e"] = energy * self.find_EF(step["energy_source"])
-            self.CO2e +=  step["CO2e"] 
+            self.total_content["Carbon footprint"]["value"] +=  step["CO2e"] 
 
     def mise_en_place(self):
         self.weight = 0
-        self.CO2e = 0
-        self.kcal = 0
         for name in self.ingredients.keys():
             self.content[name] = {}
             entries = self.add_values(name)
             for key, value in entries.items():
-                self.content[name][key] =  value
-            self.content[name]["CO2e"] = self.content[name]["Changement climatique (kg CO2 eq/kg de produit)"] * (self.ingredients[name]["quantity"]/1000.)
-            try:
-                self.content[name]["kcal"] =  int(self.content[name]["Energy, Regulation EU No 1169/2011 (kcal/100g)"]) * \
-                                                    (self.ingredients[name]["quantity"]/100.)
-            except:
-                self.content[name]["kcal"] = 0
+                if key == "Carbon footprint (kgCO2e/kg)":
+                    self.content[name][key] = value * self.ingredients[name]["quantity"]/1000.
+                else:
+                    try:
+                        self.content[name][key] = value * (self.ingredients[name]["quantity"]/100.)
+                    except:
+                        self.content[name][key] = 0
+                self.total_content[key.split(" (")[0]]["value"] += self.content[name][key]
             self.weight += self.ingredients[name]["quantity"]
-            self.CO2e += self.content[name]["CO2e"]
-            self.kcal += self.content[name]["kcal"]
     
     def add_values(self,name):
         entries = {}
@@ -98,12 +101,11 @@ print(my_recipe.name)
 print(my_recipe.ingredients)
 print(my_recipe.content)
 print("Weight",my_recipe.weight,"g")
-print("Footprint",my_recipe.CO2e,"kg CO2e")
-print("Calories",my_recipe.kcal,"kcal")
+print(my_recipe.total_content)
 my_recipe.addCookingStep("Electricity (cooking) - France continentale", 15, 2500)
 print(my_recipe.cooking_steps)
 my_recipe.cook()
-print("Footprint",my_recipe.CO2e,"kg CO2e")
+
 my_recipe2 = Recipe("Tagliatelle al ragù")
 my_recipe2.addIngredients([("Dried egg pasta, raw", 400),
                           ("Olive oil, extra virgin", 2),
@@ -116,6 +118,7 @@ my_recipe2.mise_en_place()
 print(my_recipe2.name)
 print(my_recipe2.ingredients)
 print("Weight",my_recipe2.weight,"g")
-print("Footprint",my_recipe2.CO2e,"kg CO2e")
-print("Calories",my_recipe2.kcal,"kcal")
+print(my_recipe2.total_content)
+print("")
+
 

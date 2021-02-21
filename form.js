@@ -9,6 +9,19 @@ $(document).ready(function() {
 			  });
 			});
 
+			$.get('energy.txt', function(txtFile){
+			  energy = txtFile.split("\n");
+				for(var i=0; i< energy.length;i++)
+				{
+				  jQuery('<option/>', {
+				        value: energy[i],
+				        html: energy[i]
+				        }).appendTo('#dropdown select'); //appends to select if parent div has id dropdown
+				}
+			});
+
+
+
 		    $(wrapper).on("click", "[name^='add[']", function(e) {
 		        e.preventDefault();
 		            $("[name^='add[']").last().hide();
@@ -61,11 +74,8 @@ $(document).ready(function() {
 		            $("[name='add-cf["+c+"]']").hide();
 		            c++;
 		            var cooking = $(`<div class="row" id="cooking[${c}]">
-						<div class="col-sm-4 form-group">
+						<div class="col-sm-4 form-group" id="dropdown">
    							<select class="form-control" name="energy[${c}]">
-      							<option></option>
-      							<option>Electricity</option>
-      							<option>Gas</option>
     						</select>
 						</div>
 						<div class="col-sm-3 form-group">

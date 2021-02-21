@@ -32,6 +32,18 @@ from dataflows import (
 Flow(
     load("Table Ciqual 2020_ENG_2020 07 07.xls"),
     load("Agribalyse_Synthese.csv"),
+    add_computed_field([
+        dict(target='Carbon footprint (kgCO2e/kg)', operation='format', with_='{Changement climatique (kg CO2 eq/kg de produit)}'),
+    ],
+    resources=["Agribalyse_Synthese"],
+    ),
+    delete_fields(
+        [
+            "Changement climatique (kg CO2 eq/kg de produit)",
+        ],
+    resources=["Agribalyse_Synthese"],
+    regex=False
+        ),
     update_schema("Table Ciqual 2020_ENG_2020 07 07", missingValues=["-", "None", ""]),
     duplicate(source="Agribalyse_Synthese", target_name="join", target_path="data.csv"),
     join(
@@ -41,17 +53,22 @@ Flow(
         ["Code CIQUAL"],
         source_delete=False,
         fields={
-            "Energy, Regulation EU No 1169/2011 (kcal/100g)": {
-                "name": "Energy, Regulation EU No 1169/2011 (kcal/100g)",
-            }
+            "Energy, Regulation EU No 1169/2011 (kcal/100g)": {"name": "Energy, Regulation EU No 1169/2011 (kcal/100g)"},
+            "Protein (g/100g)": {"name": "Protein (g/100g)"},
+            "Carbohydrate (g/100g)": {"name": "Carbohydrate (g/100g)"},
+            "Fat (g/100g)":{"name": "Fat (g/100g)"},
+            "Sugars (g/100g)":{"name": "Sugars (g/100g)"},
+            "Calcium (mg/100g)":{"name": "Calcium (mg/100g)"},
+            "Iron (mg/100g)":{"name": "Iron (mg/100g)"},
         },
     ),
     select_fields(
         [
-            "Code CIQUAL",
+            # "Code CIQUAL",
             "LCI Name",
-            "Changement climatique (kg CO2 eq/kg de produit)",
+            "Carbon footprint (kgCO2e/kg)",
             "Energy, Regulation EU No 1169/2011 (kcal/100g)",
+            "Protein (g/100g)","Carbohydrate (g/100g)","Fat (g/100g)","Sugars (g/100g)","Calcium (mg/100g)","Iron (mg/100g)",
         ],
         resources=["join"],
     ),
@@ -60,10 +77,64 @@ Flow(
             {
                 "name": "Energy, Regulation EU No 1169/2011 (kcal/100g)",
                 "patterns": [
-                    {"find": "[-]", "replace": -99},
-                    {"find": "\\bNone\\b", "replace": -99},
+                    {"find": "[-]", "replace": ""},
+                    {"find": "\\bNone\\b", "replace": ""},
                 ],
-            }
+            },
+            {
+                "name": "Protein (g/100g)",
+                "patterns": [
+                    {"find": "[-]", "replace": ""},
+                    {"find": '[<]', "replace": ""},
+                    {"find": "\\btraces\\b", "replace": 0},
+                    {"find": "\\bNone\\b", "replace": ""},
+                ],
+            },
+            {
+                "name": "Carbohydrate (g/100g)",
+                "patterns": [
+                    {"find": "[-]", "replace": ""},
+                    {"find": '[<]', "replace": ""},
+                    {"find": "\\btraces\\b", "replace": 0},
+                    {"find": "\\bNone\\b", "replace": ""},
+                ],
+            },
+            {
+                "name": "Fat (g/100g)",
+                "patterns": [
+                    {"find": "[-]", "replace": ""},
+                    {"find": '[<]', "replace": ""},
+                    {"find": "\\btraces\\b", "replace": 0},
+                    {"find": "\\bNone\\b", "replace": ""},
+                ],
+            },
+            {
+                "name": "Sugars (g/100g)",
+                "patterns": [
+                    {"find": "[-]", "replace": ""},
+                    {"find": '[<]', "replace": ""},
+                    {"find": "\\btraces\\b", "replace": 0},
+                    {"find": "\\bNone\\b", "replace": ""},
+                ],
+            },
+            {
+                "name": "Calcium (mg/100g)",
+                "patterns": [
+                    {"find": "[-]", "replace": ""},
+                    {"find": '[<]', "replace": ""},
+                    {"find": "\\btraces\\b", "replace": 0},
+                    {"find": "\\bNone\\b", "replace": ""},
+                ],
+            },
+            {
+                "name": "Iron (mg/100g)",
+                "patterns": [
+                    {"find": "[-]", "replace": ""},
+                    {"find": '[<]', "replace": ""},
+                    {"find": "\\btraces\\b", "replace": 0},
+                    {"find": "\\bNone\\b", "replace": ""},
+                ],
+            },
         ],
         resources=["join"],
     ),
@@ -74,13 +145,60 @@ Flow(
         regex=False,
         resources=["join"],
     ),
-    update_schema("data", missingValues=[-99, ""]),
+    set_type(
+        "Protein (g/100g)",
+        type="number",
+        decimalChar=",",
+        regex=False,
+        resources=["join"],
+    ),
+    set_type(
+        "Carbohydrate (g/100g)",
+        type="number",
+        decimalChar=",",
+        regex=False,
+        resources=["join"],
+    ),
+    set_type(
+        "Fat (g/100g)",
+        type="number",
+        decimalChar=",",
+        regex=False,
+        resources=["join"],
+    ),
+    set_type(
+        "Fat (g/100g)",
+        type="number",
+        decimalChar=",",
+        regex=False,
+        resources=["join"],
+    ),
+    set_type(
+        "Sugars (g/100g)",
+        type="number",
+        decimalChar=",",
+        regex=False,
+        resources=["join"],
+    ),
+    set_type(
+        "Calcium (mg/100g)",
+        type="number",
+        decimalChar=",",
+        regex=False,
+        resources=["join"],
+    ),
+    set_type(
+        "Iron (mg/100g)",
+        type="number",
+        decimalChar=",",
+        regex=False,
+        resources=["join"],
+    ),
+    update_schema("data", missingValues=["", ""]),
     dump_to_path("data/food"),
 ).process()
 
 
-def g_to_kg(row):
-    row["is_guitarist"] = row["instrument"] == "guitar"
 
 Flow(
     load("2017_CO2_IntensEL_EEA.csv"),
@@ -181,9 +299,6 @@ Flow(
         ],
         resources=["ademe"],
     ),
-    # duplicate(source="ademe", target_name="ademe_", target_path="ademe.csv"),
-    # duplicate(source="2017_CO2_IntensEL_EEA", target_name="EEA_", target_path="2017_CO2_IntensEL_EEA.csv"),
-    printer(),
     concatenate(
         dict(Name_EN=["Name"],
             Location=["CountryLong"],

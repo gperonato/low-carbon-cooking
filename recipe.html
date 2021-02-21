@@ -54,11 +54,8 @@
 					<div class="cooking-steps pt-4">
 						<h3>Cooking steps</h3>
 						<div class="row">
-							<div class="col-sm-4 form-group">
+							<div class="col-sm-4 form-group" id="dropdown">
 								<select class="form-control" name="energy[0]">
-									<option></option>
-									<option>Electricity (cooking) - France continentale</option>
-									<option>Natural gas - Europe</option>
 								</select>
 							</div>
 							<div class="col-sm-3 form-group">
@@ -93,20 +90,11 @@
 						</div>
 					</div>
 				</form>
-				<div id="results" style="visibility: hidden;">
-					<table class="table table-borderless">
-						<tbody>
-							<tr>
-								<th scope="row">Footprint</th>
-								<td id="CO2e"></td>
-								<td id="km"></td>
-							</tr>
-							<tr>
-								<th scope="row">Calories</th>
-								<td id="kcal"></td>
-								<td id="bigmacs"></td>
-							</tr>
-						</tbody>
+				<div id="results" style="visibility: hidden;" class="pt-4">
+					<h3>Results</h3>
+					<table class="table table-striped"">
+					 <tbody id="table-results">
+					 </tbody>
 					</table>
 				</div>
 			</body>

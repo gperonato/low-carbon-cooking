@@ -24,6 +24,11 @@ function run() {
 							this.energy_ef = energy_ef;
 							this.ingredients = {};
 							this.cooking_steps = [];
+							this.total_content = {}
+        					for (var key of Object.keys(data[0]).slice(1)) {
+            					this.total_content[key.split(" (")[0]] = {"value":0,
+            															  "unit":key.split(" (")[1].split("/")[0]}
+            				}
 						}
 
 						addIngredient(name, quantity) {
@@ -50,21 +55,23 @@ function run() {
 						}
 
 						mise_en_place() {
-							this.weight = 0
-							this.CO2e = 0
-							this.kcal = 0
 							this.content = {}
+							this.weight = 0
 							for (const [name, value] of Object.entries(this.ingredients)) {
 								this.content[name] = {}
 								var entries = this.add_values(name)
 								for (const [key, value] of Object.entries(entries)) {
-									this.content[name][key] = value
+									if (key == "Carbon footprint (kgCO2e/kg)"){
+										this.content[name][key] = value * (this.ingredients[name]["quantity"] / 1000.)
+									}
+									else {
+										this.content[name][key] = getNum(value) * (this.ingredients[name]["quantity"]/100.)
+									}
+									if (key != "LCI Name" & key != "name"){
+										this.total_content[key.split(" (")[0]]["value"] += this.content[name][key] 
+									}
 								}
-								this.content[name]["CO2e"] = this.content[name]["Changement climatique (kg CO2 eq/kg de produit)"] * (this.ingredients[name]["quantity"] / 1000)
-								this.content[name]["kcal"] = getNum(this.content[name]["Energy, Regulation EU No 1169/2011 (kcal/100g)"]) * (this.ingredients[name]["quantity"] / 100)
 								this.weight += this.ingredients[name]["quantity"]
-								this.CO2e += this.content[name]["CO2e"]
-								this.kcal += this.content[name]["kcal"]
 							}
 						}
 
@@ -72,7 +79,7 @@ function run() {
 							for (const step of this.cooking_steps) {
 								var energy = step["duration"]/60. * step["power"] / 1000.
 								step["CO2e"] = energy * this.find_EF(step["energy_source"])
-								this.CO2e += step["CO2e"] 
+								this.total_content["Carbon footprint"]["value"] += step["CO2e"] 
 								}
 						}
 
@@ -127,13 +134,13 @@ function run() {
 					// console.log(myRecipe.ingredients)
 					// console.log(myRecipe.content)
 					// console.log(myRecipe.weight)
-					// console.log(myRecipe.CO2e)
-					// console.log(myRecipe.kcal)
+					// console.log(myRecipe.total_content)
+
 
 					// myRecipe.addCookingStep("Electricity (cooking) - France continentale", 15, 2500)
 					// console.log(myRecipe.cooking_steps)
 					// myRecipe.cook()
-					// console.log(myRecipe.CO2e)
+					// console.log(myRecipe.total_content)
 
 					let webRecipe = new Recipe("webRecipe")
 					var ingredients = $('[name^="ingredient"]');
@@ -160,22 +167,15 @@ function run() {
 
 
 					$("#results").css("visibility","visible");
-					// console.log(webRecipe.CO2e);
-					// console.log(webRecipe.content);
-					var km = (webRecipe.CO2e/0.193).toFixed(2);
-					var bigmacs = (webRecipe.kcal/550).toFixed(2);
-					var CO2e = webRecipe.CO2e.toFixed(2);
-					$("#CO2e").html(`${CO2e} kgCO2e`);
-					$("#km").html(`${km} km by car`);
-					$("#kcal").html(`${webRecipe.kcal} kcal`);
-					$("#bigmacs").html(`${bigmacs} BigMacs`);
+					console.log(webRecipe.total_content)
+					var html = '';
+					for (const [key, value] of Object.entries(webRecipe.total_content)){
+					            html += '<tr><td>' + key + 
+					                    '</td><td class="text-right">' + value["value"].toFixed(2) + ' ' + value["unit"] + '</td></tr>';
+					     }
+					$('#table-results').html(html);
 
-
-					// let div = document.createElement('div');
-					// div.className = "alert";
-					// div.innerHTML = JSON.stringify(webRecipe.ingredients);
-
-					// document.body.append(div);
+		
 
 
     }
