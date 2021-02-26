@@ -8,7 +8,7 @@ Created on Wed Feb  3 21:56:51 2021
 
   
 import csv
-
+import json
 
 class Recipe():
     def __init__(self, name):
@@ -18,6 +18,7 @@ class Recipe():
         self.cooking_steps = []
         self.db = []
         self.energy_ef= []
+        self.intake= []
 
         with open('data/food/data.csv') as csvfile:
             reader = csv.DictReader(csvfile)
@@ -27,11 +28,14 @@ class Recipe():
             reader = csv.DictReader(csvfile)
             for row in reader:
                 self.energy_ef.append(row)
-
+        with open('data/food/intake.json', "r") as f:
+            self.intake = json.loads(f.read())
+        
         self.total_content = {}
-        for key in list(self.db[0].keys())[1:]:
-            self.total_content[key.split(" (")[0]] = {"value":0,
-                                                        "unit":key.split(" (")[1].split("/")[0]}
+        for key in list(self.db[0].keys()):
+            if key != "LCI Name":
+                self.total_content[key.split(" (")[0]] = {"value":0,
+                                                            "unit":key.split(" (")[1].split("/")[0]}
          
     def addIngredient(self,name,quantity):
         self.ingredients[name] = {"quantity": quantity}
@@ -53,6 +57,7 @@ class Recipe():
             energy = step["duration"]/60. * step["power"] / 1000.
             step["CO2e"] = energy * self.find_EF(step["energy_source"])
             self.total_content["Carbon footprint"]["value"] +=  step["CO2e"] 
+        self.compare()
 
     def mise_en_place(self):
         self.weight = 0
@@ -69,6 +74,7 @@ class Recipe():
                         self.content[name][key] = 0
                 self.total_content[key.split(" (")[0]]["value"] += self.content[name][key]
             self.weight += self.ingredients[name]["quantity"]
+        self.compare()
     
     def add_values(self,name):
         entries = {}
@@ -86,16 +92,32 @@ class Recipe():
             if entry["Name_Location"] == energy:
                 return float(entry["EF"])
 
+    def compare(self,meal="Hamburger, from fast foods restaurant",quantity=220):
+        reference = self.add_values(meal)
+        for key, value in reference.items():
+            name = key.split(" (")[0]
+            if value > 0:
+                if key == "Carbon footprint (kgCO2e/kg)":
+                    comparison = round(self.total_content[name]["value"] / (value*(quantity/1000.))*100,2)
+                    recommended = ""
+                else:
+                    comparison = round(self.total_content[name]["value"] / (value*(quantity/100.)) * 100,2)
+                    recommended = round(self.total_content[name]["value"]/self.intake[name]["value"] * 100,2)
+            self.total_content[name]["benchmark"] = {"name":meal,"weight (g)": quantity, "value": comparison}
+            self.total_content[name]["recommended"] = recommended
+
+
+
 
 my_recipe = Recipe("Pasta broccoli e aggiughe")
 # my_recipe.addIngredient("Dried pasta, wholemeal, raw", 100)
 # my_recipe.addIngredient("Olive oil, extra virgin", 2)
 # my_recipe.addIngredient("Anchovy, in salt (semi-preserved)", 15)
 # my_recipe.addIngredient("Romanesco cauliflower or romanesco broccoli, raw", 200)
-my_recipe.addIngredients([("Dried pasta, wholemeal, raw", 400),
+my_recipe.addIngredients([("Dried pasta, wholemeal, raw", 100),
                           ("Olive oil, extra virgin", 2),
-                          ("Anchovy, in salt (semi-preserved)", 50),
-                          ("Romanesco cauliflower or romanesco broccoli, raw", 1000)])
+                          ("Anchovy, in salt (semi-preserved)", 12),
+                          ("Romanesco cauliflower or romanesco broccoli, raw", 250)])
 my_recipe.mise_en_place()
 print(my_recipe.name)
 print(my_recipe.ingredients)
@@ -104,16 +126,17 @@ print("Weight",my_recipe.weight,"g")
 print(my_recipe.total_content)
 my_recipe.addCookingStep("Electricity (cooking) - France continentale", 15, 2500)
 print(my_recipe.cooking_steps)
+print(my_recipe.total_content)
 my_recipe.cook()
 
 my_recipe2 = Recipe("Tagliatelle al ragù")
-my_recipe2.addIngredients([("Dried egg pasta, raw", 400),
+my_recipe2.addIngredients([("Dried egg pasta, raw", 100),
                           ("Olive oil, extra virgin", 2),
-                          ("Beef, minced steak, 20% fat, cooked", 300),
-                          ("Carrot, raw", 50),
-                          ("Celery stalk, raw", 50),
-                          ("Onion, raw", 50),
-                          ("Tomato coulis, canned (tomato puree semi-reduced 11%)", 300)])
+                          ("Beef, minced steak, 20% fat, cooked", 75),
+                          ("Carrot, raw", 12),
+                          ("Celery stalk, raw", 12),
+                          ("Onion, raw", 12),
+                          ("Tomato coulis, canned (tomato puree semi-reduced 11%)", 75)])
 my_recipe2.mise_en_place()
 print(my_recipe2.name)
 print(my_recipe2.ingredients)

@@ -13,7 +13,7 @@
 		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
 		<script src="lib/papaparse.min.js"></script>
 		<script type="text/javascript" src="recipe.js"></script>
-		<script type="text/javascript" src ="form.js"></script>			
+		<script type="text/javascript" src ="form.js"></script>
 	</head>
 	<body>
 		
@@ -91,10 +91,14 @@
 					</div>
 				</form>
 				<div id="results" style="visibility: hidden;" class="pt-4">
-					<h3>Results</h3>
+
 					<table class="table table-striped"">
-					 <tbody id="table-results">
-					 </tbody>
+						<thead><tr><td><h4>Environment</h4></td><td></td><td class="text-right"></td><td class="text-right">% of reference food</td></tr></thead>
+						<tbody id="table-footprint">
+						</tbody>
+						<thead><tr><td><h4>Nutrition</h4></td><td></td><td class="text-right">% of daily reference intake</td><td class="text-right">% of reference food</td></tr></thead>
+						<tbody id="table-nutritional">
+						</tbody>
 					</table>
 				</div>
 			</body>

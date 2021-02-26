@@ -3,6 +3,23 @@ function getNum(val) {
 	return val;
 }
 
+function loadJSON(path, success, error) {
+	var xhr = new XMLHttpRequest();
+	xhr.onreadystatechange = function() {
+		if (xhr.readyState === XMLHttpRequest.DONE) {
+			if (xhr.status === 200) {
+				if (success)
+					success(JSON.parse(xhr.responseText));
+			} else {
+				if (error)
+					error(xhr);
+			}
+		}
+	};
+	xhr.open("GET", path, true);
+	xhr.send();
+}
+
 function run() {
 			Papa.parse("data/food/data.csv", {
 				download: true,
@@ -16,12 +33,16 @@ function run() {
 			    complete: function(results) {
 			        energy_ef = results.data;
 
+			loadJSON('data/food/intake.json',
+				function(intake) {
+
 
 					class Recipe {
 						constructor(name) {
 							this.name = name;
 							this.data = data;
 							this.energy_ef = energy_ef;
+							this.intake = intake;
 							this.ingredients = {};
 							this.cooking_steps = [];
 							this.total_content = {}
@@ -73,6 +94,7 @@ function run() {
 								}
 								this.weight += this.ingredients[name]["quantity"]
 							}
+							this.compare()
 						}
 
 						cook() {
@@ -81,6 +103,7 @@ function run() {
 								step["CO2e"] = energy * this.find_EF(step["energy_source"])
 								this.total_content["Carbon footprint"]["value"] += step["CO2e"] 
 								}
+							this.compare()
 						}
 
 						add_values(name) {
@@ -112,6 +135,24 @@ function run() {
 					        }
 					    }
 
+					    compare(meal="Hamburger, from fast foods restaurant",quantity=220){
+					    	var reference = this.add_values(meal)
+					    	for (const [key, value] of Object.entries(reference)){
+					    		var name = key.split(" (")[0];
+					    		if (value > 0) {
+					    			if (key == "Carbon footprint (kgCO2e/kg)"){
+					    				var comparison = ((this.total_content[name]["value"] / (value*(quantity/1000)))*100).toFixed(0).toString()+"%"
+					    				var recommended = ""
+					    			}
+					    			else{
+					    				var comparison = ((this.total_content[name]["value"] / (value*(quantity/100)))*100).toFixed(0).toString()+"%"
+					    				var recommended = ((this.total_content[name]["value"]/this.intake[name]["value"])*100).toFixed(0).toString() +"%"
+					    			}
+					    			this.total_content[name]["benchmark"] = {"name":meal,"weight (g)": quantity, "value": comparison}
+					    			this.total_content[name]["recommended"] = recommended
+					    		}
+					    	}
+					    }
 					}
 
 					// let myRecipe = new Recipe("Pasta");
@@ -164,19 +205,32 @@ function run() {
 						}	
 					}
 					webRecipe.cook()
+					console.log(webRecipe.total_content)
+					$("#results").css("visibility","visible");
 
+					var html = '';
+					for (const [key, value] of Object.entries(webRecipe.total_content).slice(0,1)){
+					            html += '<tr><td>' + key + '</td>' +
+					                    '<td class="text-right">' + value["value"].toFixed(2) + ' ' + value["unit"] + '</td>' +
+					                    '<td class="text-right">' + value["recommended"] + '</td>' +
+					                    '<td class="text-right">' + value["benchmark"]["value"] + '</td>' +
+					                    '</tr>';
+					     }
+					$('#table-footprint').html(html);
 
 					$("#results").css("visibility","visible");
-					console.log(webRecipe.total_content)
 					var html = '';
-					for (const [key, value] of Object.entries(webRecipe.total_content)){
-					            html += '<tr><td>' + key + 
-					                    '</td><td class="text-right">' + value["value"].toFixed(2) + ' ' + value["unit"] + '</td></tr>';
+					for (const [key, value] of Object.entries(webRecipe.total_content).slice(1)){
+					            html += '<tr><td>' + key + '</td>' +
+					                    '<td class="text-right">' + value["value"].toFixed(2) + ' ' + value["unit"] + '</td>' +
+					                    '<td class="text-right">' + value["recommended"] + '</td>' +
+					                    '<td class="text-right">' + value["benchmark"]["value"] + '</td>' +
+					                    '</tr>';
 					     }
-					$('#table-results').html(html);
+					$('#table-nutritional').html(html);
 
 		
-
+	});
 
     }
 });
