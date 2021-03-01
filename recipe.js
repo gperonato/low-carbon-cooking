@@ -46,6 +46,8 @@ function run() {
 							this.ingredients = {};
 							this.cooking_steps = [];
 							this.total_content = {}
+							this.comparison = {"food":"Hamburger, from fast foods restaurant",
+													"quantity":220};
         					for (var key of Object.keys(data[0]).slice(1)) {
             					this.total_content[key.split(" (")[0]] = {"value":0,
             															  "unit":key.split(" (")[1].split("/")[0]}
@@ -107,9 +109,7 @@ function run() {
 						}
 
 						add_values(name) {
-							var entries = {
-								name
-							};
+							var entries = {};
 							for (let entry of this.data) {
 								if (entry["LCI Name"] == name) {
 									for (const [key, value] of Object.entries(entry)) {
@@ -134,23 +134,32 @@ function run() {
 									}
 					        }
 					    }
-
-					    compare(meal="Hamburger, from fast foods restaurant",quantity=220){
-					    	var reference = this.add_values(meal)
+					    set_reference(food, quantity){
+					    	this.comparison["food"] = food;
+					    	this.comparison["quantity"] = quantity;
+					    }
+					    compare(){
+					    	var food = this.comparison["food"];
+					    	var quantity = this.comparison["quantity"];
+					    	var reference = this.add_values(food);
+					    	delete reference["LCI Name"]
 					    	for (const [key, value] of Object.entries(reference)){
 					    		var name = key.split(" (")[0];
+					    		var comparison = "";
+					    		var recommended = "";
 					    		if (value > 0) {
 					    			if (key == "Carbon footprint (kgCO2e/kg)"){
-					    				var comparison = ((this.total_content[name]["value"] / (value*(quantity/1000)))*100).toFixed(0).toString()+"%"
-					    				var recommended = ""
+					    				comparison = ((this.total_content[name]["value"] / (value*(quantity/1000)))*100).toFixed(0).toString()+"%"
 					    			}
 					    			else{
-					    				var comparison = ((this.total_content[name]["value"] / (value*(quantity/100)))*100).toFixed(0).toString()+"%"
-					    				var recommended = ((this.total_content[name]["value"]/this.intake[name]["value"])*100).toFixed(0).toString() +"%"
+					    				comparison = ((this.total_content[name]["value"] / (value*(quantity/100)))*100).toFixed(0).toString()+"%"
+					    				recommended = ((this.total_content[name]["value"]/this.intake[name]["value"])*100).toFixed(0).toString() +"%"
 					    			}
-					    			this.total_content[name]["benchmark"] = {"name":meal,"weight (g)": quantity, "value": comparison}
-					    			this.total_content[name]["recommended"] = recommended
 					    		}
+					    		this.total_content[name]["benchmark"] = {"name":food,
+					    												"weight (g)": quantity,
+					    												"value": comparison}
+					    		this.total_content[name]["recommended"] = recommended
 					    	}
 					    }
 					}
@@ -186,6 +195,11 @@ function run() {
 					let webRecipe = new Recipe("webRecipe")
 					var ingredients = $('[name^="ingredient"]');
 					var quantities = $('[name^="quantit"]');
+
+					var reference = {};
+					reference["food"] = $('#reference').val();
+					reference["quantity"] = $('#reference-weight').val();
+					webRecipe.set_reference(reference["food"],reference["quantity"]);
 					// console.log(ingredients);
 					var i;
 					for (i = 0; i < ingredients.length; i++) {
@@ -197,7 +211,9 @@ function run() {
 					var sources = $('[name^="energ"]');
 					var times = $('[name^="time"]');
 					var powers = $('[name^="power"]');
-					// console.log(sources);
+
+
+
 					var i;
 					for (i = 0; i < sources.length; i++) {
 						if (sources[i].value != "") {
@@ -205,7 +221,6 @@ function run() {
 						}	
 					}
 					webRecipe.cook()
-					console.log(webRecipe.total_content)
 					$("#results").css("visibility","visible");
 
 					var html = '';
@@ -220,7 +235,9 @@ function run() {
 
 					$("#results").css("visibility","visible");
 					var html = '';
+					console.log(webRecipe.total_content)
 					for (const [key, value] of Object.entries(webRecipe.total_content).slice(1)){
+
 					            html += '<tr><td>' + key + '</td>' +
 					                    '<td class="text-right">' + value["value"].toFixed(2) + ' ' + value["unit"] + '</td>' +
 					                    '<td class="text-right">' + value["recommended"] + '</td>' +

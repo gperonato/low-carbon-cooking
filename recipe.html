@@ -68,7 +68,7 @@
 							</div>
 							<div class="col-sm-3 form-group">
 								<div class="input-group">
-									<input type="number" class="form-control input-sm" placeholder="Power" name="power[0]" min="0" value="2500">
+									<input type="number" class="form-control input-sm" placeholder="Power" name="power[0]" min="0" value="2000">
 									<div class="input-group-append">
 										<span class="input-group-text"> W </span>
 									</div>
@@ -91,15 +91,34 @@
 					</div>
 				</form>
 				<div id="results" style="visibility: hidden;" class="pt-4">
-
 					<table class="table table-striped"">
-						<thead><tr><td><h4>Environment</h4></td><td></td><td class="text-right"></td><td class="text-right">% of reference food</td></tr></thead>
+						<thead><tr><td><h4>Environment</h4></td><td></td><td class="text-right"></td><td class="text-right">% of <a href="#reference-food">reference food</a></td></tr></thead>
 						<tbody id="table-footprint">
 						</tbody>
-						<thead><tr><td><h4>Nutrition</h4></td><td></td><td class="text-right">% of daily reference intake</td><td class="text-right">% of reference food</td></tr></thead>
+						<thead><tr><td><h4>Nutrition</h4></td><td></td><td class="text-right">% of <a href="https://referenceintakes.eu/reference-values.html">daily reference intake</a></td><td class="text-right">% of <a href="#reference-food">reference food</a></td></tr></thead>
 						<tbody id="table-nutritional">
 						</tbody>
 					</table>
+					<h5><a id="reference-food"></a>Reference food</h5>
+					<form id="reference-form">
+						<div class="row">
+							<div class="col-sm-7 form-group">
+								<div class="input-group">
+									<input id="reference" class="form-control input-sm" placeholder="Ingredient" type="text" value="Hamburger, from fast foods restaurant">
+								</div>
+							</div>
+							<div class="col-sm-3 form-group">
+								<div class="input-group">
+									<input id="reference-weight" class="form-control input-sm" placeholder="Weight" type="text"value="220">
+									<div class="input-group-append">
+										<span class="input-group-text"> g </span>
+									</div>
+								</div>
+														<div class="col-sm-1">
+						</form>
+							</div>
+						</div>
+					</div>
 				</div>
 			</body>
 		</html>

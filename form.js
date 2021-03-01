@@ -7,6 +7,19 @@ $(document).ready(function() {
 			  $("#ingredients").autocomplete({
 			    source: ingredients
 			  });
+			  $("#reference").autocomplete({
+			    source: ingredients,
+			    select: function(event, ui) {
+			        formsubmit();
+			    }
+			  });
+			});
+
+			$('#reference-weight').keypress(function (e) {
+			  if (e.which == 13) {
+			    formsubmit();
+			    return false; 
+			  }
 			});
 
 			$.get('energy.txt', function(txtFile){
@@ -118,4 +131,6 @@ $(document).ready(function() {
 		        	console.log("cannot remove first cooking step")
 		        }
 		    })
+
+
 		});

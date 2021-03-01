@@ -96,10 +96,11 @@ class Recipe():
         reference = self.add_values(meal)
         for key, value in reference.items():
             name = key.split(" (")[0]
+            comparison = ""
+            recommended = ""
             if value > 0:
                 if key == "Carbon footprint (kgCO2e/kg)":
                     comparison = round(self.total_content[name]["value"] / (value*(quantity/1000.))*100,2)
-                    recommended = ""
                 else:
                     comparison = round(self.total_content[name]["value"] / (value*(quantity/100.)) * 100,2)
                     recommended = round(self.total_content[name]["value"]/self.intake[name]["value"] * 100,2)
