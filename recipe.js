@@ -221,7 +221,7 @@ function run() {
 						}	
 					}
 					webRecipe.cook()
-					$("#results").css("visibility","visible");
+					$("#results").css('display','inline');
 
 					var html = '';
 					for (const [key, value] of Object.entries(webRecipe.total_content).slice(0,1)){
@@ -257,7 +257,10 @@ function run() {
 
 }
 function formsubmit() {
-	run();
+	if ($('[name="quantity[0]"]').val() > 0) {
+		run();	
+	}
+
 }
 
 

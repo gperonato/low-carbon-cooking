@@ -41,21 +41,21 @@ $(document).ready(function() {
 		            x++;
 		            var ingredient = $(`<div class="row" id="ingredients[${x}]">
 		            	<div class="col-sm-7 form-group">
-		            	<input id="ingredients" type="text" class="form-control input-sm" placeholder="Ingredient" name="ingredient[${x}]"/>
+		            	<input id="ingredients" type="text" class="form-control input-sm"  name="ingredient[${x}]"/>
 		            	</div>
 		            	<div class="col-sm-3 form-group">
 		            		<div class="input-group">
-								<input type="number" class="form-control input-sm" placeholder="Weight" name="quantity[${x}]" min="0">
+								<input type="number" class="form-control input-sm"  name="quantity[${x}]" min="0">
 								<div class="input-group-append">
 									<span class="input-group-text"> g </span>
 								</div>
 							</div>
 						</div>
 		            	<div class="col-sm-1 form-group">
-						<button id="delete" class="btn btn-primary">-</button>
+						<button id="delete" class="btn btn-secondary">-</button>
 						</div>
 								<div class="col-sm-1 form-group">
-									<button name="add[${x}]" class="btn btn-primary">+</button>
+									<button name="add[${x}]" class="btn btn-secondary">+</button>
 								</div>
 						</div>`);
 		               ingredient.find('#ingredients').autocomplete({
@@ -93,7 +93,7 @@ $(document).ready(function() {
 						</div>
 						<div class="col-sm-3 form-group">
 							<div class="input-group">
-								<input type="number" class="form-control input-sm" placeholder="Time" name="time[${c}]" min="0">
+								<input type="number" class="form-control input-sm"  name="time[${c}]" min="0">
 								<div class="input-group-append">
 									<span class="input-group-text"> min </span>
 								</div>
@@ -101,17 +101,17 @@ $(document).ready(function() {
 						</div>
 						<div class="col-sm-3 form-group">
 							<div class="input-group">
-								<input type="number" class="form-control input-sm" placeholder="Power" name="power[${c}]" min="0" value="2500">
+								<input type="number" class="form-control input-sm"  name="power[${c}]" min="0" value="2000">
 								<div class="input-group-append">
 									<span class="input-group-text"> W </span>
 								</div>
 							</div>
 						</div>				
 						<div class="col-sm-1 form-group">
-							<button id="delete-cooking" class="btn btn-primary">-</button>
+							<button id="delete-cooking" class="btn btn-secondary">-</button>
 						</div>
 							<div class="col-sm-1 form-group">
-									<button name="add-cf[${c}]" class="btn btn-primary">+</button>
+									<button name="add-cf[${c}]" class="btn btn-secondary">+</button>
 								</div>
 					</div>`);
 

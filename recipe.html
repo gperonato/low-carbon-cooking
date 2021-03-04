@@ -14,111 +14,182 @@
 		<script src="lib/papaparse.min.js"></script>
 		<script type="text/javascript" src="recipe.js"></script>
 		<script type="text/javascript" src ="form.js"></script>
+		<style>
+		header {
+		padding: 156px 0 100px;
+		}
+		section {
+		padding: 150px 0;
+		}
+		</style>
 	</head>
 	<body>
 		
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-			<a class="navbar-brand" href="#">Low-carbon cooking</a>
+		<!-- Navigation -->
+		<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="mainNav">
+			<div class="container">
+				<a class="navbar-brand js-scroll-trigger" href="#page-top">myCookPrint</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarResponsive">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item">
+							<a class="nav-link js-scroll-trigger" href="#calculator">Calculator</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link js-scroll-trigger" href="#about">About</a>
+						</li>
+					</ul>
+				</div>
+			</div>
 		</nav>
-		<div class="container pt-4">
-			<h3>Ingredients</h3>
-			<form>
-				<div class="ingredients">
-					<div class="row">
-						<div class="col-sm-7 form-group">
-							<input id="ingredients" class="form-control input-sm" placeholder="Ingredient" type="text" name="ingredient[0]">
-						</div>
-						<div class="col-sm-3 form-group">
-							<div class="input-group">
-								<input type="number" class="form-control input-sm" placeholder="Weight" name="quantity[0]" min="0">
-								<div class="input-group-append">
-									<span class="input-group-text"> g </span></div>
-								</div>
-							</div>
-							
-							<div class="col-sm-1 form-group">
-								<button id="delete" class="btn btn-primary">-</button>
-							</div>
-							<div class="col-sm-1 form-group">
-								<button name="add[0]" class="btn btn-primary">+</button>
-							</div>
-						</div>
-					</div>
-					<div>
-						<div class="form-group row">
-							<div class="col sm">
-								<button type='button' class="btn btn-primary" onclick="formsubmit()">Mise en place</button>
-							</div>
-						</div>
-					</div>
-					<div class="cooking-steps pt-4">
-						<h3>Cooking steps</h3>
-						<div class="row">
-							<div class="col-sm-4 form-group" id="dropdown">
-								<select class="form-control" name="energy[0]">
-								</select>
-							</div>
-							<div class="col-sm-3 form-group">
-								<div class="input-group">
-									<input type="number" class="form-control input-sm" placeholder="Time" name="time[0]" min="0">
-									<div class="input-group-append">
-										<span class="input-group-text"> min </span>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-3 form-group">
-								<div class="input-group">
-									<input type="number" class="form-control input-sm" placeholder="Power" name="power[0]" min="0" value="2000">
-									<div class="input-group-append">
-										<span class="input-group-text"> W </span>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-1 form-group">
-								<button id="delete-cooking" class="btn btn-primary">-</button>
-							</div>
-							<div class="col-sm-1 form-group">
-								<button name="add-cf[0]" class="btn btn-primary">+</button>
-							</div>
-						</div>
-					</div>
-					<div>
-						<div class="form-group row">
-							<div class="col-sm-1">
-								<button type='button' class="btn btn-primary" style="width: 120px;" onclick="formsubmit()">Cook</button>
-							</div>
-						</div>
-					</div>
-				</form>
-				<div id="results" style="visibility: hidden;" class="pt-4">
-					<table class="table table-striped"">
-						<thead><tr><td><h4>Environment</h4></td><td></td><td class="text-right"></td><td class="text-right">% of <a href="#reference-food">reference food</a></td></tr></thead>
-						<tbody id="table-footprint">
-						</tbody>
-						<thead><tr><td><h4>Nutrition</h4></td><td></td><td class="text-right">% of <a href="https://referenceintakes.eu/reference-values.html">daily reference intake</a></td><td class="text-right">% of <a href="#reference-food">reference food</a></td></tr></thead>
-						<tbody id="table-nutritional">
-						</tbody>
-					</table>
-					<h5><a id="reference-food"></a>Reference food</h5>
-					<form id="reference-form">
+		<section id="calculator">
+			<div class="container pt-4">
+				<h3>Calculator</h3>
+				<form>
+					<div class="ingredients">
 						<div class="row">
 							<div class="col-sm-7 form-group">
+								<label for="ingredients" class="control-label">Ingredient</label>
 								<div class="input-group">
-									<input id="reference" class="form-control input-sm" placeholder="Ingredient" type="text" value="Hamburger, from fast foods restaurant">
+									<input id="ingredients" class="form-control input-sm" " type="text" name="ingredient[0]">
 								</div>
 							</div>
 							<div class="col-sm-3 form-group">
+								<label for="quantita[0]" class="control-label">Weight</label>
 								<div class="input-group">
-									<input id="reference-weight" class="form-control input-sm" placeholder="Weight" type="text"value="220">
+									<input type="number" class="form-control input-sm"  name="quantity[0]" min="0">
 									<div class="input-group-append">
-										<span class="input-group-text"> g </span>
+										<span class="input-group-text"> g </span></div>
 									</div>
 								</div>
-														<div class="col-sm-1">
-						</form>
+								
+								<div class="col-sm-1 form-group">
+									<label  class="control-label">&nbsp;</label>
+									<div class="input-group">
+										<button id="delete" class="btn btn-secondary">-</button>
+									</div>
+								</div>
+								<div class="col-sm-1 form-group">
+									<label  class="control-label">&nbsp;</label>
+									<div class="input-group">
+										<button name="add[0]" class="btn btn-secondary">+</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div class="form-group row">
+								<div class="col sm">
+									<button type='button' class="btn btn-secondary" onclick="formsubmit()">Mise en place</button>
+								</div>
+							</div>
+						</div>
+						<div class="cooking-steps pt-4">
+							<h3></h3>
+							<div class="row">
+								<div class="col-sm-4 form-group" id="dropdown">
+									<label for="energy[0]" class="control-label">Energy source</label>
+									<select class="form-control" name="energy[0]">
+									</select>
+								</div>
+								<div class="col-sm-3 form-group">
+									<label for="time[0]" class="control-label">Cooking time</label>
+									<div class="input-group">
+										
+										<input type="number" class="form-control input-sm" name="time[0]" min="0">
+										<div class="input-group-append">
+											<span class="input-group-text"> min </span>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3 form-group">
+									<label for="time[0]" class="control-label">Input power</label>
+									<div class="input-group">
+										<input type="number" class="form-control input-sm"  name="power[0]" min="0" value="2000" placeholder="Input power">
+										<div class="input-group-append">
+											<span class="input-group-text"> W </span>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-1 form-group">
+									<label  class="control-label">&nbsp;</label>
+									<div class="input-group">
+										
+										<button id="delete-cooking" class="btn btn-secondary">-</button>
+									</div>
+								</div>
+								<div class="col-sm-1 form-group">
+									<label  class="control-label">&nbsp;</label>
+									<div class="input-group">
+										
+										<button name="add-cf[0]" class="btn btn-secondary">+</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div class="form-group row">
+								<div class="col-sm-1">
+									<button type='button' class="btn btn-secondary" style="width: 120px;" onclick="formsubmit()">Cook</button>
+								</div>
+							</div>
+						</div>
+					</form>
+					<div id="results" style="display: none;" class="row pt-4">
+						<h3>Results</h3>
+						<table class="table table-striped"">
+							<thead><tr><td><h5>Environment</h5></td><td></td><td class="text-right"></td><td class="text-right">% of <a href="#reference-food">reference food</a></td></tr></thead>
+							<tbody id="table-footprint">
+							</tbody>
+							<thead><tr><td><h5>Nutrition</h5></td><td></td><td class="text-right">% of <a href="https://referenceintakes.eu/reference-values.html">daily reference intake</a></td><td class="text-right">% of <a href="#reference-food">reference food</a></td></tr></thead>
+							<tbody id="table-nutritional">
+							</tbody>
+						</table>
+						<div class="col-sm-7 pt-4">
+							<h5><a id="reference-food"></a>Reference food</h5>
+						</div>
+						<form id="reference-form">
+							<div class="row">
+								<div class="col-sm-7 form-group">
+									<div class="input-group">
+										<input id="reference" class="form-control input-sm" placeholder="Ingredient" type="text" value="Hamburger, from fast foods restaurant">
+									</div>
+								</div>
+								<div class="col-sm-3 form-group">
+									<div class="input-group">
+										<input id="reference-weight" class="form-control input-sm" placeholder="Weight" type="text"value="220">
+										<div class="input-group-append">
+											<span class="input-group-text"> g </span>
+										</div>
+									</div>
+									<div class="col-sm-1">
+									</form>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
+				</section>
+				<section id="about" class="bg-light">
+					<div class="container">
+						<div class="row">
+							<h3>About</h3>
+							<p class="lead">The food supply chain is responsible for one quarter of antropogenic green-house gas emissions worldwide<sup><a href="#ref1">1</a></sup>.<br>With myCookPrint calculator, you can estimate the carbon footprint of a meal, including food production, transportation and preparation.
+						</p>
+						<p>
+						MyCookPrint calculator is based on two main databases provided by French governmental agencies as open data (Licence Ouverte):							</p>
+						<ul>
+							<li>the <a href="https://doc.agribalyse.fr/documentation-en/">AGRIBALYSE®</a> database (v. 3.0.1 2020) provided by the French Environment Protection Agency containing the environmental analysis of food products; </li>
+							<li>the <a href="https://ciqual.anses.fr/">CIQUAL</a> food composition database (v. 2020) provided by the French Agency for Food, Environmental and Occupational health safety (ANSES).</li>
+						</ul>
+						<p class="lead">As such, the results are valid for medium standard products consumed in France. However, they might be used as as first proxy also in other European countries.
+						</p>
+						<p>Additional data regarding the carbon content of energy sources are issued from the European Environment Agency <a href="https://www.eea.europa.eu/ds_resolveuid/0320026e904e43729189fe8720b5e35d">CO2 Intensity of Electricity generation</a> (2017), the latest values from <a href="https://www.data.gouv.fr/fr/datasets/base-carbone-r-1/">ADEME's Base carbone®</a> (v 19.0 4/12/2020), and the <a href="https://www.bafu.admin.ch/bafu/en/home/topics/climate/questions-answers.html">Swiss Federal Office for the Environment</a> (2014).
+							<p>The source code of the calculator as well as the data sources are available in the <a href="https://github.com/gperonato/low-carb">Github repository</a> of the project.</p>
+							<small><sup>1</sup><a id="ref1"></a>Poore, J., & Nemecek, T. (2018). Reducing food’s environmental impacts through producers and consumers. Science, 360(6392), 987–992. <a href="https://doi.org/10.1126/science.aaq0216">https://doi.org/10.1126/science.aaq0216</a></small>
+						</div>
+					</div>
+				</section>
 			</body>
 		</html>
