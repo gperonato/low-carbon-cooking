@@ -4,16 +4,20 @@
 		<!-- Required meta tags -->
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<link href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.css" rel="stylesheet"/>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA==" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" integrity="sha512-aOG0c6nPNzGk+5zjwyJaoRUgCdOrfSDhmMID2u4+OIslr0GjpLKo7Xm0Ao3xmpM4T8AmIouRkqwj1nrdVsLKEQ==" crossorigin="anonymous" />
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
 		<script src="lib/papaparse.min.js"></script>
 		<script type="text/javascript" src="recipe.js"></script>
 		<script type="text/javascript" src ="form.js"></script>
+		<script type="text/javascript">
+		$(function () {
+			$('[data-toggle="tooltip"]').tooltip()
+			})
+		</script>
 		<style>
 		header {
 		padding: 156px 0 100px;
@@ -140,10 +144,15 @@
 					<div id="results" style="display: none;" class="row pt-4">
 						<h3>Results</h3>
 						<table class="table table-striped"">
-							<thead><tr><td><h5>Environment</h5></td><td></td><td class="text-right"></td><td class="text-right">% of <a href="#reference-food">reference food</a></td></tr></thead>
+							<thead><tr><td><h5>Environment</h5></td>
+							<td><a href="#" data-toggle="tooltip" title='Total values. Please note that some ingredients might not be counted here.' class="text-center">Content</a><td class="text-center"></td>
+							<td class="text-center">Percentage of <a href="#reference-food" data-toggle="tooltip" title='Click to set a custom benchmark.' >reference food</a></td></tr></thead>
 							<tbody id="table-footprint">
 							</tbody>
-							<thead><tr><td><h5>Nutrition</h5></td><td></td><td class="text-right">% of <a href="https://referenceintakes.eu/reference-values.html">daily reference intake</a></td><td class="text-right">% of <a href="#reference-food">reference food</a></td></tr></thead>
+							<thead><tr><td><h5>Nutrition</h5></td><td><a href="#" data-toggle="tooltip" title='Total values. Please note that traces and values < 0.5 are not counted.' class="text-center">Content</a></td>
+							<td class="text-center">Percentage of <a href="#" data-toggle="tooltip" title='Reference intakes set by EU legislation (Annex XIII of Regulation 1169/2011 on the provision of food information to consumers)'>daily reference intake</a></td>
+<td class="text-center">Percentage of <a href="#reference-food" data-toggle="tooltip" title='Click to set a custom benchmark.'>reference food</a></td>
+							</tr></thead>
 							<tbody id="table-nutritional">
 							</tbody>
 						</table>
@@ -186,10 +195,10 @@
 						<p class="lead">As such, the results are valid for medium standard products consumed in France. However, they might be used as as first proxy also in other European countries.
 						</p>
 						<p>Additional data regarding the carbon content of energy sources are issued from the European Environment Agency <a href="https://www.eea.europa.eu/ds_resolveuid/0320026e904e43729189fe8720b5e35d">CO2 Intensity of Electricity generation</a> (2017), the latest values from <a href="https://www.data.gouv.fr/fr/datasets/base-carbone-r-1/">ADEME's Base carbone®</a> (v 19.0 4/12/2020), and the <a href="https://www.bafu.admin.ch/bafu/en/home/topics/climate/questions-answers.html">Swiss Federal Office for the Environment</a> (2014).
-							<p>The source code of the calculator as well as the data sources are available in the <a href="https://github.com/gperonato/low-carb">Github repository</a> of the project.</p>
-							<small><sup>1</sup><a id="ref1"></a>Poore, J., & Nemecek, T. (2018). Reducing food’s environmental impacts through producers and consumers. Science, 360(6392), 987–992. <a href="https://doi.org/10.1126/science.aaq0216">https://doi.org/10.1126/science.aaq0216</a></small>
-						</div>
+						<p>The source code of the calculator as well as the data sources are available in the <a href="https://github.com/gperonato/low-carb">Github repository</a> of the project.</p>
+						<small><sup>1</sup><a id="ref1"></a>Poore, J., & Nemecek, T. (2018). Reducing food’s environmental impacts through producers and consumers. Science, 360(6392), 987–992. <a href="https://doi.org/10.1126/science.aaq0216">https://doi.org/10.1126/science.aaq0216</a></small>
 					</div>
-				</section>
-			</body>
-		</html>
+				</div>
+			</section>
+		</body>
+	</html>
