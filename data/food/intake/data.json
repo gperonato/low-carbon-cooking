@@ -1,0 +1,10 @@
+{
+"Energy, Regulation EU No 1169/2011":{"value":2000,"unit":"kcal"},
+"Fat":{"value":70,"unit":"g"},
+"Carbohydrate":{"value":260,"unit":"g"},
+"Sugars":{"value":90,"unit":"g"},
+"Protein":{"value":50,"unit":"g"},
+"Calcium":{"value":800,"unit":"mg"},
+"Iron":{"value":14,"unit":"mg"}
+}
+

@@ -7,7 +7,9 @@ Created on Sun Feb 7 15:20 2021
 """
 
 import dataflows
-import datapackage
+from datapackage import Package
+import os
+import requests
 
 from dataflows import (
     Flow,
@@ -28,9 +30,14 @@ from dataflows import (
     add_field
 )
 
+import requests
+
+url = 'https://koumoul.com/s/data-fair/api/v1/datasets/agribalyse-synthese/raw'
+r = requests.get(url, allow_redirects=True)
+open("Agribalyse_Synthese.csv", 'wb').write(r.content)
 
 Flow(
-    load("Table Ciqual 2020_ENG_2020 07 07.xls"),
+    load("https://ciqual.anses.fr/cms/sites/default/files/inline-files/Table%20Ciqual%202020_ENG_2020%2007%2007.xls"),
     load("Agribalyse_Synthese.csv"),
     add_computed_field([
         dict(target='Carbon footprint (kgCO2e/kg)', operation='format', with_='{Changement climatique (kg CO2 eq/kg de produit)}'),
@@ -44,14 +51,14 @@ Flow(
     resources=["Agribalyse_Synthese"],
     regex=False
         ),
-    update_schema("Table Ciqual 2020_ENG_2020 07 07", missingValues=["-", "None", ""]),
+    update_schema("Table%20Ciqual%202020_ENG_2020%2007%2007", missingValues=["-", "None", ""]),
     duplicate(source="Agribalyse_Synthese", target_name="join", target_path="data.csv"),
     join(
-        "Table Ciqual 2020_ENG_2020 07 07",  # Source resource
+        "Table%20Ciqual%202020_ENG_2020%2007%2007",  # Source resource
         ["alim_code"],
         "join",  # Target resource
         ["Code CIQUAL"],
-        source_delete=False,
+        source_delete=True,
         fields={
             "Energy, Regulation EU No 1169/2011 (kcal/100g)": {"name": "Energy, Regulation EU No 1169/2011 (kcal/100g)"},
             "Protein (g/100g)": {"name": "Protein (g/100g)"},
@@ -198,11 +205,36 @@ Flow(
     dump_to_path("data/food"),
 ).process()
 
+package = Package("data/food/datapackage.json")
+package.remove_resource("Agribalyse_Synthese")
+package.commit()
+package.descriptor['Sources'] = [
+{
+  "title": "Agribalyse® v.3.0.1, 24.11.2020 update",
+  "path": "https://www.data.gouv.fr/fr/datasets/agribalyse-r-detail-par-etape-du-cycle-de-vie/"
+},
+{
+  "title": "Ciqual database, 07.07.2020 update",
+  "path": "https://www.data.gouv.fr/fr/datasets/table-de-composition-nutritionnelle-des-aliments-ciqual/"
+},
+]
+package.descriptor['description'] = 'Adapted join of CIQUAL and Agribalyse® datasets. Check getData.py to see the transformations applied to the original datasets.'
+package.commit()
+package.save("data/food/datapackage.json")
+os.remove("data/food/Agribalyse_Synthese.csv")
 
+
+url = 'https://www.eea.europa.eu/data-and-maps/data/co2-intensity-of-electricity-generation/eea-2017-co2-emission-intensity/2017-co2_intensel_eea_csv/at_download/file'
+r = requests.get(url, allow_redirects=True)
+open("2017_CO2_IntensEL_EEA.zip", 'wb').write(r.content)
+
+url = "https://www.data.gouv.fr/fr/datasets/r/8513c5a0-9f98-4059-8843-990d7dd47ff2"
+r = requests.get(url, allow_redirects=True)
+open("ademe.csv", 'wb').write(r.content)
 
 Flow(
-    load("2017_CO2_IntensEL_EEA.csv"),
-    load("CarbonIntensity_other.csv"),
+    load("2017_CO2_IntensEL_EEA.zip"),
+    load("data/energy/CarbonIntensity_other.csv"),
     set_type(
         "Year",
         type="number",
@@ -233,15 +265,15 @@ Flow(
     set_type("ValueNumeric", type="number", resources=["2017_CO2_IntensEL_EEA","CarbonIntensity_other"]),
     lambda row: dict(row, ValueNumeric=row["ValueNumeric"] / 1000),
 
-    load("ademe.xlsx"),
+    load("ademe.csv"),
     select_fields(
         [
-            "Identifiant de l'ÈlÈment",
+            "Identifiant de l'élément",
             "Type Ligne",
             "Nom base anglais",
-            "Nom base franÁais",
-            "Localisation gÈographique",
-            "Total poste non dÈcomposÈ",
+            "Nom base français",
+            "Localisation géographique",
+            "Total poste non décomposé",
         ],
         resources=["ademe"],
     ),
@@ -250,22 +282,22 @@ Flow(
         resources=["ademe"],
         ),
     add_computed_field([
-        dict(target='id', operation='sum', source=["Identifiant de l'ÈlÈment"]),
+        dict(target='id', operation='sum', source=["Identifiant de l'élément"]),
         dict(target='Name_EN', operation='format', with_='{Nom base anglais}'),
-        dict(target='Name_FR', operation='format', with_='{Nom base franÁais}'),
-        dict(target='Location', operation='format', with_='{Localisation gÈographique}'),
-        dict(target='EF', operation='format', with_='{Total poste non dÈcomposÈ}'),
+        dict(target='Name_FR', operation='format', with_='{Nom base français}'),
+        dict(target='Location', operation='format', with_='{Localisation géographique}'),
+        dict(target='EF', operation='format', with_='{Total poste non décomposé}'),
     ],
         resources=["ademe"],
         ),
     delete_fields(
         [
-            "Identifiant de l'ÈlÈment",
+            "Identifiant de l'élément",
             "Type Ligne",
             "Nom base anglais",
-            "Nom base franÁais",
-            "Localisation gÈographique",
-            "Total poste non dÈcomposÈ",
+            "Nom base français",
+            "Localisation géographique",
+            "Total poste non décomposé",
         ],
         resources=["ademe"],
         ),
@@ -284,12 +316,6 @@ Flow(
     ),
     find_replace(
         [
-            {
-                "name": "Name_FR",
-                "patterns": [
-                    {"find": "È", "replace": "é"},
-                ],
-            },
             {
                 "name": "Name_EN",
                 "patterns": [
@@ -311,3 +337,24 @@ Flow(
     ),
     dump_to_path("data/energy"),
     ).process()
+
+package = Package("data/energy/datapackage.json")
+package.descriptor['Sources'] = [
+{
+  "title": "EEA 2017 CO2 Intensity of Electricity Generation, 28.02.2020 update",
+  "path": "https://www.eea.europa.eu/data-and-maps/data/co2-intensity-of-electricity-generation"
+},
+{
+  "title": "Swiss Federal Office for the Environment",
+  "path": "https://www.bafu.admin.ch/bafu/en/home/topics/climate/questions-answers.html"
+},
+{
+  "title": "Base carbone® v.19.0, 04.12.2020 update",
+  "path": "https://www.data.gouv.fr/fr/datasets/base-carbone-r-1/"
+},
+]
+package.descriptor['description'] = 'Adapted join of various European carbon intensty datasets. Check getData.py to see the transformations applied to the original datasets.'
+package.commit()
+package.save("data/energy/datapackage.json")
+
+

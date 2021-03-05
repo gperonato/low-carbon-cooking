@@ -28,7 +28,7 @@ class Recipe():
             reader = csv.DictReader(csvfile)
             for row in reader:
                 self.energy_ef.append(row)
-        with open('data/food/intake.json', "r") as f:
+        with open('data/food/intake/data.json', "r") as f:
             self.intake = json.loads(f.read())
         
         self.total_content = {}

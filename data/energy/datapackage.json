@@ -1,0 +1,65 @@
+{
+    "bytes": 2259,
+    "count_of_rows": 34,
+    "hash": "546cf5d93191cec1d40bce9d97abc2b4",
+    "profile": "data-package",
+    "resources": [
+        {
+            "bytes": 2259,
+            "dialect": {
+                "delimiter": ",",
+                "doubleQuote": true,
+                "lineTerminator": "\r\n",
+                "quoteChar": "\"",
+                "skipInitialSpace": false
+            },
+            "encoding": "utf-8",
+            "format": "csv",
+            "hash": "fd7571f1dae31119568adf5d0952c1bb",
+            "mediatype": "text/csv",
+            "name": "ademe",
+            "path": "data.csv",
+            "profile": "data-resource",
+            "schema": {
+                "fields": [
+                    {
+                        "format": "default",
+                        "name": "Location",
+                        "type": "string"
+                    },
+                    {
+                        "decimalChar": ".",
+                        "format": "default",
+                        "groupChar": "",
+                        "name": "EF",
+                        "type": "number"
+                    },
+                    {
+                        "format": "default",
+                        "name": "Name_EN",
+                        "type": "string"
+                    },
+                    {
+                        "name": "Name_Location",
+                        "type": "string"
+                    }
+                ]
+            }
+        }
+    ],
+    "Sources": [
+        {
+            "title": "EEA 2017 CO2 Intensity of Electricity Generation, 28.02.2020 update",
+            "path": "https://www.eea.europa.eu/data-and-maps/data/co2-intensity-of-electricity-generation"
+        },
+        {
+            "title": "Swiss Federal Office for the Environment",
+            "path": "https://www.bafu.admin.ch/bafu/en/home/topics/climate/questions-answers.html"
+        },
+        {
+            "title": "Base carbone\u00ae v.19.0, 04.12.2020 update",
+            "path": "https://www.data.gouv.fr/fr/datasets/base-carbone-r-1/"
+        }
+    ],
+    "description": "Adapted join of various European carbon intensty datasets. Check getData.py to see the transformations applied to the original datasets."
+}

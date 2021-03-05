@@ -33,7 +33,7 @@ function run() {
 			    complete: function(results) {
 			        energy_ef = results.data;
 
-			loadJSON('data/food/intake.json',
+			loadJSON('data/food/intake/data.json',
 				function(intake) {
 
 

@@ -1,0 +1,103 @@
+{
+    "bytes": 1114196,
+    "count_of_rows": 4958,
+    "hash": "3e231f9fff383e43759b862bd5ac4fe3",
+    "profile": "data-package",
+    "resources": [
+        {
+            "bytes": 185117,
+            "dialect": {
+                "caseSensitiveHeader": false,
+                "delimiter": ",",
+                "doubleQuote": true,
+                "header": true,
+                "lineTerminator": "\r\n",
+                "quoteChar": "\"",
+                "skipInitialSpace": false
+            },
+            "encoding": "utf-8",
+            "format": "csv",
+            "hash": "3bfa352941a76d32b33792e943012af6",
+            "name": "join",
+            "path": "data.csv",
+            "profile": "tabular-data-resource",
+            "schema": {
+                "fields": [
+                    {
+                        "format": "default",
+                        "name": "LCI Name",
+                        "type": "string"
+                    },
+                    {
+                        "format": "default",
+                        "name": "Carbon footprint (kgCO2e/kg)",
+                        "type": "string"
+                    },
+                    {
+                        "decimalChar": ".",
+                        "format": "default",
+                        "groupChar": "",
+                        "name": "Energy, Regulation EU No 1169/2011 (kcal/100g)",
+                        "type": "number"
+                    },
+                    {
+                        "decimalChar": ".",
+                        "format": "default",
+                        "groupChar": "",
+                        "name": "Protein (g/100g)",
+                        "type": "number"
+                    },
+                    {
+                        "decimalChar": ".",
+                        "format": "default",
+                        "groupChar": "",
+                        "name": "Carbohydrate (g/100g)",
+                        "type": "number"
+                    },
+                    {
+                        "decimalChar": ".",
+                        "format": "default",
+                        "groupChar": "",
+                        "name": "Fat (g/100g)",
+                        "type": "number"
+                    },
+                    {
+                        "decimalChar": ".",
+                        "format": "default",
+                        "groupChar": "",
+                        "name": "Sugars (g/100g)",
+                        "type": "number"
+                    },
+                    {
+                        "decimalChar": ".",
+                        "format": "default",
+                        "groupChar": "",
+                        "name": "Calcium (mg/100g)",
+                        "type": "number"
+                    },
+                    {
+                        "decimalChar": ".",
+                        "format": "default",
+                        "groupChar": "",
+                        "name": "Iron (mg/100g)",
+                        "type": "number"
+                    }
+                ],
+                "missingValues": [
+                    ""
+                ]
+            }
+        }
+    ],
+    "Sources": [
+        {
+            "title": "Agribalyse\u00ae v.3.0.1, 24.11.2020 update",
+            "path": "https://www.data.gouv.fr/fr/datasets/agribalyse-r-detail-par-etape-du-cycle-de-vie/"
+        },
+        {
+            "title": "Ciqual database, 07.07.2020 update",
+            "path": "https://www.data.gouv.fr/fr/datasets/table-de-composition-nutritionnelle-des-aliments-ciqual/"
+        }
+    ],
+    "description": "Adapted join of CIQUAL and Agribalyse\u00ae datasets. Check getData.py to see the transformations applied to the original datasets."
+}
