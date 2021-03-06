@@ -2,7 +2,7 @@ $(document).ready(function() {
 		    var wrapper = $(".ingredients");
 		    var x = 0;
 
-			$.get('ingredients.txt', function(txtFile){
+			$.get('lists/ingredients.txt', function(txtFile){
 			  ingredients = txtFile.split("\n");
 			  $("#ingredients").autocomplete({
 			    source: ingredients
@@ -22,7 +22,7 @@ $(document).ready(function() {
 			  }
 			});
 
-			$.get('energy.txt', function(txtFile){
+			$.get('lists/energy.txt', function(txtFile){
 			  energy = txtFile.split("\n");
 				for(var i=0; i< energy.length;i++)
 				{

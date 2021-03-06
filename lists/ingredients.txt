@@ -1,0 +1,2473 @@
+Pastis (anise-flavoured spirit)
+Clear fruit brandy or eau-de-vie
+Gin
+Liqueur
+Rum
+Whisky
+Wine, white, sweet
+Wine-based aperitif
+Vodka
+Rum-based cocktail
+Whiskey-based cocktail
+Pure alcohol
+Marsala wine
+Sangria
+Kir (Cocktail of white wine with red fruit liqueur)
+Champagne kir (Cocktail of champagne with red fruit liqueur)
+Blackcurrant liqueur
+Cocktail, punch type, 16% alcohol
+Spirit made from wine, armagnac or cognac type
+Sake or rice wine
+Mixed fruits juice, pure juice, multivitamin
+Cocktail, alcohol-free (juices and syrup-based cocktail)
+Mixed fruits juice, orange based, multivitamin
+Orange juice, home-made
+Mixed fruits juice, pure juice
+Mixed fruits nectar, multivitamin
+Mixed fruits nectar
+Mixed fruits juice, reconstituted from a concentrate, multivitamin
+Apple juice, pure juice
+Smoothie
+Baby milk, first age, powder
+Baby milk, second age, powder
+Tapioca, raw
+Potato, peeled, baked
+Potato, boiled/cooked in water
+Potato crisps
+Potato, peeled, raw
+Mashed potato balls pre-fried, frozen, raw
+Potato, steamed, vacuum-packed
+Potato, sautéed/pan-fried
+Potato flakes, dehydrated, with milk or cream
+Potato puree, made from flakes, reconstituted with whole milk, with added fat
+Potato puree, with milk and butter, unsalted
+Potato puree, made from flakes, reconstituted with semi-skimmed milk and water, unsalted
+Dauphine potato, frozen, raw
+Dauphine potato, frozen, cooked
+Potato flakes, dehydrated, plain
+New potato, raw
+Potato, roasted/baked
+Potato, pre-fried into cubes, frozen, cooked
+Ware potato, boiled/cooked in water, peeled
+Early potato, boiled/cooked in water, peeled
+French fries or chips, frozen, roasted/baked
+French fries or chips, frozen, deep-fried
+Duchesse potato, frozen, cooked
+Mashed potato balls pre-fried, frozen, cooked
+Potato, sautéed/pan-fried, with goose fat
+Potato crisps, à l'ancienne (old-fashioned style)
+Potato crisps and related, reduced fat
+Rostis or Potatoes cake
+Mashed potatoes w fresh tome cheese
+Duchesse potato, frozen, raw
+Potato, pre-fried into cubes, frozen, raw
+French fries or chips, frozen, raw, intended to be roasted/baked
+French fries or chips, frozen, raw, intended to be microwaved
+French fries or chips, frozen, raw, intended to be deep-fried
+Sweet potato, raw
+Sweet potato, cooked
+Sweet potato, puree, cooked with cream
+Beer, dark
+Beer, regular (4-5° alcohol)
+Beer, strong (>8° alcohol)
+Shandy (beer + lemonade)
+Shandy, prepacked (<1° alcohol)
+Cider, dry
+Cider, sweet
+Beer, low alcohol-content (3° alcohol)
+Beer, special (5-6° alcohol)
+Beer, specialty, from abbey or regional (varying alcohol content)
+Cider
+Cider, half-dry
+Flavoured cider
+Beer, alcohol-free (<1,2° alcohol)
+Sparkling fruit wine
+Wine, white, 11°
+Wine, white, sparkling
+Wine, red, 10°
+Wine, red, 11°
+Wine, red, 12°
+Wine, rose, 11°
+Champagne
+Wine, red, 13°
+Wine, white, sparkling, flavoured
+Wine, white, dry, 11°
+Beef, rib, raw
+Beef, shoulder, raw
+Beef, rib steak, lean, grilled/pan-fried
+Beef, braised
+Beef, round, raw
+Beef, rib steak, raw
+Beef, round, cooked
+Beef, sirloin steak, roasted/baked
+Beef, sirloin steak, grilled/pan-fried
+Beef, sirloin steak, raw
+Beef, sirloin steak, red label, raw
+Beef, short ribs, raw
+Beef, short ribs, braised
+Beef, thin flank, raw
+Beef, thin flank, grilled/pan-fried
+Beef, cheek, raw
+Beef, cheek, braised or boiled
+Beef, knuckle, raw
+Beef, knuckle, boiled/cooked in water
+Beef, topside, raw
+Beef, topside, grilled/pan-fried
+Beef, topside, roasted/baked
+Beef, steak or beef steak, grilled
+Beef, steak or beef steak, raw
+Beef, bolar-blade, raw
+Beef, hanger steak, raw
+Beef, hanger steak, grilled
+Beef, rump steak, raw
+Beef, rump steak, grilled
+Beef, bolar-blade, grilled/pan-fried
+Beef, roast beef, roasted/baked
+Beef, flank steak, grilled/pan-fried
+Beef, flank steak, raw
+Beef, bolar-blade, roasted/baked
+Beef, stewing meat, cooked
+Beef, stewing meat, raw
+Beef, neck, braised
+Beef, minced steak, 5% fat, raw
+Beef, minced steak, 5% fat, cooked
+Beef, minced steak, 10% fat, raw
+Beef, minced steak, 10% fat, cooked
+Beef, minced steak, 15% fat, raw
+Beef, minced steak, 15% fat, cooked
+Beef, minced steak, 20% fat, raw
+Beef, minced steak, 20% fat, cooked
+Burger, beef based, 15% fat, raw
+Beef, chuck, raw
+Beef, chuck, braised or boiled
+Beef, oxtail, boiled/cooked in water
+Veal, chop, raw
+Veal, chop, grilled/pan-fried
+Veal, loin, sautéed/pan-fried
+Veal, loin, raw
+Veal, escalope, cooked
+Veal, escalope, raw
+Veal, tenderloin, raw
+Veal, tenderloin, grilled/pan-fried
+Veal, tenderloin, roasted
+Veal fillet, raw
+Veal fillet, roasted/baked
+Veal, minced steak, 20% fat, raw
+Veal, minced steak, 15% fat, raw
+Veal, breast, raw
+Veal, roast, raw
+Veal, roast, cooked
+Veal, shoulder, raw
+Veal, shoulder, grilled/pan-fried
+Veal, shoulder, braised/boiled
+Calf, foot, raw
+Veal, knuckle or shank, braised or boiled
+Calf, head, boiled/cooked in water
+Veal, knuckle or shank, raw
+Veal, neck, raw
+Veal, neck, braised or boiled
+Bread, French bread, baguette
+Bread, French bread (baguette or ball), with yeast
+Toasted bread, home-made
+Bread, French bread, baguette, unsalted
+Brown bread, French bread (baguette or ball), with flour type 80 or 110
+Bread, French bread, ball, 400g
+Brear (baguette or ball), made with type T55-T110 flour
+Country-style bread, French bread (baguette or ball)
+Bread, wholemeal or integral bread (made with flour type 150)
+Sandwich loaf, wholemeal
+Sandwich loaf, bran grain
+Sandwich loaf, multigrain
+Bran grain bread
+Rye bread, and wheat
+Bread, gluten free
+Bread, French bread, without salt
+Panini bread
+Pita bread
+Sandwich loaf
+Sandwich loaf, crust less, prepacked
+Brioche sandwich bread, prepacked
+Brioche or Vienna bread
+Bread, French bread, (baguette or ball), multigrain, from bakery
+English muffin, wholewheat flour, prepacked
+English muffin, prepacked
+Bagel
+Rolls for hamburger/hotdog (buns), prepacked
+Bread, home-made, with flour for home-made bread preparation
+Country-style bread, home-made (with flour for bread making machine)
+Rolls for hamburger/hotdog (buns), wholemeal, prepacked
+Rusk
+Rusk, w eggs
+Rusk, unsalted
+Rusk, multigrain
+Rusk, wholemeal or rich in fibre
+Puffed rice textured bread, wholemeal
+Puffed cereals textured bread
+Rusk, slice, wheat
+Rusk with eggs, sliced, prepacked
+Wheat swedish toast
+Swedish toast, with linseeds
+Crispbread, extruded and grilled
+Biscuit, extruded and grilled, chocolate filling
+Biscuit, extruded and grilled, fruits filling
+Wheat swedish toast, wholemeal
+Swedish toast, with fruits
+Rusk , slice, multigrain
+Croutons
+Croutons, plain, prepacked
+Grissini or bread stick
+Croissant
+Croissant, ordinary, from bakery
+Croissant, butter, from bakery
+Croissant w almonds, from bakery
+Milk roll, from bakery
+Milk roll, prepacked
+Milk roll filled with chocolate drops, prepacked
+Raisin puff pastry (Viennese pastries)
+Chocolate croissant, puff pastry, from bakery
+Chocolate croissant, prepacked
+Brioche, filled with chocolate drops
+Brioche, filled with chocolate
+Brioche, filled with fruits
+Brioche, filled with custard (Chinese brioche type), prepacked
+Brioche, prepacked
+Brioche
+Brioche, from bakery
+Christmas brioche with candied fruits, prepacked
+Brioche, pure butter
+Focaccia, filled
+Fougasse, filled
+Corn tortilla wrap, to be filled
+Savoury cake (with cheese, vegetables, meat, fish, poultry,etc.)
+Wheat tortilla wrap, to be filled
+Rillettes, pork
+Rillettes, pure pork
+Rillettes from Tours
+Rillettes from Mans
+Rillettes, pure goose
+Rillettes, duck
+Rillettes, goose
+Rillettes, poultry
+Rillette, fish
+Rillettes, salmon
+Rillettes, tuna
+Rillettes, mackerel
+Duck confit (conserved in rendered fat), meat (leg) without skin, reheated
+Preserved duck
+Duck breast fillet, smoked
+Preserved pork liver
+Preserved poultry liver
+Pâté w green pepper
+Country-style pâté or terrine
+Breton pâté
+Duck terrine
+Rabbit pâté
+Rabbit terrine
+Game pâté
+Country-style pâté with mushrooms
+Fish terrine
+Seafood terrine, with or without fish
+Taramasalata, prepacked
+Vegetable terrine or mousse
+Vegetable flan
+Pork liver pâté, superior quality
+Pork liver pâté
+Pork liver mousse, superior quality
+Pork liver mousse
+Duck mousse
+Poultry liver pâté
+Goose liver pâté
+Rolled escalope of pork with pistachios
+Pâté in crust
+Ham, in a pastry crusty
+Head-cheese pâté or brawn
+Pork snout in salad dressing sauce
+Chitterling sausage
+Chitterling sausage from Guéméné
+Chitterling sausage, pan-reheated
+Chitterling sausage from Vire
+Chitterling sausage, raw
+Chitterling sausage, sautéed/pan-fried
+Chitterling sausage from Troyes, raw
+Caen-style tripe
+Caen-style tripe, prepacked
+Provencal-type tripe (with tomato)
+Black pudding (blood sausage), refrigerated
+Black pudding (blood sausage), sautéed/pan-fried
+White pudding, truffled, raw
+Veal quenelle, in sauce
+Poultry quenelle, raw
+Poultry quenelle, in sauce
+Fish quenelle, in sauce
+Fish quenelle, raw
+Quenelle, plain, raw
+Spelt, raw
+Khorasan wheat
+Wheat, whole, raw
+Durum wheat, whole, raw
+Wheat, whole, pre-cooked, raw
+Durum wheat pre-cooked, whole grain, cooked, unsalted
+Durum wheat, pre-cooked, cooked, in a microwaveable bag
+Durum wheat pre-cooked, whole grain, cooked, to pan-fry
+Asian noodles, flavoured, cooked
+Asian noodles, plain, cooked, unsalted
+Rice, raw
+Rice, parboiled, raw
+Rice, brown, raw
+Rice, brown, cooked, unsalted
+Rice, cooked, unsalted
+Rice, parboiled, cooked, unsalted
+Wild rice, raw
+Rice, red, raw
+Rice, red, cooked, unsalted
+Wild rice, cooked, unsalted
+Basmati rice, raw
+Rice, mix of species (white, wholegrain, wild, red,etc.), raw
+Corn or maize grain, raw
+Pop-corn or oil popped maize, salted
+Pop-corn or air-popped maize, unsalted
+Pop-corn or popped maize, with caramel
+Oat, raw
+Oatmeal flakes
+Oat flakes, boiled/cooked in water
+Barley, whole, raw
+Pearled barley, raw
+Pearled barley, boiled/cooked in water, unsalted
+Millet, whole
+Millet, cooked, unsalted
+Quinoa, raw
+Quinoa, boiled/cooked in water, unsalted
+Amaranth, raw
+Sorghum, whole, raw
+Buckwheat, whole, raw
+Rye, whole, raw
+Wheat flour, type 110
+Wheat flour, type 150
+Wheat flour, type 65
+Wheat flour, type 55 (for bread)
+Wheat flour, self-raising
+Wheat flour, type 55 (for pastry)
+Wheat flour, type 80
+Spelt flour
+Maize/corn starch
+Rice flour
+Rye flour, type 170
+Rye flour, type 85
+Rye flour, type 130
+Buckwheat flour
+Maize/corn flour
+Barley flour
+Millet flour
+Chestnut flour
+Chick pea flour
+Durum wheat semolina, raw
+Mix of cereals and legumes, raw
+Polenta or Maize/corn semolina, pre-cooked, dried
+Polenta or maize semolina, cooked, unsalted
+Wheat bran
+Oat bran
+Maize/corn bran
+Rice bran
+Couscous (durum wheat semolina pre-cooked with steam), raw
+Couscous (durum wheat semolina pre-cooked with steam), cooked, unsalted
+Wheat bulgur, raw
+Wheat bulgur, cooked, unsalted
+Dried pasta, raw
+Dried pasta, cooked, unsalted
+Fresh egg pasta, raw
+Fresh egg pasta, cooked, unsalted
+Dried egg pasta, raw
+Dried egg pasta, cooked, unsalted
+Dried pasta, gluten-free, cooked, unsalted
+Asian noodles, flavoured, dehydrated
+Dried pasta, wholemeal, raw
+Dried pasta, wholemeal, cooked, unsalted
+Dried pasta, gluten-free, raw
+Rice noodle, dried
+Rice noodle, cooked, unsalted
+Squid, raw
+Squid fritter, Roman-style
+Scallop, with coral, raw
+Scallop, with coral, cooked
+Shrimp or prawn, cooked
+Oyster, raw
+Mussel, boiled/cooked in water
+Mussel, common, raw
+Shrimp or prawn, raw
+Shrimp fritters
+Norway lobster, raw
+Mediterranean mussel, raw
+Mussel, canned, drained
+Pacific oyster, raw
+European oyster, raw
+Squid, boiled/cooked in water
+Shrimp, frozen, raw
+Snail in parsley butter, cooked
+Scallop, without coral, raw
+American or Canadian sea scallop, without coral, raw
+Peru sea scallop, without coral, raw
+deep water pink shrimp, raw
+Mussels, in Catalan-style sauce or marinade (tomatoes), canned, drained
+Mussels, in a shallot and white wine broth
+Mussels, filled (fat, parsley and garlic…)
+Squid, fried or pan-fried with fat
+Garlic, fresh
+Chervil, fresh
+Chive or spring onion, fresh
+Curry, powder
+Ginger, powder
+Gelatine, dried
+Ketchup
+Nutritional yeast
+Baker's yeast, compressed
+Mustard
+Parsley, fresh
+Black pepper, powder
+Horseradish, fresh
+Salt, white, for human consumption (sea, igneous or rock), no enrichment
+Vinegar
+White pepper, powder
+Grey pepper, powder
+Mustard, with grains
+Garlic, powder, dried
+Parsley, dried
+Cinnamon, powder
+Coriander, seed
+Mint, fresh
+Basil, dried
+Basil, fresh
+Marjoram, dried
+Oregano, dried
+Rosemary, dried
+Sage, dried
+Thyme, dried
+Saffron
+Cumin, seed
+Tapenade (a puree of capers, pitted black olives, anchovy and herbs, with olive oil and lemon juice
+Celery salt
+Baker's yeast, dehydrated
+Baking powder or raising agent
+Nutmeg
+Paprika
+Tartare sauce, prepacked
+Cloves
+Bay, leaves
+Mayonnaise (70% fat and more)
+Mix of 4 spices
+Salt, white, for human consumption (sea, igneous or rock), iodine added, no other enrichment
+Provence herbs, dried
+Poppy, seed
+Savory, dried
+Caraway, seed
+Vanilla, alcoholic extract
+Fennel, seed
+Rosemary, fresh
+Sage, fresh
+Thyme, fresh
+Ginger, raw
+Cardamom, powder
+Fenugreek, seed
+Mayonnaise, reduced fat or light mayonnaise
+Pure sea salt, no enrichment
+Sea salt, grey, no enrichment
+Seaweed, agar, raw
+Spirulina, (spirulina sp.), dried
+Cayenne pepper
+Turmeric, powder
+Vinegar, cider
+Vinegar, balsamic
+Tarragon, fresh
+Dill, fresh
+Coriander, fresh
+Vanilla, aqueous extract
+Barbecue sauce, prepacked
+Bechamel sauce, prepacked
+Bearnaise sauce, prepacked
+Soy sauce, prepacked
+Hollandaise sauce, prepacked
+Tomato sauce, with onions, prepacked
+Salad dressing, (50-75% of oil), prepacked
+Armorican-style sauce, prepacked
+Harissa (hot spicy sauce), prepacked
+Tomato sauce, with meat or Bolognese sauce, prepacked
+Green pepper sauce, prepacked
+Burgundy-style sauce, prepacked
+Madeira wine sauce, prepacked
+Cream sauce with shallots, prepacked
+Carbonara sauce (cream sauce with lardoons), prepacked
+Hunter-style sauce (a garnish of mushrooms, shallots and tomatoes in white wine sauce), prepacked
+Curry sauce, prepacked
+White butter sauce, prepacked
+Bechamel sauce, home-made
+Mustard sauce prepacked
+Sauce, butter, prepacked
+Cream sauce
+Mushroom sauce, prepacked
+Cream sauce with spices
+Cream sauce with herbs
+Sweet and sour sauce, prepacked
+Red wine sauce
+Yogurt sauce
+American-style sauce, prepacked
+Aioli sauce (garlic and olive oil mayonnaise), prepacked
+Basque-style sauce or tomato sauce with sweet peppers, prepacked
+Aromatic stock cube, for fish, dehydrated
+Tomato sauce, w mushrooms, prepacked
+Tomato sauce, w olives, prepacked
+Sauce, pesto, prepacked
+Sauce, pepper, prepacked
+Salad dressing, prepacked
+Cheese sauce for risotto or pasta, prepacked
+Roquefort (blue cheese) sauce, prepacked
+Cream sauce with mushrooms, prepacked
+Nuoc mam sauce or fish sauce, prepacked
+Burger sauce, prepacked
+Salad dressing, reduced fat, prepacked
+Grand veneur sauce (a reduction of red wine with garlic, shallots and red currant jelly), prepacked
+Indian-style sauce, tandoori or garam masala type, prepacked
+Kebab sauce, prepacked
+Mayonnaise flavoured with garlic, chilli pepper and fish broth, prepacked
+Tomato sauce, w vegetables, prepacked
+Tomato sauce, w cheese, prepacked
+Sauce, pesto rosso, prepacked
+Sauce, pepper, prepacked
+Soy cream preparation
+Chocolate sauce
+Sodium bicarbonate
+Camembert cheese, from cow's milk
+Soft-ripened cheese with bloomy rind (Camembert-type cheese)
+Camembert cheese, from cow's milk, from raw milk
+Soft-ripened cheese, double cream, around 30% fat
+Soft-ripened round cheese with bloomy rind, 5 to 11% fat, Camembert-type cheese, reduced fat
+Coulommiers cheese, from cow's milk
+Soft-ripened round cheese with bloomy rind, around 11% fat, Coulommiers-type cheese, reduced fat
+Soft-ripened round cheese with bloomy rind, around 5% fat, Camembert-type cheese, reduced fat
+Brie cheese, from cow's milk
+Brie de Meaux cheese, from cow's milk
+Brie de Melun cheese, from cow's milk
+Carré de l'Est cheese, from cow's milk
+Chaource cheese, from cow's milk
+Maroilles laitier cheese
+Maroilles fermier cheese
+Neufchâtel cheese, from cow's milk
+Soft-ripened cheese, triple cream, around 40% fat
+Soft-ripened washed-rind cheese, reduced fat, around 13% fat
+Maroilles cheese, from cow's milk
+Livarot cheese, from cow's milk
+Époisses cheese, from cow's milk
+Munster cheese, from cow's milk
+Langres cheese, from cow's milk
+Pont l'Evêque cheese, from cow's milk
+Reblochon cheese, from cow's milk
+Soft-ripened washed-rind cheese, from pasteurised milk (Vieux pané-type cheese)
+Saint-Marcellin cheese, from cow's milk
+Soft -ripened washed, bloomy and coloured rind cheese
+Vacherin cheese or Mont d'or cheese, from cow's milk
+Saint-Felicien cheese, from cow's milk
+Feta-type cheese from cow's milk
+Feta cheese, from ewe's milk
+Feta-type cheese from cow's milk, in oil and spices
+Beaufort cheese, from cow's milk
+Comté cheese, from cow's milk
+Gruyere cheese, France, Protected Geographical Indication, from cow's milk
+Gruyere cheese, from cow's milk
+Emmental cheese, from cow's milk
+Hard cheese, emmental-type cheese, reduced fat
+Emmental cheese, grated, from cow's milk
+Ossau-Iraty cheese, from ewe's milk
+Parmesan cheese, from cow's milk
+Fontina cheese, from cow's milk
+Grana Padano cheese, from cow's milk
+Processed cheese, in slices
+Processed cheese, around 20% fat, in wedges or cubes
+Uncured soft cheese, spreadable, around 25% fat, in a tub
+Processed cheese, double cream, around 31% fat
+Uncured soft cheese, spreadable, around 20% fat, in a tub
+Processed cheese with fresh cream cheese and walnuts
+Processed cheese snack w breadsticks, for children
+Roquefort cheese, from ewe's milk
+Fourme de Montbrison cheese
+Blue cheese, from cow's milk
+Auvergne blue cheese, from cow's milk
+Fourme d'Ambert cheese, from cow's milk
+Causses blue cheese, from cow's milk
+Gorgonzola cheese, from cow's milk
+Gex blue cheese, or Jura blue cheese or Septmoncel blue cheese, from cow's milk
+Bresse blue cheese, from cow's milk
+Bresse blue cheese, from cow's milk, reduced fat, around 15% fat
+Firm cheese, around 14% fat, Maasdam-type cheese, reduced fat
+Provolone cheese, from cow's milk
+Cantal cheese, half matured, from cow's milk
+Cantal, Salers or Laguiole cheese, from cow's milk
+Salers cheese, from cow's milk
+Cheddar cheese, from cow's milk
+Edam cheese, from cow's milk
+Mimolette cheese, young, from cow's milk
+Gouda cheese, from cow's milk
+Mimolette cheese, half-old, from cow's milk
+Mimolette cheese, old, from cow's milk
+Mimolette cheese, from cow's milk
+Firm cheese, around 27% fat, Maasdam-type cheese
+Mimolette cheese, extra old, from cow's milk
+Morbier cheese, from cow's milk
+Pyrénées cheese, from ewe's milk
+Saint-Nectaire cheese, from cow's milk, milks collected in many farms
+Raclette cheese, from cow's milk
+Saint-Nectaire cheese, from cow's milk, milk collected in an unique farm
+Saint-Nectaire cheese, from cow's milk
+Saint-Paulin cheese, from cow's milk (semi-hard cheese)
+Tomme cheese, from cow's milk
+Tomme cheese, from mountain or Savoy
+Tomme cheese, reduced fat, around 13% fat
+Asiago cheese, from cow's milk
+Corsica soft ripened cheese, from ewe's milk
+Tomme cheese (PDO) from the French Bauges munntains
+Cheese, from goat's milk, fresh, from pasteurised milk
+Cheese, from goat's milk, from raw milk
+Cheese, from goat's milk, from pasteurised milk
+Cheese, from goat's milk
+Cheese, from goat's milk, fresh, from raw milk
+Cheese, from goat's milk, fresh
+Goat cheese from raw milk
+Cheese, semi-dry, from goat's milk
+Cheese, buche, from goat's milk
+Cheese, buche, from goat's milk, light
+Soft-ripened cheese, from goat's milk, from pasteurised milk
+Cheese, dry, from goat's milk
+Soft-ripened cheese with bloomy rind, from goat's milk, Camembert-type cheese
+Soft ripened cheese with bloomy rind, from ewe's milk, Camembert-type cheese
+Semi-hard cheese, from ewe's milk
+Chabichou cheese, from goat's milk
+Pélardon cheese, from goat's milk
+Crottin cheese, from goat's milk, from raw milk
+Crottin cheese, from goat's milk
+Crottin de Chavignol cheese, from goat's milk
+Picodon cheese, from goat's milk
+Pouligny Saint-Pierre cheese, from goat's milk
+Sainte Maure cheese, from goat's milk
+Selles-sur-Cher cheese, from goat's milk
+Chevrot cheese, from goat's milk
+Rocamadour cheese, from goat's milk
+Valençay cheese, from goat's milk
+Apricot, pitted, raw
+Apricot, pitted, dried
+Pineapple, pulp, raw
+Avocado, pulp, raw
+Banana, pulp, raw
+Black currant, raw
+Cherry, pitted, raw
+Lemon, pulp, raw
+Quince, raw
+Date, pulp and peel, dried
+Fig, raw
+Fig, dried
+Strawberry in season, raw
+Raspberry, raw
+Passion fruit, pulp and pips, raw
+Pomegranate, pulp and pips, raw
+Red currant, raw
+Gooseberry, raw
+Kiwi fruit, pulp and seeds, raw
+Lychee, pulp, raw
+Mango by plane, pulp, raw
+Melon, cantaloupe (ex Cavaillon or Charentais melon), pulp, raw
+Blueberry, raw
+Blackberry, raw
+Nectarine, pulp and peel, raw
+Orange, pulp, raw
+Papaya, pulp, raw
+Watermelon, pulp, raw
+Pear, pulp and peel, raw
+Apple compote
+Apple, pulp and peel, raw
+Grapefruit, pulp, raw
+Greengage plum, raw
+Prune
+Peach, pulp and peel, raw
+Grape, white, raw
+Grape, red, raw
+Raisin
+Rhubarb, stalk, raw
+Rhubarb, stalk, cooked, with sugar
+Apple, pulp, raw
+Carambola, pulp, raw
+Prickly pear, pulp and seeds, raw
+Persimmon, pulp, raw
+Lime, pulp, raw
+Black mulberry, raw
+Tamarind, immature fruit, pulp, raw
+Clementine, pulp, raw
+Guava, pulp, raw
+Apple, Canada, pulp, raw
+Banana, pulp, dried
+Mandarin, pulp, raw
+Plum, raw
+Pear, peeled, raw
+Fruits compote, miscellaneous
+Fruits compote, miscellaneous, reduced sugar
+Morello cherry, raw
+Apple, dried
+Grape, raw
+Cranberry, raw
+Peach, dried
+Lemon zest, raw
+Elderberry, berries, raw
+Fruits compote, miscellaneous, reduced sugar, refrigerated
+Blueberry, frozen, raw
+Fruit salad, raw
+Raspberry, frozen, raw
+Olive, green, stuffed (anchovy, sweet peppers, etc…)
+Blackberry, frozen, raw
+Fruits dessert, all types (fruits dessert's sugar content is less than fruits compote but more than fruits compote reduced sugar)
+Fruits puree, without sugar added
+Baby food jar with banana
+Baby food jar without banana
+Fruit-based beverage for baby from 4/6 months
+Dairy cereal-based beverage with vegetables for baby's dinner from 4/6 months
+Dairy cereal-based beverage with fruits for baby's snack from 4/6 months
+Dairy cereal-based beverage for baby's breakfast from 4/6 months
+Dairy dessert for baby, custard type
+Dairy dessert for baby, with rice or semolina
+Dairy dessert for baby, plain with sugar or with fruits
+Instant cereal (powder to be reconstituted) for baby from 4/6 months
+Instant cereal (powder to be reconstituted) for baby from 6 months
+Dairy cereal-based beverage for baby's breakfast from 8/9 months
+Dairy cereal-based beverage for baby's breakfast from 12 months
+Dairy cereal-based beverage for baby's breakfast
+Apple, pulp, roasted/baked
+Apples, raw, without skin, cooked, boiled/cooked in water
+Grapefruit, yellow, pulp, raw
+Grapefruit, red or pink, pulp, raw
+Kumquat, without pips, raw
+Pummelo, pulp, raw
+Apple, var. Golden, pulp and skin, raw
+Fruit cocktail or salad, canned in syrup, drained
+Fruit cocktail or salad, canned in syrup, not drained
+Fruit cocktail or salad, canned in light syrup, drained
+Fruit cocktail or salad, canned in light syrup, not drained
+Apricot, canned in light syrup, drained
+Apricot, canned in light syrup, not drained
+Apricot, in syrup, canned, drained
+Apricot, in syrup, canned, not drained
+Pineapple, in pineapple juice and syrup, canned, drained
+Pineapple, in pineapple juice and syrup, canned, not drained
+Pineapple, in light syrup, canned, drained
+Pineapple, in light syrup, canned, not drained
+Peach, canned in light syrup, drained
+Peach, canned in light syrup, not drained
+Pear, canned in light syrup, not drained
+Melon, honeydew, pulp, raw
+Red berries (raspberries, strawberries, red currants, black currants) , raw
+Almond, (with peel)
+Peanut
+Peanut, grilled, salted
+Hazelnut
+Walnut, dried, husked
+Coconut, ripe kernel, fresh
+Coconut, kernel, dried
+Brazil nut
+Pistachio nut, grilled, salted
+Sesame seed
+Sunflower seed
+Chestnut cream
+Coconut, immature kernel, fresh
+Chestnut cream, vanilla flavoured, canned
+Mix of salted grains/nuts and raisins
+Cashew nut, grilled, salted
+Chestnut, boiled/cooked in water
+Chestnut, grilled
+Walnut, fresh
+Chestnut, raw
+Pine nuts
+Pecan nut
+Macadamia nut
+Cucurbitacea, seed
+Alfalfa seeds, sprouted, raw
+Alphalfa seeds, raw
+Hazelnut, grilled
+Flaxseed
+Sesame seed, husked
+Peanut, grilled
+Sesame seed, grilled, husked
+Chestnut, canned
+Almond, peeled, unpeeled or blanched
+Almond, grilled, salted
+Macadamia nut, grilled, salted
+Pistachio nut, grilled
+Sunflower seed, grilled, salted
+Pecan nut, salted
+Seeds, chia, dried
+Mix of unsalted grains/nuts and dried fruit
+Mix of unsalted grains/nuts and raisins
+Hazelnut, grilled, salted
+Flaxseed, brown
+Almond paste or marzipan, prepacked
+Peanut butter or peanut paste
+Tahini (sesame paste)
+Cocoa butter
+Solid vegetable fat (margarine type), for frying
+Frying oil
+Palm oil
+Palm oil, refined
+Butter, 82% fat, unsalted
+Butter oil or concentrated butter
+Butter, 80% fat, lightly salted
+Butter, 80% fat, salted
+Butter, 82% fat, unsalted, easy-to-spread
+Butter, 60-62% fat, light, unsalted
+Butter, 60-62% fat, light, lightly salted
+Butter, light, 39-41% fat, unsalted
+Lard or pork fat
+Pork fat, raw
+Chicken fat
+Duck fat
+Goose fat
+Turkey fat
+Vegetable fat (like margarine), 80% fat, salted
+Vegetable fat (margarine type), 80% fat, unsalted
+Vegetable fat (margarine type), 70% fat, unsalted
+Vegetable fat (margarine type), 60% fat, unsalted, sunflowerseed
+Dairy fat 25% fat, light, spreadable, unsalted
+Dairy fat 20% fat, light, spreadable, unsalted
+Vegetable fat (margarine type), spreadable, 30-40% fat, light, unsalted
+Vegetable fat (margarine type), spreadable, 30-40% fat, light, lightly salted
+Vegetable fat (margarine type), spreadable, 30-40% fat, light, unsalted, with plant sterols esters
+Vegetable fat (margarine type), spreadable, 30-40% fat, light, unsalted, rich in omega 3
+Vegetable fat (margarine type), spreadable, 50-63% fat, light, unsalted, rich in omega 3
+Vegetable fat (margarine type), 50-63% fat, light, lightly salted
+Vegetable fat (margarine type), spreadable, 50-63% fat, light, unsalted, with plant sterols esters
+Vegetable fat (margarine type), spreadable, 50-63% fat, light, lightly salted, rich in omega 3
+Vegetable fat (margarine type), spreadable, 50-63% fat, light, unsalted
+Vegetable fat (margarine type), spreadable, 30-40% fat, light, lightly salted, with plant sterols esters
+Blended fat (vegetable and animal origins), 50-63% fat
+Blended fat (vegetable and animal origins), 50-63% fat, lightly salted
+Blended fat (vegetable and animal origins), spreadable, 30-40% fat
+Blended fat (vegetable and animal origins), spreadable, 30-40% fat, lightly salted
+Peanut oil
+Rapeseed oil
+Cottonseed oil
+Linseed oil
+Maize/corn oil
+Hazelnut oil
+Olive oil, extra virgin
+Grapeseed oil
+Sesame oil
+Soy oil
+Sunflower oil
+Cod liver oil
+Sardine oil
+Salmon oil
+Herring oil
+Combined oil (blended vegetable oils)
+Combined oil (mix of olive oil and seeds oil)
+Coffee, ground
+Not instant coffee, without sugar, ready-to-drink
+Coffee, powder, instant
+Lemonade, with sugar
+Bottled water, flavoured, w sugar
+Tonic drink, without sugar, with artificial sweetener(s)
+Tonic drink, with sugar and artificial sweetener(s)
+Still soft drink with tea extract, with sugar and artificial sweetener(s)
+Lemonade, with sugar and artificial sweetener(s)
+Syrup, with sugar (to be diluted)
+Cola, with sugar
+Fruit soft drink, carbonated (10-50% of fruit juice), with sugar
+Tea, brewed, without sugar
+Fruit soft drink, still (less than 10% of fruit juice), without sugar and with artificial sweetener(s)
+Infusion, brewed, without sugar
+Fruit soft drink, still (less than 10% of fruit juice), with sugar
+Soft drink, carbonated, without fruit juice, with sugar
+Bottled water, flavoured, without sugar and artificial sweeteners
+Bottled water, flavoured, without sugar and with artificial sweeteners
+Soft drink, carbonated, without fruit juice, reduced sugar
+Fruit soft drink, carbonated (less than 10% of fruit juice), with sugar and artificial sweetener(s)
+Lemonade, without sugar, with artificial sweetener(s)
+Cola, with sugar and artificial sweetener(s)
+Lemonade with a flavoured syrup
+Coconut milk or coconut cream
+Fruit soft drink, carbonated (less than 10% of fruit juice), with sugar
+Syrup (mint, strawberries flavouredetc.), with sugar diluted in water
+Cola, without sugar and with artificial sweetener(s)
+Still soft drink with tea extract, flavoured, without sugar and with artificial sweeteners
+Cola, with sugar and without caffeine
+Cola, without sugar, with artificial sweetener(s) and with caffeine
+Decaffeinated coffee, powder, instant
+Decaffeinated not instant coffee, without sugar, ready-to-drink
+Espresso coffee, not instant coffee, without sugar, ready-to-drink
+Decaffeinated instant coffee, without sugar, ready-to-drink
+Instant coffee, without sugar, ready-to-drink
+Still soft drink with tea extract, flavoured, with sugar
+Soft drink, carbonated, without fruit juice, with sugar and artificial sweetener(s)
+Cocoa powder, without sugar, powder, instant
+Cocoa or chocolate powder, for beverages, with sugar
+Instant cocoa or chocolate beverage, with sugar, ready-to-drink (reconstituted with standard semi-skimmed milk)
+Instant cocoa or chocolate beverage, with sugar, fortified with vitamins and chemical elements, ready-to-drink (reconstituted with standard semi-skimm
+Almond drink
+Mix of chicory and coffee, powder, instant
+Coffee with milk or white coffee or cappuccino, instant coffee or not, without sugar, ready-to-drink
+Chicory, powder, instant
+Mix of chicory and coffee, instant, without sugar, ready-to-drink (reconstituted with standard semi-skimmed milk)
+Black tea, brewed, without sugar
+Green tea, brewed, without sugar
+Oolong tea, brewed, without sugar
+Coffee with milk or Cappuccino, powder, instant
+Instant chicory, without sugar and artificial sweeteners, ready-to-drink (reconstituted with standard semi-skimmed milk)
+Mix of chicory and coffee, instant, without sugar, ready-to-drink (reconstituted with water)
+Coffee with milk or Cappuccino with chocolate, powder, instant
+Cocoa or chocolate powder, for beverages, with sugar, fortified with vitamins and chemical elements
+Cocoa or chocolate powder, for beverages, with sugar, fortified with vitamins
+Lemon or lime base, for beverage, without sugar (to be diluted)
+Fruit soft drink, still (10-50% of fruit juice), reduced sugar
+Fruit soft drink, still (fruit juice content unspecified), with sugar
+Fruit soft drink, still (10-50% of fruit juice), with sugar
+Fruit soft drink, carbonated (less than 10% of fruit juice), without sugar and with artificial sweetener(s)
+Fruit juice with milk
+Tonic drink, with sugar
+Fruit soft drink, carbonated (less than 10% of fruit juice), without sugar and artificial sweetener(s)
+Energy drink, with sugar
+Energy drink, without sugar and with artificial sweetener(s)
+Water, bottled
+Soy drink, plain
+Soy drink, plain, fortified with calcium
+Soy drink, flavoured, with sugar
+Soy drink, flavoured, enriched in calcium, w sugar or fruit concentrate
+Rice-based drink, plain
+Oat-based drink, plain
+Baby milk, growing up milk, ready to feed
+Baby milk, first milk, ready to feed
+Baby milk, follow on milk, ready to feed
+Milk, powder, whole
+Milk, whole, UHT
+Milk, whole, pasteurised
+Condensed milk, without sugar, whole
+Condensed milk, with sugar, whole
+Milk, semi-skimmed, UHT
+Milk, semi-skimmed, pasteurised
+Milk, powder, semi-skimmed
+Milk, semi-skimmed, vitamin fortified, UHT
+Milk, skimmed, UHT
+Milk, skimmed, pasteurised
+Milk, powder, skimmed
+Milk, semi-skimmed, reduced lactose
+Chocolate flavoured milk, with sugar, partially skimmed, fortified with vitamins and chemicals elements
+Strawberry flavoured milk, with sugar, partially skimmed, fortified with vitamins D
+Goat milk, whole, UHT
+Goat milk, half skimmed, UHT pasteurized
+Goat milk, whole, raw
+Sheep milk, whole
+Thick cream 30% fat, refrigerated
+Liquid cream 30% fat, UHT
+Whipped cream or Chantilly cream, under pressure, UHT
+Liquid cream, light, 15-20% fat, UHT
+Thick cream, light, 15-20% fat, refrigerated
+cream, light, 4 to 8% fat, liquid or thick
+Dairy drink or fermented milk or yogurt, flavoured, with sugar
+Uncured soft cheese, spreadable, around 30-40% fat, flavoured (ex : garlic and herbs)
+Dairy drink or fermented milk or yogurt, with fruits, with sugar
+Dairy drink or fermented milk or yogurt, plain, with sugar
+Dairy drink or fermented milk or yogurt, plain, with sugar, with L Casei
+Fermented milk or dairy specialty, yogurt type, flavoured, with sugar, with bifidus
+Fermented milk or dairy specialty, yogurt type, with fruits, with sugar, with bifidus
+Fermented milk or dairy specialty, yogurt type, plain, with bifidus
+Yogurt, Greek-style, ewe's milk
+Yogurt, Greek-style, on a bed of fruits
+Yogurt, goat's milk, plain, around 5% fat
+Yogurt, fermented milk or dairy specialty, with cereals, fat free
+Yogurt, fermented milk or dairy specialty, flavoured, with sweetener, fat free
+Yogurt, fermented milk or dairy specialty, flavoured, with sugar
+Yogurt, fermented milk or dairy specialty, flavoured, w sugar, with cream
+Yogurt, fermented milk or dairy specialty, w cereals
+Yogurt, fermented milk or dairy specialty, with chocolate shavings, with cream, with sugar
+Yogurt, fermented milk or dairy specialty, with fruits, with sweetener, fat free
+Yogurt, fermented milk or dairy specialty, with fruits, with sweetener, fat free, fortified with vitamin D
+Yogurt, fermented milk or dairy specialty, w fruits, with sugar
+Yogurt, fermented milk or dairy specialty, w fruits, with sugar, with cream
+Mozzarella cheese, from cow's milk
+Yogurt, fermented milk or dairy specialty, with fruits, with sugar, fortified with vitamin D
+Yogurt, fermented milk or dairy specialty, plain
+Yogurt, fermented milk or dairy specialty, plain, fat free
+Yogurt, fermented milk or dairy specialty, plain, w cream
+Yogurt, fermented milk or dairy specialty, plain, w sugar
+Drained soft fresh cheese, around 6% fat
+Fresh cream cheese, plain, fat free
+Fresh cream cheese, plain, around 3% fat
+Fresh cream cheese, plain, creamy, around 8% fat
+Fresh cream cheese, with fruits, creamy, with sugar, around 7% fat
+Petit-Suisse, fresh cream cheese type, with fruits, 2-3% fat
+Petit-Suisse, fresh cream cheese type, with fruits, 2-3% fat, fortified with calcium and vitamin D
+Petit-Suisse, fresh cream cheese type, plain, fat free
+Petit-Suisse, fresh cream cheese type, plain, around 4% fat
+Petit-Suisse like fresh cream cheese, plain, around 9% fat
+Petit-Suisse, fresh cream cheese type, fruits flavoured, 2-3% fat, fortified with calcium and vitamin D
+Custard dessert, reduced fat, refrigerated
+Flan with eggs, refrigerated
+Renneted milk, flavoured, refrigerated
+Milk jelly, flavoured, covered with caramel, refrigerated
+Milk jelly, flavoured, refrigerated
+Custard topped with whipped cream (chocolate, coffee, caramel or vanilla custard), refrigerated
+Milk jelly, flavoured, reduced fat and sugar, refrigerated
+Panna cotta, refrigerated
+Cheesecake, refrigerated
+Soy dessert, w fruits, refrigerated
+Soy dessert, plain, refrigerated
+Tiramisu, refrigerated
+Fermented milk drink, plain, skimmed milk
+Fermented milk drink, plain, whole milk
+Chestnut mousse, refrigerated
+Yogurt, Greek-style, plain
+Artichoke, globe, cooked
+Asparagus, boiled/cooked in water
+Eggplant, cooked
+Beetroot, cooked
+Swiss chard, raw
+Swiss chard, cooked
+Broccoli, cooked
+Carrot, canned, drained
+Carrot, cooked
+Carrot, raw
+Curly endive, raw
+Brussels sprout, cooked
+Red cabbage, raw
+Green cabbage, boiled/cooked in water
+Cauliflower, raw
+Cauliflower, cooked
+Palm heart, canned, drained
+Cucumber, pulp and peel, raw
+Courgette or zucchini, pulp and peel, raw
+Courgette or zucchini, pulp and peel, cooked
+Watercress, raw
+Celery stalk, raw
+Celery stalk, cooked
+Celeriac, cooked
+Chicory, raw
+Spinach, cooked
+Fennel, raw
+Mung bean, sprouted or soy spouts, canned, drained
+French bean, cooked
+Lettuce, raw
+Turnip, cooked
+Onion, raw
+Onion, cooked
+Garden peas, canned, drained
+Garden peas, cooked
+Dandelion, raw
+Leek, raw
+Leek, cooked
+Sweet pepper, green, yellow or red, raw
+Pumpkin, canned, drained
+Pumpkin, raw
+Radish, raw
+Salsify, cooked
+Tomato in season, raw
+Tomato, peeled, canned, drained
+Sweet corn, on the cob, cooked
+Jerusalem artichoke, cooked
+Diced mixed vegetables, canned, drained
+Artichoke, globe, raw
+Eggplant, raw
+Cardoon, raw
+Celeriac, raw
+Broccoli, raw
+Brussels sprout, raw
+Spinach, raw
+Spinach, canned, drained
+French bean by plane, raw
+French bean, canned, drained
+Butter bean or yellow bean, canned, drained
+Turnip, peeled, raw
+Turnip cabbage, raw
+Sweet corn, canned, drained
+Artichoke, canned, drained
+Tomato paste, concentrated, canned
+Green cabbage, raw
+French bean, frozen, raw
+French bean, frozen, cooked
+Garden peas, raw
+Asparagus, peeled, raw
+Asparagus, canned, drained
+Brussels sprout, canned, drained
+Celery stalk, canned, drained
+Salsify, canned, drained
+Cauliflower, frozen, raw
+Spinach, frozen, raw
+Garden peas, frozen, raw
+Sweet pepper, green, raw
+Sweet pepper, green, cooked
+Sweet pepper, red, raw
+Sweet pepper, red, cooked
+Radish, black, raw
+Escaroles
+Beetroot, raw
+Garden peas and carrots, canned, drained
+Kohlrabi, boiled/cooked in water
+Red cabbage, boiled/cooked in water
+Pumpkin, cooked
+Shallot, raw
+Lamb's lettuce, raw
+Mixed vegetables, frozen, raw
+Morel, raw
+Sweet corn, on the cob, frozen, raw
+Sorrel, raw
+White cabbage, raw
+Fennel, boiled/cooked in water
+Tomato, green, raw
+Spinach, frozen, cooked
+Cauliflower, frozen, cooked
+Garden peas, frozen, cooked
+Lima bean, raw
+Pumpkin (cucurbita moschata), pulp, raw
+Red kuri squash, pulp, raw
+Parsnip, cooked
+Sweet green hokkaido squash, pulp, raw
+Leeks fondue or slow-simmered leeks
+Squash, melonnette jaspée from Vendée, pulp, raw
+Squash, butternut, pulp, raw
+Squash, all types, raw
+Squash, spaghetti, pulp, cooked
+Squash, spaghetti, pulp, raw
+Chili pepper, raw
+Artichoke, heart, canned, drained
+Artichoke base, canned, drained
+New Zealand spinach, cooked
+Red endive, raw
+Green endive, raw
+Rutabaga or Swede, cooked
+Pumpkin, pulp, raw
+Chinese cabbage (nappa cabbage or bok choy), raw
+Sweet pepper, yellow, raw
+Tomato pulp, canned
+Tomato puree, canned
+Cos or romaine lettuce, raw
+Tomato, cherry, raw
+Snow pea, raw
+Onion, dried
+Parsnip, raw
+Mung bean, sprouted or soy spouts, raw
+Bamboo shoots, canned, drained
+Tomato, dried
+Haricot beans with tomato sauce, canned
+Butter bean or yellow bean, raw
+Jerusalem artichoke, raw
+Salsify, black, raw
+Bamboo shoots, raw
+Garden cress, raw
+Iceberg lettuce, raw
+Rutabaga or Swede, raw
+Butter bean or yellow bean, frozen, raw
+Broccoli, frozen, raw
+Broccoli, frozen, cooked
+Brussels sprout, frozen, raw
+Brussels sprout, frozen, cooked
+Carrot, frozen, raw
+Carrot, frozen, cooked
+Cucumber, pulp, raw
+Garden peas and carrots, frozen, raw
+Garden peas and carrots, frozen, cooked
+Snow pea, boiled/cooked in water
+Roman rocket, raw
+Curly kale, raw
+Curly kale, cooked
+Chinese cabbage (nappa cabbage or bok choy), cooked
+Courgette or zucchini, pulp and peel, frozen, raw
+Chinese or Japanese artichokes, frozen, raw
+Artichoke base, frozen, raw
+Sweet corn, frozen, raw
+Turnip, frozen, raw
+Onion, frozen, raw
+Leek, frozen, raw
+Salsify, frozen, raw
+Piperade, Basque-style (fondue of sweet peppers and tomatoes flavoured with onions and garlics)
+Cardoon, cooked
+Tomato, pulp and peel, boiled/cooked in water
+Snow pea, cooked
+Baby food jar with vegetables, from 4-6 months
+Baby food jar with vegetables and starch, from 4-6 months
+Vegetable dish for baby, with starch, from 6-8 months
+Vegetable dish for baby, with milk/cream and starch, from 6-8 months
+Vegetable dish for baby, with milk/cream and starch, from 8-12 months
+Vegetable dish for baby, with milk/cream and starch, from 12 months
+Soup for baby, with vegetables and potatoes
+Soup for baby, with vegetables, cereals and milk
+Vegetable dish for baby, with milk/cream and starch, from 18 months
+Shallot, cooked
+Tomato, dried, in oil
+French bean, puree
+Vegetables (3-4 types), mashed
+Broccoli, puree
+Tomato coulis, canned (tomato puree semi-reduced 11%)
+Carrots, puree
+Vegetables pan-fried without mushrooms, frozen, raw
+Mixed vegetables for soups, frozen, raw
+Courgettes, puree
+Thinly-shredded or diced vegetables, frozen, raw
+Mixed vegetables for ratatouille, frozen
+Spring vegetables, frozen, raw (French beans, carrots, potatoes, green peas, onions)
+Tomato paste, double concentrate, canned
+Flat bean, raw
+Spinach, young leaves, raw
+Mixed diced vegetables, frozen
+Mesclun or salads, mix of baby leaves
+Vegetables pan-fried or stir-fried, Asian-style, frozen, raw
+Grilled vegetables pan-fried, Mediterranean-style, frozen, raw
+Sweet pepper, red, canned, drained
+Celeriac, puree
+Asparagus, green, raw
+Romanesco cauliflower or romanesco broccoli, raw
+Asparagus, white or purple, peeled, raw
+Glasswort (Salicornia sp.), fresh
+Green peas, puree
+Spinach, puree
+Tomato, roasted/baked, with skin
+Mixed vegetables for couscous, frozen, raw
+Mixed vegetables for couscous, cooked
+Vegetables pan-fried with mushrooms (country-style), frozen
+Broad bean, cooked
+Haricot bean, dry
+Haricot bean, cooked
+Red kidney bean, cooked
+Lentil, dried
+Lentil, cooked
+Split pea, cooked
+Chick pea, cooked
+Flageolet bean, canned, drained
+Lentil, seasoned, canned, drained
+Haricot bean, canned, drained
+Flageolet bean, cooked
+Split pea, dried
+Chick pea, dried
+Broad bean, to shell, fresh
+Broad bean, dried
+Lentils, sprouted
+Red kidney bean, canned, drained
+Red kidney bean, dried
+Beans, mung, mature, seeds, dry
+Mung bean, cooked
+Chick pea, canned, drained
+lupin grain, raw
+Lentil, pink or red, dried
+Broad bean, fresh, frozen
+flageolet bean, frozen
+Flageolet bean, green, dried
+Flageolet bean, green, cooked
+Broad bean, peeled, frozen, raw
+Broad bean, without peal, frozen, water boiled
+Broad bean, frozen, water boiled
+Peanut, boiled/cooked in water, w salt
+Lentil, green, dried
+Lentil, blond, dried
+Green lentil, cooked
+Lentil, blond, cooked
+Lentil, pink or red, cooked
+Soya flour
+Soybean, whole grain
+Tofu, plain
+Soy dessert, flavoured, refrigerated
+Miso
+Tempeh
+Syrup for canned fruits in syrup
+Light syrup for canned fruits in syrup
+Wakame (Undaria pinnatifida), dried or dehydrated
+Sea lettuce (ulva sp.), dried or dehydrated)
+Sea belt (Saccharina latissima), dried or dehydrated
+Laver (Porphyra sp.), dried or dehydrated
+Dulse (Palmaria palmata), dried or dehydrated
+Kombu or Japanese kelp (Laminaria japonica), dried or dehydrated
+Tangle (Laminaria digitata), dried or dehydrated
+Sea thong (Himanthalia elongata), dried or dehydrated
+Gracilaria seaweeds (Gracilaria verrucosa), dried or dehydrated
+Toothed wrack or bladder wrack (Fucus serratus et vesiculosus), dried or dehydrated
+Sea lettuce (Enteromorpha sp.), dried or dehydrated
+Carragheen mosses (Chondrus crispus), dried or dehydrated
+North Atlantic rockweed (Ascophyllum nodosum), dried or dehydrated
+Atlantic wakame (Alaria esculenta), dried or dehydrated
+Mutton, meat, raw
+Mutton, shoulder, raw
+Sheep, foot, raw
+Sheep, head, raw
+Mutton, leg, raw
+Lamb, cutlet, raw
+Lamb cutlet, grilled
+Lamb, leg, raw
+Lamb, leg, roasted/baked
+Lamb, shoulder, raw
+Lamb, shoulder, lean, raw
+Lamb, shoulder, roasted/baked
+Lamb, shoulder, lean, roasted/baked
+Lamb, neck, braised or boiled
+Lamb, chop fillet, grilled/pan-fried
+Lamb, rib chop, grilled/pan-fried
+Lamb, saddle, lean, roasted/baked
+Lamb, neck, raw
+Lamb, saddle, raw
+Lamb, chop fillet, raw
+Lamb, rib chop, raw
+Lamb, leg, grilled/pan-fried
+Lamb, leg, braised
+Lamb, saddle, grilled/pan-fried
+Young goat, raw
+Young goat, cooked
+Egg, raw
+Egg white, raw
+Egg yolk, raw
+Egg yolk, powder
+Egg white, powder
+Egg white, cooked
+Egg yolk, cooked
+Egg, hard-boiled
+Egg, poached
+Egg, powder
+Egg, soft-boiled
+Duck egg, raw
+Goose egg, raw
+Turkey egg, raw
+Egg, scrambled, with added fat
+Egg, fried without added fat
+Omelette, with cheese
+Omelette, with lardoons
+Omelette, with mushrooms
+Omelette, with herbs
+Spanish-style tortilla with onions (omelette with potatoes and onions)
+Chou pastry with praline flavoured creme
+Sponge cake w chocolate w or wo cherry
+Sponge cake w fruit mousse
+Dessert, Opera cake type
+Sponge sandwich cake filled and topped with strawberries or raspberries
+Rum baba, prepacked
+Canelé cake
+Macaron filled with jam or cream
+Macaroon
+Christmas log cake
+Brownie (chocolate cake)
+Rock-shaped coconut cake
+Savoy-style sponge cake
+Pound cake, prepacked
+Lemon cake, all types
+Breton pudding cake with prunes
+Buttered and caramelized milk bread cake
+Gingerbread
+Baklava (oriental pastry with almonds and syrup)
+Gazelle horn (oriental pastry with almonds and syrup)
+Thin-crust pizza shell, raw
+Pizza pastry base
+Short crust pastry, raw
+Pastry, short crust, baked
+Short crust pastry, pure butter, raw
+Short crust pastry, pure butter, frozen, raw
+Puff pastry, raw
+Puff pastry, frozen, raw
+Puff pastry, cooked
+Puff pastry, pure butter, raw
+Puff pastry, pure butter, frozen, raw
+Puff pastry, pure butter, cooked
+Shortbread dough, raw
+Shortbread dough, cooked
+Shortbread dough, pure butter, raw
+Phyllo or filo dough, raw
+Shortbread dough, pure butter, frozen, raw
+Shortbread dough, pure butter, cooked
+Pastry cream puff
+Chou pastry filled with whipped cream
+Chou pastry filled with custard
+Chou pastry, sugar coated
+Profiteroles (chou pastry), with vanilla ice cream and chocolate sauce
+Profiteroles (chou pastry), with custard and chocolate sauce, refrigerated
+Eclair
+Fruit pie with confectioner's custard
+Apple turnover
+Apple pie with custard (flour, eggs, cream, sugar, apple alcohol)
+Lemon tart
+Apple tart
+Strawberries tart
+Apple crumble
+Apricots tart
+Red berries tart
+Tatin tart (caramelized upside-down apple tart)
+Chocolate tart from bakery
+Fruit tart
+Flan tart with eggs
+Fruit charlotte
+Semolina pudding, with raisins and caramel sauce, refrigerated
+Semolina pudding, canned
+Rice pudding w caramel sauce, refrigerated
+Chocolate cake
+Chocolate soft cake, prepacked
+Yogurt cake
+Fresh cream cheese cake
+Soft cake, plain, sponge cake type
+Twelfth Night cake
+Twelfth Night cake (puff pastry filled with almond paste)
+Crepe, plain, prepacked, refrigerated
+Crepe, plain, prepacked, room temperature
+Buckwheat crepe, plain, prepacked
+Basque cake (shortbread), with custard
+Basque cake (shortbread), with cherries
+Blinis
+Crepe filled with sugar, prepacked
+Crepe, filled with jam, home-made
+Crepe, filled with chocolate or chocolate and hazelnut spread, home-made
+Crepe filled with chocolate, prepacked
+Crepe filled with strawberries, prepacked
+Soft waffle (Brussels-style), plain or with sugar, prepacked
+Soft waffle (Brussels-style), with chocolate, prepacked
+Wafer biscuit, crunchy (thin or dry), plain or with sugar, prepacked
+Wafer biscuit, crunchy (thin or dry), with chocolate, prepacked
+Doughnut, plain
+Doughnut filled with jam
+Doughnut filled with fruits, prepacked
+Doughnut filled with chocolate, prepacked
+Fruit cake
+Marble cake
+Fruit shortbread cake, prepacked
+Fruit soft cake
+Soft cake with nuts
+Soft cake filled with chocolate or chocolate drops or milk
+Sponge cake filled and covered with chocolate
+Soft cake filled with fruits, mini sponge roll type
+Muffin, with blueberry or chocolate
+Biscuit (cookie)
+Biscuit (cookie), plain
+Biscuit (cookie) vitamins content guaranteed
+Biscuit (cookie) vitamins and chemical elements content guaranteed
+Biscuit (cookie) with fruits, reduced salt
+Crispy biscuit (cookie), with chocolate, reduced fat
+Biscuit (cookie) filled with fruits, reduced fat
+Speculoos biscuit
+Biscuit (cookie), with vegetal fat
+Biscuit (cookie), assortment of miniature sweets and biscuits
+Butter biscuit (cookie)
+Biscuit (cookie), covering with a chocolate bar
+Butter biscuit (cookie), with chocolate
+Biscuit (cookie), with milk
+Crispy biscuit (cookie), without chocolate, reduced fat
+Breakfast biscuit (cookie)
+Breakfast biscuit (cookie), reduced sugar
+Biscuit (cookie), with chocolate, prepacked
+Biscuit (cookie) filled with fruit paste or fruit puree
+Biscuit (cookie), chocolate covering
+Biscuit bar filled with fruits, reduced fat
+Breakfast biscuit (cookie), with chocolate
+Breakfast biscuit (cookie) with cereals, fortified with vitamins and chemical elements
+Biscuit shortbread, with butter
+Biscuit shortbread, with butter and chocolate
+Biscuit sponge cake, with chocolate, pre-packed
+Biscuit (small tart), with chocolate, pre-packed
+Biscuit shortbread, with chocolate, pre-packed
+Biscuit shortbread, with fruits
+Biscuit (cookie) with nuts (no chocolate or lightly chocolate-flavoured)
+Florentine biscuit (chocolate sweet biscuit (cookie) with almonds)
+Pastry biscuit with meringue
+Shortbread cookie w coconut
+Shortbread pastry biscuit
+Shortbread cookie with fruit (apple, red berries, etc.)
+Shortbread cookie with cocoa or chocolate, or praline or other
+Biscuit (cookie), snack with dairy or vanilla filling
+Biscuit (cookie), snack w chocolate filling
+Biscuit (cookie), snack with fruits filling
+Wafer biscuit without filling
+Wafer biscuit, filled with chocolate, prepacked
+Wafer biscuit, filled with nuts (hazelnut, almond, praline, etc.), with chocolate or not, prepacked
+Wafer biscuit, plain or vanilla flavoured, prepacked
+Wafer biscuit, with fruits
+Wafer cookie
+Wafer cookie
+Wafer cookie, with chocolate, prepacked
+Biscuit (cookie), sponge fingers or Lady fingers
+Biscuit (cookie), cat tongue type
+Meringue
+Biscuit (cookie), thin, w almonds
+Biscuit (cookie), thin, w fruits
+Madeleine cake, pure butter
+Madeleine biscuit, with chocolate, prepacked
+Madeleine biscuit (cookie)
+Biscuit puff pastry
+Biscuit ( puff pastry), palmier, from bakery
+Peer tart with almonds
+Almond cake
+Mille-feuille pastry
+Biscuit sponge cake with fruits covering, pre-packed
+Biscuit (small tart), with fruit covering
+Soft cake, filled with fruit paste or fruit puree and sugar icing coated
+Biscuit (cookie), with chocolate drops
+Cone, wafer for ice cream
+Dried sponge cake filled with fruits and covered with chocolate
+Biscuit for baby
+Biscuit (cookie), reduced sugar
+Veal stew in white sauce
+White bean stew, canned
+Sauerkraut, with garnish
+Sauerkraut, without garnish, drained
+Shepherd's pie or cottage pie with meat
+Salt-cured pork belly with lentils
+Boiled meat with vegetables
+Ratatouille cooked
+Ravioli filled with meat, in tomato sauce, canned
+Cheese soufflé
+Spinach w cream sauce
+Couscous w mutton
+Paëlla
+Burgundy-style beef stew
+Fish or seafood au gratin, intended to be cook
+Fish and shrimp 'au gratin', previously frozen
+Couscous with meat or chicken, light
+Eggplant au gratin (oven grilled)
+Dauphiné-style creamed potatoes au gratin
+Pre-fried potatoes, pan-fried, lardoons or chicken, and other, without green vegetables
+Duck with sauce (green pepper sauce, hunter-style sauce,etc.)
+Rabbit with mustard sauce
+Beef stew with carrots
+Pork sausage stew with cabbage, carrots and potatoes
+Chicory w ham
+Salmon with sorrel
+Lasagna or cannelloni with meat (bolognese sauce)
+Bolognese-style pasta (spaghetti, tagliatelle…)
+Fish w bordelaise sauce
+Cantonese rice
+Escalope cordon bleu (topped with a ham slice and Gruyere sauce)
+White bean stew, with pork, canned
+White bean stew, with duck or goose, canned
+Cauliflower au gratin (oven grilled)
+Stuffed tomatoes
+Stuffed cabbage
+Couscous w fish
+Samosas or samoosas
+Dumplings, steamed, with shrimps, cooked
+Chili con carne
+Cockerel in red wine sauce
+Pasta au gratin (oven grilled)
+Moussaka
+Stewed lamb garnished with potatoes and other vegetables
+Veal olive or veal paupiette
+Poultry paupiette
+Couscous royal (with different meats)
+White fish with Provencal-style sauce (tomato sauce)
+Lasagna or cannelloni with vegetables
+Carbonara-style pasta (spaghetti, tagliatelle…)
+Tartiflette (cheese fondue)
+Couscous w chicken
+Lasagna or cannelloni with fish
+White fish with Florentine-style sauce (spinach sauce)
+White fish with shallots, mussels and white wine sauce
+White fish with mustard sauce
+White fish with Parisian-style sauce (mushrooms sauce)
+White fish with tarragon sauce
+White fish with sorrel sauce
+Fresh pasta, stuffed with cheese (e.g. ravioli), cooked
+Couscous with vegetables
+Fish or seafood in puff pastry
+Couscous w meat
+Fish brandade or fish shepherd's pie
+Fresh pasta, stuffed with cheese and vegetables (e.g. ravioli), cooked
+Fresh pasta, stuffed with meat (e.g. bolognese-style ravioli), raw
+Fresh pasta, stuffed with meat (e.g. bolognese-style ravioli), cooked
+Mutton tagine
+Vegetables au gratin (oven grilled)
+Beef, meat balls, cooked
+Osso buco
+Chinese specialty or dumplings
+Veal, bread escalope, cooked
+Chicken with curry and coconut milk sauce
+Fresh pasta, stuffed with cheese (e.g. ravioli), raw
+Fresh pasta, stuffed with cheese and vegetables (e.g. ravioli), raw
+Noodles with shrimps sautéed/pan-fried
+White rice, cooked, with chicken
+White rice, cooked, with vegetables and meat
+Risotto, w vegetables
+Risotto, w seafood
+Risotto, w cheeses
+Chicken, Basque style
+Ravioli filled with vegetables, in tomato sauce, canned
+Fresh pasta, stuffed with vegetables (e.g. ravioli), cooked
+Shepherd's pie with duck
+Riste (Eggplant, tomatoes, onions)
+Pasta with cheese sauce (spaghetti, tagliatelle…)
+Vegetable rosti, pre-fried, frozen
+Fresh pasta, stuffed with vegetables (e.g. ravioli), raw
+Chicken tagine
+Pork with caramel sauce
+Vegetable rosti, pre-fried, frozen, cooked
+Meat balls, beef, with tomato sauce
+Veal paupiette, cooked in oven
+Lasagna or cannelloni with vegetables, cooked
+Lasagna or cannelloni with vegetables and goat cheese, cooked
+Snails in puff pastry
+Toasted ham sandwich topped with grated cheese
+Cheese in puff pastry
+Meat in puff pastry
+Hot-dog
+Pizza, cheese and tomato or Margherita pizza
+Quiche Lorraine (eggs and lardoons quiche)
+Crepe, filled with ham
+Crepe or buckwheat crepe, filled with cheese, ham and bechamel sauce
+Crepe or buckwheat crepe, filled with mushrooms and bechamel sauce
+Vol-au-vent, with meat/poultry/quenelle
+Hamburger, from fast foods restaurant
+Cheeseburger, from fast foods restaurant
+Cheeseburger, double, from fast foods restaurant
+Fish burger, fast foods restaurant
+Vegetables tart
+Croissant filled with ham
+Spring roll
+Egg roll or Nem
+Sandwich made with pita bread, kebab and raw vegetables
+Sandwich made with French bread, kebab and raw vegetables
+Sandwich made with French bread, tuna, raw vegetables (tomato and lettuce) and mayonnaise
+Caribbean-style fish fritters, fish acras
+Sandwich made with panini bread, raw cured ham, mozzarella cheese and tomato
+Pizza, ham and cheese
+Small cheese chou-pastry puff
+Fritter, filled (filo pastry) (garnish : shrimps, vegetables, poultry, meat, etc.)
+Cheese tart
+Provencal-style tart
+Sushi or maki with seafood products
+Pizza, bolognese-style w meat
+Burritos
+Fajitas
+Pizza, chorizo or salami
+Pizza, seafood
+Pizza, salmon
+Pizza, goat cheese and lardoons
+Pizza, vegetables or pizza 4 seasons
+Sandwich made with French bread, hard-boiled egg, raw vegetables (tomato and lettuce) and butter
+Sandwich made with French bread, chicken, raw vegetables (lettuce & tomato) and mayonnaise
+Pizza, cheese and mushrooms
+Pizza, four cheeses
+Gnocchi, from semolina, cooked
+Sandwich made with French bread, ham and emmental cheese
+Sandwich made with French bread, smoked salmon and butter
+Sandwich made with French bread, tuna, sweet corn and raw vegetables
+Chicken burger , fast foods restaurant
+Vol-au-vent with fish and seafood
+Poultry on skewer
+Beef on skewer
+Mixed meat on skewer
+Ham and cheese in puffed pastry
+Savoy-style fondue (cheese wine and bread)
+Gnocchi, from potato, cooked
+Stuffed vegetables (excluding tomato)
+Poultry nuggets
+Large round sandwich with lettuce, tuna, anchovy and black olives
+Sandwich made with French bread, ham and butter
+Sandwich made with French bread, camembert cheese and butter
+Sandwich made with French bread, pâté and pickles
+Sandwich made with French bread, dry sausage and butter
+Sandwich made with French bread, ham, emmental cheese and butter
+Canapés (toasts w various toppings)
+Provencal-style tomato (breaded tomatoes stuffed with garlic and parsley)
+Topping sauce for pizza
+Pizza, onion anchovy and black olives
+Onion tart
+Sandwich made with French bread, raw vegetables and mayonnaise
+Sandwich made with French bread, turkey, raw vegetables (lettuce & tomato) and mayonnaise
+Sandwich made with French bread, egg, raw vegetables (tomato and lettuce) and mayonnaise
+Sandwich made with French bread, pork, raw vegetables (lettuce & tomato) and mayonnaise
+Sandwich made with French bread, merguez sausage, ketchup and mustard
+Sandwich made with French bread, salami and butter
+Salmon carpaccio, w marinade
+Fish on skewer
+Lamb on skewer
+Toasted ham sandwich topped with grated cheese and a fried egg
+Sandwich made with loaf bread, various filling
+Cheese and ham, breaded
+Grilled cheese & ham sandwich, prepacked
+Pizza, ham cheese and mushrooms
+Crepe or buckwheat crepe, filled with cheese and bechamel sauce
+Flamed tart (thin-crusted onion tart with cream and lardoons)
+Meat, poultry or fish fritters, home-made
+Crepe or buckwheat crepe, filled with cheese, ham, mushrooms and bechamel sauce
+Leek tart or pie
+Salmon tart
+Vegetable fritters
+Fritter, filled with eggs (filo pastry)
+Fritter, filled with beef (filo pastry)
+Fritter, filled with potatoes (filo pastry)
+Riesling wine and pork pie
+Tomato tart
+Crepe or buckwheat crepe, filled with egg, ham and cheese
+Scallops tart
+Yakitori (grilled meat on skewers, Japanese-style, with sauce)
+Pork on skewer, raw
+Pastilla, filled with chicken (pie)
+Pizza, lardoons onions and cheese
+Falafel
+Crepe or buckwheat crepe, filled with scallops
+Sandwich made with wholemeal loaf bread, ham, raw vegetables, cheese (optional)
+Sandwich made with wholemeal loaf bread, tuna, raw vegetables and mayonnaise
+Sandwich made with wholemeal loaf bread, ham and cheese
+Sandwich made with wholemeal loaf bread, chicken, raw vegetables and mayonnaise
+Crepe or buckwheat crepe, filled with mushrooms and bechamel sauce, cooked
+Egg roll or Nem, with chicken, cooked
+Egg roll or Nem, with pork, cooked
+Egg roll or Nem, with shrimp and/or crab, cooked
+Shepherd's pie with duck, cooked
+Vegetables au gratin (oven grilled) in bechamel sauce
+Celeriac in remoulade sauce, prepacked
+Prepared mixed tuna and vegetable salad, canned, drained
+Prepared mixed meat/fish canned, drained salad
+Green salad, raw, without seasoning
+Greek-style marinated mushrooms
+Prepared potatoes salad, home-made
+Tabbouleh, prepacked
+Potato salad, piémontaise-style, prepacked
+Ox muzzle in salad dressing sauce
+Prepared rice salad
+Prepared pasta salad, vegetarian
+Prepared pasta salad, with vegetable, meat or fish
+Guacamole, prepacked
+Hummus
+Maroilles cheese tart or maroilles cheese flamiche
+Crepe or buckwheat crepe, filled with fish and/or seafood
+Caesar's salad (salad, chicken, croûtons, sauce)
+Lasagna or cannelloni with goat cheese and spinach
+Soup, lentils, prepacked, to be reheated
+Soup, chicken and vegetables, prepacked, to be reheated
+Soup, mixed vegetables, prepacked, to be reheated
+Soup, fish and/or crustacean, prepacked, to be reheated
+Soup, mixed vegetables, dehydrated and reconstituted
+Soup, leek and potato, prepacked, to be reheated
+Soup, chicken and vermicelli, prepacked, to be reheated
+Soup, onions, prepacked, to be reheated
+Soup, mushrooms, prepacked, to be reheated
+Soup, carrots, prepacked, to be reheated
+Soup, tomatoes, prepacked, to be reheated
+Soup, chorba frik, w meat and frik
+Soup, minestrone, prepacked, to be reheated
+Soup, pistou (basil, garlic and olive oil), dehydrated and reconstituted
+Soup, fish and/or crustacean, dehydrated and reconstituted
+Soup, Asian-style with noodles, dehydrated and reconstituted
+Soup, Moroccan, dehydrated and reconstituted
+Soup, leek and potato, dehydrated and reconstituted
+Soup, chicken and vegetables, dehydrated and reconstituted
+Soup, asparagus, dehydrated and reconstituted
+Soup, tomatoes and vermicelli, prepacked, to be reheated
+Soup, cereals and vegetables, dehydrated and reconstituted
+Soup, tomatoes, dehydrated and reconstituted
+Soup, mushrooms, dehydrated and reconstituted
+Soup, onions, dehydrated and reconstituted
+Soup, pumpkin, prepacked, to be reheated
+Broth, stock or bouillon, vegetables, dehydrated and reconstituted
+Soup, tomato and vermicelli, dehydrated and reconstituted
+Soup, chicken and vermicelli, dehydrated and reconstituted
+Soup, pistou (basil, garlic and olive oil), prepacked, to be reheated
+Soup, pumpkin, dehydrated and reconstituted
+Soup, Asian-style with noodles, prepacked, to be reheated
+Soup, minestrone, dehydrated and reconstituted
+Soup, watercress, dehydrated and reconstituted
+Soup, watercress, prepacked, to be reheated
+Soup, vegetables with cheese, prepacked, to be reheated
+Soup, green vegetables, prepacked, to be reheated
+Soup, green vegetables, dehydrated and reconstituted
+Soup, split peas, prepacked, to be reheated
+Soup, gazpacho, cold
+Soup, asparagus, prepacked, to be reheated
+Atlantic herring, smoked, fillet
+Anchovy, fillets, rolled with capers, semi-preserved, drained
+Anchovy, fillets, in oil, semi-preserved, drained
+American bass, raw
+European plaice, breaded, fried
+European plaice, steamed
+Alaska pollock, raw
+Haddock, steamed
+Atlantic halibut, raw
+Atlantic herring, marinated, or rollmops
+Atlantic herring, raw
+Atlantic herring, fried
+Atlantic herring, smoked, plain
+Atlantic herring, grilled/pan-fried
+Saithe, cooked
+Lemon sole, breaded, fried
+Lemon sole, steamed
+Anglerfish, raw
+Mackerel, roasted/baked
+Mackerel, fried
+Whiting, fried
+Whiting, steamed
+Cod, roasted/baked
+Cod, salted, boiled/cooked in water
+Cod, steamed
+Mullet, roasted/baked
+Pilchard, in tomato sauce, canned, drained
+Fish, croquette, fritter or nuggets, fried
+Fish, breaded, frozen, raw
+Fish, breaded, fried
+Ray, roasted/baked
+Nursehound or lesser spotted dogfish, cooked
+European pilchard or sardine, in oil, canned, drained
+European pilchard or sardine, in tomato sauce, canned, drained
+Salmon, raw, farmed
+Salmon, smoked
+Salmon, steamed
+Tuna, plain, canned, drained
+European pilchard or sardine, in olive oil, canned, drained
+Tuna, roasted/baked
+Turbot, raw, wild
+Cod, raw
+European hake, raw
+Surimi, on sticks, in slices or grated, crab flavour
+Saithe, frozen, raw
+Hake, fillet, frozen, raw
+Mackerel, raw
+Ray, raw
+Tuna, raw
+Fish, in sauce, frozen
+Common dab, raw
+Common sole, raw
+Common sole, steamed
+Common sole, roasted/baked
+Common sole, boiled/cooked in water
+Common sole, fried
+Spiny scorpionfish, raw
+Yellowfin tuna, raw
+European pilchard or sardine, raw
+Skipjack tuna, raw
+Tuna, in oil, canned, drained
+European bass, raw
+Ray, cooked in an aromatic stock
+Nursehound or lesser spotted dogfish, raw
+Atlantic bass, raw
+Albacore, raw
+Albacore, steamed under pressure
+Common anchovy, raw
+Gilthead seabream, raw, wild
+Anglerfish, grilled
+Swordfish, raw
+Pond smelt, raw
+Megrim, raw
+Surmullet or red mullet, raw
+Mackerel, fillet, in tomato sauce, canned, drained
+Mackerel, smoked
+Gilthead seabream, raw, farmed
+Haddock, smoked
+Mullet, raw
+Sea trout, raw
+Swordfish, roasted/baked
+Turbot, roasted/baked
+Whiting, raw
+Mackerel, fillet, in mustard sauce, canned, drained
+Mackerel, fillet, in white wine, canned, drained
+Cod, salted, dried
+Black seabream, raw
+Bogue, raw
+Bonito, raw
+Atlantic chub mackerel, raw
+Common dentex, raw
+John dory, raw
+Red gurnard, raw
+Brown meagre, raw
+Capelin, raw
+Blackspot seabream, raw
+Surmullet or red mullet, steamed
+Salema, raw
+Horse mackerel, raw
+Salmon, canned, drained
+European hake, braised
+Haddock, raw
+Mackerel, canned in brine, drained
+Whiting, breaded
+Haddock, grilled/pan-fried
+Conger, raw
+Roundnose grenadier, raw
+Pollack, raw
+Ling, raw
+Pouting, raw
+Saithe, raw
+Lemon sole, raw
+European pilchard or sardine, grilled
+Snapper, raw
+Snapper, cooked
+Spiny scorpionfish, steamed
+Alaska pollock, smoked
+Largehead hairtail, raw
+Greenland halibut, raw
+Crevalle jack, raw
+Bigeye scad, raw
+Shark, raw
+Garfish, raw
+Freshwater bream, raw
+Arctic char, raw
+Spotted wolffish
+European sprat, raw
+Turbot, raw
+Anchovy, in salt (semi-preserved)
+Grouper, raw
+Albacore, in olive oil, canned, drained
+Yellowfin tuna, canned in brine, drained
+Mackerel, marinated
+Common anchovy, marinated
+Blue ling, raw
+Tonguesole, raw
+Turbot, raw, farmed
+European plaice, raw
+Mediterranean bass, raw, wild
+Mediterranean bass, raw, farmed
+Golden redfish, raw
+Salmon, microwaved, farmed
+Grenadier, from any fishing spot, raw
+Blue grenadier, raw
+Salmon, boiled/cooked in water, farmed
+Tub gurnard, raw
+Black seabream, roasted/baked
+Salmon, grilled/pan-fried
+Salmon, farmed, roasted/baked
+European pilchard or sardine, fillets without fishbone, in olive oil, canned, drained
+Atlantic herring, smoked, in oil
+Shallow-water Cape hake, raw
+Ling, cooked
+Horse mackerel, lean (spring, summer), raw
+Horse mackerel, oily (autumn, winter), raw
+Atlantic herring, lean, raw
+Atlantic herring, oily, raw
+Surimi, filled w cheese
+Big-scale sand smelt (whole small fish), to fry, raw
+Blue shark, fillet, without skin, raw
+Tuna, flaked, in tomato sauce, canned, drained
+Tuna, in Catalan-style or in tomato sauce, canned
+Surmullet or red mullet, fillet with skin, frozen, raw (from Thailand or Senegal)
+Tuna, flaked, in oil, canned, drained
+Greenland halibut, steamed
+Common sole, grilled
+Ham and mushroom pancake in cheese sauce
+Coleslaw, w sauce, prepacked
+Gnocchi, from potato, raw
+Gnocchi, from semolina, raw
+Croissant filled with ham and cheese
+Goat cheese and spinach tart
+Squid and spicy tomato sauce pie
+Tabbouleh with chicken, prepacked
+Pizza, tuna
+Pizza, kebab
+Pizza, chicken
+Pizza with raclette or tartiflette cheese and lardoons
+Pizza, cured ham
+Carp, raw, farmed
+Carp, roasted/baked
+European perch, roasted/baked
+Trout, roasted/baked
+Trout, steamed
+Trout, farmed, raw
+Rainbow trout, raw, farmed
+European perch, raw
+Rainbow trout, farmed, roasted/baked
+Rainbow trout, farmed, steamed
+Brown bullhead, raw
+Pangasius, filets, cooked
+Salmon trout, raw
+Nile perch, raw
+Trout, farmed, smoked
+European bass, roasted/baked
+Pork, shoulder, raw
+Pork, belly, raw
+Pork loin, raw
+Pork, knuckle or shank, raw
+Pork loin, cooked
+Pork, shoulder, cooked
+Pork, chop, raw
+Pork, chop, grilled
+Pork, round steak, raw
+Pork, round steak, cooked
+Pork, rack, raw
+Pork, rack, cooked
+Pork tenderloin, lean, raw
+Pork tenderloin roast, cooked
+Pork filet mignon, cooked
+Pork filet mignon, raw
+Pork, roast, raw
+Pork, roast, cooked
+Pork, loin, raw
+Pork, spare-ribs, raw
+Pork, spare-ribs, braised
+Pork, loin, roasted/baked
+Pork, ham escalope, raw
+Pork, ham escalope, cooked
+Pork, back fat, rindless, raw
+Pork, jowl, rindless, raw
+Pork, shoulder lower half, without rind, fat and bone, raw
+Pork, way leg, without rind, fat and bone, raw
+Pork, knuckle oh ham, without rind, fat and bone, raw
+Pork, 90/10 trimming, raw
+Pork, 80/20 trimming, raw
+Pork, shoulder upper half, without rind, fat and bone, raw
+Pork, rind, raw
+Pork, belly, flank removed, raw
+Prok, eye of shortloin, raw
+Lardoons, raw
+Pork belly, smoked, raw
+Bresaola
+Lardoons, cooked
+Pork ear sat-cured
+Pork trotters salt-cured
+Pork belly salt-cured
+Pork ham, intended to be cooked or pork ham, intended to be roast/bake
+Smoked lardoons, raw
+Smoked lardoons, cooked
+Bacon, back
+Cured ham, raw
+Cured ham, raw, smoked
+Dry-cured ham, fat and rind removed
+Cooked ham, smoked
+Cured ham, raw, smoked, reduced fat
+Bayonne Cured ham, raw, smoked
+Dry-cured ham
+Parma dry-cured ham
+Serrano dry-cured ham
+Coppa
+Pancetta, dried
+Cooked ham, superior quality
+Cooked ham, superior quality, with rind
+Cooked ham, superior quality, rind less
+Braised ham on the bone
+Cooked ham, superior quality, rind less and fatless
+Cooked ham, superior quality, reduced salt
+Cooked ham, choice
+Cooked pork shoulder, choice
+Cooked ham, choice, w rind
+Cooked ham, choice, rind less and fatless
+Round of ham, cooked
+Ham in cube, grated or minced
+Cooked pork shoulder, standard, rind less and fatless
+Cooked ham, Parisian-style, rind less and fatless
+Poultry, minced meat
+Poultry ham in cube, grated or minced
+Knuckle of ham, cooked
+Chicken cooked ham, in slices
+Turkey cooked ham, in slices
+Salt curing roast poultry, cooked
+Chipolata sausage, cooked
+Toulouse sausage, cooked
+Sausage meat, raw
+Sausage meat, pure pork, raw
+Sausage meat, pork and beef, raw
+Morteaux sausage
+Montbeliard sausage
+Morteaux sausage, boiled/cooked in water
+Toulouse sausage, raw
+Chipolata slim sausage, raw
+Swiss sausage, intended to be cook
+Smoked Alsatian sausage or Landjäger
+Poultry sausage, delicatessen style
+Poultry sausage
+Frankfurter sausage
+Merguez sausage, raw
+Merguez sausage, pure beef, raw
+Merguez sausage, pork and beef, raw
+Merguez sausage, beef, mutton and pork, raw
+Merguez sausage, beef and mutton, cooked
+Merguez sausage, beef and mutton, raw
+Liver sausage
+Diot (sausage from Savoy), raw
+Dry sausage
+Dry sausage, pure pork
+Dry sausage, pure pork, superior quality
+Rosette dry sausage
+Sausage, dried
+Dry sausage w walnuts and/or hazelnuts
+Spicy pork sausage with red pepper, no precision
+Dry spicy pork sausage with red pepper
+Spicy pork sausage with red pepper, in large slices
+Salami
+Salami, pure pork
+Salami, pork and beef
+Salami, Danish-style
+Garlic sausage
+Cooked sausage, pure pork
+Sausage from Paris
+Sausage from Paris, smoked
+Sausage in a brioche crust, cooked
+Saveloy or cervelat
+Saveloy or cervelat (from Obernai Alsace)
+Saveloy or cervelat, pure pork with garlic
+Strasbourg sausage
+Cocktail sausage
+Viennese sausage, pork and veal, raw
+Ham sausage
+Beer sausage
+Mortadella
+Mortadella, pure pork
+Pork and beef mortadella
+Mortadella with pistachios, pure pork
+Chocolate bar with biscuit
+Coated chocolate bar without biscuit
+Coconut bar, with chocolate coating
+Candies, all types
+Milk chocolate bar
+Dark chocolate bar, less than 70% cocoa
+Honey
+Milk chocolate bar, with puffed/popped cereals
+White chocolate bar
+Chocolate confectionery or bar, with dairy filling
+Sorbet, on stick
+Fruit jelly
+Sugar, white
+Sugar, brown
+Milk chocolate bar, with dried fruits (nuts, almonds, raisins, praline)
+Milk chocolate bar, without sugar, with sweeteners
+Jam, strawberry
+White chocolate bar, with dried fruits (nuts, almonds, raisins, praline)
+Dark chocolate bar, without sugar and with artificial sweeteners
+Chocolate spread with hazelnuts
+Nougat
+Ice cream, chocolate coated
+Sugar-coated almond
+Jam, apricot
+Jam, cherry
+Marmalade, orange
+Dulce de leche or confiture de lait
+Chocolate confectionery, sugar coated
+Sugar and chocolate coated peanut
+Sugar, vanilla flavoured
+Candies, marshmallows
+Hard candy and lollipop
+Jelly candy
+Jam, raspberry
+Chocolate confectionery, filled with nuts and/or praline
+Saccharin sweetener
+Chocolate and nut confectionery filled with praline
+Cane molasses
+Dark chocolate bar, with fruits (orange, raspberries, pear)
+Dark chocolate bar, with dried fruits (nuts, almonds, raisin, praline)
+Chocolate bar with dried fruits
+Dark chocolate, filled with mint confectionery
+Chocolate snack bar, dairy filling
+Dark chocolate bar, more than 70% cocoa
+Fructose
+Milk chocolate, filled
+Dark chocolate bar, filled with praline
+Soft caramel candy
+Milk chocolate bar, filled with praline
+Dark chocolate bar, more than 40% cocoa, for cooking
+Chocolate confectionery, filled with wafer
+Melon and almond Candy on a unleavened bread layer
+Toblerone milk cholcolate bar w nougat
+Chocolate snack bar, dairy filling with sponge cake
+Milky cereal breakfast bar, with chocolate or not, fortified with vitamins and minerals
+Cereal bar with fruit, fortified with vitamins and minerals
+Cereal bar with chocolate, fortified with vitamins and minerals
+Chocolate cereal bar
+Jam, reduced sugar
+Cereal bar w fruit
+Cereal bar with almonds or hazelnuts
+Breakfast cereals, popped or puffed wheat grain, with honey or caramel, fortified with vitamins and chemical elements
+Breakfast cereals, with chocolate, not filled, fortified with vitamins and chemical elements
+Breakfast cereals, rich in fibre, with or without fruits, fortified with vitamins and chemical elements
+Breakfast cereals, corn flakes, plain, fortified with vitamins and chemical elements
+Breakfast cereals, rich in fibre, with chocolate, fortified with vitamins and chemical elements
+Breakfast cereals, chocolate wheat grain flakes, fortified with vitamins and chemical elements
+Breakfast cereals, chocolate wheat grain flakes (not fortified with vitamins and chemical elements)
+Breakfast cereals, with chocolate, not filled (not fortified with vitamins and chemical elements)
+Breakfast cereals, corn flakes, plain (not fortified with vitamins and chemical elements)
+Breakfast cereals, filled with chocolate or chocolate-hazelnuts, fortified with vitamins and chemical elements
+Breakfast cereals, filled with chocolate or chocolate-hazelnuts
+Breakfast cereals, filled with a filling other than chocolate, fortified with vitamins and chemical elements
+Breakfast cereals, diet, plain or with honey, fortified with vitamins and chemical elements
+Breakfast cereals, diet, with chocolate, fortified with vitamins and chemical elements
+Breakfast cereals, diet, with fruits, fortified with vitamins and chemical elements
+Breakfast cereals, diet, with dried fruits, fortified with vitamins and chemical elements
+Breakfast cereals, diet, with chocolate, not fortified
+Breakfast cereals, diet, with fruits, not fortified
+Breakfast cereals, diet, plain, not fortified
+Breakfast cereals, corn flakes, sugar iced (not fortified with vitamins and chemical elements)
+Muesli, crunchy, with fruits and/or dried fruits, grains (not fortified with vitamins and chemical elements)
+Muesli, crunchy, with chocolate (not fortified with vitamins and chemical elements)
+Muesli, flakes (Bircher-style), with fruits or dried fruits, fortified with vitamins and chemical elements
+Muesli, crunchy, with fruits or dried fruits, fortified with vitamins and chemical elements
+Muesli, crunchy, with chocolate, with or without fruits, fortified with vitamins and chemical elements
+Muesli, flakes (Bircher-style), with fruits or dried fruits, without sugar
+Breakfast cereals, chocolate puffed/popped wheat grain, fortified with vitamins and chemical elements
+Breakfast cereals, very rich in fibre, fortified with vitamins and chemical elements
+Breakfast cereals, corn flakes, sugar iced, fortified with vitamins and chemical elements
+Breakfast cereals, wheat flakes with walnuts, hazelnuts or almonds, fortified with vitamins and chemical elements
+Muesli, flakes (Bircher-style)
+Breakfast cereals, puffed/popped corn, with honey (not fortified with vitamins and chemical elements)
+Breakfast cereals, puffed/popped corn, with honey, fortified with vitamins and chemical elements
+Breakfast cereals, puffed/popped cereals, wholemeal, fortified with vitamins and chemical elements
+Breakfast cereals, mix of puffed or extruded cereals, fortified with vitamins and chemical elements
+Muesli, flakes (Bircher-style), with fruits or dried fruits (not fortified with vitamins and chemical elements)
+Oat flakes, pre-cooked, raw
+Rabbit, meat, braised
+Rabbit, meat, raw
+Rabbit, meat, cooked
+Rabbit, wild, meat, raw
+Rabbit, wild, meat, cooked
+Hen, meat and skin, raw
+Hen, meat only, raw
+Chicken, leg, meat and skin, raw
+Chicken, meat, raw
+Chicken, leg, meat and skin, roasted/baked
+Chicken, meat and skin, roasted/baked
+Chicken leg, meat, roasted/baked
+Chicken, white race, meat and skin, raw
+Chicken, free-range, meat and skin, raw
+Chicken, stewing, leg, raw
+Chicken, meat and skin, raw
+Chicken, breast, without skin, raw
+Chicken, breast, without skin, cooked
+Chicken high leg, meat, raw
+Chicken, eviscerated without offal, raw
+Chicken, drumstick, raw
+Chicken, wing, meat and skin, raw
+Chicken, leg, meat, raw
+Chicken, nugget, breaded croquette
+Chicken, breast, meat and skin, raw
+Chicken leg, meat, boiled/cooked in water
+Chicken, leg, meat and skin, boiled/cooked in water
+Chicken, breast, meat and skin, roasted/baked
+Chicken, wing, meat and skin, roasted/baked
+Chicken, marinated wing, roasted/baked
+Turkey, breaded escalope
+Capon, meat and skin, raw
+Capon, meat and skin, roasted/baked
+Quail, meat and skin, cooked
+Duck, meat and skin, roasted/baked
+Duck, meat, raw
+Duck, meat, roasted/baked
+Duck, leg, meat and skin, raw
+Duck, meat and skin, raw
+Duck, magret, cooked in pan
+Duck, breast fillet
+Turkey, meat and skin, raw
+Turkey, meat, raw
+Turkey, meat, roasted/baked
+Turkey, escalope, raw
+Turkey, leg, meat and skin, raw
+Turkey, escalope, sautéed/pan-fried, with salt
+Turkey, leg, meat only, raw
+Turkey, escalope, roasted/baked
+Turkey, wing, raw
+Milanese-style turkey escalope or breaded veal escalope
+Pheasant, meat, roasted/baked
+Goose, meat, raw
+Goose, meat and skin, raw
+Goose, meat, roasted/baked
+Goose, meat and skin, roasted/baked
+Pigeon, meat, roasted/baked
+Guinea fowl, raw
+Guinea fowl, breast, raw
+Guinea fowl, leg, raw
+cream sauce for pizza base
+Pizza base, raw
+Tomato sauce for pizza base
+Prawn crackers
+Corn chips or tortilla chips
+Puffed salty snacks, made from potato
+Salty snacks, mini pretzels or sticks
+Puffed salty snacks, made from potato and soy
+Puffed salty snacks, made from maize/corn, without peanuts
+Salty snacks, crackers, garnished or filled with cheese
+Salty snacks, crackers, plain
+Salty snacks, crackers, reduced fat
+Puffed salty snacks, made from maize/corn, with peanuts
+Salty snacks, made from potato
+Coated peanuts
+Salty snacks, puff pastry
+Salted crispy crepe with cheese, prepacked
+Crouton with garlic, herbs or onions, prepacked
+Milkshake, from fast foods restaurant
+Custard dessert, chocolate, refrigerated
+Chocolate mousse (milk-based), refrigerated
+Custard cream with caramel sauce, refrigerated
+Mousse, chocolate, refrigerated
+Custard cream with eggs (a small jar of chocolate or vanilla cream or other flavour), refrigerated
+Rice pudding, refrigerated
+Caramelized custard cream (crème brûlée), refrigerated
+Custard dessert, vanilla, canned
+Floating island (meringue poached in milk and served in a light custard cream), refrigerated
+Fruits batter-pudding, refrigerated
+Semolina pudding, refrigerated
+Fruit liegeois
+Fruit mousse, refrigerated
+Custard dessert, vanilla, refrigerated
+Rice pudding, canned
+Chocolate cake w melting centre, refrigerated
+Mousse (chocolate, coffee, caramel or vanilla) topped with whipped cream, refrigerated
+French toast
+Custard dessert, coffee, refrigerated
+Custard dessert, caramel, refrigerated
+Peach melba (with vanilla ice cream and raspberry sauce)
+Frozen dessert, ice cream with meringue, vacherin ice cream or mystery ice cream type
+Ice cream on stick, with chocolate coating
+Custard dessert, chocolate, canned
+Ice cream, cone (normal size)
+Frozen dessert, Sundae ice cream type
+Ice cream, in box
+Frozen dessert, puff pastry, to share
+Frozen yogurt
+baked Alaska
+Belle Helene pear dessert (cooked pear topped with hot chocolate sauce on a bed of vanilla ice cream)
+Ice cream, luxury, in box
+Ice cream, luxury, in cup
+Ice cream, cone, mini
+Ice cream, in individual cup
+Sorbet, in box
+Ice lolly
+Iced nougat
+Frosted lemon or orange (sorbet)
+Ice cream, in cup for children
+Goblet of ice cream, coffee or chocolate ice cream topped with whipped cream
+Ice cream log
+Goblet of ice cream, peach Melba or Belle Helene pear type
+Light custard cream with vanilla, prepacked
+Pastry cream or custard
+Brain, lamb, raw
+Brain, lamb, cooked
+Brain, pork, braised
+Brain, pork, raw
+Brain, calf, raw
+Brain, calf, cooked
+Heart, beef, raw
+Heart, beef, cooked
+Heart, chicken, raw
+Heart, turkey, raw
+Heart, chicken, cooked
+Heart, turkey, cooked
+Heart, lamb, raw
+Heart, lamb, cooked
+Heart, pork, raw
+Heart, veal, raw
+Liver, lamb, raw
+Liver, lamb, cooked
+Liver, young cow, raw
+Liver, young cow, cooked
+Liver, calf, raw
+Liver, calf, cooked
+Liver, poultry, raw
+Liver, rabbit, raw
+Liver, chicken, raw
+Liver, pork, cooked
+Liver, turkey, raw
+Liver, chicken, cooked
+Liver, turkey, cooked
+Liver, pork, raw
+Liver, goose, raw
+Liver, duck, raw
+Tongue, calf, cooked
+Tongue, beef, raw
+Tongue, beef, cooked
+Tongue, calf, raw
+Tongue, pork, raw
+Sweetbread, lamb, raw
+Sweetbread, lamb, cooked
+Sweetbread, calf, raw
+Sweetbread, calf, sautéed/pan-fried
+Kidney, beef, raw
+Kidney, beef, cooked
+Kidney, pork, raw
+Kidney, pork, cooked
+Kidney, lamb, braised
+Kidney, lamb, raw
+Kidney, veal, sautéed/pan-fried
+Kidney, calf, raw
+Tripe, beef, raw
+Blood, beef, raw
+Gizzard, chicken, raw
+Meal replacement low calorie, Custard cream dessert-type
+Meal replacement low calorie, ready-to-drink
+Meal replacement low calorie, in powder, reconstituted with skimmed milk
+Meal replacement low calorie, in powder, reconstituted with skimmed milk, milkshake type
+Soy lecithin
+Vegetable dish for baby, w meat/fish and starch, from 6-8 months
+Vegetable dish for baby, w meat/fish and starch, from 8-12 months
+Vegetable dish for baby, w meat/fish and starch, from 12 months
+Vegetable dish for baby, w meat/fish and starch, from 18 months
+Molokhia powder (dried jute leaves)
+Frik (crushed immature durum wheat), raw
+Frik (crushed immature durum wheat), cooked, unsalted
+Khatfa (phyllo or filo pastry), prepacked
+Plantain banana, raw
+Plantain banana, cooked
+Taro, tuber, raw
+Taro, tuber, cooked
+Yam or Indian potato, peeled, raw
+Yam or Indian potato, peeled, boiled/cooked in water
+Cassava or manioc, roots, raw
+Cassava or manioc, roots, cooked
+Breadfruit, raw
+Okra, cooked, without salt
+Mineral still water (Abatilles), bottled, lightly mineralized
+Mineral still water (Aix-les-Bains), bottled, lightly mineralized
+Mineral sparkling water (Aziac), bottled, lightly mineralized
+Mineral still water (Amanda), bottled, strongly mineralized
+Mineral sparkling water (Arcens), bottled, averagely mineralized
+Mineral sparkling water (Ardesy), bottled, strongly mineralized
+Mineral sparkling water (Auvergne), bottled, strongly mineralized
+Mineral still water (Celtic), bottled, very lightly mineralized
+Mineral still water (Chambon), bottled, lightly mineralized
+Mineral still water (Chantemerle), bottled, lightly mineralized
+Mineral sparkling water (Chateauneuf), bottled, strongly mineralized
+Mineral sparkling water (Chateldon), bottled, strongly mineralized
+Mineral still water (Clos de l'Abbaye), bottled, averagely mineralized
+Mineral still water (Contrex), bottled, strongly mineralized
+Mineral still water (Dax), bottled, averagely mineralized
+Mineral sparkling water (Didier), bottled, strongly mineralized
+Mineral still water (Didier), bottled, strongly mineralized
+Mineral still water (Evian), bottled, lightly mineralized
+Mineral still water (Hépar), bottled, strongly mineralized
+Mineral sparkling water (Hydroxydase), bottled, strongly mineralized
+Mineral sparkling water (Vernière), bottled, averagely mineralized
+Mineral still water (Luchon), bottled, lightly mineralized
+Mineral water (Mont-Roucous, bottled, very lightly mineralized
+Spring water (Ogeu), bottled, lightly mineralized
+Mineral still water (Orée du bois), bottled, averagely mineralized
+Mineral sparkling water (Orezza), bottled, averagely mineralized
+Mineral sparkling water (Parot), bottled, averagely mineralized
+Mineral still water (Plancoet), bottled, lightly mineralized
+Mineral still water (Propiac), bottled, strongly mineralized
+Mineral sparkling water (Puits St Georges), bottled, averagely mineralized
+Mineral sparkling water (Quézac), bottled, averagely mineralized
+Mineral sparkling water (Reine des basaltes), bottled, averagely mineralized
+Mineral sparkling water (Rozana), bottled, strongly mineralized
+Mineral still water (Sail-les-Bains), bottled, lightly mineralized
+Mineral sparkling water (Salvetat), bottled, averagely mineralized
+Mineral sparkling water (Soultzmatt), bottled, averagely mineralized
+Mineral still water (St-Amand), bottled, averagely mineralized
+Mineral still water (St-Antonin), bottled, strongly mineralized
+Mineral sparkling water (St-Diéry), bottled, strongly mineralized
+Mineral sparkling water (Ste-Marguerite), bottled, averagely mineralized
+Mineral sparkling water (St-Yorre), bottled, strongly mineralized
+Mineral still water (Thonon), bottled, lightly mineralized
+Mineral sparkling water (Ventadour), bottled, lightly mineralized
+Mineral sparkling water (Vernet), bottled, lightly mineralized
+Mineral sparkling water (Vichy Célestins), bottled, strongly mineralized
+Mineral still water (Vittel), bottled, averagely mineralized
+Mineral still water (Volvic), bottled, lightly mineralized
+Mineral sparkling water (Volvic active), bottled, lightly mineralized
+Mineral still water (Wattwiller), bottled, lightly mineralized
+Mineral sparkling water (Perrier), bottled, lightly mineralized
+Mineral sparkling water (Badoit), bottled, averagely mineralized
+Mineral still water (Avra), bottled, lightly mineralized
+Mineral still water (Beckerich), bottled, lightly mineralized
+Mineral still water (Caramulo), bottled, very lightly mineralized
+Mineral still water (Chaudfontaine), bottled, lightly mineralized
+Mineral still water (Christinen Brunnen), bottled, averagely mineralized
+Mineral still water (Courmayer), bottled, strongly mineralized
+Mineral still water (Highland spring), bottled, lightly mineralized
+Mineral still water (Levissima), bottled, lightly mineralized
+Mineral still water (Luso), bottled, very lightly mineralized
+Mineral still water (Néro), bottled, lightly mineralized
+Mineral still water (Penacova), bottled, very lightly mineralized
+Mineral water (San Benedetto), bottled, lightly mineralized
+Mineral water (San Bernardo), bottled, very lightly mineralized
+Mineral sparkling water (San Pellegrino), bottled, averagely mineralized
+Mineral still water (Spa-Reine), bottled, averagely mineralized
+Mineral still water (Talians), bottled, strongly mineralized
+Mineral still water (Valvert), bottled, lightly mineralized
+Mineral still water (Appollinaris), bottled, strongly mineralized
+Spring still water (Cristaline), bottled
+Mineral still water (Biovive), bottled, lightly mineralized
+Mineral still water (La Cairolle), bottled, strongly mineralized
+Mineral sparkling water (Cilaos), bottled, strongly mineralized
+Mineral still water (La Française), bottled, strongly mineralized
+Mineral still water (Montcalm), bottled, very lightly mineralized
+Mineral still water (Montclar), bottled, lightly mineralized
+Mineral sparkling water (Nessel), bottled, averagely mineralized
+Mineral sparkling water (Ogeu), bottled, lightly mineralized
+Mineral still water (Ogeu), bottled, lightly mineralized
+Mineral still water (Prince Noir), bottled, strongly mineralized
+Mineral sparkling water (St-Alban), bottled, averagely mineralized
+Mineral sparkling water (St-Géron), bottled, averagely mineralized
+Mineral sparkling water (St-Michel-de-Mourcairol), bottled, averagely mineralized
+Mineral still water (Treignac), bottled, very lightly mineralized
+Mineral sparkling water (Vals), bottled, averagely mineralized
+Mineral still water (Vauban), bottled, averagely mineralized
+Water, mineral, carbonated ou non-carbonated, CAROLA
+Water, mineral, non-carbonated, MONT-BLANC
+Water, mineral, non-carbonated, EDEN
+Pizza base, cooked
