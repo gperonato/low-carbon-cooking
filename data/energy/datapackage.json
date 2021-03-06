@@ -1,7 +1,7 @@
 {
     "bytes": 2259,
     "count_of_rows": 34,
-    "hash": "546cf5d93191cec1d40bce9d97abc2b4",
+    "hash": "f362d3a8c19fbcc8fb487e073ee00fe6",
     "profile": "data-package",
     "resources": [
         {
@@ -17,7 +17,7 @@
             "format": "csv",
             "hash": "fd7571f1dae31119568adf5d0952c1bb",
             "mediatype": "text/csv",
-            "name": "ademe",
+            "name": "data",
             "path": "data.csv",
             "profile": "data-resource",
             "schema": {
@@ -43,6 +43,96 @@
                         "name": "Name_Location",
                         "type": "string"
                     }
+                ]
+            }
+        },
+        {
+            "path": "CarbonIntensity_other.csv",
+            "profile": "tabular-data-resource",
+            "name": "CarbonIntensity_other",
+            "format": "csv",
+            "mediatype": "text/csv",
+            "encoding": "utf-8",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "CountryShort",
+                        "type": "string",
+                        "format": "default"
+                    },
+                    {
+                        "name": "CountryLong",
+                        "type": "string",
+                        "format": "default"
+                    },
+                    {
+                        "name": "Year",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "ValueNumeric",
+                        "type": "number",
+                        "format": "default"
+                    },
+                    {
+                        "name": "Unit",
+                        "type": "string",
+                        "format": "default"
+                    },
+                    {
+                        "name": "Data_source",
+                        "type": "string",
+                        "format": "default"
+                    }
+                ],
+                "missingValues": [
+                    ""
+                ]
+            }
+        },
+        {
+            "path": "CarbonIntensity_other.csv",
+            "profile": "tabular-data-resource",
+            "name": "CarbonIntensity_other",
+            "format": "csv",
+            "mediatype": "text/csv",
+            "encoding": "utf-8",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "CountryShort",
+                        "type": "string",
+                        "format": "default"
+                    },
+                    {
+                        "name": "CountryLong",
+                        "type": "string",
+                        "format": "default"
+                    },
+                    {
+                        "name": "Year",
+                        "type": "integer",
+                        "format": "default"
+                    },
+                    {
+                        "name": "ValueNumeric",
+                        "type": "number",
+                        "format": "default"
+                    },
+                    {
+                        "name": "Unit",
+                        "type": "string",
+                        "format": "default"
+                    },
+                    {
+                        "name": "Data_source",
+                        "type": "string",
+                        "format": "default"
+                    }
+                ],
+                "missingValues": [
+                    ""
                 ]
             }
         }

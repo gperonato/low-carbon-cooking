@@ -7,7 +7,7 @@ Created on Sun Feb 7 15:20 2021
 """
 
 import dataflows
-from datapackage import Package
+from datapackage import Package, Resource
 import os
 import requests
 
@@ -202,10 +202,10 @@ Flow(
         resources=["join"],
     ),
     update_schema("data", missingValues=["", ""]),
-    dump_to_path("data/food"),
+    dump_to_path("food"),
 ).process()
 
-package = Package("data/food/datapackage.json")
+package = Package("food/datapackage.json")
 package.remove_resource("Agribalyse_Synthese")
 package.commit()
 package.descriptor['Sources'] = [
@@ -220,8 +220,11 @@ package.descriptor['Sources'] = [
 ]
 package.descriptor['description'] = 'Adapted join of CIQUAL and Agribalyse® datasets. Check getData.py to see the transformations applied to the original datasets.'
 package.commit()
-package.save("data/food/datapackage.json")
-os.remove("data/food/Agribalyse_Synthese.csv")
+package.save("food/datapackage.json")
+os.remove("food/Agribalyse_Synthese.csv")
+
+
+
 
 
 url = 'https://www.eea.europa.eu/data-and-maps/data/co2-intensity-of-electricity-generation/eea-2017-co2-emission-intensity/2017-co2_intensel_eea_csv/at_download/file'
@@ -234,7 +237,7 @@ open("ademe.csv", 'wb').write(r.content)
 
 Flow(
     load("2017_CO2_IntensEL_EEA.zip"),
-    load("data/energy/CarbonIntensity_other.csv"),
+    load("energy/CarbonIntensity_other.csv"),
     set_type(
         "Year",
         type="number",
@@ -265,7 +268,7 @@ Flow(
     set_type("ValueNumeric", type="number", resources=["2017_CO2_IntensEL_EEA","CarbonIntensity_other"]),
     lambda row: dict(row, ValueNumeric=row["ValueNumeric"] / 1000),
 
-    load("ademe.csv"),
+    load("ademe.csv",name="data"),
     select_fields(
         [
             "Identifiant de l'élément",
@@ -275,11 +278,11 @@ Flow(
             "Localisation géographique",
             "Total poste non décomposé",
         ],
-        resources=["ademe"],
+        resources=["data"],
     ),
     filter_rows(
         equals=[{"Type Ligne":"ElÈment"}],
-        resources=["ademe"],
+        resources=["data"],
         ),
     add_computed_field([
         dict(target='id', operation='sum', source=["Identifiant de l'élément"]),
@@ -288,7 +291,7 @@ Flow(
         dict(target='Location', operation='format', with_='{Localisation géographique}'),
         dict(target='EF', operation='format', with_='{Total poste non décomposé}'),
     ],
-        resources=["ademe"],
+        resources=["data"],
         ),
     delete_fields(
         [
@@ -299,20 +302,20 @@ Flow(
             "Localisation géographique",
             "Total poste non décomposé",
         ],
-        resources=["ademe"],
+        resources=["data"],
         ),
     filter_rows(
         equals=[
         {"id":26769}, # Electricity for cooking (France)
         {"id":13515}], # Gas (Europe)
-        resources=["ademe"],
+        resources=["data"],
         ),
     set_type(
         "EF",
         type="number",
         decimalChar=",",
         regex=False,
-        resources=["ademe"],
+        resources=["data"],
     ),
     find_replace(
         [
@@ -323,22 +326,29 @@ Flow(
                 ],
             }
         ],
-        resources=["ademe"],
+        resources=["data"],
     ),
     concatenate(
         dict(Name_EN=["Name"],
             Location=["CountryLong"],
             EF=["ValueNumeric"]),
-        dict(name="ademe",path="data"),
+        dict(name="data",path="data"),
     ),
     add_computed_field([
         dict(target='Name_Location', operation='format', with_='{Name_EN} - {Location}'),
         ]
     ),
-    dump_to_path("data/energy"),
+    dump_to_path("energy"),
     ).process()
 
-package = Package("data/energy/datapackage.json")
+resource = Resource({"path": "energy/CarbonIntensity_other.csv"})
+resource.tabular # true
+resource.read(keyed=True)
+resource.infer()
+resource.descriptor["path"] = "CarbonIntensity_other.csv"
+resource.commit()
+
+package = Package("energy/datapackage.json")
 package.descriptor['Sources'] = [
 {
   "title": "EEA 2017 CO2 Intensity of Electricity Generation, 28.02.2020 update",
@@ -354,7 +364,8 @@ package.descriptor['Sources'] = [
 },
 ]
 package.descriptor['description'] = 'Adapted join of various European carbon intensty datasets. Check getData.py to see the transformations applied to the original datasets.'
+package.add_resource(resource.descriptor)
 package.commit()
-package.save("data/energy/datapackage.json")
+package.save("energy/datapackage.json")
 
 
