@@ -1,11 +1,11 @@
 {
-    "bytes": 2259,
-    "count_of_rows": 34,
-    "hash": "f362d3a8c19fbcc8fb487e073ee00fe6",
+    "bytes": 2400,
+    "count_of_rows": 36,
+    "hash": "3ae8e17149f7af75db6d6a1319819fdf",
     "profile": "data-package",
     "resources": [
         {
-            "bytes": 2259,
+            "bytes": 2400,
             "dialect": {
                 "delimiter": ",",
                 "doubleQuote": true,
@@ -15,7 +15,7 @@
             },
             "encoding": "utf-8",
             "format": "csv",
-            "hash": "fd7571f1dae31119568adf5d0952c1bb",
+            "hash": "6da07fa23726afbdb2b8d2220348f77c",
             "mediatype": "text/csv",
             "name": "data",
             "path": "data.csv",
@@ -90,66 +90,6 @@
                     ""
                 ]
             }
-        },
-        {
-            "path": "CarbonIntensity_other.csv",
-            "profile": "tabular-data-resource",
-            "name": "CarbonIntensity_other",
-            "format": "csv",
-            "mediatype": "text/csv",
-            "encoding": "utf-8",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "CountryShort",
-                        "type": "string",
-                        "format": "default"
-                    },
-                    {
-                        "name": "CountryLong",
-                        "type": "string",
-                        "format": "default"
-                    },
-                    {
-                        "name": "Year",
-                        "type": "integer",
-                        "format": "default"
-                    },
-                    {
-                        "name": "ValueNumeric",
-                        "type": "number",
-                        "format": "default"
-                    },
-                    {
-                        "name": "Unit",
-                        "type": "string",
-                        "format": "default"
-                    },
-                    {
-                        "name": "Data_source",
-                        "type": "string",
-                        "format": "default"
-                    }
-                ],
-                "missingValues": [
-                    ""
-                ]
-            }
         }
-    ],
-    "Sources": [
-        {
-            "title": "EEA 2017 CO2 Intensity of Electricity Generation, 28.02.2020 update",
-            "path": "https://www.eea.europa.eu/data-and-maps/data/co2-intensity-of-electricity-generation"
-        },
-        {
-            "title": "Swiss Federal Office for the Environment",
-            "path": "https://www.bafu.admin.ch/bafu/en/home/topics/climate/questions-answers.html"
-        },
-        {
-            "title": "Base carbone\u00ae v.19.0, 04.12.2020 update",
-            "path": "https://www.data.gouv.fr/fr/datasets/base-carbone-r-1/"
-        }
-    ],
-    "description": "Adapted join of various European carbon intensty datasets. Check getData.py to see the transformations applied to the original datasets."
+    ]
 }

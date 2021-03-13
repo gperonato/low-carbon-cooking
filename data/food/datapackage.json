@@ -1,11 +1,11 @@
 {
-    "bytes": 1114196,
+    "bytes": 1121479,
     "count_of_rows": 4958,
-    "hash": "3e231f9fff383e43759b862bd5ac4fe3",
+    "hash": "8cab6666d203a82a69f625ddb7196759",
     "profile": "data-package",
     "resources": [
         {
-            "bytes": 185117,
+            "bytes": 192400,
             "dialect": {
                 "caseSensitiveHeader": false,
                 "delimiter": ",",
@@ -17,7 +17,7 @@
             },
             "encoding": "utf-8",
             "format": "csv",
-            "hash": "3bfa352941a76d32b33792e943012af6",
+            "hash": "d0ee0998c567ee48ab338a3a533ce21f",
             "name": "join",
             "path": "data.csv",
             "profile": "tabular-data-resource",
@@ -80,6 +80,13 @@
                         "format": "default",
                         "groupChar": "",
                         "name": "Iron (mg/100g)",
+                        "type": "number"
+                    },
+                    {
+                        "decimalChar": ".",
+                        "format": "default",
+                        "groupChar": "",
+                        "name": "Vitamin B12 (\u00b5g/100g)",
                         "type": "number"
                     }
                 ],

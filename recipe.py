@@ -55,6 +55,7 @@ class Recipe():
     def cook(self):
         for step in self.cooking_steps:
             energy = step["duration"]/60. * step["power"] / 1000.
+            print(self.find_EF(step["energy_source"]))
             step["CO2e"] = energy * self.find_EF(step["energy_source"])
             self.total_content["Carbon footprint"]["value"] +=  step["CO2e"] 
         self.compare()

@@ -5,6 +5,7 @@
 "Sugars":{"value":90,"unit":"g"},
 "Protein":{"value":50,"unit":"g"},
 "Calcium":{"value":800,"unit":"mg"},
-"Iron":{"value":14,"unit":"mg"}
+"Iron":{"value":14,"unit":"mg"},
+"Vitamin B12":{"value":2.5,"unit":"µg"}
 }
 

@@ -67,6 +67,7 @@ Flow(
             "Sugars (g/100g)":{"name": "Sugars (g/100g)"},
             "Calcium (mg/100g)":{"name": "Calcium (mg/100g)"},
             "Iron (mg/100g)":{"name": "Iron (mg/100g)"},
+            "Vitamin B12 (µg/100g)":{"name": "Vitamin B12 (µg/100g)"},
         },
     ),
     select_fields(
@@ -75,7 +76,7 @@ Flow(
             "LCI Name",
             "Carbon footprint (kgCO2e/kg)",
             "Energy, Regulation EU No 1169/2011 (kcal/100g)",
-            "Protein (g/100g)","Carbohydrate (g/100g)","Fat (g/100g)","Sugars (g/100g)","Calcium (mg/100g)","Iron (mg/100g)",
+            "Protein (g/100g)","Carbohydrate (g/100g)","Fat (g/100g)","Sugars (g/100g)","Calcium (mg/100g)","Iron (mg/100g)","Vitamin B12 (µg/100g)"
         ],
         resources=["join"],
     ),
@@ -142,6 +143,15 @@ Flow(
                     {"find": "\\bNone\\b", "replace": ""},
                 ],
             },
+            {
+                "name": "Vitamin B12 (µg/100g)",
+                "patterns": [
+                    {"find": "[-]", "replace": ""},
+                    {"find": '[<]', "replace": ""},
+                    {"find": "\\btraces\\b", "replace": 0},
+                    {"find": "\\bNone\\b", "replace": ""},
+                ],
+            },
         ],
         resources=["join"],
     ),
@@ -201,6 +211,14 @@ Flow(
         regex=False,
         resources=["join"],
     ),
+    set_type(
+        "Vitamin B12 (µg/100g)",
+        type="number",
+        decimalChar=",",
+        regex=False,
+        resources=["join"],
+    ),
+
     update_schema("data", missingValues=["", ""]),
     dump_to_path("food"),
 ).process()
@@ -281,11 +299,11 @@ Flow(
         resources=["data"],
     ),
     filter_rows(
-        equals=[{"Type Ligne":"ElÈment"}],
+        equals=[{"Type Ligne":"Elément"}],
         resources=["data"],
         ),
     add_computed_field([
-        dict(target='id', operation='sum', source=["Identifiant de l'élément"]),
+        dict(target='id', operation='format', with_="{Identifiant de l'élément}"),
         dict(target='Name_EN', operation='format', with_='{Nom base anglais}'),
         dict(target='Name_FR', operation='format', with_='{Nom base français}'),
         dict(target='Location', operation='format', with_='{Localisation géographique}'),
@@ -293,6 +311,12 @@ Flow(
     ],
         resources=["data"],
         ),
+    set_type(
+        "id",
+        type="number",
+        regex=False,
+        resources=["data"],
+    ),
     delete_fields(
         [
             "Identifiant de l'élément",
