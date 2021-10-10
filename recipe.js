@@ -48,6 +48,7 @@ function run() {
 					this.total_content = {}
 					this.comparison = {"food":"Hamburger, from fast foods restaurant",
 											"quantity":220};
+					console.log(Object.keys(data[0]));
 					for (var key of Object.keys(data[0]).slice(1)) {
     					this.total_content[key.split(" (")[0]] = {"value":0,
     															  "unit":key.split(" (")[1].split("/")[0]}
@@ -166,14 +167,13 @@ function run() {
 
 		// Web recipe
 		let webRecipe = new Recipe("webRecipe")
-		var ingredients = $('[name^="ingredient"]');
-		var quantities = $('[name^="quantit"]');
+		var ingredients = $('[name="i"]');
+		var quantities = $('[name="q"]');
 
 		var reference = {};
 		reference["food"] = $('#reference').val();
 		reference["quantity"] = $('#reference-weight').val();
 		webRecipe.set_reference(reference["food"],reference["quantity"]);
-		// console.log(ingredients);
 		var i;
 		for (i = 0; i < ingredients.length; i++) {
 			// console.log(ingredients[i].value, quantities[i].value)
@@ -181,15 +181,15 @@ function run() {
 		}
 		webRecipe.mise_en_place()
 
-		var sources = $('[name^="energ"]');
-		var times = $('[name^="time"]');
-		var powers = $('[name^="power"]');
-
+		var sources = $('[name="e"]');
+		var times = $('[name="t"]');
+		var powers = $('[name="p"]');
 
 
 		var i;
 		for (i = 0; i < sources.length; i++) {
 			if (sources[i].value != "") {
+				// console.log(sources[i].value)
 				webRecipe.addCookingStep(sources[i].value, times[i].value, powers[i].value)
 			}	
 		}
@@ -229,8 +229,9 @@ function run() {
 
 }
 function formsubmit() {
-	if ($('[name="quantity[0]"]').val() > 0) {
+	if ($('[name="q"]').val() > 0) {
 		run();
+		history.pushState(null, "", '?' + $("#recipeform").serialize()); 
 	}
 
 }

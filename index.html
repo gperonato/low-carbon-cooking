@@ -34,36 +34,9 @@
 		<section id="calculator">
 			<div class="container pt-4">
 				<h3>Calculator</h3>
-				<form>
+				<form id="recipeform">
 					<div class="ingredients">
 						<div class="row">
-							<div class="col-sm-7 form-group">
-								<label for="ingredients" class="control-label">Ingredient</label>
-								<div class="input-group">
-									<input id="ingredients" class="form-control input-sm" " type="text" name="ingredient[0]">
-								</div>
-							</div>
-							<div class="col-sm-3 form-group">
-								<label for="quantita[0]" class="control-label">Weight</label>
-								<div class="input-group">
-									<input type="number" class="form-control input-sm"  name="quantity[0]" min="0">
-									<div class="input-group-append">
-										<span class="input-group-text"> g </span></div>
-									</div>
-								</div>
-								
-								<div class="col-sm-1 form-group">
-									<label  class="control-label">&nbsp;</label>
-									<div class="input-group">
-										<button id="delete" class="btn btn-secondary">-</button>
-									</div>
-								</div>
-								<div class="col-sm-1 form-group">
-									<label  class="control-label">&nbsp;</label>
-									<div class="input-group">
-										<button name="add[0]" class="btn btn-secondary">+</button>
-									</div>
-								</div>
 							</div>
 						</div>
 						<div>
@@ -76,44 +49,6 @@
 						<div class="cooking-steps pt-4">
 							<h3></h3>
 							<div class="row">
-								<div class="col-sm-4 form-group" id="dropdown">
-									<label for="energy[0]" class="control-label">Energy source</label>
-									<select class="form-control" name="energy[0]">
-									</select>
-								</div>
-								<div class="col-sm-3 form-group">
-									<label for="time[0]" class="control-label">Cooking time</label>
-									<div class="input-group">
-										
-										<input type="number" class="form-control input-sm" name="time[0]" min="0">
-										<div class="input-group-append">
-											<span class="input-group-text"> min </span>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-3 form-group">
-									<label for="time[0]" class="control-label">Input power</label>
-									<div class="input-group">
-										<input type="number" class="form-control input-sm"  name="power[0]" min="0" value="2000" placeholder="Input power">
-										<div class="input-group-append">
-											<span class="input-group-text"> W </span>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-1 form-group">
-									<label  class="control-label">&nbsp;</label>
-									<div class="input-group">
-										
-										<button id="delete-cooking" class="btn btn-secondary">-</button>
-									</div>
-								</div>
-								<div class="col-sm-1 form-group">
-									<label  class="control-label">&nbsp;</label>
-									<div class="input-group">
-										
-										<button name="add-cf[0]" class="btn btn-secondary">+</button>
-									</div>
-								</div>
 							</div>
 						</div>
 						<div>
