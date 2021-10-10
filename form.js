@@ -53,7 +53,7 @@ const cooksnippet = `<div class="row" id="cooking">
 							<button name="add-cf" class="btn btn-secondary">+</button>
 						</div>
 			</div>`
-
+const default_power = 2000;
 
 
 $.get('lists/energy.txt', function(txtFile) {
@@ -84,6 +84,8 @@ $.get('lists/energy.txt', function(txtFile) {
 
 			if (inenergysources.length == 0) {
 				inenergysources.push("")
+				// Default power
+				inpower.push(default_power)
 			}
 
 			// Add fields from parameters
@@ -146,6 +148,7 @@ $.get('lists/energy.txt', function(txtFile) {
 						text: energy[i]
 					}))
 				};
+				$("[name='p']").last().val(default_power);
 				c++;
 			});
 
