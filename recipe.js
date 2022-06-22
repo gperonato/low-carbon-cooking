@@ -21,19 +21,19 @@ function loadJSON(path, success, error) {
 }
 
 function run() {
-			Papa.parse("data/food/data.csv", {
+			Papa.parse("../data/food/data.csv", {
 				download: true,
 				header:true,
 			    complete: function(results) {
 			        data = results.data;
 
-			Papa.parse("data/energy/data.csv", {
+			Papa.parse("../data/energy/data.csv", {
 				download: true,
 				header:true,
 			    complete: function(results) {
 			        energy_ef = results.data;
 
-			loadJSON('data/food/intake/data.json',
+			loadJSON('../data/food/intake/data.json',
 				function(intake) {
 
 

@@ -57,15 +57,15 @@ const cooksnippet = `<div class="row" id="cooking">
 const default_power = 2000;
 
 function select_language(language){
-	var page = "index_" + language + ".html";
+	var lang = language;
 	if (language == "EN") {
-		var page = "index.html";
+		var lang = "";
 	}
-	var url = window.location.protocol + "//" + window.location.hostname + '/' + page + window.location.search
+	var url = window.location.protocol + "//" + window.location.hostname + '/' + lang +  window.location.search
 	window.location.assign(url)
 }
 
-Papa.parse("data/translation.csv", {
+Papa.parse("../data/translation.csv", {
 	download: true,
 	header:true,
     complete: function(results) {
