@@ -89,9 +89,9 @@ Papa.parse("data/translation.csv", {
 
 		// Action for changing language
 		$('#language a').click(function() {
-		        select_language($(this).name())
+		        select_language($(this).attr('name'))
 		    }
-		});
+		);
 
 		// Define language from url params (if provided)
 		if (inlanguage.length > 0){
