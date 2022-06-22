@@ -48,7 +48,7 @@ function run() {
 					this.total_content = {}
 					this.comparison = {"food":"Hamburger, from fast foods restaurant",
 											"quantity":220};
-					console.log(Object.keys(data[0]));
+
 					for (var key of Object.keys(data[0]).slice(1)) {
     					this.total_content[key.split(" (")[0]] = {"value":0,
     															  "unit":key.split(" (")[1].split("/")[0]}
@@ -171,13 +171,15 @@ function run() {
 		var quantities = $('[name="q"]');
 
 		var reference = {};
-		reference["food"] = $('#reference').val();
+		reference["food"] = translate_value($('#reference').val(),language,"EN");
 		reference["quantity"] = $('#reference-weight').val();
+		console.log("Setting reference food:", reference["food"]);
 		webRecipe.set_reference(reference["food"],reference["quantity"]);
-		var i;
+
 		for (i = 0; i < ingredients.length; i++) {
-			// console.log(ingredients[i].value, quantities[i].value)
-			webRecipe.addIngredient(ingredients[i].value, quantities[i].value)
+			ingredient = translate_value(ingredients[i].value,language,"EN");
+			console.log("Adding ingredient:", ingredient)			
+			webRecipe.addIngredient(ingredient, quantities[i].value)
 		}
 		webRecipe.mise_en_place()
 
@@ -186,11 +188,11 @@ function run() {
 		var powers = $('[name="p"]');
 
 
-		var i;
 		for (i = 0; i < sources.length; i++) {
 			if (sources[i].value != "") {
-				// console.log(sources[i].value)
-				webRecipe.addCookingStep(sources[i].value, times[i].value, powers[i].value)
+				source = translate_value(sources[i].value,language,"EN");
+				console.log("Adding source:", source)
+				webRecipe.addCookingStep(source, times[i].value, powers[i].value)
 			}	
 		}
 		webRecipe.cook()
@@ -198,7 +200,7 @@ function run() {
 
 		var html = '';
 		for (const [key, value] of Object.entries(webRecipe.total_content).slice(0,1)){
-		            html += '<tr><td>' + key + '</td>' +
+		            html += '<tr><td>' + translate_value(key,"EN",language) + '</td>' +
 		                    '<td class="text-center">' + value["value"].toFixed(2) + ' ' + value["unit"] + '</td>' +
 		                    '<td class="text-center">' + value["recommended"] + '</td>' +
 		                    '<td class="text-center">' + value["benchmark"]["value"] + '</td>' +
@@ -208,10 +210,9 @@ function run() {
 
 		$("#results").css("visibility","visible");
 		var html = '';
-		console.log(webRecipe.total_content)
+		// console.log(webRecipe.total_content)
 		for (const [key, value] of Object.entries(webRecipe.total_content).slice(1)){
-
-		            html += '<tr><td>' + key + '</td>' +
+		            html += '<tr><td>' + translate_value(key,"EN",language)  + '</td>' +
 		                    '<td class="text-center">' + value["value"].toFixed(2) + ' ' + value["unit"] + '</td>' +
 		                    '<td class="text-center">' + value["recommended"] + '</td>' +
 		                    '<td class="text-center">' + value["benchmark"]["value"] + '</td>' +
@@ -228,10 +229,33 @@ function run() {
 });
 
 }
+
+function translate_value(value, source_language, target_language) {
+			for (t = 0; t < dictionary.length; t++) {
+				if (dictionary[t][source_language] == value) {
+						return dictionary[t][target_language]
+							}
+				}
+			return value		
+}
+
+
 function formsubmit() {
 	if ($('[name="q"]').val() > 0) {
 		run();
-		history.pushState(null, "", '?' + $("#recipeform").serialize()); 
+		var recipe_arr = $("#recipeform").serializeArray();
+
+		// Serialize form values
+		// var serialized = 'l='+language+"&";
+		var serialized = '';
+		for (i = 0; i < recipe_arr.length; i++) {
+			if (recipe_arr[i]["name"] == "i" || recipe_arr[i]["name"] == "e"){
+				recipe_arr[i]["value"] = translate_value(recipe_arr[i]["value"],language,"Code");
+				}
+			serialized += recipe_arr[i]["name"] + "=" + recipe_arr[i]["value"] + "&"
+			}
+		// Update URL
+		history.pushState(null, "", '?' + serialized); 
 	}
 
 }
