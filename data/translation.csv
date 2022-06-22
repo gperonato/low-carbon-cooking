@@ -2514,11 +2514,11 @@ ELNO,ENERGY,Electricity mix - Norway,Mix électrique - Norvège,Mix elettrico - 
 ELCH,ENERGY,Electricity mix - Switzerland,Mix électrique - Suisse,Mix elettrico - Svizzera
 ECFR,ENERGY,Electricity (cooking) - France continentale,Électricité (cuisson résidentiel) - France continentale,Elettricità (cucina residenziale) - Francia continentale
 NGEU,ENERGY,Natural gas - Europe,Gaz naturel - Europe,"Gas, metano - Europa"
-,MYCOOKPRINT,Carbon footprint,Empreinte carbone,Impronta carbonica
+,,Carbon footprint,Empreinte carbone,Impronta carbonica
 ,,"Energy, Regulation EU No 1169/2011","Energie, Réglement UE N˚ 1169/2011","Energia, Regolamento UE N˚ 1169/2011"
-,,Protein,Proteines,Proteine
-,,Carbohydrate,Glucydes,Carboidrati
-,,Fat,Grassi,Grassi
+,,Protein,Protéines,Proteine
+,,Carbohydrate,Glucides,Carboidrati
+,,Fat,Graisses,Grassi
 ,,Sugars,Sucres,Zuccheri
 ,,Calcium,Calcium,Calcio
 ,,Iron,Fer,Ferro
