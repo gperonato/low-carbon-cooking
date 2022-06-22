@@ -22,19 +22,19 @@
 				<div class="collapse navbar-collapse" id="navbarResponsive">
 					<ul class="navbar-nav ml-auto">
 						<li class="nav-item">
-							<a class="nav-link js-scroll-trigger" href="#calculator">Calculator</a>
+							<a class="nav-link js-scroll-trigger" href="#calculator">Calcolatore</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link js-scroll-trigger" href="#about">About</a>
+							<a class="nav-link js-scroll-trigger" href="#about">A proposito di questo sito</a>
 						</li>
 						<li>
 							<div class="btn-group">
 							  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							    Language
+							    Lingua
 							  </button>
 							  <div class="dropdown-menu dropdown-menu-right" id="language">
+							  <a class="dropdown-item" name="EN" href="#">English</a>
 							  <a class="dropdown-item" name="FR" href="#">Français</a>
-							  <a class="dropdown-item" name="IT" href="#">Italiano</a>
 							  </div>
 							</div>
 						</li>
@@ -44,7 +44,7 @@
 		</nav>
 		<section id="calculator">
 			<div class="container pt-4">
-				<h3>Calculator</h3>
+				<h3>Calcolatore</h3>
 				<form id="recipeform">
 					<div class="ingredients">
 						<div class="row">
@@ -53,7 +53,7 @@
 						<div>
 							<div class="form-group row">
 								<div class="col sm">
-									<button type='button' class="btn btn-secondary" onclick="formsubmit()">Mise en place</button>
+									<button type='button' class="btn btn-secondary" style="width: 120px;" onclick="formsubmit()">Prepara</button>
 								</div>
 							</div>
 						</div>
@@ -65,28 +65,28 @@
 						<div>
 							<div class="form-group row">
 								<div class="col-sm-1">
-									<button type='button' class="btn btn-secondary" style="width: 120px;" onclick="formsubmit()">Cook</button>
+									<button type='button' class="btn btn-secondary" style="width: 120px;" onclick="formsubmit()">Cucina</button>
 								</div>
 							</div>
 						</div>
 					</form>
 					<div id="results" style="display: none;" class="row pt-4">
-						<h3>Results</h3>
+						<h3>Risultati</h3>
 						<table class="table table-striped">
-							<thead><tr><td><h5>Environment</h5></td>
-							<td class="text-center"><a href="#" data-toggle="tooltip" title='Total values. Please note that some ingredients might not be counted here.' class="text-center">Content</a><td class="text-center"></td>
-							<td class="text-center">Percentage of <a href="#reference-food" data-toggle="tooltip" title='Click to set a custom benchmark.' >reference food</a></td></tr></thead>
+							<thead><tr><td><h5>Caratteristiche ambientali</h5></td>
+							<td class="text-center"><a href="#" data-toggle="tooltip" title='Valori totali. Notare che alcuni ingredienti potrebbero non essere conteggiati.' class="text-center">Quantità</a><td class="text-center"></td>
+							<td class="text-center">Percentuale dell'<a href="#reference-food" data-toggle="tooltip" title="Clicca qui per cambiare riferimento.">alimento di paragone</a></td></tr></thead>
 							<tbody id="table-footprint">
 							</tbody>
-							<thead><tr><td><h5>Nutrition</h5></td><td class="text-center"><a href="#" data-toggle="tooltip" title='Total values. Please note that traces and values < 0.5 are not counted.' class="text-center">Content</a></td>
-							<td class="text-center">Percentage of <a href="#" data-toggle="tooltip" title='Reference intakes set by EU legislation (Annex XIII of Regulation 1169/2011 on the provision of food information to consumers)'>daily reference intake</a></td>
-							<td class="text-center">Percentage of <a href="#reference-food" data-toggle="tooltip" title='Click to set a custom benchmark.'>reference food</a></td>
+							<thead><tr><td><h5>Caratteristiche nutrizionali</h5></td><td class="text-center"><a href="#" data-toggle="tooltip" title="Valori totali.  Notare che tracce e valori inferiori a 0.5 non sono contati." class="text-center">Quantità</a></td>
+							<td class="text-center">Percentuale della <a href="#" data-toggle="tooltip" title="Riferimenti normativa UE (Annesso XIII del Regolamento 1169/2011 relativo alla fornitura di informazioni sugli alimenti ai consumatori)">dose giornaliera raccomandata</a></td>
+							<td class="text-center">Pecentuale dell'<a href="#reference-food" data-toggle="tooltip" title="Clicca qui per cambiare riferimento."> alimento di paragone</a></td>
 						</tr></thead>
 						<tbody id="table-nutritional">
 						</tbody>
 					</table>
 					<div class="col-sm-7 pt-4">
-						<h5><a id="reference-food"></a>Reference food</h5>
+						<h5><a id="reference-food"></a>Alimento di paragone</h5>
 					</div>
 					<form id="reference-form">
 						<div class="row">
@@ -112,26 +112,29 @@
 			<section id="about" class="bg-light">
 				<div class="container">
 					<div class="row pl-3 pr-3">
-						<h3>About</h3>
-						<p class="lead">The food supply chain is responsible for one quarter of antropogenic green-house gas emissions worldwide<sup><a href="#ref1">1</a></sup>.<br>With myCookPrint calculator, you can estimate the carbon footprint of a meal, including food production, transportation and preparation.
+						<h3>A proposito di questo sito</h3>
+						<p class="lead">
+							Il settore alimentare è responsabile d'un quarto delle emissioni di gas a effetto serra a livello mondiale<sup><a href="#ref1">1</a></sup>.<br>Grazie al calcolare myCookPrint, puoi stimare l'impronta carbonica di una ricetta, inclusa la produzione, la trasformazione, il trasporto fino alla cottura del cibo.
 					</p>
 					<p>
-					MyCookPrint calculator is based on two main databases released by French government agencies as open data (Licence Ouverte):							</p>
-					<ul>
-						<li>the <a href="https://doc.agribalyse.fr/documentation-en/">AGRIBALYSE®</a> database (v. 3.0.1 2020) provided by the French Environment Protection Agency (ADEME) containing the environmental analysis of food products; </li>
-						<li>the <a href="https://ciqual.anses.fr/">CIQUAL</a> food composition database (v. 2020) provided by the French Agency for Food, Environmental and Occupational health safety (ANSES).</li>
-					</ul>
-					<p class="lead">As such, the results are valid for medium standard products consumed in France. However, they might be used as as first proxy also in other European countries.
+						Il calcolare myCookPrint utilizza due database distribuiti dal governo fancese in open data (Licence Ouverte):
 					</p>
-					<p>Additional data regarding the carbon content of energy sources are issued from the European Environment Agency <a href="https://www.eea.europa.eu/ds_resolveuid/0320026e904e43729189fe8720b5e35d">CO2 Intensity of Electricity generation</a> (2017), the latest values from <a href="https://www.data.gouv.fr/fr/datasets/base-carbone-r-1/">ADEME's Base carbone®</a> (v 19.0 4/12/2020), and the <a href="https://www.bafu.admin.ch/bafu/en/home/topics/climate/questions-answers.html">Swiss Federal Office for the Environment</a> (2014).
-					<p>The source code of the calculator as well as the data sources are available in the <a href="https://github.com/gperonato/low-carbon-cooking">Github repository</a> of the project.</p>
+					<ul>
+						<li><a href="https://doc.agribalyse.fr/documentation-en/">AGRIBALYSE®</a> (v. 3.0.1 2020) prodotto dall'Agence de la Transition Ecologique française (ADEME) fornisce l'impronta ambientale dei prodotti alimentari più comuni; </li>
+						<li><a href="https://ciqual.anses.fr/">CIQUAL</a> (v. 2020) prodotta dall'Agence nationale de sécurité sanitaire de l'alimentation, de l'environnement et du travail (ANSES) fornisce le informazioni sulla composizione degli alimenti.</li>
+					</ul>
+					<p class="lead">I risultati sono validi per i prodotti consumati in Francia, ma possono essere usati anche come indicatore di massima per altri paesi europei. 
+					</p>
+					<p>Il calcolatore utilizza inoltre i fattori d'emissione (CO2e/KWh) delle fonti energetiche fornite dall'Agenzia Europea dell'Ambiente (<a href="https://www.eea.europa.eu/ds_resolveuid/0320026e904e43729189fe8720b5e35d">CO2 Intensity of Electricity generation</a> (2017), la <a href="https://www.data.gouv.fr/fr/datasets/base-carbone-r-1/">Base carbone®</a> (v 19.0 4/12/2020) dell'ADEME per la Francia, e l'<a href="https://www.bafu.admin.ch/bafu/en/home/topics/climate/questions-answers.html">Ufficio Federale dell'Ambiente (UFEN)</a> (2014) per la Svizzera.
+					<p>Il codice sorgente e i dati sono disponibili nella <a href="https://github.com/gperonato/low-carbon-cooking">repository Github</a> del progetto.</p>
+					<p>Notare che la traduzione in italiano degli alimenti viene fornita senza alcuna garanzia in termini di accuratezza, completezza o affidabilità, si prega di consultare la versione originale francese (o la traduzione ufficiale in inglese) in caso di dubbi.</p>
 					<small><sup>1</sup><a id="ref1"></a>Poore, J., & Nemecek, T. (2018). Reducing food’s environmental impacts through producers and consumers. Science, 360(6392), 987–992. <a href="https://doi.org/10.1126/science.aaq0216">https://doi.org/10.1126/science.aaq0216</a></small>
 				</div>
 			</div>
 		</section>
 	</body>
 	<script type="text/javascript">
-	var language="EN";
+	var language = "IT";
 	$(function () {
 		$('[data-toggle="tooltip"]').tooltip()
 		})
