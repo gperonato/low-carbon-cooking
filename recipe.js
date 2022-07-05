@@ -48,11 +48,6 @@ function run() {
 					this.total_content = {}
 					this.comparison = {"food":"Hamburger, from fast foods restaurant",
 											"quantity":220};
-
-					for (var key of Object.keys(data[0]).slice(1)) {
-    					this.total_content[key.split(" (")[0]] = {"value":0,
-    															  "unit":key.split(" (")[1].split("/")[0]}
-    				}
 				}
 
 				addIngredient(name, quantity) {
@@ -81,6 +76,8 @@ function run() {
 				mise_en_place() {
 					this.content = {}
 					this.weight = 0
+					var values_to_skip = [];
+					// Populate content
 					for (const [name, value] of Object.entries(this.ingredients)) {
 						this.content[name] = {}
 						var entries = this.add_values(name)
@@ -89,14 +86,25 @@ function run() {
 								this.content[name][key] = value * (this.ingredients[name]["quantity"] / 1000.)
 							}
 							else {
-								this.content[name][key] = getNum(value) * (this.ingredients[name]["quantity"]/100.)
-							}
-							if (key != "LCI Name" & key != "name"){
-								this.total_content[key.split(" (")[0]]["value"] += this.content[name][key] 
+								if (! isNaN(value)) {
+									this.content[name][key] = getNum(value) * (this.ingredients[name]["quantity"]/100.)
+								}
+								else {values_to_skip.push(key)}
 							}
 						}
 						this.weight += this.ingredients[name]["quantity"]
 					}
+					// Populate total content
+					for (const [name, object] of Object.entries(this.content)){
+						for (const [key, value] of Object.entries(object)){
+							if (! values_to_skip.includes(key)){
+									this.total_content[key.split(" (")[0]] = {"value":0,
+										    								  "unit":key.split(" (")[1].split("/")[0]}
+									this.total_content[key.split(" (")[0]]["value"] += this.content[name][key] 
+								}
+						}
+					}
+					console.log("Skipping", new Set(values_to_skip))
 					this.compare()
 				}
 
@@ -148,7 +156,7 @@ function run() {
 			    		var name = key.split(" (")[0];
 			    		var comparison = "";
 			    		var recommended = "";
-			    		if (value > 0) {
+			    		if (value > 0 && this.total_content.hasOwnProperty(name)) {
 			    			if (key == "Carbon footprint (kgCO2e/kg)"){
 			    				comparison = ((this.total_content[name]["value"] / (value*(quantity/1000)))*100).toFixed(0).toString()+"%"
 			    			}
@@ -156,11 +164,11 @@ function run() {
 			    				comparison = ((this.total_content[name]["value"] / (value*(quantity/100)))*100).toFixed(0).toString()+"%"
 			    				recommended = ((this.total_content[name]["value"]/this.intake[name]["value"])*100).toFixed(0).toString() +"%"
 			    			}
+				    		this.total_content[name]["benchmark"] = {"name":food,
+				    												"weight (g)": quantity,
+				    												"value": comparison}
+				    		this.total_content[name]["recommended"] = recommended
 			    		}
-			    		this.total_content[name]["benchmark"] = {"name":food,
-			    												"weight (g)": quantity,
-			    												"value": comparison}
-			    		this.total_content[name]["recommended"] = recommended
 			    	}
 			    }
 			}
