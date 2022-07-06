@@ -93,6 +93,32 @@ Papa.parse("../data/translation.csv", {
 		var x = 1;
 		var c = 1;
 
+		// Action settings window
+		$("#servings").last().val(servings);
+		$("#main-ingredients").prop("checked",onlyMain);
+		$("#save-settings").on("click", function(e) {
+				servings = $("#servings").last().val();
+				onlyMain = $("#main-ingredients").prop("checked");
+				urlParams.set('servings', servings.toString());
+				urlParams.set('onlyMain', onlyMain.toString());
+				history.pushState(null, null, "?"+urlParams.toString());
+				for (var x = 0; x < iningredients.length; x++) {
+					// Autocomplete
+					if (onlyMain) {
+						$(wrapper).find("[name='i']").last().autocomplete({
+						source: food_arr_main.map(a => a[language])
+						}).autocomplete('enable');
+					}
+					else {
+						console.log("all")
+						$(wrapper).find("[name='i']").last().autocomplete({
+						source: food_arr.map(a => a[language])
+						}).autocomplete('enable');
+					}
+				}
+				formsubmit();
+				});
+
 		// Action for changing language
 		$('#language a').click(function() {
 		        select_language($(this).attr('name'))
@@ -231,7 +257,6 @@ Papa.parse("../data/translation.csv", {
 				console.log("cannot remove first cooking step")
 			}
 		});
-
 		formsubmit();
 	});
 }});
