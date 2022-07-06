@@ -98,9 +98,11 @@ function run() {
 					for (const [name, object] of Object.entries(this.content)){
 						for (const [key, value] of Object.entries(object)){
 							if (! values_to_skip.includes(key)){
-									this.total_content[key.split(" (")[0]] = {"value":0,
-										    								  "unit":key.split(" (")[1].split("/")[0]}
-									this.total_content[key.split(" (")[0]]["value"] += this.content[name][key] 
+									if (! this.total_content[key.split(" (")[0]] ){
+										this.total_content[key.split(" (")[0]] = {"value":0,
+										    								  	  "unit":key.split(" (")[1].split("/")[0]}										
+										}
+									this.total_content[key.split(" (")[0]]["value"] += this.content[name][key] / this.servings
 								}
 						}
 					}

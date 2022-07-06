@@ -75,9 +75,11 @@ class Recipe():
         for ingredient in self.content.keys():
             for key, value in self.content[ingredient].items():
                 if key not in keys_to_skip:
-                    self.total_content[key.split(" (")[0]] = {"value": 0,
-                                                              "unit":key.split(" (")[1].split("/")[0]}
-                    self.total_content[key.split(" (")[0]]["value"] += self.content[name][key]
+                    key_no_unit = key.split(" (")[0]
+                    if not key_no_unit in self.total_content.keys():
+                        self.total_content[key_no_unit] = {"value": 0,
+                                                                  "unit":key.split(" (")[1].split("/")[0]}
+                    self.total_content[key_no_unit]["value"] += self.content[name][key]
         print("Skipping", set(keys_to_skip))
         self.compare()
     
@@ -86,7 +88,6 @@ class Recipe():
         for entry in self.db:
             if entry["LCI Name"] == name:
                 for key, value in entry.items():
-                    print(value)
                     try:
                         entries[key] = float(value)
                     except:
@@ -119,38 +120,38 @@ class Recipe():
 
 
 my_recipe = Recipe("Pasta broccoli e aggiughe")
-# my_recipe.addIngredient("Dried pasta, wholemeal, raw", 100)
-# my_recipe.addIngredient("Olive oil, extra virgin", 2)
-# my_recipe.addIngredient("Anchovy, in salt (semi-preserved)", 15)
-# my_recipe.addIngredient("Romanesco cauliflower or romanesco broccoli, raw", 200)
+my_recipe.addIngredient("Dried pasta, wholemeal, raw", 100)
+my_recipe.addIngredient("Olive oil, extra virgin", 2)
+my_recipe.addIngredient("Anchovy, in salt (semi-preserved)", 15)
+my_recipe.addIngredient("Romanesco cauliflower or romanesco broccoli, raw", 200)
 my_recipe.addIngredients([("Dried pasta, wholemeal, raw", 100),
                           ("Olive oil, extra virgin", 2),
                           ("Anchovy, in salt (semi-preserved)", 12),
                           ("Romanesco cauliflower or romanesco broccoli, raw", 250)])
 my_recipe.mise_en_place()
-# print(my_recipe.name)
-# print(my_recipe.ingredients)
-# print(my_recipe.content)
-# print("Weight",my_recipe.weight,"g")
-# print(my_recipe.total_content)
-# my_recipe.addCookingStep("Electricity (cooking) - France continentale", 15, 2500)
-# print(my_recipe.cooking_steps)
+print(my_recipe.name)
+print(my_recipe.ingredients)
+print(my_recipe.content)
+print("Weight",my_recipe.weight,"g")
+print(my_recipe.total_content)
+my_recipe.addCookingStep("Electricity (cooking) - France continentale", 15, 2500)
+print(my_recipe.cooking_steps)
 print(my_recipe.total_content)
 my_recipe.cook()
 
-# my_recipe2 = Recipe("Tagliatelle al ragù")
-# my_recipe2.addIngredients([("Dried egg pasta, raw", 100),
-#                           ("Olive oil, extra virgin", 2),
-#                           ("Beef, minced steak, 20% fat, cooked", 75),
-#                           ("Carrot, raw", 12),
-#                           ("Celery stalk, raw", 12),
-#                           ("Onion, raw", 12),
-#                           ("Tomato coulis, canned (tomato puree semi-reduced 11%)", 75)])
-# my_recipe2.mise_en_place()
-# print(my_recipe2.name)
-# print(my_recipe2.ingredients)
-# print("Weight",my_recipe2.weight,"g")
-# print(my_recipe2.total_content)
-# print("")
+my_recipe2 = Recipe("Tagliatelle al ragù")
+my_recipe2.addIngredients([("Dried egg pasta, raw", 100),
+                          ("Olive oil, extra virgin", 2),
+                          ("Beef, minced steak, 20% fat, cooked", 75),
+                          ("Carrot, raw", 12),
+                          ("Celery stalk, raw", 12),
+                          ("Onion, raw", 12),
+                          ("Tomato coulis, canned (tomato puree semi-reduced 11%)", 75)])
+my_recipe2.mise_en_place()
+print(my_recipe2.name)
+print(my_recipe2.ingredients)
+print("Weight",my_recipe2.weight,"g")
+print(my_recipe2.total_content)
+print("")
 
 
