@@ -43,6 +43,7 @@ function run() {
 					this.data = data;
 					this.energy_ef = energy_ef;
 					this.intake = intake;
+					this.servings = 1;
 					this.ingredients = {};
 					this.cooking_steps = [];
 					this.total_content = {}
@@ -114,7 +115,7 @@ function run() {
 					for (const step of this.cooking_steps) {
 						var energy = step["duration"]/60. * step["power"] / 1000.
 						step["CO2e"] = energy * this.find_EF(step["energy_source"])
-						this.total_content["Carbon footprint"]["value"] += step["CO2e"] 
+						this.total_content["Carbon footprint"]["value"] += step["CO2e"] / this.servings
 						}
 					this.compare()
 				}
@@ -177,6 +178,7 @@ function run() {
 
 		// Web recipe
 		let webRecipe = new Recipe("webRecipe")
+		webRecipe.servings = servings;
 		var ingredients = $('[name="i"]');
 		var quantities = $('[name="q"]');
 
@@ -264,6 +266,12 @@ function formsubmit() {
 				}
 			serialized += recipe_arr[i]["name"] + "=" + recipe_arr[i]["value"] + "&"
 			}
+		if (servings > 1) {
+			serialized += "servings=" + servings + "&"
+		}
+		if (onlyMain == false) {
+			serialized += "onlyMain=false"
+		}
 		// Update URL
 		history.pushState(null, "", '?' + serialized); 
 	}

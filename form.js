@@ -5,7 +5,12 @@ const iningredients = urlParams.getAll('i');
 const inquantities = urlParams.getAll('q');
 const inenergysources = urlParams.getAll('e');
 const incookingtime = urlParams.getAll('t');
-const inpower = urlParams.getAll('p')
+const inpower = urlParams.getAll('p');
+var onlyMain = JSON.parse(urlParams.get('onlyMain'))
+if (onlyMain == null){
+	onlyMain = true;
+}
+var servings = parseFloat(urlParams.get('servings')) || 1;
 const ingrsnippet = `<div class="row" id="ingredients">
 	            	<div class="col-sm-7 form-group">
 	            	<input id="ingredient" type="text" class="form-control input-sm"  name="i" value=""/>
@@ -55,7 +60,6 @@ const cooksnippet = `<div class="row" id="cooking">
 						</div>
 			</div>`
 const default_power = 2000;
-
 function select_language(language){
 	var lang = language;
 	if (language == "EN") {
@@ -73,7 +77,10 @@ Papa.parse("../data/translation.csv", {
 
     // Create arrays of food and energy sources
 	food_arr = dictionary.filter(function (e) {
-	    return e.Type == "CIQUAL";
+	    return e.Type == "AGB";
+	});
+	food_arr_main = dictionary.filter(function (e) {
+	    return e.Type == "AGB" && e.isMain == "TRUE";
 	});
 	energy_arr = dictionary.filter(function (e) {
 	            return e.Type == "ENERGY";
@@ -81,7 +88,6 @@ Papa.parse("../data/translation.csv", {
 
 
 	$(document).ready(function() {
-
 		var wrapper = $(".ingredients");
 		var wrapper_cooking = $(".cooking-steps");
 		var x = 1;
@@ -116,9 +122,9 @@ Papa.parse("../data/translation.csv", {
 		});
 
 		// Translate reference
-			$("#reference").last().autocomplete({
-				source: food_arr.map(a => a[language])
-			}).val(translate_value("25413","Code",language)).autocomplete('enable');
+		$("#reference").last().autocomplete({
+			source: food_arr.map(a => a[language])
+		}).val(translate_value("25413","Code",language)).autocomplete('enable');
 
 		// Add empty field if no parameters are provided
 		if (iningredients.length == 0) {
@@ -142,10 +148,16 @@ Papa.parse("../data/translation.csv", {
 			$("[name='q']").last().val(inquantities[x]);
 
 			// Autocomplete
-			$(wrapper).find("[name='i']").last().autocomplete({
+			if (onlyMain) {
+				$(wrapper).find("[name='i']").last().autocomplete({
+				source: food_arr_main.map(a => a[language])
+				}).autocomplete('enable');
+			}
+			else {
+				$(wrapper).find("[name='i']").last().autocomplete({
 				source: food_arr.map(a => a[language])
-			}).autocomplete('enable');
-
+				}).autocomplete('enable');
+			}
 		}
 
 		for (var c = 0; c < inenergysources.length; c++) {
