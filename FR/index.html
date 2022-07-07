@@ -12,7 +12,40 @@
 		<link rel="stylesheet" href="../libs/scrolling-nav/css/scrolling-nav.css">
 	</head>
 	<body>
-		
+		<!-- Modal -->
+		<div class="modal fade" id="settings" tabindex="-1" role="dialog" aria-labelledby="settings-label" aria-hidden="true">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <h5 class="modal-title" id="settings-label">Réglages</h5>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+		      <div class="modal-body">
+		      	<form>
+		        <div class="form-group row">
+		       				<label for="servings" class="col-sm-2 col-form-label">Portions</label>
+		       				<div class="col-sm-10">
+			            	<input id="servings" type="number" class="form-control input-sm"/>
+			            </div>
+			    </div>
+			    <div class="form-check">
+		  			<input class="form-check-input" type="checkbox" value="" id="main-ingredients">
+		  			<label class="form-check-label" for="main-ingredients">
+		    			Montrer seulement les ingrédients principaux (sans plats cuisinés)
+		  			</label>
+				</div>
+				</form>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+		        <button type="button" class="btn btn-primary" id="save-settings"  data-dismiss="modal">Enregistrer</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+				
 		<!-- Navigation -->
 		<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="mainNav">
 			<div class="container">
@@ -26,18 +59,22 @@
 							<a class="nav-link js-scroll-trigger" href="#calculator">Calculateur</a>
 						</li>
 						<li class="nav-item">
+							<!-- Button trigger modal -->
+									<a href ="#" class="nav-link"  data-toggle="modal" data-target="#settings" aria-haspopup="true" aria-expanded="false">
+							  		Réglages
+									</a>
+						</li>
+						<li class="nav-item">
 							<a class="nav-link js-scroll-trigger" href="#about">A propos</a>
 						</li>
-						<li>
-							<div class="btn-group">
-							  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							    Langue
-							  </button>
+						<li class="nav-item">
+							  <a href ="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							    Langue</a>
 							  <div class="dropdown-menu dropdown-menu-right" id="language">
 							  <a class="dropdown-item" name="EN" href="#">English</a>
 							  <a class="dropdown-item" name="IT" href="#">Italiano</a>
 							  </div>
-							</div>
+						</li>
 						</li>
 					</ul>
 				</div>
@@ -75,7 +112,7 @@
 						<h3>Résultats</h3>
 						<table class="table table-striped">
 							<thead><tr><td><h5>Environnement</h5></td>
-							<td class="text-center"><a href="#" data-toggle="tooltip" title="Valeurs totales." class="text-center">Quantité</a><td class="text-center"></td>
+							<td class="text-center"><td class="text-center"><a href="#" data-toggle="tooltip" title='Voiture thermique (sans production), motorisation moyenne, France, 2018 | Base Carbone® ADEME' class="text-center">Distance équivalente en voiture</a>
 							<td class="text-center">Pourcentage de l'<a href="#reference-food" data-toggle="tooltip" title='Cliquez ici pour changer la référence.' >aliment de référence</a></td></tr></thead>
 							<tbody id="table-footprint">
 							</tbody>

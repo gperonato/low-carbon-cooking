@@ -11,6 +11,39 @@
 		<link rel="stylesheet" href="../libs/scrolling-nav/css/scrolling-nav.css">
 	</head>
 	<body>
+		<!-- Modal -->
+		<div class="modal fade" id="settings" tabindex="-1" role="dialog" aria-labelledby="settings-label" aria-hidden="true">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <h5 class="modal-title" id="settings-label">Impostazioni</h5>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+		      <div class="modal-body">
+		      	<form>
+		        <div class="form-group row">
+		       				<label for="servings" class="col-sm-2 col-form-label">Porzioni</label>
+		       				<div class="col-sm-10">
+			            	<input id="servings" type="number" class="form-control input-sm"/>
+			            </div>
+			    </div>
+			    <div class="form-check">
+		  			<input class="form-check-input" type="checkbox" value="" id="main-ingredients">
+		  			<label class="form-check-label" for="main-ingredients">
+		    			Cerca solo tra gli ingredienti principali (nascondi i piatti pronti)
+		  			</label>
+				</div>
+				</form>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-secondary" data-dismiss="modal">Chiudi</button>
+		        <button type="button" class="btn btn-primary" id="save-settings"  data-dismiss="modal">Salva</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
 		
 		<!-- Navigation -->
 		<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="mainNav">
@@ -25,18 +58,21 @@
 							<a class="nav-link js-scroll-trigger" href="#calculator">Calcolatore</a>
 						</li>
 						<li class="nav-item">
+							<!-- Button trigger modal -->
+									<a href ="#" class="nav-link"  data-toggle="modal" data-target="#settings" aria-haspopup="true" aria-expanded="false">
+							  		Impostazioni
+									</a>
+						</li>
+						<li class="nav-item">
 							<a class="nav-link js-scroll-trigger" href="#about">A proposito di questo sito</a>
 						</li>
-						<li>
-							<div class="btn-group">
-							  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							    Lingua
-							  </button>
+						<li class="nav-item">
+							  <a href ="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							    Lingua</a>
 							  <div class="dropdown-menu dropdown-menu-right" id="language">
 							  <a class="dropdown-item" name="EN" href="#">English</a>
 							  <a class="dropdown-item" name="FR" href="#">Français</a>
 							  </div>
-							</div>
 						</li>
 					</ul>
 				</div>
@@ -74,13 +110,13 @@
 						<h3>Risultati</h3>
 						<table class="table table-striped">
 							<thead><tr><td><h5>Caratteristiche ambientali</h5></td>
-							<td class="text-center"><a href="#" data-toggle="tooltip" title='Valori totali.' class="text-center">Quantità</a><td class="text-center"></td>
+							<td class="text-center"><td class="text-center"><a href="#" data-toggle="tooltip" title='Auto termica (senza produzione) con motorizzazione standard in Francia, 2018 | Base Carbone® ADEME' class="text-center">Distanza equivalente in auto</a>
 							<td class="text-center">Percentuale dell'<a href="#reference-food" data-toggle="tooltip" title="Clicca qui per cambiare riferimento.">alimento di paragone</a></td></tr></thead>
 							<tbody id="table-footprint">
 							</tbody>
 							<thead><tr><td><h5>Caratteristiche nutrizionali</h5></td><td class="text-center"><a href="#" data-toggle="tooltip" title="Valori totali.  Notare che per alcuni alimenti sono considerati i valori massimi, mentre le tracce non sono contate." class="text-center">Quantità</a></td>
 							<td class="text-center">Percentuale della <a href="#" data-toggle="tooltip" title="Riferimenti normativa UE (Annesso XIII del Regolamento 1169/2011 relativo alla fornitura di informazioni sugli alimenti ai consumatori)">dose giornaliera raccomandata</a></td>
-							<td class="text-center">Pecentuale dell'<a href="#reference-food" data-toggle="tooltip" title="Clicca qui per cambiare riferimento."> alimento di paragone</a></td>
+							<td class="text-center">Pecentuale dell'<a href="#reference-food" data-toggle="tooltip" title="Clicca qui per cambiare riferimento.">alimento di paragone</a></td>
 						</tr></thead>
 						<tbody id="table-nutritional">
 						</tbody>
