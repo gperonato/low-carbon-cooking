@@ -6,10 +6,6 @@ const inquantities = urlParams.getAll('q');
 const inenergysources = urlParams.getAll('e');
 const incookingtime = urlParams.getAll('t');
 const inpower = urlParams.getAll('p');
-var onlyMain = JSON.parse(urlParams.get('onlyMain'))
-if (onlyMain == null){
-	onlyMain = true;
-}
 var servings = parseFloat(urlParams.get('servings')) || 1;
 const ingrsnippet = `<div class="row" id="ingredients">
 	            	<div class="col-sm-7 form-group">
@@ -60,6 +56,9 @@ const cooksnippet = `<div class="row" id="cooking">
 						</div>
 			</div>`
 const default_power = 2000;
+if (! onlyMain){
+	var onlyMain = true;
+}
 function select_language(language){
 	var lang = language;
 	if (language == "EN") {

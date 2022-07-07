@@ -59,18 +59,21 @@
 							<a class="nav-link js-scroll-trigger" href="#calculator">Calculator</a>
 						</li>
 						<li class="nav-item">
+							<!-- Button trigger modal -->
+									<a href ="#" class="nav-link"  data-toggle="modal" data-target="#settings" aria-haspopup="true" aria-expanded="false">
+							  		Settings
+									</a>
+						</li>
+						<li class="nav-item">
 							<a class="nav-link js-scroll-trigger" href="#about">About</a>
 						</li>
-						<li>
-							<div class="btn-group">
-							  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							    Language
-							  </button>
+						<li class="nav-item">
+							  <a href ="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							    Language</a>
 							  <div class="dropdown-menu dropdown-menu-right" id="language">
 							  <a class="dropdown-item" name="FR" href="#">Français</a>
 							  <a class="dropdown-item" name="IT" href="#">Italiano</a>
 							  </div>
-							</div>
 						</li>
 					</ul>
 				</div>
@@ -103,20 +106,12 @@
 								</div>
 							</div>
 						</div>
-						<!-- Button trigger modal -->
-						<div class="form-group row">
-							<div class="col-sm-1">
-								<button type="button" class="btn btn-secondary" style="width: 120px;"  data-toggle="modal" data-target="#settings">
-						  		Settings
-								</button>
-							</div>
-						</div>
 					</form>
 					<div id="results" style="display: none;" class="row pt-4">
 						<h3>Results</h3>
 						<table class="table table-striped">
 							<thead><tr><td><h5>Environment</h5></td>
-							<td class="text-center"><a href="#" data-toggle="tooltip" title='Total values.' class="text-center">Content</a><td class="text-center"></td>
+							<td class="text-center"><a href="#" data-toggle="tooltip" title='Total values. Please note that some ingredients might not be counted here.' class="text-center">Content</a><td class="text-center"></td>
 							<td class="text-center">Percentage of <a href="#reference-food" data-toggle="tooltip" title='Click to set a custom benchmark.' >reference food</a></td></tr></thead>
 							<tbody id="table-footprint">
 							</tbody>

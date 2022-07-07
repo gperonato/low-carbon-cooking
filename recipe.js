@@ -214,7 +214,7 @@ function run() {
 		for (const [key, value] of Object.entries(webRecipe.total_content).slice(0,1)){
 		            html += '<tr><td>' + translate_value(key,"EN",language) + '</td>' +
 		                    '<td class="text-center">' + value["value"].toFixed(2) + ' ' + value["unit"] + '</td>' +
-		                    '<td class="text-center">' + value["recommended"] + '</td>' +
+		                    '<td class="text-center">' + (value["value"]/0.180).toFixed(2)  + ' km </td>' +
 		                    '<td class="text-center">' + value["benchmark"]["value"] + '</td>' +
 		                    '</tr>';
 		     }
@@ -268,9 +268,6 @@ function formsubmit() {
 			}
 		if (servings > 1) {
 			serialized += "servings=" + servings + "&"
-		}
-		if (onlyMain == false) {
-			serialized += "onlyMain=false"
 		}
 		// Update URL
 		history.pushState(null, "", '?' + serialized); 

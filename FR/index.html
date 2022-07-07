@@ -59,18 +59,22 @@
 							<a class="nav-link js-scroll-trigger" href="#calculator">Calculateur</a>
 						</li>
 						<li class="nav-item">
+							<!-- Button trigger modal -->
+									<a href ="#" class="nav-link"  data-toggle="modal" data-target="#settings" aria-haspopup="true" aria-expanded="false">
+							  		Réglages
+									</a>
+						</li>
+						<li class="nav-item">
 							<a class="nav-link js-scroll-trigger" href="#about">A propos</a>
 						</li>
-						<li>
-							<div class="btn-group">
-							  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							    Langue
-							  </button>
+						<li class="nav-item">
+							  <a href ="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							    Langue</a>
 							  <div class="dropdown-menu dropdown-menu-right" id="language">
 							  <a class="dropdown-item" name="EN" href="#">English</a>
 							  <a class="dropdown-item" name="IT" href="#">Italiano</a>
 							  </div>
-							</div>
+						</li>
 						</li>
 					</ul>
 				</div>
@@ -101,14 +105,6 @@
 								<div class="col-sm-1">
 									<button type='button' class="btn btn-secondary" style="width: 120px;" onclick="formsubmit()">Cuisson</button>
 								</div>
-							</div>
-						</div>
-						<!-- Button trigger modal -->
-						<div class="form-group row">
-							<div class="col-sm-1">
-								<button type="button" class="btn btn-secondary" style="width: 120px;"  data-toggle="modal" data-target="#settings">
-						  		Réglages
-								</button>
 							</div>
 						</div>
 					</form>
