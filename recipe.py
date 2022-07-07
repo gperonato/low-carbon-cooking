@@ -19,6 +19,7 @@ class Recipe():
         self.db = []
         self.energy_ef= []
         self.intake= []
+        self.total_content = {}
 
         with open('data/food/data.csv') as csvfile:
             reader = csv.DictReader(csvfile)
@@ -30,12 +31,6 @@ class Recipe():
                 self.energy_ef.append(row)
         with open('data/food/intake/data.json', "r") as f:
             self.intake = json.loads(f.read())
-        
-        self.total_content = {}
-        for key in list(self.db[0].keys()):
-            if key != "LCI Name":
-                self.total_content[key.split(" (")[0]] = {"value":0,
-                                                            "unit":key.split(" (")[1].split("/")[0]}
          
     def addIngredient(self,name,quantity):
         self.ingredients[name] = {"quantity": quantity}
@@ -62,6 +57,8 @@ class Recipe():
 
     def mise_en_place(self):
         self.weight = 0
+        keys_to_skip = []
+        # Populate content
         for name in self.ingredients.keys():
             self.content[name] = {}
             entries = self.add_values(name)
@@ -69,12 +66,21 @@ class Recipe():
                 if key == "Carbon footprint (kgCO2e/kg)":
                     self.content[name][key] = value * self.ingredients[name]["quantity"]/1000.
                 else:
-                    try:
+                    if value != None:
                         self.content[name][key] = value * (self.ingredients[name]["quantity"]/100.)
-                    except:
-                        self.content[name][key] = 0
-                self.total_content[key.split(" (")[0]]["value"] += self.content[name][key]
+                    else:
+                        keys_to_skip.append(key)
             self.weight += self.ingredients[name]["quantity"]
+         # Populate total content
+        for ingredient in self.content.keys():
+            for key, value in self.content[ingredient].items():
+                if key not in keys_to_skip:
+                    key_no_unit = key.split(" (")[0]
+                    if not key_no_unit in self.total_content.keys():
+                        self.total_content[key_no_unit] = {"value": 0,
+                                                                  "unit":key.split(" (")[1].split("/")[0]}
+                    self.total_content[key_no_unit]["value"] += self.content[name][key]
+        print("Skipping", set(keys_to_skip))
         self.compare()
     
     def add_values(self,name):
@@ -85,7 +91,7 @@ class Recipe():
                     try:
                         entries[key] = float(value)
                     except:
-                        pass
+                        entries[key] = None
                 return entries
 
     def find_EF(self,energy):
@@ -95,27 +101,29 @@ class Recipe():
 
     def compare(self,meal="Hamburger, from fast foods restaurant",quantity=220):
         reference = self.add_values(meal)
+        del reference["LCI Name"]
+        print(self.total_content.keys() )
         for key, value in reference.items():
             name = key.split(" (")[0]
             comparison = ""
             recommended = ""
-            if value > 0:
+            if name in self.total_content.keys() and value > 0:
                 if key == "Carbon footprint (kgCO2e/kg)":
                     comparison = round(self.total_content[name]["value"] / (value*(quantity/1000.))*100,2)
                 else:
                     comparison = round(self.total_content[name]["value"] / (value*(quantity/100.)) * 100,2)
                     recommended = round(self.total_content[name]["value"]/self.intake[name]["value"] * 100,2)
-            self.total_content[name]["benchmark"] = {"name":meal,"weight (g)": quantity, "value": comparison}
-            self.total_content[name]["recommended"] = recommended
+                self.total_content[name]["benchmark"] = {"name":meal,"weight (g)": quantity, "value": comparison}
+                self.total_content[name]["recommended"] = recommended
 
 
 
 
 my_recipe = Recipe("Pasta broccoli e aggiughe")
-# my_recipe.addIngredient("Dried pasta, wholemeal, raw", 100)
-# my_recipe.addIngredient("Olive oil, extra virgin", 2)
-# my_recipe.addIngredient("Anchovy, in salt (semi-preserved)", 15)
-# my_recipe.addIngredient("Romanesco cauliflower or romanesco broccoli, raw", 200)
+my_recipe.addIngredient("Dried pasta, wholemeal, raw", 100)
+my_recipe.addIngredient("Olive oil, extra virgin", 2)
+my_recipe.addIngredient("Anchovy, in salt (semi-preserved)", 15)
+my_recipe.addIngredient("Romanesco cauliflower or romanesco broccoli, raw", 200)
 my_recipe.addIngredients([("Dried pasta, wholemeal, raw", 100),
                           ("Olive oil, extra virgin", 2),
                           ("Anchovy, in salt (semi-preserved)", 12),
