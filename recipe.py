@@ -64,7 +64,7 @@ class Recipe():
             entries = self.add_values(name)
             for key, value in entries.items():
                 if key == "Carbon footprint (kgCO2e/kg)":
-                    self.content[name][key] = value * self.ingredients[name]["quantity"]/1000.
+                    self.content[name]["Carbon footprint (gCO2e/g)"] = value * self.ingredients[name]["quantity"]
                 else:
                     if value != None:
                         self.content[name][key] = value * (self.ingredients[name]["quantity"]/100.)
@@ -109,7 +109,7 @@ class Recipe():
             recommended = ""
             if name in self.total_content.keys() and value > 0:
                 if key == "Carbon footprint (kgCO2e/kg)":
-                    comparison = round(self.total_content[name]["value"] / (value*(quantity/1000.))*100,2)
+                    comparison = round(self.total_content[name]["value"] / (value*(quantity))*100,2)
                 else:
                     comparison = round(self.total_content[name]["value"] / (value*(quantity/100.)) * 100,2)
                     recommended = round(self.total_content[name]["value"]/self.intake[name]["value"] * 100,2)
