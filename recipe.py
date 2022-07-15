@@ -49,7 +49,7 @@ class Recipe():
 
     def cook(self):
         for step in self.cooking_steps:
-            energy = step["duration"]/60. * step["power"] / 1000.
+            energy = step["duration"]/60. * step["power"]
             print(self.find_EF(step["energy_source"]))
             step["CO2e"] = energy * self.find_EF(step["energy_source"])
             self.total_content["Carbon footprint"]["value"] +=  step["CO2e"] 
@@ -134,7 +134,7 @@ print(my_recipe.ingredients)
 print(my_recipe.content)
 print("Weight",my_recipe.weight,"g")
 print(my_recipe.total_content)
-my_recipe.addCookingStep("Electricity (cooking) - France continentale", 15, 2500)
+my_recipe.addCookingStep("Electricity 2021 - use : residential cooking - France continentale", 15, 2500)
 print(my_recipe.cooking_steps)
 print(my_recipe.total_content)
 my_recipe.cook()

@@ -113,7 +113,7 @@ function run() {
 
 				cook() {
 					for (const step of this.cooking_steps) {
-						var energy = step["duration"]/60. * step["power"] / 1000.
+						var energy = step["duration"]/60. * step["power"]
 						step["CO2e"] = energy * this.find_EF(step["energy_source"])
 						this.total_content["Carbon footprint"]["value"] += step["CO2e"] / this.servings
 						}
