@@ -28,7 +28,7 @@ Code,Type,isMain,EN,FR,IT
 21513,AGB,FALSE,"Lamb, saddle, lean, roasted/baked","Agneau, selle, partie maigre, rôtie/cuite au four","Agnello, sella, parte magra, arrosto/al forno"
 11023,AGB,TRUE,"Garlic, powder, dried","Ail séché, poudre","Aglio secco, in polvere"
 11000,AGB,TRUE,"Garlic, fresh","Ail, cru","Aglio, crudo"
-1014,AGB,FALSE,Pure alcohol,Alcool pur,Alcool puro
+1014,AGB,TRUE,Pure alcohol,Alcool pur,Alcool puro
 4041,AGB,FALSE,Mashed potatoes w fresh tome cheese,Aligot (purée de pomme de terre à la tomme fraîche),Aligot (purè di patate con tomino fresco)
 15000,AGB,TRUE,"Almond, (with peel)",Amande (avec peau),Mandorla (con buccia)
 15042,AGB,TRUE,"Almond, grilled, salted","Amande, grillée, salée","Mandorla, tostata, salata"
@@ -40,10 +40,10 @@ Code,Type,isMain,EN,FR,IT
 13718,AGB,TRUE,"Pineapple, in light syrup, canned, drained","Ananas au sirop léger, appertisé, égoutté","Ananas sciroppata (sciroppo leggero), in scatola, sgocciolata"
 13719,AGB,TRUE,"Pineapple, in light syrup, canned, not drained","Ananas au sirop léger, appertisé, non égoutté","Ananas sciroppata (sciroppo leggero), in scatola, non scolata"
 13002,AGB,TRUE,"Pineapple, pulp, raw","Ananas, pulpe, cru","Ananas, polpa, cruda"
-26177,AGB,FALSE,"Anchovy, in salt (semi-preserved)","Anchois au sel (anchoité, semi-conserve)",Acciughe sotto sale (semiconserva)
+26177,AGB,TRUE,"Anchovy, in salt (semi-preserved)","Anchois au sel (anchoité, semi-conserve)",Acciughe sotto sale (semiconserva)
 26079,AGB,TRUE,"Common anchovy, raw","Anchois commun, cru","Acciughe comuni, crude"
 26187,AGB,FALSE,"Common anchovy, marinated","Anchois commun, mariné","Acciughe comuni, marinate"
-26000,AGB,FALSE,"Anchovy, fillets, in oil, semi-preserved, drained","Anchois, filets à l'huile, semi-conserve, égoutté","Acciughe, filetti sott'olio, in semiconserva, scolati"
+26000,AGB,TRUE,"Anchovy, fillets, in oil, semi-preserved, drained","Anchois, filets à l'huile, semi-conserve, égoutté","Acciughe, filetti sott'olio, in semiconserva, scolati"
 25999,AGB,FALSE,"Anchovy, fillets, rolled with capers, semi-preserved, drained","Anchois, filets roulés aux câpres, semi-conserve, égoutté","Acciughe, filetti arrotolati ai capperi, in semiconserva, scolati"
 8500,AGB,FALSE,Chitterling sausage,Andouille,Andouille (salume)
 8501,AGB,FALSE,Chitterling sausage from Guéméné,Andouille de Guéméné,Andouille (salume) di Guéméné
@@ -195,9 +195,9 @@ Code,Type,isMain,EN,FR,IT
 25001,AGB,FALSE,Veal stew in white sauce,Blanquette de veau,Spezzatino di vitello in salsa bianca (blanquette de veau)
 9003,AGB,TRUE,Khorasan wheat,"Blé de Khorasan, cru","Grano Khorasan o turanicum o frumento orientale, crudo"
 9060,AGB,TRUE,"Durum wheat, whole, raw","Blé dur entier, cru","Semola di grano duro integrale, cruda"
-9082,AGB,FALSE,"Durum wheat, pre-cooked, cooked, in a microwaveable bag","Blé dur précuit cuisiné, en sachet micro-ondable","Grano duro precotto, in busta per microonde"
+9082,AGB,TRUE,"Durum wheat, pre-cooked, cooked, in a microwaveable bag","Blé dur précuit cuisiné, en sachet micro-ondable","Grano duro precotto, in busta per microonde"
 9080,AGB,TRUE,"Wheat, whole, pre-cooked, raw","Blé dur précuit, entier, cru","Grano duro precotto, intero, crudo"
-9083,AGB,FALSE,"Durum wheat pre-cooked, whole grain, cooked, to pan-fry","Blé dur précuit, grains entiers, cuisiné, à poêler","Grano duro precotto, integrale, cotto, da cucinare in padella"
+9083,AGB,TRUE,"Durum wheat pre-cooked, whole grain, cooked, to pan-fry","Blé dur précuit, grains entiers, cuisiné, à poêler","Grano duro precotto, integrale, cotto, da cucinare in padella"
 9081,AGB,TRUE,"Durum wheat pre-cooked, whole grain, cooked, unsalted","Blé dur précuit, grains entiers, cuit, non salé","Grano duro precotto, integrale, cotto, non salato"
 9010,AGB,TRUE,"Wheat, whole, raw","Blé tendre entier ou froment, cru","Grano tenero integrale o frumento, crudo"
 12526,AGB,TRUE,"Gex blue cheese, or Jura blue cheese or Septmoncel blue cheese, from cow's milk",Bleu de Gex ou Fromage bleu du Haut-jura ou Bleu de septmoncel (AOC),Bleu de Gex o formaggio blu Haut-Jura o Bleu de septmoncel (AOC)
