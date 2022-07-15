@@ -2512,8 +2512,10 @@ ELTR,ENERGY,,Electricity mix - Turkey,Mix électrique - Turquie,Mix elettrico - 
 ELIS,ENERGY,,Electricity mix - Island,Mix électrique - Islande,Mix elettrico - Islanda
 ELNO,ENERGY,,Electricity mix - Norway,Mix électrique - Norvège,Mix elettrico - Norvegia
 ELCH,ENERGY,,Electricity mix - Switzerland,Mix électrique - Suisse,Mix elettrico - Svizzera
-ECFR,ENERGY,,Electricity (cooking) - France continentale,Électricité (cuisson résidentiel) - France continentale,Elettricità (cucina residenziale) - Francia continentale
-NGEU,ENERGY,,Natural gas - Europe,Gaz naturel - Europe,"Gas, metano - Europa"
+ECFR,ENERGY,,Electricity 2021 - use : residential cooking - France continentale,Électricité 2021 - usage : cuisson résidentiel - France continentale,Elettricità 2021 - uso: cucina residenziale - Francia continentale
+PVFR,ENERGY,,Electricity photovoltaic - France continentale,Electricité photovoltaïque - France continentale,Elettricità da fotovoltaico - Francia continentale
+NGEU,ENERGY,,Natural gas - Europe,Gaz naturel - Europe,Gas naturale - Europa
+NGFR,ENERGY,,Natural gas- 2015 Mix - France continentale,Gaz naturel - Mix 2015 - France continentale,Gas naturale - Mix 2015 - Francia continentale
 ,,,Carbon footprint,Empreinte carbone,Impronta carbonica
 ,,,"Energy, Regulation EU No 1169/2011","Energie, Réglement UE N˚ 1169/2011","Energia, Regolamento UE N˚ 1169/2011"
 ,,,Protein,Protéines,Proteine

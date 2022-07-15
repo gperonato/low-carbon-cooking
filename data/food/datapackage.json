@@ -98,11 +98,11 @@
     ],
     "Sources": [
         {
-            "title": "Agribalyse\u00ae v.3.0.1, 24.11.2020 update",
+            "title": "Agribalyse\u00ae v.3.0.1, 11.06.2021 update",
             "path": "https://www.data.gouv.fr/fr/datasets/agribalyse-r-detail-par-etape-du-cycle-de-vie/"
         },
         {
-            "title": "Ciqual database, 07.07.2020 update",
+            "title": "Ciqual database, 28.08.2020 update",
             "path": "https://www.data.gouv.fr/fr/datasets/table-de-composition-nutritionnelle-des-aliments-ciqual/"
         }
     ],
