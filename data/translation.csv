@@ -2525,3 +2525,8 @@ NGFR,ENERGY,,Natural gas- 2015 Mix - France continentale,Gaz naturel - Mix 2015 
 ,,,Calcium,Calcium,Calcio
 ,,,Iron,Fer,Ferro
 ,,,Vitamin B12,Vitamine B12,Vitamina B12
+%WEIGHT%,,,Weight,Poids,Peso
+%INGREDIENT%,,,Ingredient,Ingrédient,Ingrediente
+%SOURCE%,,,Select energy source,Séléctionner la source d'énergie,Selezionare la fonte d'energia
+%POWER%,,,Input power,Puissance consommée,Potenza assorbita
+%TIME%,,,Cooking time,Temps de cuisson,Tempo di cottura

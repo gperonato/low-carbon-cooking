@@ -253,7 +253,7 @@ function translate_value(value, source_language, target_language) {
 
 
 function formsubmit() {
-	if ($('[name="q"]').val() > 0) {
+	if ($('[name="q"]').val().length > 0 && $('[name="i"]').val().length > 0) {
 		run();
 		var recipe_arr = $("#recipeform").serializeArray();
 

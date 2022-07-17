@@ -7,13 +7,13 @@ const inenergysources = urlParams.getAll('e');
 const incookingtime = urlParams.getAll('t');
 const inpower = urlParams.getAll('p');
 var servings = parseFloat(urlParams.get('servings')) || 1;
-const ingrsnippet = `<div class="row" id="ingredients">
+var ingrsnippet = `<div class="row" id="ingredients">
 	            	<div class="col-sm-7 form-group">
-	            	<input id="ingredient" type="text" class="form-control input-sm"  name="i" value=""/>
+	            	<input id="ingredient" type="text" class="form-control input-sm" placeholder="%INGREDIENT%" name="i" value=""/>
 	            	</div>
 	            	<div class="col-sm-3 form-group">
 	            		<div class="input-group">
-							<input type="number" class="form-control input-sm"  name="q" min="0" value="">
+							<input type="number" class="form-control input-sm"  placeholder="%WEIGHT%" name="q" min="0" value="">
 							<div class="input-group-append">
 								<span class="input-group-text"> g </span>
 							</div>
@@ -27,14 +27,15 @@ const ingrsnippet = `<div class="row" id="ingredients">
 							</div>
 					</div>`
 
-const cooksnippet = `<div class="row" id="cooking">
+var cooksnippet = `<div class="row" id="cooking">
 				<div class="col-sm-4 form-group" id="energydropdown">
 						<select class="form-control" name="e" id="energyselect">
+						<option value="" selected disabled hidden>%SOURCE%</option>
 						</select>
 				</div>
 				<div class="col-sm-3 form-group">
 					<div class="input-group">
-						<input type="number" class="form-control input-sm"  name="t" min="0" value="">
+						<input type="number" class="form-control input-sm"  placeholder = "%TIME%"  name="t" min="0" value="">
 						<div class="input-group-append">
 							<span class="input-group-text"> min </span>
 						</div>
@@ -42,7 +43,7 @@ const cooksnippet = `<div class="row" id="cooking">
 				</div>
 				<div class="col-sm-3 form-group">
 					<div class="input-group">
-						<input type="number" class="form-control input-sm"  name="p" min="0" value="">
+						<input type="number" class="form-control input-sm"  placeholder = "%POWER%" name="p" min="0" value="">
 						<div class="input-group-append">
 							<span class="input-group-text"> W </span>
 						</div>
@@ -145,6 +146,13 @@ Papa.parse("../data/translation.csv", {
 				return false;
 			}
 		});
+
+		// Translate form
+		ingrsnippet = ingrsnippet.replace("%WEIGHT%",translate_value("%WEIGHT%","Code",language));
+		ingrsnippet = ingrsnippet.replace("%INGREDIENT%",translate_value("%INGREDIENT%","Code",language));
+		cooksnippet = cooksnippet.replace("%SOURCE%",translate_value("%SOURCE%","Code",language));
+		cooksnippet = cooksnippet.replace("%TIME%",translate_value("%TIME%","Code",language));
+		cooksnippet = cooksnippet.replace("%POWER%",translate_value("%POWER%","Code",language));
 
 		// Translate reference
 		$("#reference").last().autocomplete({
