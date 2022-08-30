@@ -2357,7 +2357,7 @@ Code,Type,isMain,EN,FR,IT
 19698,AGB,FALSE,"Tiramisu, refrigerated","Tiramisu, rayon frais","Tiramisù, banco frigo"
 18022,AGB,FALSE,"Infusion, brewed, without sugar","Tisane infusée, non sucrée","Tisana, infusa, non zuccherata"
 25523,AGB,FALSE,Canapés (toasts w various toppings),"Toasts ou Canapés salés, garnitures diverses","Tartine o canapè, condimenti vari"
-20904,AGB,FALSE,"Tofu, plain","Tofu, nature","Tofu, semplice"
+20904,AGB,TRUE,"Tofu, plain","Tofu, nature","Tofu, al naturale"
 25524,AGB,FALSE,Provencal-style tomato (breaded tomatoes stuffed with garlic and parsley),Tomate à la provençale,Pomodoro alla provenzale
 20172,AGB,TRUE,"Tomato, cherry, raw","Tomate cerise, crue","Pomodoro ciliegino, crudo"
 20047_1,AGB,TRUE,"Tomato in season, raw","Tomate de saison, crue","Pomodoro di stagione, crudo"
