@@ -28,7 +28,7 @@ Code,Type,isMain,EN,FR,IT
 21513,AGB,FALSE,"Lamb, saddle, lean, roasted/baked","Agneau, selle, partie maigre, rôtie/cuite au four","Agnello, sella, parte magra, arrosto/al forno"
 11023,AGB,TRUE,"Garlic, powder, dried","Ail séché, poudre","Aglio secco, in polvere"
 11000,AGB,TRUE,"Garlic, fresh","Ail, cru","Aglio, crudo"
-1014,AGB,FALSE,Pure alcohol,Alcool pur,Alcool puro
+1014,AGB,TRUE,Pure alcohol,Alcool pur,Alcool puro
 4041,AGB,FALSE,Mashed potatoes w fresh tome cheese,Aligot (purée de pomme de terre à la tomme fraîche),Aligot (purè di patate con tomino fresco)
 15000,AGB,TRUE,"Almond, (with peel)",Amande (avec peau),Mandorla (con buccia)
 15042,AGB,TRUE,"Almond, grilled, salted","Amande, grillée, salée","Mandorla, tostata, salata"
@@ -40,10 +40,10 @@ Code,Type,isMain,EN,FR,IT
 13718,AGB,TRUE,"Pineapple, in light syrup, canned, drained","Ananas au sirop léger, appertisé, égoutté","Ananas sciroppata (sciroppo leggero), in scatola, sgocciolata"
 13719,AGB,TRUE,"Pineapple, in light syrup, canned, not drained","Ananas au sirop léger, appertisé, non égoutté","Ananas sciroppata (sciroppo leggero), in scatola, non scolata"
 13002,AGB,TRUE,"Pineapple, pulp, raw","Ananas, pulpe, cru","Ananas, polpa, cruda"
-26177,AGB,FALSE,"Anchovy, in salt (semi-preserved)","Anchois au sel (anchoité, semi-conserve)",Acciughe sotto sale (semiconserva)
+26177,AGB,TRUE,"Anchovy, in salt (semi-preserved)","Anchois au sel (anchoité, semi-conserve)",Acciughe sotto sale (semiconserva)
 26079,AGB,TRUE,"Common anchovy, raw","Anchois commun, cru","Acciughe comuni, crude"
 26187,AGB,FALSE,"Common anchovy, marinated","Anchois commun, mariné","Acciughe comuni, marinate"
-26000,AGB,FALSE,"Anchovy, fillets, in oil, semi-preserved, drained","Anchois, filets à l'huile, semi-conserve, égoutté","Acciughe, filetti sott'olio, in semiconserva, scolati"
+26000,AGB,TRUE,"Anchovy, fillets, in oil, semi-preserved, drained","Anchois, filets à l'huile, semi-conserve, égoutté","Acciughe, filetti sott'olio, in semiconserva, scolati"
 25999,AGB,FALSE,"Anchovy, fillets, rolled with capers, semi-preserved, drained","Anchois, filets roulés aux câpres, semi-conserve, égoutté","Acciughe, filetti arrotolati ai capperi, in semiconserva, scolati"
 8500,AGB,FALSE,Chitterling sausage,Andouille,Andouille (salume)
 8501,AGB,FALSE,Chitterling sausage from Guéméné,Andouille de Guéméné,Andouille (salume) di Guéméné
@@ -195,9 +195,9 @@ Code,Type,isMain,EN,FR,IT
 25001,AGB,FALSE,Veal stew in white sauce,Blanquette de veau,Spezzatino di vitello in salsa bianca (blanquette de veau)
 9003,AGB,TRUE,Khorasan wheat,"Blé de Khorasan, cru","Grano Khorasan o turanicum o frumento orientale, crudo"
 9060,AGB,TRUE,"Durum wheat, whole, raw","Blé dur entier, cru","Semola di grano duro integrale, cruda"
-9082,AGB,FALSE,"Durum wheat, pre-cooked, cooked, in a microwaveable bag","Blé dur précuit cuisiné, en sachet micro-ondable","Grano duro precotto, in busta per microonde"
+9082,AGB,TRUE,"Durum wheat, pre-cooked, cooked, in a microwaveable bag","Blé dur précuit cuisiné, en sachet micro-ondable","Grano duro precotto, in busta per microonde"
 9080,AGB,TRUE,"Wheat, whole, pre-cooked, raw","Blé dur précuit, entier, cru","Grano duro precotto, intero, crudo"
-9083,AGB,FALSE,"Durum wheat pre-cooked, whole grain, cooked, to pan-fry","Blé dur précuit, grains entiers, cuisiné, à poêler","Grano duro precotto, integrale, cotto, da cucinare in padella"
+9083,AGB,TRUE,"Durum wheat pre-cooked, whole grain, cooked, to pan-fry","Blé dur précuit, grains entiers, cuisiné, à poêler","Grano duro precotto, integrale, cotto, da cucinare in padella"
 9081,AGB,TRUE,"Durum wheat pre-cooked, whole grain, cooked, unsalted","Blé dur précuit, grains entiers, cuit, non salé","Grano duro precotto, integrale, cotto, non salato"
 9010,AGB,TRUE,"Wheat, whole, raw","Blé tendre entier ou froment, cru","Grano tenero integrale o frumento, crudo"
 12526,AGB,TRUE,"Gex blue cheese, or Jura blue cheese or Septmoncel blue cheese, from cow's milk",Bleu de Gex ou Fromage bleu du Haut-jura ou Bleu de septmoncel (AOC),Bleu de Gex o formaggio blu Haut-Jura o Bleu de septmoncel (AOC)
@@ -2357,7 +2357,7 @@ Code,Type,isMain,EN,FR,IT
 19698,AGB,FALSE,"Tiramisu, refrigerated","Tiramisu, rayon frais","Tiramisù, banco frigo"
 18022,AGB,FALSE,"Infusion, brewed, without sugar","Tisane infusée, non sucrée","Tisana, infusa, non zuccherata"
 25523,AGB,FALSE,Canapés (toasts w various toppings),"Toasts ou Canapés salés, garnitures diverses","Tartine o canapè, condimenti vari"
-20904,AGB,FALSE,"Tofu, plain","Tofu, nature","Tofu, semplice"
+20904,AGB,TRUE,"Tofu, plain","Tofu, nature","Tofu, al naturale"
 25524,AGB,FALSE,Provencal-style tomato (breaded tomatoes stuffed with garlic and parsley),Tomate à la provençale,Pomodoro alla provenzale
 20172,AGB,TRUE,"Tomato, cherry, raw","Tomate cerise, crue","Pomodoro ciliegino, crudo"
 20047_1,AGB,TRUE,"Tomato in season, raw","Tomate de saison, crue","Pomodoro di stagione, crudo"
@@ -2512,8 +2512,10 @@ ELTR,ENERGY,,Electricity mix - Turkey,Mix électrique - Turquie,Mix elettrico - 
 ELIS,ENERGY,,Electricity mix - Island,Mix électrique - Islande,Mix elettrico - Islanda
 ELNO,ENERGY,,Electricity mix - Norway,Mix électrique - Norvège,Mix elettrico - Norvegia
 ELCH,ENERGY,,Electricity mix - Switzerland,Mix électrique - Suisse,Mix elettrico - Svizzera
-ECFR,ENERGY,,Electricity (cooking) - France continentale,Électricité (cuisson résidentiel) - France continentale,Elettricità (cucina residenziale) - Francia continentale
-NGEU,ENERGY,,Natural gas - Europe,Gaz naturel - Europe,"Gas, metano - Europa"
+ECFR,ENERGY,,Electricity 2021 - use : residential cooking - France continentale,Électricité 2021 - usage : cuisson résidentiel - France continentale,Elettricità 2021 - uso: cucina residenziale - Francia continentale
+PVFR,ENERGY,,Electricity photovoltaic - France continentale,Electricité photovoltaïque - France continentale,Elettricità da fotovoltaico - Francia continentale
+NGEU,ENERGY,,Natural gas - Europe,Gaz naturel - Europe,Gas naturale - Europa
+NGFR,ENERGY,,Natural gas- 2015 Mix - France continentale,Gaz naturel - Mix 2015 - France continentale,Gas naturale - Mix 2015 - Francia continentale
 ,,,Carbon footprint,Empreinte carbone,Impronta carbonica
 ,,,"Energy, Regulation EU No 1169/2011","Energie, Réglement UE N˚ 1169/2011","Energia, Regolamento UE N˚ 1169/2011"
 ,,,Protein,Protéines,Proteine
@@ -2523,3 +2525,8 @@ NGEU,ENERGY,,Natural gas - Europe,Gaz naturel - Europe,"Gas, metano - Europa"
 ,,,Calcium,Calcium,Calcio
 ,,,Iron,Fer,Ferro
 ,,,Vitamin B12,Vitamine B12,Vitamina B12
+%WEIGHT%,,,Weight,Poids,Peso
+%INGREDIENT%,,,Ingredient,Ingrédient,Ingrediente
+%SOURCE%,,,Select energy source,Séléctionner la source d'énergie,Selezionare la fonte d'energia
+%POWER%,,,Input power,Puissance consommée,Potenza assorbita
+%TIME%,,,Cooking time,Temps de cuisson,Tempo di cottura

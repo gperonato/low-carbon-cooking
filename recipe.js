@@ -84,7 +84,7 @@ function run() {
 						var entries = this.add_values(name)
 						for (const [key, value] of Object.entries(entries)) {
 							if (key == "Carbon footprint (kgCO2e/kg)"){
-								this.content[name][key] = value * (this.ingredients[name]["quantity"] / 1000.)
+								this.content[name]["Carbon footprint (gCO2e/g)"] = value * (this.ingredients[name]["quantity"])
 							}
 							else {
 								if (! isNaN(value)) {
@@ -113,7 +113,7 @@ function run() {
 
 				cook() {
 					for (const step of this.cooking_steps) {
-						var energy = step["duration"]/60. * step["power"] / 1000.
+						var energy = step["duration"]/60. * step["power"]
 						step["CO2e"] = energy * this.find_EF(step["energy_source"])
 						this.total_content["Carbon footprint"]["value"] += step["CO2e"] / this.servings
 						}
@@ -161,7 +161,7 @@ function run() {
 			    		var recommended = "";
 			    		if (value > 0 && this.total_content.hasOwnProperty(name)) {
 			    			if (key == "Carbon footprint (kgCO2e/kg)"){
-			    				comparison = ((this.total_content[name]["value"] / (value*(quantity/1000)))*100).toFixed(0).toString()+"%"
+			    				comparison = ((this.total_content[name]["value"] / (value*(quantity)))*100).toFixed(0).toString()+"%"
 			    			}
 			    			else{
 			    				comparison = ((this.total_content[name]["value"] / (value*(quantity/100)))*100).toFixed(0).toString()+"%"
@@ -213,8 +213,8 @@ function run() {
 		var html = '';
 		for (const [key, value] of Object.entries(webRecipe.total_content).slice(0,1)){
 		            html += '<tr><td>' + translate_value(key,"EN",language) + '</td>' +
-		                    '<td class="text-center">' + value["value"].toFixed(2) + ' ' + value["unit"] + '</td>' +
-		                    '<td class="text-center">' + (value["value"]/0.192).toFixed(2)  + ' km </td>' +
+		                    '<td class="text-center">' + value["value"].toFixed(0) + ' ' + value["unit"] + '</td>' +
+		                    '<td class="text-center">' + (value["value"]/192).toFixed(1)  + ' km </td>' +
 		                    '<td class="text-center">' + value["benchmark"]["value"] + '</td>' +
 		                    '</tr>';
 		     }
@@ -225,7 +225,7 @@ function run() {
 		// console.log(webRecipe.total_content)
 		for (const [key, value] of Object.entries(webRecipe.total_content).slice(1)){
 		            html += '<tr><td>' + translate_value(key,"EN",language)  + '</td>' +
-		                    '<td class="text-center">' + value["value"].toFixed(2) + ' ' + value["unit"] + '</td>' +
+		                    '<td class="text-center">' + value["value"].toFixed(1) + ' ' + value["unit"] + '</td>' +
 		                    '<td class="text-center">' + value["recommended"] + '</td>' +
 		                    '<td class="text-center">' + value["benchmark"]["value"] + '</td>' +
 		                    '</tr>';
@@ -253,7 +253,7 @@ function translate_value(value, source_language, target_language) {
 
 
 function formsubmit() {
-	if ($('[name="q"]').val() > 0) {
+	if ($('[name="q"]').val().length > 0 && $('[name="i"]').val().length > 0) {
 		run();
 		var recipe_arr = $("#recipeform").serializeArray();
 

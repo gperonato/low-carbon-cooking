@@ -49,7 +49,7 @@ class Recipe():
 
     def cook(self):
         for step in self.cooking_steps:
-            energy = step["duration"]/60. * step["power"] / 1000.
+            energy = step["duration"]/60. * step["power"]
             print(self.find_EF(step["energy_source"]))
             step["CO2e"] = energy * self.find_EF(step["energy_source"])
             self.total_content["Carbon footprint"]["value"] +=  step["CO2e"] 
@@ -64,7 +64,7 @@ class Recipe():
             entries = self.add_values(name)
             for key, value in entries.items():
                 if key == "Carbon footprint (kgCO2e/kg)":
-                    self.content[name][key] = value * self.ingredients[name]["quantity"]/1000.
+                    self.content[name]["Carbon footprint (gCO2e/g)"] = value * self.ingredients[name]["quantity"]
                 else:
                     if value != None:
                         self.content[name][key] = value * (self.ingredients[name]["quantity"]/100.)
@@ -109,7 +109,7 @@ class Recipe():
             recommended = ""
             if name in self.total_content.keys() and value > 0:
                 if key == "Carbon footprint (kgCO2e/kg)":
-                    comparison = round(self.total_content[name]["value"] / (value*(quantity/1000.))*100,2)
+                    comparison = round(self.total_content[name]["value"] / (value*(quantity))*100,2)
                 else:
                     comparison = round(self.total_content[name]["value"] / (value*(quantity/100.)) * 100,2)
                     recommended = round(self.total_content[name]["value"]/self.intake[name]["value"] * 100,2)
@@ -134,7 +134,7 @@ print(my_recipe.ingredients)
 print(my_recipe.content)
 print("Weight",my_recipe.weight,"g")
 print(my_recipe.total_content)
-my_recipe.addCookingStep("Electricity (cooking) - France continentale", 15, 2500)
+my_recipe.addCookingStep("Electricity 2021 - use : residential cooking - France continentale", 15, 2500)
 print(my_recipe.cooking_steps)
 print(my_recipe.total_content)
 my_recipe.cook()

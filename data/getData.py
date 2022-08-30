@@ -228,11 +228,11 @@ package.remove_resource("Agribalyse_Synthese")
 package.commit()
 package.descriptor['Sources'] = [
 {
-  "title": "Agribalyse® v.3.0.1, 24.11.2020 update",
+  "title": "Agribalyse® v.3.0.1, 11.06.2021 update",
   "path": "https://www.data.gouv.fr/fr/datasets/agribalyse-r-detail-par-etape-du-cycle-de-vie/"
 },
 {
-  "title": "Ciqual database, 07.07.2020 update",
+  "title": "Ciqual database, 28.08.2020 update",
   "path": "https://www.data.gouv.fr/fr/datasets/table-de-composition-nutritionnelle-des-aliments-ciqual/"
 },
 ]
@@ -249,7 +249,7 @@ url = 'https://www.eea.europa.eu/data-and-maps/data/co2-intensity-of-electricity
 r = requests.get(url, allow_redirects=True)
 open("2017_CO2_IntensEL_EEA.zip", 'wb').write(r.content)
 
-url = "https://www.data.gouv.fr/fr/datasets/r/8513c5a0-9f98-4059-8843-990d7dd47ff2"
+url = "https://www.data.gouv.fr/fr/datasets/r/899c4d80-7590-4ed4-a661-e99e3ca93b40"
 r = requests.get(url, allow_redirects=True)
 open("ademe.csv", 'wb').write(r.content)
 
@@ -293,6 +293,7 @@ Flow(
             "Type Ligne",
             "Nom base anglais",
             "Nom base français",
+            "Nom attribut anglais",
             "Localisation géographique",
             "Total poste non décomposé",
         ],
@@ -304,7 +305,7 @@ Flow(
         ),
     add_computed_field([
         dict(target='id', operation='format', with_="{Identifiant de l'élément}"),
-        dict(target='Name_EN', operation='format', with_='{Nom base anglais}'),
+        dict(target='Name_EN', operation='format', with_='{Nom base anglais} {Nom attribut anglais}'),
         dict(target='Name_FR', operation='format', with_='{Nom base français}'),
         dict(target='Location', operation='format', with_='{Localisation géographique}'),
         dict(target='EF', operation='format', with_='{Total poste non décomposé}'),
@@ -323,6 +324,7 @@ Flow(
             "Type Ligne",
             "Nom base anglais",
             "Nom base français",
+            "Nom attribut anglais",
             "Localisation géographique",
             "Total poste non décomposé",
         ],
@@ -330,8 +332,10 @@ Flow(
         ),
     filter_rows(
         equals=[
-        {"id":26769}, # Electricity for cooking (France)
-        {"id":13515}], # Gas (Europe)
+        {"id":37098}, # Electricity for cooking (France)
+        {"id":13515}, # Gas (Europe),
+        {"id":26621}, # Gas (France),
+        {"id":34720}], # PV
         resources=["data"],
         ),
     set_type(
@@ -346,7 +350,7 @@ Flow(
             {
                 "name": "Name_EN",
                 "patterns": [
-                    {"find": "Electricity", "replace": "Electricity (cooking)"},
+                    {"find": "Natural gas ", "replace": "Natural gas"},
                 ],
             }
         ],
@@ -383,11 +387,13 @@ package.descriptor['Sources'] = [
   "path": "https://www.bafu.admin.ch/bafu/en/home/topics/climate/questions-answers.html"
 },
 {
-  "title": "Base carbone® v.19.0, 04.12.2020 update",
+  "title": "Base carbone® v.19.0, 07.07.2021 update",
   "path": "https://www.data.gouv.fr/fr/datasets/base-carbone-r-1/"
 },
 ]
+package.commit()
 package.descriptor['description'] = 'Adapted join of various European carbon intensty datasets. Check getData.py to see the transformations applied to the original datasets.'
+package.commit()
 package.add_resource(resource.descriptor)
 package.commit()
 package.save("energy/datapackage.json")
