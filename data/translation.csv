@@ -2482,15 +2482,6 @@ ECFR,ENERGY,,Electricity residential cooking - Continental France,Électricité 
 PVFR,ENERGY,,Electricity photovoltaic - France continentale,Electricité photovoltaïque - France continentale,Elettricità da fotovoltaico - Francia continentale
 NGEU,ENERGY,,Natural gas  - Europe,Gaz naturel - Europe,Gas naturale - Europa
 NGFR,ENERGY,,Natural gas - France continentale,Gaz naturel - France continentale,Gas naturale - Francia continentale
-,,,Carbon footprint,Empreinte carbone,Impronta carbonica
-,,,"Energy, Regulation EU No 1169/2011","Energie, Réglement UE N˚ 1169/2011","Energia, Regolamento UE N˚ 1169/2011"
-,,,Protein,Protéines,Proteine
-,,,Carbohydrate,Glucides,Carboidrati
-,,,Fat,Graisses,Grassi
-,,,Sugars,Sucres,Zuccheri
-,,,Calcium,Calcium,Calcio
-,,,Iron,Fer,Ferro
-,,,Vitamin B12,Vitamine B12,Vitamina B12
 %WEIGHT%,,,Weight,Poids,Peso
 %INGREDIENT%,,,Ingredient,Ingrédient,Ingrediente
 %SOURCE%,,,Select energy source,Séléctionner la source d'énergie,Selezionare la fonte d'energia
@@ -2498,97 +2489,97 @@ NGFR,ENERGY,,Natural gas - France continentale,Gaz naturel - France continentale
 %TIME%,,,Cooking time,Temps de cuisson,Tempo di cottura
 food_code,,,Food Code,,
 food_label,,,Food Label,,
-organic_acids,,,Organic Acids,,
-40_fatty_acids,,,4:0 Fatty Acids,,
-60_fatty_acids,,,6:0 Fatty Acids,,
-80_fatty_acids,,,8:0 Fatty Acids,,
-100_fatty_acids,,,10:0 Fatty Acids,,
-120_fatty_acids,,,12:0 Fatty Acids,,
-140_fatty_acids,,,14:0 Fatty Acids,,
-160_fatty_acids,,,16:0 Fatty Acids,,
-180_fatty_acids,,,18:0 Fatty Acids,,
-181_oleic_acid,,,18:1 Oleic Acid,,
-182_linoleic_acid,,,18:2 Linoleic Acid,,
-183_alpha-linolenic_acid,,,18:3 Alpha-Linolenic Acid,,
-204_arachidonic_acid,,,20:4 Arachidonic Acid,,
-205_epa,,,20:5 EPA,,
-206_dha,,,20:6 DHA,,
-monounsaturated_fatty_acids,,,Monounsaturated Fatty Acids,,
-polyunsaturated_fatty_acids,,,Polyunsaturated Fatty Acids,,
-saturated_fatty_acids,,,Saturated Fatty Acids,,
-alcohol,,,Alcohol,,
-starch,,,Starch,,
-beta-carotene,,,Beta-Carotene,,
-calcium,,,Calcium,,
-cholesterol,,,Cholesterol,,
-copper,,,Copper,,
-water,,,Water,,
-iron,,,Iron,,
-fiber,,,Fiber,,
-fructose,,,Fructose,,
-galactose,,,Galactose,,
-carbohydrates,,,Carbohydrates,,
-glucose,,,Glucose,,
-iodine,,,Iodine,,
-lactose,,,Lactose,,
-lipids,,,Fat,,
-magnesium,,,Magnesium,,
-maltose,,,Maltose,,
-manganese,,,Manganese,,
-energy,,,Energy,,
-energy_kj,,,Energy,,
-phosphorus,,,Phosphorus,,
-polyols,,,Polyols,,
-potassium,,,Potassium,,
-proteins,,,Proteins,,
-retinol,,,Retinol,,
-sucrose,,,Sucrose,,
-salt,,,Salt,,
-selenium,,,Selenium,,
-sodium,,,Sodium,,
-sugars,,,Sugars,,
-vitamin_b12,,,Vitamin B12,,
-vitamin_b1,,,Vitamin B1,,
-vitamin_b2,,,Vitamin B2,,
-vitamin_b3,,,Vitamin B3,,
-vitamin_b5,,,Vitamin B5,,
-vitamin_b6,,,Vitamin B6,,
-vitamin_b9,,,Vitamin B9,,
-vitamin_c,,,Vitamin C,,
-vitamin_d,,,Vitamin D,,
-vitamin_e,,,Vitamin E,,
-vitamin_k1,,,Vitamin K1,,
-vitamin_k2,,,Vitamin K2,,
-zinc,,,Zinc,,
-agb_code,,,AGB Code,,
-ciqual_code,,,CIQUAL Code,,
-food_group,,,Food Group,,
-food_subgroup,,,Food Subgroup,,
-product_name_in_french,,,Product Name in French,,
-lci_name,,,LCI Name,,
-season_code,,,Season Code,,
-airplane_code,,,Airplane Code,,
-delivery,,,Delivery,,
-packaging_material,,,Packaging Material,,
-preparation,,,Preparation,,
-dqr,,,DQR,,
-unique_ef_score,,,Unique EF Score,,
-climate_change,,,Climate Change,,
-ozone_layer_depletion,,,Ozone Layer Depletion,,
-ionizing_radiation,,,Ionizing Radiation,,
-photochemical_ozone_formation,,,Photochemical Ozone Formation,,
-fine_particles,,,Fine Particles,,
-human_health_toxicological_effects_non-carcinogens,,,Human Health Toxicological Effects Non-carcinogens,,
-human_health_toxicological_effects_carcinogens,,,Human Health Toxicological Effects Carcinogens,,
-terrestrial_and_freshwater_acidification,,,Terrestrial and Freshwater Acidification,,
-freshwater_eutrophication,,,Freshwater Eutrophication,,
-marine_eutrophication,,,Marine Eutrophication,,
-terrestrial_eutrophication,,,Terrestrial Eutrophication,,
-aquatic_ecosystems_ecotoxicity,,,Aquatic Ecosystems Ecotoxicity,,
-land_use,,,Land Use,,
-water_resource_depletion,,,Water Resource Depletion,,
-energy_resource_depletion,,,Energy Resource Depletion,,
-mineral_resource_depletion,,,Mineral Resource Depletion,,
-climate_change_biogenic,,,Climate change - biogenic emissions,,
-climate_change_biogenic,,,Climate change - fossil emissions,,
-climate_change_land_use,,,Climate change - emissions linked to land use change,,
+organic_acids,,,Organic Acids,Acides organiques,Acidi organici
+40_fatty_acids,,,4:0 Fatty Acids,Acides gras 4:0,Acidi grassi 4:0
+60_fatty_acids,,,6:0 Fatty Acids,Acides gras 6:0,Acidi grassi 6:0
+80_fatty_acids,,,8:0 Fatty Acids,Acides gras 8:0,Acidi grassi 8:0
+100_fatty_acids,,,10:0 Fatty Acids,Acides gras 10:0,10:0 Acidi grassi
+120_fatty_acids,,,12:0 Fatty Acids,Acides gras 12:0,Acidi grassi 12:0
+140_fatty_acids,,,14:0 Fatty Acids,14:0 Acides gras,14:0 Acidi grassi
+160_fatty_acids,,,16:0 Fatty Acids,16:0 Acides gras,16:0 Acidi grassi
+180_fatty_acids,,,18:0 Fatty Acids,Acides gras 18:0,Acidi grassi 18:0
+181_oleic_acid,,,18:1 Oleic Acid,18:1 Acide oléique,18:1 Acido oleico
+182_linoleic_acid,,,18:2 Linoleic Acid,18:2 Acide linoléique,18:2 Acido linoleico
+183_alpha-linolenic_acid,,,18:3 Alpha-Linolenic Acid,18:3 Acide alpha-linolénique,18:3 Acido alfa-linolenico
+204_arachidonic_acid,,,20:4 Arachidonic Acid,20:4 Acide arachidonique,20:4 Acido arachidonico
+205_epa,,,20:5 EPA,20:5 EPA,20:5 EPA
+206_dha,,,20:6 DHA,20:6 DHA,20:6 DHA
+monounsaturated_fatty_acids,,,Monounsaturated Fatty Acids,Acides gras monoinsaturés,Acidi grassi monoinsaturi
+polyunsaturated_fatty_acids,,,Polyunsaturated Fatty Acids,Acides gras polyinsaturés,Acidi grassi polinsaturi
+saturated_fatty_acids,,,Saturated Fatty Acids,Acides gras saturés,Acidi grassi saturi
+alcohol,,,Alcohol,Alcool,Alcool
+starch,,,Starch,Amidon,Amido
+beta-carotene,,,Beta-Carotene,Bêta-carotène,Beta-carotene
+calcium,,,Calcium,Calcium,Calcio
+cholesterol,,,Cholesterol,Cholestérol,Colesterolo
+copper,,,Copper,Cuivre,Rame
+water,,,Water,Eau,Acqua
+iron,,,Iron,Fer,Ferro
+fiber,,,Fiber,Fibre,Fibra
+fructose,,,Fructose,Fructose,Fruttosio
+galactose,,,Galactose,Galactose,Galattosio
+carbohydrates,,,Carbohydrates,Glucides,Carboidrati
+glucose,,,Glucose,Glucose,Glucosio
+iodine,,,Iodine,Iode,Iodio
+lactose,,,Lactose,Lactose,Lattosio
+lipids,,,Fat,Lipides,Grassi
+magnesium,,,Magnesium,Magnésium,Magnesio
+maltose,,,Maltose,Maltose,Maltosio
+manganese,,,Manganese,Manganèse,Manganese
+energy,,,Energy,Énergie,Energia
+energy_kj,,,Energy,Énergie,Energia
+phosphorus,,,Phosphorus,Phosphore,Fosforo
+polyols,,,Polyols,Polyols,Polioli
+potassium,,,Potassium,Potassium,Potassio
+proteins,,,Proteins,Protéines,Proteine
+retinol,,,Retinol,Rétinol,Retinolo
+sucrose,,,Sucrose,Saccharose,Saccarosio
+salt,,,Salt,Sel,Sale
+selenium,,,Selenium,Sélénium,Selenio
+sodium,,,Sodium,Sodium,Sodio
+sugars,,,Sugars,Sucres,Zuccheri
+vitamin_b12,,,Vitamin B12,Vitamine B12,Vitamina B12
+vitamin_b1,,,Vitamin B1,Vitamine B1,Vitamina B1
+vitamin_b2,,,Vitamin B2,Vitamine B2,Vitamina B2
+vitamin_b3,,,Vitamin B3,Vitamine B3,Vitamina B3
+vitamin_b5,,,Vitamin B5,Vitamine B5,Vitamina B5
+vitamin_b6,,,Vitamin B6,Vitamine B6,Vitamina B6
+vitamin_b9,,,Vitamin B9,Vitamine B9,Vitamina B9
+vitamin_c,,,Vitamin C,Vitamine C,Vitamina C
+vitamin_d,,,Vitamin D,Vitamine D,Vitamina D
+vitamin_e,,,Vitamin E,Vitamine E,Vitamina E
+vitamin_k1,,,Vitamin K1,Vitamine K1,Vitamina K1
+vitamin_k2,,,Vitamin K2,Vitamine K2,Vitamina K2
+zinc,,,Zinc,Zinc,Zinco
+agb_code,,,AGB Code,Code AGB,Codice AGB
+ciqual_code,,,CIQUAL Code,Code CIQUAL,Codice CIQUAL
+food_group,,,Food Group,Groupe d'aliments,Gruppo alimentare
+food_subgroup,,,Food Subgroup,Sous-groupe alimentaire,Sottogruppo alimentare
+product_name_in_french,,,Product Name in French,Nom du produit en français,Nome del prodotto in francese
+lci_name,,,LCI Name,Nom LCI,Nome LCI
+season_code,,,Season Code,Code saison,Codice Stagione
+airplane_code,,,Airplane Code,Code avion,Codice aereo
+delivery,,,Delivery,Livraison,Consegna
+packaging_material,,,Packaging Material,Matériel d'emballage,Materiale d'imballaggio
+preparation,,,Preparation,Préparation,Preparazione
+dqr,,,DQR,DQR,DQR
+unique_ef_score,,,Unique EF Score,Score unique EF,Punteggio unico EF
+climate_change,,,Climate Change,Changement climatique,Cambiamento climatico
+ozone_layer_depletion,,,Ozone Layer Depletion,Appauvrissement de la couche d'ozone,Impoverimento dello strato di ozono
+ionizing_radiation,,,Ionizing Radiation,Rayonnements ionisants,Radiazione ionizzante
+photochemical_ozone_formation,,,Photochemical Ozone Formation,Formation photochimique d'ozone,Formazione di ozono fotochimico
+fine_particles,,,Fine Particles,Particules fines,Particelle sottili
+human_health_toxicological_effects_non-carcinogens,,,Human Health Toxicological Effects Non-carcinogens,Effets toxicologiques sur la santé humaine : substances non-cancérogènes,Effetti tossicologici sulla salute umana Non cancerogeni
+human_health_toxicological_effects_carcinogens,,,Human Health Toxicological Effects Carcinogens,Effets toxicologiques sur la santé humaine : substances cancérogènes,Effetti tossicologici sulla salute umana Cancerogeni
+terrestrial_and_freshwater_acidification,,,Terrestrial and Freshwater Acidification,Acidification terrestre et eaux douces,Acidificazione terrestre e delle acque dolci
+freshwater_eutrophication,,,Freshwater Eutrophication,Eutrophisation eaux douces,Eutrofizzazione dell'acqua dolce
+marine_eutrophication,,,Marine Eutrophication,Eutrophisation marine,Eutrofizzazione marina
+terrestrial_eutrophication,,,Terrestrial Eutrophication,Eutrophisation terrestre,Eutrofizzazione terrestre
+aquatic_ecosystems_ecotoxicity,,,Aquatic Ecosystems Ecotoxicity,Écotoxicité pour écosystèmes aquatiques d'eau douce,Ecotossicità per ecosistemi acquatici 
+land_use,,,Land Use,Utilisation du sol,Uso del suolo
+water_resource_depletion,,,Water Resource Depletion,Épuisement des ressources eau,Impoverimento delle risorse idriche
+energy_resource_depletion,,,Energy Resource Depletion,Épuisement des ressources énergétiques,Impoverimento delle risorse energetiche
+mineral_resource_depletion,,,Mineral Resource Depletion,Épuisement des ressources minéraux,Impoverimento delle risorse minerarie
+climate_change_biogenic,,,Climate change - biogenic emissions,Changement climatique - émissions biogéniques,Cambiamento climatico - emissioni biogeniche
+climate_change_biogenic,,,Climate change - fossil emissions,Changement climatique - émissions fossiles,Cambiamento climatico - emissioni fossili
+climate_change_land_use,,,Climate change - emissions linked to land use change,Changement climatique - émissions liées au changement d'affectation des sols,Cambiamento climatico - emissioni legate al cambiamento di uso del suolo
