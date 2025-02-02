@@ -21,17 +21,29 @@ function loadJSON(path, success, error) {
 }
 
 function run() {
-			Papa.parse("../data/food/data.csv", {
+			Papa.parse("../data/food/environment.csv", {
 				download: true,
 				header:true,
 			    complete: function(results) {
-			        data = results.data;
+			        environment = results.data;
+
+			Papa.parse("../data/food/nutrition.csv", {
+				download: true,
+				header:true,
+			    complete: function(results) {
+			        nutrition = results.data;
 
 			Papa.parse("../data/energy/data.csv", {
 				download: true,
 				header:true,
 			    complete: function(results) {
 			        energy_ef = results.data;
+
+			Papa.parse("../data/food/units.csv", {
+				download: true,
+				header:true,
+			    complete: function(results) {
+			        units = results.data;
 
 			loadJSON('../data/food/intake/data.json',
 				function(intake) {
@@ -40,9 +52,11 @@ function run() {
 			class Recipe {
 				constructor(name) {
 					this.name = name;
-					this.data = data;
+					this.environment = environment;
+					this.nutrition = nutrition;
 					this.energy_ef = energy_ef;
 					this.intake = intake;
+					this.units = units;
 					this.servings = 1;
 					this.ingredients = {};
 					this.cooking_steps = [];
@@ -76,59 +90,58 @@ function run() {
 
 				mise_en_place() {
 					this.content = {}
-					this.weight = 0
-					var values_to_skip = [];
+					this.weight = 0;
 					// Populate content
 					for (const [name, value] of Object.entries(this.ingredients)) {
 						this.content[name] = {}
-						var entries = this.add_values(name)
-						for (const [key, value] of Object.entries(entries)) {
-							if (key == "Carbon footprint (kgCO2e/kg)"){
-								this.content[name]["Carbon footprint (gCO2e/g)"] = value * (this.ingredients[name]["quantity"])
-							}
-							else {
-								if (! isNaN(value)) {
-									this.content[name][key] = getNum(value) * (this.ingredients[name]["quantity"]/100.)
-								}
-								else {values_to_skip.push(key)}
+						for (const dict of [this.nutrition, this.environment]) {
+							var entries = this.add_values(name, dict)
+							for (const [key, value] of Object.entries(entries)) {
+								this.content[name][key] = {"value": getNum(value) * (this.ingredients[name]["quantity"]/1000),
+														   "source": entries["source"]}
 							}
 						}
-						this.weight += this.ingredients[name]["quantity"]
+					this.weight += this.ingredients[name]["quantity"]
 					}
 					// Populate total content
 					for (const [name, object] of Object.entries(this.content)){
 						for (const [key, value] of Object.entries(object)){
-							if (! values_to_skip.includes(key)){
-									if (! this.total_content[key.split(" (")[0]] ){
-										this.total_content[key.split(" (")[0]] = {"value":0,
-										    								  	  "unit":key.split(" (")[1].split("/")[0]}										
-										}
-									this.total_content[key.split(" (")[0]]["value"] += this.content[name][key] / this.servings
+							// Add the content if the object doesn't exist already and if it has a unit
+							if (! (this.total_content[key]) & this.look_up(key, "Short Name", "Unit", this.units) != ""){
+								this.total_content[key] = {"value": 0,
+								    				       "unit": this.look_up(key, "Short Name", "Unit", this.units),
+								    				       "benchmark": {},
+								    				       "recommended": ""	
+								    				   	}
+								var is_environment = false;
 								}
+							if (this.total_content[key]) {
+								this.total_content[key]["value"] += this.content[name][key]["value"] / this.servings;
+								if(this.content[name][key]["source"].includes("AGRIBALYSE")) {is_environment = true}
+								this.total_content[key]["is_environment"] = is_environment	
+							}
 						}
 					}
-					console.log("Skipping", new Set(values_to_skip))
 					this.compare()
 				}
 
 				cook() {
 					for (const step of this.cooking_steps) {
 						var energy = step["duration"]/60. * step["power"]
-						step["CO2e"] = energy * this.find_EF(step["energy_source"])
-						this.total_content["Carbon footprint"]["value"] += step["CO2e"] / this.servings
+						step["CO2e"] = energy * this.look_up(step["energy_source"], "code", "EF", this.energy_ef) / 1000.
+						this.total_content["climate_change"]["value"] += step["CO2e"] / this.servings
 						}
 					this.compare()
 				}
 
-				add_values(name) {
+				add_values(name, dict) {
 					var entries = {};
-					for (let entry of this.data) {
-						if (entry["LCI Name"] == name) {
+					for (let entry of dict) {
+						if (entry["lci_name"] == name) {
 							for (const [key, value] of Object.entries(entry)) {
-								entries[key] = parseFloat(value);
+								entries[key] = value;
 							}
 						}
-
 					}
 					return entries;
 				}
@@ -139,13 +152,14 @@ function run() {
 					}
 				}
 
-			    find_EF(energy) {
-			        for (let entry of this.energy_ef) {
-			            if (entry["Name_Location"] == energy) {
-								return parseFloat(entry["EF"]);
+			    look_up(variable, variable_name, key, dict) {
+			        for (let entry of dict) {
+			            if (entry[variable_name] == variable) {
+								return entry[key];
 							}
 			        }
 			    }
+
 			    set_reference(food, quantity){
 			    	this.comparison["food"] = food;
 			    	this.comparison["quantity"] = quantity;
@@ -153,24 +167,23 @@ function run() {
 			    compare(){
 			    	var food = this.comparison["food"];
 			    	var quantity = this.comparison["quantity"];
-			    	var reference = this.add_values(food);
-			    	delete reference["LCI Name"]
+			    	var reference = Object.assign({}, this.add_values(food, this.nutrition), this.add_values(food, this.environment)); 
+			    	var recommended = 0;
+			    	var comparison = "";
+			    	// Reference food
 			    	for (const [key, value] of Object.entries(reference)){
-			    		var name = key.split(" (")[0];
-			    		var comparison = "";
-			    		var recommended = "";
-			    		if (value > 0 && this.total_content.hasOwnProperty(name)) {
-			    			if (key == "Carbon footprint (kgCO2e/kg)"){
-			    				comparison = ((this.total_content[name]["value"] / (value*(quantity)))*100).toFixed(0).toString()+"%"
-			    			}
-			    			else{
-			    				comparison = ((this.total_content[name]["value"] / (value*(quantity/100)))*100).toFixed(0).toString()+"%"
-			    				recommended = ((this.total_content[name]["value"]/this.intake[name]["value"])*100).toFixed(0).toString() +"%"
-			    			}
-				    		this.total_content[name]["benchmark"] = {"name":food,
+			    		if (this.total_content.hasOwnProperty(key)) {
+			    			comparison = this.total_content[key]["value"] / (getNum(value)*quantity/1000)
+				    		this.total_content[key]["benchmark"] = {"name":food,
 				    												"weight (g)": quantity,
 				    												"value": comparison}
-				    		this.total_content[name]["recommended"] = recommended
+			    		}
+			    	}
+			    	// Recommended intake
+			    	for (const [key, value] of Object.entries(this.total_content)){
+			    		if (value["value"] > 0 && this.intake.hasOwnProperty(key)) {
+			    			recommended = this.total_content[key]["value"]/this.intake[key]["value"]; // ratio
+				    		this.total_content[key]["recommended"] = recommended;
 			    		}
 			    	}
 			    }
@@ -202,7 +215,7 @@ function run() {
 
 		for (i = 0; i < sources.length; i++) {
 			if (sources[i].value != "") {
-				source = translate_value(sources[i].value,language,"EN");
+				source = translate_value(sources[i].value,language,"Code");
 				console.log("Adding source:", source)
 				webRecipe.addCookingStep(source, times[i].value, powers[i].value)
 			}	
@@ -211,25 +224,28 @@ function run() {
 		$("#results").css('display','inline');
 
 		var html = '';
-		for (const [key, value] of Object.entries(webRecipe.total_content).slice(0,1)){
-		            html += '<tr><td>' + translate_value(key,"EN",language) + '</td>' +
-		                    '<td class="text-center">' + value["value"].toFixed(0) + ' ' + value["unit"] + '</td>' +
-		                    '<td class="text-center">' + (value["value"]/192).toFixed(1)  + ' km </td>' +
-		                    '<td class="text-center">' + value["benchmark"]["value"] + '</td>' +
-		                    '</tr>';
+		for (const [key, value] of Object.entries(webRecipe.total_content)){
+			if (webRecipe.total_content[key]["is_environment"] == true & key == "climate_change") {
+	            html += '<tr><td>' + translate_value(key,"Code",language) + '</td>' +
+	                    '<td class="text-center">' + Math.round(((value["value"]) + Number.EPSILON)*100)/100 + ' ' + value["unit"] + '</td>' +
+	                    '<td class="text-center">' + Math.round(((value["value"])/0.192 + Number.EPSILON)*100)/100 +  ' km ' + '</td>'  +
+	                     '<td class="text-center">' + Math.round(value["benchmark"]["value"]*100)  + '%</td>' +
+	                    '</tr>';
 		     }
+		}
 		$('#table-footprint').html(html);
 
 		$("#results").css("visibility","visible");
 		var html = '';
-		// console.log(webRecipe.total_content)
-		for (const [key, value] of Object.entries(webRecipe.total_content).slice(1)){
-		            html += '<tr><td>' + translate_value(key,"EN",language)  + '</td>' +
-		                    '<td class="text-center">' + value["value"].toFixed(1) + ' ' + value["unit"] + '</td>' +
-		                    '<td class="text-center">' + value["recommended"] + '</td>' +
-		                    '<td class="text-center">' + value["benchmark"]["value"] + '</td>' +
-		                    '</tr>';
+		for (const [key, value] of Object.entries(webRecipe.total_content)){
+			if (webRecipe.total_content[key]["is_environment"] == false && webRecipe.total_content[key]["recommended"] != "") {
+	            html += '<tr><td>' + translate_value(key,"Code", language)  + '</td>' +
+	                    '<td class="text-center">' + Math.round((value["value"] + Number.EPSILON)*100)/100 + ' ' + value["unit"] + '</td>' +
+	                    '<td class="text-center">' + Math.round(value["recommended"]*100)  + '%</td>' +
+	                    '<td class="text-center">' + Math.round(value["benchmark"]["value"]*100)  + '%</td>' +
+	                    '</tr>';
 		     }
+		  }
 		$('#table-nutritional').html(html);
 
 		});
@@ -238,7 +254,17 @@ function run() {
 	});
 
 	}
-});
+
+	});
+
+	}
+
+	});
+
+		}
+
+	});
+
 
 }
 

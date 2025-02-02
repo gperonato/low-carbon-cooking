@@ -1,0 +1,173 @@
+﻿Keyword,Translation,Short Name,Unit,Source
+ALIM_CODE,Food Code,food_code,,CALNUT2020_2020_07_20
+FOOD_LABEL,Food Label,food_label,,CALNUT2020_2020_07_20
+acides_organiques_g,Organic Acids,organic_acids,g,CALNUT2020_2020_07_20
+ag_04_0_g,4:0 Fatty Acids,40_fatty_acids,g,CALNUT2020_2020_07_20
+ag_06_0_g,6:0 Fatty Acids,60_fatty_acids,g,CALNUT2020_2020_07_20
+ag_08_0_g,8:0 Fatty Acids,80_fatty_acids,g,CALNUT2020_2020_07_20
+ag_10_0_g,10:0 Fatty Acids,100_fatty_acids,g,CALNUT2020_2020_07_20
+ag_12_0_g,12:0 Fatty Acids,120_fatty_acids,g,CALNUT2020_2020_07_20
+ag_14_0_g,14:0 Fatty Acids,140_fatty_acids,g,CALNUT2020_2020_07_20
+ag_16_0_g,16:0 Fatty Acids,160_fatty_acids,g,CALNUT2020_2020_07_20
+ag_18_0_g,18:0 Fatty Acids,180_fatty_acids,g,CALNUT2020_2020_07_20
+ag_18_1_ole_g,18:1 Oleic Acid,181_oleic_acid,g,CALNUT2020_2020_07_20
+ag_18_2_lino_g,18:2 Linoleic Acid,182_linoleic_acid,g,CALNUT2020_2020_07_20
+ag_18_3_a_lino_g,18:3 Alpha-Linolenic Acid,183_alpha-linolenic_acid,g,CALNUT2020_2020_07_20
+ag_20_4_ara_g,20:4 Arachidonic Acid,204_arachidonic_acid,g,CALNUT2020_2020_07_20
+ag_20_5_epa_g,20:5 EPA,205_epa,g,CALNUT2020_2020_07_20
+ag_20_6_dha_g,20:6 DHA,206_dha,g,CALNUT2020_2020_07_20
+agmi_g,Monounsaturated Fatty Acids,monounsaturated_fatty_acids,g,CALNUT2020_2020_07_20
+agpi_g,Polyunsaturated Fatty Acids,polyunsaturated_fatty_acids,g,CALNUT2020_2020_07_20
+ags_g,Saturated Fatty Acids,saturated_fatty_acids,g,CALNUT2020_2020_07_20
+alcool_g,Alcohol,alcohol,g,CALNUT2020_2020_07_20
+amidon_g,Starch,starch,g,CALNUT2020_2020_07_20
+beta_carotene_mcg,Beta-Carotene,beta-carotene,mcg,CALNUT2020_2020_07_20
+calcium_mg,Calcium,calcium,mg,CALNUT2020_2020_07_20
+cholesterol_mg,Cholesterol,cholesterol,mg,CALNUT2020_2020_07_20
+cuivre_mg,Copper,copper,mg,CALNUT2020_2020_07_20
+eau_g,Water,water,g,CALNUT2020_2020_07_20
+fer_mg,Iron,iron,mg,CALNUT2020_2020_07_20
+fibres_g,Fiber,fiber,g,CALNUT2020_2020_07_20
+fructose_g,Fructose,fructose,g,CALNUT2020_2020_07_20
+galactose_g,Galactose,galactose,g,CALNUT2020_2020_07_20
+glucides_g,Carbohydrates,carbohydrates,g,CALNUT2020_2020_07_20
+glucose_g,Glucose,glucose,g,CALNUT2020_2020_07_20
+iode_mcg,Iodine,iodine,mcg,CALNUT2020_2020_07_20
+lactose_g,Lactose,lactose,g,CALNUT2020_2020_07_20
+lipides_g,Lipids,lipids,g,CALNUT2020_2020_07_20
+magnesium_mg,Magnesium,magnesium,mg,CALNUT2020_2020_07_20
+maltose_g,Maltose,maltose,g,CALNUT2020_2020_07_20
+manganese_mg,Manganese,manganese,mg,CALNUT2020_2020_07_20
+nrj_kcal,Energy,energy,kcal,CALNUT2020_2020_07_20
+nrj_kj,Energy,energy_kj,kJ,CALNUT2020_2020_07_20
+phosphore_mg,Phosphorus,phosphorus,mg,CALNUT2020_2020_07_20
+polyols_g,Polyols,polyols,g,CALNUT2020_2020_07_20
+potassium_mg,Potassium,potassium,mg,CALNUT2020_2020_07_20
+proteines_g,Proteins,proteins,g,CALNUT2020_2020_07_20
+retinol_mcg,Retinol,retinol,mcg,CALNUT2020_2020_07_20
+saccharose_g,Sucrose,sucrose,g,CALNUT2020_2020_07_20
+sel_g,Salt,salt,g,CALNUT2020_2020_07_20
+selenium_mcg,Selenium,selenium,mcg,CALNUT2020_2020_07_20
+sodium_mg,Sodium,sodium,mg,CALNUT2020_2020_07_20
+sucres_g,Sugars,sugars,g,CALNUT2020_2020_07_20
+vitamine_b1_mg,Vitamin B12,vitamin_b12,mcg,CALNUT2020_2020_07_20
+vitamine_b12_mcg,Vitamin B1,vitamin_b1,mg,CALNUT2020_2020_07_20
+vitamine_b2_mg,Vitamin B2,vitamin_b2,mg,CALNUT2020_2020_07_20
+vitamine_b3_mg,Vitamin B3,vitamin_b3,mg,CALNUT2020_2020_07_20
+vitamine_b5_mg,Vitamin B5,vitamin_b5,mg,CALNUT2020_2020_07_20
+vitamine_b6_mg,Vitamin B6,vitamin_b6,mg,CALNUT2020_2020_07_20
+vitamine_b9_mcg,Vitamin B9,vitamin_b9,mcg,CALNUT2020_2020_07_20
+vitamine_c_mg,Vitamin C,vitamin_c,mg,CALNUT2020_2020_07_20
+vitamine_d_mcg,Vitamin D,vitamin_d,mcg,CALNUT2020_2020_07_20
+vitamine_e_mg,Vitamin E,vitamin_e,mg,CALNUT2020_2020_07_20
+vitamine_k1_mcg,Vitamin K1,vitamin_k1,mcg,CALNUT2020_2020_07_20
+vitamine_k2_mcg,Vitamin K2,vitamin_k2,mcg,CALNUT2020_2020_07_20
+zinc_mg,Zinc,zinc,mg,CALNUT2020_2020_07_20
+Code AGB,AGB Code,agb_code,,AGRIBALYSE3.2
+Code CIQUAL,CIQUAL Code,ciqual_code,,AGRIBALYSE3.2
+Groupe d'aliment,Food Group,food_group,,AGRIBALYSE3.2
+Sous-groupe d'aliment,Food Subgroup,food_subgroup,,AGRIBALYSE3.2
+Nom du Produit en Français,Product Name in French,product_name_in_french,,AGRIBALYSE3.2
+LCI Name,LCI Name,lci_name,,AGRIBALYSE3.2
+code saison,Season Code,season_code,,AGRIBALYSE3.2
+code avion,Airplane Code,airplane_code,,AGRIBALYSE3.2
+Livraison,Delivery,delivery,,AGRIBALYSE3.2
+Matériau d'emballage,Packaging Material,packaging_material,,AGRIBALYSE3.2
+Préparation,Preparation,preparation,,AGRIBALYSE3.2
+DQR,DQR,dqr,,AGRIBALYSE3.2
+Score unique EF,Unique EF Score,unique_ef_score,mPt,AGRIBALYSE3.2
+Changement climatique,Climate Change,climate_change,kg CO2 eq,AGRIBALYSE3.2
+Appauvrissement de la couche d'ozone,Ozone Layer Depletion,ozone_layer_depletion,kg CVC11 eq,AGRIBALYSE3.2
+Rayonnements ionisants,Ionizing Radiation,ionizing_radiation,kBq U-235 eq,AGRIBALYSE3.2
+Formation photochimique d'ozone,Photochemical Ozone Formation,photochemical_ozone_formation,kg NMVOC eq,AGRIBALYSE3.2
+Particules fines,Fine Particles,fine_particles,disease inc.,AGRIBALYSE3.2
+Effets toxicologiques sur la santé humaine : substances non-cancérogènes,Human Health Toxicological Effects Non-carcinogens,human_health_toxicological_effects_non-carcinogens,CTUh,AGRIBALYSE3.2
+Effets toxicologiques sur la santé humaine : substances cancérogènes,Human Health Toxicological Effects Carcinogens,human_health_toxicological_effects_carcinogens,CTUh,AGRIBALYSE3.2
+Acidification terrestre et eaux douces,Terrestrial and Freshwater Acidification,terrestrial_and_freshwater_acidification,mol H+ eq,AGRIBALYSE3.2
+Eutrophisation eaux douces,Freshwater Eutrophication,freshwater_eutrophication,kg P eq,AGRIBALYSE3.2
+Eutrophisation marine,Marine Eutrophication,marine_eutrophication,kg N eq,AGRIBALYSE3.2
+Eutrophisation terrestre,Terrestrial Eutrophication,terrestrial_eutrophication,mol N eq,AGRIBALYSE3.2
+Écotoxicité pour écosystèmes aquatiques d'eau douce,Aquatic Ecosystems Ecotoxicity,aquatic_ecosystems_ecotoxicity,CTUe,AGRIBALYSE3.2
+Utilisation du sol,Land Use,land_use,Pt,AGRIBALYSE3.2
+Épuisement des ressources eau,Water Resource Depletion,water_resource_depletion,m3 depriv.,AGRIBALYSE3.2
+Épuisement des ressources énergétiques,Energy Resource Depletion,energy_resource_depletion,MJ,AGRIBALYSE3.2
+Épuisement des ressources minéraux,Mineral Resource Depletion,mineral_resource_depletion,kg Sb eq,AGRIBALYSE3.2
+Changement climatique - émissions biogéniques,Climate change - biogenic emissions,climate_change_biogenic,kg CO2 eq,AGRIBALYSE3.2
+Changement climatique - émissions fossiles,Climate change - fossil emissions,climate_change_biogenic,kg CO2 eq,AGRIBALYSE3.2
+Changement climatique - émissions liées au changement d'affectation des sols,Climate change - emissions linked to land use change,climate_change_land_use,kg CO2 eq,AGRIBALYSE3.2
+alim_grp_code,,alim_grp_code,,CIQUAL2020_2020_07_07
+alim_ssgrp_code,,alim_ssgrp_code,,CIQUAL2020_2020_07_07
+alim_ssssgrp_code,,alim_ssssgrp_code,,CIQUAL2020_2020_07_07
+alim_grp_nom_eng,,alim_grp_nom_fr,,CIQUAL2020_2020_07_07
+alim_ssgrp_nom_eng,,alim_ssgrp_nom_fr,,CIQUAL2020_2020_07_07
+alim_ssssgrp_nom_eng,,alim_ssssgrp_nom_fr,,CIQUAL2020_2020_07_07
+alim_code,,alim_code,,CIQUAL2020_2020_07_07
+alim_nom_eng,,alim_nom_fr,,CIQUAL2020_2020_07_07
+alim_nom_sci,,alim_nom_sci,,CIQUAL2020_2020_07_07
+"Energy, Regulation EU No 1169/2011 (kJ/100g)",,energy_kj,,CIQUAL2020_2020_07_07
+"Energy, Regulation EU No 1169/2011 (kcal/100g)",,energy,,CIQUAL2020_2020_07_07
+"Energy, N x Jones' factor, with fibres (kJ/100g)",,energy_jones,,CIQUAL2020_2020_07_07
+"Energy, N x Jones' factor, with fibres (kcal/100g)",,energy_jones_kcal,,CIQUAL2020_2020_07_07
+Water (g/100g),Water,water,,CIQUAL2020_2020_07_07
+Protein (g/100g),,proteins_jones,,CIQUAL2020_2020_07_07
+"Protein, crude, N x 6.25 (g/100g)",Proteins,proteins,,CIQUAL2020_2020_07_07
+Carbohydrate (g/100g),Carbohydrates,carbohydrates,,CIQUAL2020_2020_07_07
+Fat (g/100g),Lipids,lipids,,CIQUAL2020_2020_07_07
+Sugars (g/100g),Sugars,sugars,,CIQUAL2020_2020_07_07
+fructose (g/100g),Fructose,fructose,,CIQUAL2020_2020_07_07
+galactose (g/100g),Galactose,galactose,,CIQUAL2020_2020_07_07
+glucose (g/100g),Glucose,glucose,,CIQUAL2020_2020_07_07
+lactose (g/100g),Lactose,lactose,,CIQUAL2020_2020_07_07
+maltose (g/100g),Maltose,maltose,,CIQUAL2020_2020_07_07
+sucrose (g/100g),Sucrose,sucrose,,CIQUAL2020_2020_07_07
+Starch (g/100g),Starch,starch,,CIQUAL2020_2020_07_07
+Fibres (g/100g),Fiber,fiber,,CIQUAL2020_2020_07_07
+Polyols (g/100g),Polyols,polyols,,CIQUAL2020_2020_07_07
+Ash (g/100g),Ash,ash,,CIQUAL2020_2020_07_07
+Alcohol (g/100g),Alcohol,alcohol,,CIQUAL2020_2020_07_07
+Organic acids (g/100g),Organic Acids,organic_acids,,CIQUAL2020_2020_07_07
+FA saturated (g/100g),Saturated Fatty Acids,saturated_fatty_acids,,CIQUAL2020_2020_07_07
+FA mono (g/100g),Monounsaturated Fatty Acids,monounsaturated_fatty_acids,,CIQUAL2020_2020_07_07
+FA poly (g/100g),Polyunsaturated Fatty Acids,polyunsaturated_fatty_acids,,CIQUAL2020_2020_07_07
+FA 4:0 (g/100g),4:0 Fatty Acids,40_fatty_acids,,CIQUAL2020_2020_07_07
+FA 6:0 (g/100g),6:0 Fatty Acids,60_fatty_acids,,CIQUAL2020_2020_07_07
+FA 8:0 (g/100g),8:0 Fatty Acids,80_fatty_acids,,CIQUAL2020_2020_07_07
+FA 10:0 (g/100g),10:0 Fatty Acids,100_fatty_acids,,CIQUAL2020_2020_07_07
+FA 12:0 (g/100g),12:0 Fatty Acids,120_fatty_acids,,CIQUAL2020_2020_07_07
+FA 14:0 (g/100g),14:0 Fatty Acids,140_fatty_acids,,CIQUAL2020_2020_07_07
+FA 16:0 (g/100g),16:0 Fatty Acids,160_fatty_acids,,CIQUAL2020_2020_07_07
+FA 18:0 (g/100g),18:0 Fatty Acids,180_fatty_acids,,CIQUAL2020_2020_07_07
+FA 18:1 n-9 cis (g/100g),18:1 Oleic Acid,181_oleic_acid,,CIQUAL2020_2020_07_07
+"FA 18:2 9c,12c (n-6) (g/100g)",18:2 Linoleic Acid,182_linoleic_acid,,CIQUAL2020_2020_07_07
+"FA 18:3 c9,c12,c15 (n-3) (g/100g)",18:3 Alpha-Linolenic Acid,183_alpha-linolenic_acid,,CIQUAL2020_2020_07_07
+"FA 20:4 5c,8c,11c,14c (n-6) (g/100g)",20:4 Arachidonic Acid,204_arachidonic_acid,,CIQUAL2020_2020_07_07
+"FA 20:5 5c,8c,11c,14c,17c (n-3) EPA (g/100g)",20:5 EPA,205_epa,,CIQUAL2020_2020_07_07
+"FA 22:6 4c,7c,10c,13c,16c,19c (n-3) DHA (g/100g)",20:6 DHA,206_dha,,CIQUAL2020_2020_07_07
+Cholesterol (mg/100g),Cholesterol,cholesterol,,CIQUAL2020_2020_07_07
+Salt (g/100g),Salt,salt,,CIQUAL2020_2020_07_07
+Calcium (mg/100g),Calcium,calcium,,CIQUAL2020_2020_07_07
+Chloride (mg/100g),Chloride,chloride,,CIQUAL2020_2020_07_07
+Copper (mg/100g),Copper,copper,,CIQUAL2020_2020_07_07
+Iron (mg/100g),Iron,iron,,CIQUAL2020_2020_07_07
+Iodine (µg/100g),Iodine,iodine,,CIQUAL2020_2020_07_07
+Magnesium (mg/100g),Magnesium,magnesium,,CIQUAL2020_2020_07_07
+Manganese (mg/100g),Manganese,manganese,,CIQUAL2020_2020_07_07
+Phosphorus (mg/100g),Phosphorus,phosphorus,,CIQUAL2020_2020_07_07
+Potassium (mg/100g),Potassium,potassium,,CIQUAL2020_2020_07_07
+Selenium (µg/100g),Selenium,selenium,,CIQUAL2020_2020_07_07
+Sodium (mg/100g),Sodium,sodium,,CIQUAL2020_2020_07_07
+Zinc (mg/100g),Zinc,zinc,,CIQUAL2020_2020_07_07
+Retinol (µg/100g),Retinol,retinol,,CIQUAL2020_2020_07_07
+Beta-carotene (µg/100g),Beta-Carotene,beta-carotene,,CIQUAL2020_2020_07_07
+Vitamin D (µg/100g),Vitamin D,vitamin_d,,CIQUAL2020_2020_07_07
+Vitamin E (mg/100g),Vitamin E,vitamin_e,,CIQUAL2020_2020_07_07
+Vitamin K1 (µg/100g),Vitamin K1,vitamin_k1,,CIQUAL2020_2020_07_07
+Vitamin K2 (µg/100g),Vitamin K2,vitamin_k2,,CIQUAL2020_2020_07_07
+Vitamin C (mg/100g),Vitamin C,vitamin_c,,CIQUAL2020_2020_07_07
+Vitamin B1 or Thiamin (mg/100g),Vitamin B1,vitamin_b1,,CIQUAL2020_2020_07_07
+Vitamin B2 or Riboflavin (mg/100g),Vitamin B2,vitamin_b2,,CIQUAL2020_2020_07_07
+Vitamin B3 or Niacin (mg/100g),Vitamin B3,vitamin_b3,,CIQUAL2020_2020_07_07
+Vitamin B5 or Pantothenic acid (mg/100g),Vitamin B5,vitamin_b5,,CIQUAL2020_2020_07_07
+Vitamin B6 (mg/100g),Vitamin B6,vitamin_b6,,CIQUAL2020_2020_07_07
+Vitamin B9 or Folate (µg/100g),Vitamin B9,vitamin_b9,,CIQUAL2020_2020_07_07
+Vitamin B12 (µg/100g),Vitamin B12,vitamin_b12,,CIQUAL2020_2020_07_07

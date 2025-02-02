@@ -1,39 +1,35 @@
-Location,EF,Name_EN,Name_Location
-EU-28,0.2942060978,Electricity mix,Electricity mix - EU-28
-EU-27 (from 2020),0.2957363229,Electricity mix,Electricity mix - EU-27 (from 2020)
-Austria,0.103979949,Electricity mix,Electricity mix - Austria
-Belgium,0.1760660661,Electricity mix,Electricity mix - Belgium
-Bulgaria,0.4862079455,Electricity mix,Electricity mix - Bulgaria
-Croatia,0.1879500129,Electricity mix,Electricity mix - Croatia
-Cyprus,0.6606885135,Electricity mix,Electricity mix - Cyprus
-Czech Republic,0.4378535036,Electricity mix,Electricity mix - Czech Republic
-Denmark,0.147658672,Electricity mix,Electricity mix - Denmark
-Estonia,0.9224060595,Electricity mix,Electricity mix - Estonia
-Finland,0.08279391551,Electricity mix,Electricity mix - Finland
-France,0.0672337903,Electricity mix,Electricity mix - France
-Germany,0.4188183765,Electricity mix,Electricity mix - Germany
-Greece,0.6573098024,Electricity mix,Electricity mix - Greece
-Hungary,0.2529550546,Electricity mix,Electricity mix - Hungary
-Ireland,0.3925317564,Electricity mix,Electricity mix - Ireland
-Italy,0.2587962486,Electricity mix,Electricity mix - Italy
-Latvia,0.04915832489,Electricity mix,Electricity mix - Latvia
-Lithuania,0.06368652408,Electricity mix,Electricity mix - Lithuania
-Luxembourg,0.06518380009,Electricity mix,Electricity mix - Luxembourg
-Malta,0.4417688369,Electricity mix,Electricity mix - Malta
-Netherlands,0.4526270045,Electricity mix,Electricity mix - Netherlands
-Poland,0.755716627,Electricity mix,Electricity mix - Poland
-Portugal,0.3497821735,Electricity mix,Electricity mix - Portugal
-Romania,0.2625186677,Electricity mix,Electricity mix - Romania
-Slovakia,0.1073052767,Electricity mix,Electricity mix - Slovakia
-Slovenia,0.2482626382,Electricity mix,Electricity mix - Slovenia
-Spain,0.3043012182,Electricity mix,Electricity mix - Spain
-Sweden,0.009274772239,Electricity mix,Electricity mix - Sweden
-United Kingdom,0.2685214422,Electricity mix,Electricity mix - United Kingdom
-Turkey,0.5414304669,Electricity mix,Electricity mix - Turkey
-Island,0.000015958094,Electricity mix,Electricity mix - Island
-Norway,0.01892324587,Electricity mix,Electricity mix - Norway
-Switzerland,0.1815,Electricity mix,Electricity mix - Switzerland
-France continentale,0.0554,Electricity 2021 - use : residential cooking,Electricity 2021 - use : residential cooking - France continentale
-France continentale,0.0439,Electricity photovoltaic,Electricity photovoltaic - France continentale
-Europe,0.244,Natural gas,Natural gas - Europe
-France continentale,0.227,Natural gas- 2015 Mix,Natural gas- 2015 Mix - France continentale
+code,type,location,EF,source,database,external_id,year
+ELAT,Grid electricity consumption mix (LCA),Austria,0.17077,Electricity Maps Estimation; entsoe.eu,Electricity Maps v. 2024-01-17,AT,2023
+ELBE,Grid electricity consumption mix (LCA),Belgium,0.17445,Electricity Maps Estimation; entsoe.eu,Electricity Maps v. 2024-01-17,BE,2023
+ELBG,Grid electricity consumption mix (LCA),Bulgaria,0.37857,eso.bg; Electricity Maps Estimation,Electricity Maps v. 2024-01-17,BG,2023
+ELHR,Grid electricity consumption mix (LCA),Croatia,0.28051,Electricity Maps Estimation; entsoe.eu,Electricity Maps v. 2024-01-17,HR,2023
+ELCY,Grid electricity consumption mix (LCA),Cyprus,0.9465800000000001,Electricity Maps Estimation; tsoc.org.cy,Electricity Maps v. 2024-01-17,CY,2023
+ELCZ,Grid electricity consumption mix (LCA),Czechia,0.50183,Electricity Maps Estimation; entsoe.eu; ceps.cz,Electricity Maps v. 2024-01-17,CZ,2023
+ELDK,Grid electricity consumption mix (LCA),Denmark,0.14946,entsoe.eu,Electricity Maps v. 2024-01-17,DK,2023
+ELEE,Grid electricity consumption mix (LCA),Estonia,0.27951,Electricity Maps Estimation; entsoe.eu,Electricity Maps v. 2024-01-17,EE,2023
+ELFI,Grid electricity consumption mix (LCA),Finland,0.08206999999999999,Electricity Maps Estimation; entsoe.eu,Electricity Maps v. 2024-01-17,FI,2023
+ELFR,Grid electricity consumption mix (LCA),France,0.05928,opendata.reseaux-energies.fr; Electricity Maps Estimation,Electricity Maps v. 2024-01-17,FR,2023
+ELDE,Grid electricity consumption mix (LCA),Germany,0.41562,Electricity Maps Estimation; entsoe.eu,Electricity Maps v. 2024-01-17,DE,2023
+ELGB,Grid electricity consumption mix (LCA),Great Britain,0.19992,Electricity Maps Estimation; bmreports.com,Electricity Maps v. 2024-01-17,GB,2023
+ELGR,Grid electricity consumption mix (LCA),Greece,0.39119,Electricity Maps Estimation; entsoe.eu,Electricity Maps v. 2024-01-17,GR,2023
+ELHU,Grid electricity consumption mix (LCA),Hungary,0.26014,entsoe.eu,Electricity Maps v. 2024-01-17,HU,2023
+ELIE,Grid electricity consumption mix (LCA),Ireland,0.38581,Electricity Maps Estimation,Electricity Maps v. 2024-01-17,IE,2023
+ELIT,Grid electricity consumption mix (LCA),Italy,0.33355,,Electricity Maps v. 2024-01-17,IT,2023
+ELLV,Grid electricity consumption mix (LCA),Latvia,0.20327,Electricity Maps Estimation; entsoe.eu,Electricity Maps v. 2024-01-17,LV,2023
+ELLT,Grid electricity consumption mix (LCA),Lithuania,0.19334,Electricity Maps Estimation; entsoe.eu,Electricity Maps v. 2024-01-17,LT,2023
+ELLU,Grid electricity consumption mix (LCA),Luxembourg,0.29639,Electricity Maps Estimation; entsoe.eu,Electricity Maps v. 2024-01-17,LU,2023
+ELNL,Grid electricity consumption mix (LCA),Netherlands,0.29023000000000004,Electricity Maps Estimation,Electricity Maps v. 2024-01-17,NL,2023
+ELPL,Grid electricity consumption mix (LCA),Poland,0.80441,Electricity Maps Estimation; entsoe.eu,Electricity Maps v. 2024-01-17,PL,2023
+ELPT,Grid electricity consumption mix (LCA),Portugal,0.15724000000000002,Electricity Maps Estimation; entsoe.eu,Electricity Maps v. 2024-01-17,PT,2023
+ELRO,Grid electricity consumption mix (LCA),Romania,0.29764999999999997,Electricity Maps Estimation; entsoe.eu,Electricity Maps v. 2024-01-17,RO,2023
+ELSK,Grid electricity consumption mix (LCA),Slovakia,0.24553999999999998,Electricity Maps Estimation; entsoe.eu,Electricity Maps v. 2024-01-17,SK,2023
+ELSI,Grid electricity consumption mix (LCA),Slovenia,0.24362999999999999,Electricity Maps Estimation; entsoe.eu,Electricity Maps v. 2024-01-17,SI,2023
+ELES,Grid electricity consumption mix (LCA),Spain,0.17213,Electricity Maps Estimation; entsoe.eu,Electricity Maps v. 2024-01-17,ES,2023
+ELSE,Grid electricity consumption mix (LCA),Sweden,0.024550000000000002,entsoe.eu,Electricity Maps v. 2024-01-17,SE,2023
+ELCH,Grid electricity consumption mix (LCA),Switzerland,0.08504,Electricity Maps Estimation,Electricity Maps v. 2024-01-17,CH,2023
+ELMT,Grid electricity average mix,Malta,0.872,AIE (Agence Internationale de l'Energie),Base_Carbone_V23.4,15626,2014
+ELEU27,European grid electricity average mix,Europe European Union - 27,0.42,AIE (Agence Internationale de l'Energie),Base_Carbone_V23.4,15714,2014
+ECFR,Electricity 2023 - use : residential cooking,France continentale,0.0577,,Base_Carbone_V23.4,43281,2024
+NGEU,Natural gas,Europe,0.243,,Base_Carbone_V23.4,13515,2015
+NGFR,Natural gas - 2022 Mix,France continentale,0.239,,Base_Carbone_V23.4,37132,2023
+PVFR,Electricity photovoltaic,France continentale,0.0439,,Base_Carbone_V23.4,34720,2021

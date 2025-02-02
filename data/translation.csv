@@ -1,4 +1,4 @@
-Code,Type,isMain,EN,FR,IT
+﻿Code,Type,isMain,EN,FR,IT
 13712,AGB,TRUE,"Apricot, canned in light syrup, drained","Abricot au sirop léger, appertisé, égoutté","Albicocca sciroppata (sciroppo leggero), in scatola, scolata"
 13713,AGB,TRUE,"Apricot, canned in light syrup, not drained","Abricot au sirop léger, appertisé, non égoutté","Albicocca sciroppata (sciroppo leggero), in scatola, non scolata"
 13714,AGB,TRUE,"Apricot, in syrup, canned, drained","Abricot au sirop, appertisé, égoutté","Albicocca sciroppata, in scatola, scolata"
@@ -73,7 +73,6 @@ Code,Type,isMain,EN,FR,IT
 20002,AGB,FALSE,"Eggplant, cooked","Aubergine, cuite","Melanzane, cotte"
 13004,AGB,TRUE,"Avocado, pulp, raw","Avocat, pulpe, cru","Avocado, polpa, crudo"
 9310,AGB,TRUE,"Oat, raw","Avoine, crue","Avena, cruda"
-23020,AGB,FALSE,"Rum baba, prepacked","Baba au rhum, préemballé","Babà al rum, preconfezionato"
 7258,AGB,FALSE,Bagel,Bagel,Bagel
 23300,AGB,FALSE,Baklava (oriental pastry with almonds and syrup),Baklava ou Baklawa (pâtisserie orientale aux amandes et sirop),Baklava o Baklawa (pasta orientale con mandorle e sciroppo)
 20198,AGB,TRUE,"Bamboo shoots, raw","Bambou, pousse, crue","Bambù, germoglio, crudo"
@@ -220,7 +219,6 @@ Code,Type,isMain,EN,FR,IT
 6002,AGB,TRUE,"Beef, shoulder, raw","Boeuf, épaule, crue","Manzo, spalla, cruda"
 6111,AGB,TRUE,"Beef, sirloin steak, raw","Boeuf, faux-filet, cru","Manzo, costata di manzo, cruda"
 6110,AGB,FALSE,"Beef, sirloin steak, grilled/pan-fried","Boeuf, faux-filet, grillé/poêlé","Manzo, costata di manzo, alla griglia/in padella"
-6112,AGB,TRUE,"Beef, sirloin steak, red label, raw","Boeuf, faux-filet, label rouge, cru","Manzo, controfiletto, label rouge, crudo"
 6105,AGB,FALSE,"Beef, sirloin steak, roasted/baked","Boeuf, faux-filet, rôti/cuit au four","Manzo, ccontrofiletto, arrosto/al forno"
 6102,AGB,TRUE,"Beef, round, raw","Boeuf, gîte à la noix, cru","Manzo, scannello (o noce o fesa), crudo"
 6104,AGB,FALSE,"Beef, round, cooked","Boeuf, gîte à la noix, cuit","Manzo, scannello (o noce o fesa), cotto"
@@ -278,7 +276,6 @@ Code,Type,isMain,EN,FR,IT
 18049,AGB,FALSE,"Fruit soft drink, carbonated (less than 10% of fruit juice), with sugar","Boisson gazeuse aux fruits (à moins de 10% de jus), sucrée","Bevanda di frutta analcolica (meno del 10% di succo), zuccherata"
 18033,AGB,FALSE,"Fruit soft drink, carbonated (less than 10% of fruit juice), with sugar and artificial sweetener(s)","Boisson gazeuse aux fruits (à moins de 10% de jus), sucrée, avec édulcorants","Bibita alla frutta (meno del 10% di succo), zuccherata, con edulcoranti"
 18019,AGB,FALSE,"Fruit soft drink, carbonated (10-50% of fruit juice), with sugar","Boisson gazeuse aux fruits (de 10 à 50% de jus), sucrée","Bevanda di frutta analcolica (dal 10 al 50% di succo), zuccherata"
-18032,AGB,FALSE,"Soft drink, carbonated, without fruit juice, reduced sugar","Boisson gazeuse, sans jus de fruit, à teneur réduite en sucres","Bevanda analcolica, senza succo di frutta, a ridotto contenuto di zuccheri"
 18026,AGB,FALSE,"Soft drink, carbonated, without fruit juice, with sugar","Boisson gazeuse, sans jus de fruit, sucrée","Bevanda analcolica, senza succo di frutta, zuccherata"
 18078,AGB,FALSE,"Soft drink, carbonated, without fruit juice, with sugar and artificial sweetener(s)","Boisson gazeuse, sans jus de fruit, sucrée, avec édulcorants","Bevanda analcolica, senza succo di frutta, zuccherata, con edulcoranti"
 13162,AGB,FALSE,Dairy cereal-based beverage with fruits for baby's snack from 4/6 months,Boisson infantile céréales lactées aux fruits pour le goûter dès 4/6 mois,Bevanda per l’infanzia con cereali al latte e alla frutta per spuntini da 4/6 mesi
@@ -291,7 +288,6 @@ Code,Type,isMain,EN,FR,IT
 19122,AGB,FALSE,"Chocolate flavoured milk, with sugar, partially skimmed, fortified with vitamins and chemicals elements","Boisson lactée aromatisée au chocolat, sucrée, au lait partiellement écrémé, enrichie et/ou restaurée en vitamines et/ou minéraux","Bevanda al latte aromatizzata al cioccolato, zuccherata, parzialmente scremato, arricchita e/o ripristinata con vitamine e/o minerali"
 19508,AGB,TRUE,"Dairy drink or fermented milk or yogurt, flavoured, with sugar","Boisson lactée, lait fermenté ou yaourt à boire, aromatisé, sucré","Bevanda al latte, latte fermentato o yogurt da bere, aromatizzata, zuccherata"
 19535,AGB,TRUE,"Dairy drink or fermented milk or yogurt, with fruits, with sugar","Boisson lactée, lait fermenté ou yaourt à boire, aux fruits, sucré","Bevanda a base di latte, latte fermentato o bevanda allo yogurt, con frutta, zuccherata"
-19537,AGB,TRUE,"Dairy drink or fermented milk or yogurt, plain, with sugar","Boisson lactée, lait fermenté ou yaourt à boire, nature, sucré","Bevanda al latte, latte fermentato o yogurt da bere, al naturale, zuccherato"
 19538,AGB,TRUE,"Dairy drink or fermented milk or yogurt, plain, with sugar, with L Casei","Boisson lactée, lait fermenté ou yaourt à boire, nature, sucré, au L Casei","Bevanda al latte, latte fermentato o yogurt da bere, al naturale, zuccherato, con L Casei"
 18304,AGB,FALSE,"Fruit soft drink, still (10-50% of fruit juice), reduced sugar","Boisson plate aux fruits (10 à 50% de jus), à teneur réduite en sucres","Bevanda piatta alla frutta (dal 10 al 50% di succo), a ridotto contenuto di zuccheri"
 18339,AGB,FALSE,"Fruit soft drink, still (10-50% of fruit juice), with sugar","Boisson plate aux fruits (10 à 50% de jus), sucrée","Bevanda piatta alla frutta (10-50% di succo), zuccherata"
@@ -360,17 +356,13 @@ Code,Type,isMain,EN,FR,IT
 38406,AGB,FALSE,Coated peanuts,"Cacahuètes (arachide) enrobées d'un biscuit, pour apéritif","Arachidi ricoperte con un biscotto, per antipasto"
 31042,AGB,FALSE,Sugar and chocolate coated peanut,Cacahuètes enrobées de chocolat dragéifiées,Arachidi ricoperte di cioccolato
 18100,AGB,TRUE,"Cocoa powder, without sugar, powder, instant","Cacao, non sucré, poudre soluble","Cacao, polvere solubile non zuccherata"
-18163,AGB,FALSE,"Coffee with milk or Cappuccino with chocolate, powder, instant","Café au lait ou cappuccino au chocolat, poudre soluble","Caffè latte o cappuccino con cioccolato, polvere solubile"
-18160,AGB,FALSE,"Coffee with milk or Cappuccino, powder, instant","Café au lait ou cappuccino, poudre soluble","Caffè latte o cappuccino, polvere solubile"
 18151,AGB,FALSE,"Coffee with milk or white coffee or cappuccino, instant coffee or not, without sugar, ready-to-drink","Café au lait, café crème ou cappuccino, instantané ou non, non sucré, prêt à boire","Caffè latte o cappuccino, istantaneo o no, non zuccherato, pronto da bere"
 18072,AGB,FALSE,"Decaffeinated instant coffee, without sugar, ready-to-drink","Café décaféiné, instantané, non sucré, prêt à boire","Caffè decaffeinato, istantaneo, non zuccherato, pronto da bere"
 18070,AGB,FALSE,"Decaffeinated not instant coffee, without sugar, ready-to-drink","Café décaféiné, non instantané, non sucré, prêt à boire","Caffè decaffeinato, non istantaneo, non zuccherato, pronto da bere"
 18071,AGB,FALSE,"Espresso coffee, not instant coffee, without sugar, ready-to-drink","Café expresso, non instantané, non sucré, prêt à boire","Caffè espresso, non istantaneo, non zuccherato, pronto da bere"
-18069,AGB,FALSE,"Decaffeinated coffee, powder, instant","Café, décaféiné, poudre soluble","Caffè, decaffeinato, polvere solubile"
 18073,AGB,FALSE,"Instant coffee, without sugar, ready-to-drink","Café, instantané, non sucré, prêt à boire","Caffè, istantaneo, non zuccherato, pronto da bere"
 18003,AGB,TRUE,"Coffee, ground","Café, moulu",Caffè macinato
 18004,AGB,FALSE,"Not instant coffee, without sugar, ready-to-drink","Café, non instantané, non sucré, prêt à boire","Caffè, non istantaneo, non zuccherato, pronto da bere"
-18005,AGB,TRUE,"Coffee, powder, instant","Café, poudre soluble","Caffè, polvere solubile"
 36102,AGB,FALSE,"Quail, meat and skin, cooked","Caille, viande et peau, cuite","Quaglia, carne e pelle, cotta"
 23909,AGB,FALSE,Fruit cake,Cake aux fruits,Torta (tipo plumcake) alla frutta
 7814,AGB,FALSE,"Savoury cake (with cheese, vegetables, meat, fish, poultry,etc.)","Cake salé (garniture : fromage, légumes, viande, poisson, volaille, etc.)","Torta salata (tipo plumcake salato) (guarnizione: formaggio, verdure, carne, pesce, pollame, ecc.)"
@@ -422,14 +414,12 @@ Code,Type,isMain,EN,FR,IT
 20078,AGB,TRUE,"Celery stalk, canned, drained","Céleri branche, appertisé, égoutté","Sedano, in scatola, sgocciolato"
 20023,AGB,TRUE,"Celery stalk, raw","Céleri branche, cru","Sedano, crudo"
 20024,AGB,FALSE,"Celery stalk, cooked","Céleri branche, cuit","Sedano, cotto"
-25600,AGB,FALSE,"Celeriac in remoulade sauce, prepacked","Céleri rémoulade, préemballé","Sformato di sedano rapa, preconfezionato"
+25600,AGB,FALSE,"Celeriac in remoulade sauce, prepacked","Céleri rémoulade, préemballé","Clementina, polpa, cruda"
 20055,AGB,TRUE,"Celeriac, raw","Céleri-rave, cru","Sedano rapa, crudo"
 20025,AGB,FALSE,"Celeriac, cooked","Céleri-rave, cuit","Sedano rapa, cotto"
 20278,AGB,TRUE,"Celeriac, puree","Céleri-rave, purée","Sedano rapa, purè"
 32013,AGB,FALSE,"Breakfast cereals, with chocolate, not filled (not fortified with vitamins and chemical elements)","Céréales chocolatées pour petit déjeuner, non fourrées, (non enrichies en vitamines et minéraux)","Cereali per la colazione al cioccolato, non ripieni, (non arricchiti con vitamine e minerali)"
 32134,AGB,FALSE,"Breakfast cereals, puffed/popped cereals, wholemeal, fortified with vitamins and chemical elements","Céréales complètes soufflées, enrichies en vitamines et minéraux","Cereali integrali soffiati, arricchiti con vitamine e minerali"
-13167,AGB,FALSE,Instant cereal (powder to be reconstituted) for baby from 4/6 months,"Céréales instantanées, poudre à reconstituer, dès 4/6 mois","Cereali istantanei, in polvere da ricostituire, da 4/6 mesi"
-13168,AGB,FALSE,Instant cereal (powder to be reconstituted) for baby from 6 months,"Céréales instantanées, poudre à reconstituer, dès 6 mois","Cereali istantanei, in polvere da ricostituire, da 6 mesi"
 32028,AGB,FALSE,"Breakfast cereals, diet, with chocolate, not fortified","Céréales pour petit déjeuner ""équilibre"" au chocolat (non enrichies en vitamines et minéraux)","Cereali per la colazione tipo “fitness"" al cioccolato (non arricchiti con vitamine e minerali)"
 32022,AGB,FALSE,"Breakfast cereals, diet, with chocolate, fortified with vitamins and chemical elements","Céréales pour petit déjeuner ""équilibre"" au chocolat, enrichies en vitamines et minéraux","Cereale per la colazione tipo “fitness"" al cioccolato, arricchito con vitamine e minerali"
 32029,AGB,FALSE,"Breakfast cereals, diet, with fruits, not fortified","Céréales pour petit déjeuner ""équilibre"" aux fruits (non enrichies en vitamines et minéraux)","Cereali per la colazione tipo “fitness"" di frutta (non arricchiti con vitamine e minerali)"
@@ -480,11 +470,9 @@ Code,Type,isMain,EN,FR,IT
 15047,AGB,TRUE,"Seeds, chia, dried","Chia, graine, séchée","Chia, seme, essiccato"
 18162,AGB,FALSE,"Mix of chicory and coffee, instant, without sugar, ready-to-drink (reconstituted with water)","Chicorée et café, instantané, non sucré, prêt à boire (reconstituée avec de l'eau)","Mix di cicoria e caffè, solubile, non zuccherata, pronta da bere (ricostituita con acqua)"
 18153,AGB,FALSE,"Mix of chicory and coffee, instant, without sugar, ready-to-drink (reconstituted with standard semi-skimmed milk)","Chicorée et café, instantané, non sucré, prête à boire (reconstituée avec du lait demi-écrémé standard)","Mix di cicoria e caffè, solubile, non zuccherata, pronta da bere (ricostituita con normale latte parzialmente scremato)"
-18150,AGB,TRUE,"Mix of chicory and coffee, powder, instant","Chicorée et café, poudre soluble","Mix di cicoria e caffè, polvere solubile"
 20162,AGB,TRUE,"Red endive, raw","Chicorée rouge, crue","Cicoria rossa, cruda"
 20163,AGB,TRUE,"Green endive, raw","Chicorée verte, crue","Cicoria verde, cruda"
 18161,AGB,FALSE,"Instant chicory, without sugar and artificial sweeteners, ready-to-drink (reconstituted with standard semi-skimmed milk)","Chicorée, instantanée, non sucrée, prête à boire (reconstituée avec du lait demi-écrémé standard)","Cicoria, istantanea, non zuccherata, pronta da bere (ricostituita con latte parzialmente scremato standard)"
-18152,AGB,TRUE,"Chicory, powder, instant","Chicorée, poudre soluble","Cicoria, polvere solubile"
 25111,AGB,FALSE,Chili con carne,Chili con carne,Chili con carne
 26236,AGB,TRUE,"Horse mackerel, oily (autumn, winter), raw","Chinchard gras, cru","Sugarello grasso, crudo"
 26235,AGB,TRUE,"Horse mackerel, lean (spring, summer), raw","Chinchard maigre, cru","Sugarello magro, crudo"
@@ -541,7 +529,6 @@ Code,Type,isMain,EN,FR,IT
 20094,AGB,FALSE,"Cauliflower, frozen, raw","Chou-fleur, surgelé, cru","Cavolfiore, surgelato, crudo"
 20065,AGB,TRUE,"Cauliflower, frozen, cooked","Chou-fleur, surgelé, cuit","Cavolfiore, surgelato, cotto"
 25003,AGB,FALSE,"Chou pastry, sugar coated",Chouquette,Chouquette (Piccoli bignè con zucchero)
-25004,AGB,FALSE,"Kohlrabi, boiled/cooked in water","Chou-rave, bouilli/cuit à l'eau","Cavolo rapa, bollito"
 23467,AGB,FALSE,"Turnip cabbage, raw","Chou-rave, cru","Cavolo rapa, crudo"
 11003,AGB,TRUE,"Chive or spring onion, fresh","Ciboule ou Ciboulette, fraîche","Erba cipollina, fresca"
 5022,AGB,TRUE,Flavoured cider,Cidre aromatisé (framboise),Sidro aromatizzato (lampone)
@@ -557,7 +544,6 @@ Code,Type,isMain,EN,FR,IT
 13125,AGB,TRUE,"Lemon zest, raw","Citron, zeste, cru","Limone, scorza, crudo"
 20166,AGB,TRUE,"Pumpkin, pulp, raw","Citrouille, pulpe, crue","Zucca, polpa, cruda"
 39216,AGB,FALSE,"Fruits batter-pudding, refrigerated","Clafoutis aux fruits, rayon frais","Clafoutis o clafouti,di frutta, da frigorifero"
-13082,AGB,TRUE,"Clementine, pulp, raw","Clémentine, pulpe, crue","Clementina, polpa, cruda"
 11052,AGB,TRUE,Cloves,Clou de girofle,Chiodo di garofano
 1012,AGB,TRUE,Rum-based cocktail,Cocktail à base de rhum,Cocktail a base di rum
 1013,AGB,TRUE,Whiskey-based cocktail,Cocktail à base de whisky,Cocktail a base di whisky
@@ -696,7 +682,6 @@ Code,Type,isMain,EN,FR,IT
 12832,AGB,TRUE,"Crottin cheese, from goat's milk, from raw milk","Crottin de chèvre, au lait cru","Crottin di capra (tipo di formaggio), latte crudo"
 12833,AGB,TRUE,"Crottin cheese, from goat's milk","Crottin de chèvre, sans précision",Crottin di capra (tipo di formaggio)
 38500,AGB,FALSE,"Crouton with garlic, herbs or onions, prepacked","Croûton à l'ail aux fines herbes ou aux oignons, préemballé","Crostino all'aglio alle erbette o alla cipolla, preconfezionato"
-7430,AGB,FALSE,Croutons,Croûtons,Crostini
 7432,AGB,FALSE,"Croutons, plain, prepacked","Croûtons nature, préemballés","Crostini al naturale, preconfezionati"
 23493,AGB,FALSE,Apple crumble,Crumble aux pommes,Crumble di mele
 15028,AGB,TRUE,"Cucurbitacea, seed","Cucurbitacées, graine","Cucurbitacee, seme"
@@ -734,101 +719,11 @@ Code,Type,isMain,EN,FR,IT
 26109,AGB,TRUE,"Blackspot seabream, raw","Dorade rose, ou daurade rose, crue"," Pagello pezzogna o pezzogna, cruda"
 26088,AGB,TRUE,"Gilthead seabream, raw, farmed","Dorade royale ou daurade ou vraie daurade, crue, élevage","Orata, cruda, di allevamento"
 26080,AGB,TRUE,"Gilthead seabream, raw, wild","Dorade royale, ou daurade ou vraie daurade, crue, sauvage","Orata, cruda, selvatica"
-25415,AGB,FALSE,"Cheeseburger, double, from fast foods restaurant","Double cheeseburger, provenant de fast food","Doppio cheeseburger, da fast food"
 31036,AGB,FALSE,Sugar-coated almond,Dragée amande,Confetto alle mandorle
 20988,AGB,TRUE,"Dulse (Palmaria palmata), dried or dehydrated","Dulse (Palmaria palmata), séchée ou déshydratée","Alga Palmaria palmata o dulse, essiccata o disidratata"
-76080,AGB,FALSE,"Spring still water (Cristaline), bottled","Eau de source Cristaline, embouteillée, non gazeuse","Acqua di sorgente cristallina, in bottiglia, non gassata"
-76028,AGB,FALSE,"Spring water (Ogeu), bottled, lightly mineralized","Eau de source Ogeu, embouteillée, faiblement minéralisée (Ogeu, 64)","Acqua di sorgente di Ogeu, in bottiglia, a basso contenuto di minerali (Ogeu, 64)"
 1001,AGB,TRUE,Clear fruit brandy or eau-de-vie,Eau de vie,Distillato
 1023,AGB,TRUE,"Spirit made from wine, armagnac or cognac type","Eau de vie de vin, type armagnac, cognac","Distillato di vino, tipo armagnac, cognac"
 18430,AGB,FALSE,"Water, bottled",Eau embouteillée de source,Acqua in bottiglia di sorgente
-76000,AGB,FALSE,"Mineral still water (Abatilles), bottled, lightly mineralized","Eau minérale Abatilles, embouteillée, non gazeuse, faiblement minéralisée (Arcachon, 33)","Acqua minerale Abatilles, in bottiglia, non gassata, a basso contenuto di minerali (Arcachon, 33)"
-76001,AGB,FALSE,"Mineral still water (Aix-les-Bains), bottled, lightly mineralized","Eau minérale Aix-les-Bains, embouteillée, non gazeuse, faiblement minéralisée (Aix-les-Bains, 73)","Acqua minerale di Aix-les-Bains, in bottiglia, non gassata, a basso contenuto di minerali (Aix-les-Bains, 73)"
-76002,AGB,FALSE,"Mineral sparkling water (Aziac), bottled, lightly mineralized","Eau minérale Aizac, embouteillée, gazeuse, faiblement minéralisée (Aizac, 07)","Acqua minerale Aizac, in bottiglia, frizzante, a basso contenuto di minerali (Aizac, 07)"
-76004,AGB,FALSE,"Mineral still water (Amanda), bottled, strongly mineralized","Eau minérale Amanda, embouteillée, non gazeuse, fortement minéralisée (St-Amand, 59)","Acqua minerale Amanda, in bottiglia, non gassata, altamente mineralizzata (St-Amand, 59)"
-76079,AGB,FALSE,"Mineral still water (Appollinaris), bottled, strongly mineralized","Eau minérale Appollinaris, embouteillée, non gazeuse, fortement minéralisée (Allemagne)","Acqua minerale Appollinaris, in bottiglia, non gassata, altamente mineralizzata (Germania)"
-76006,AGB,FALSE,"Mineral sparkling water (Arcens), bottled, averagely mineralized","Eau minérale Arcens, embouteillée, gazeuse, moyennement minéralisée (Arcens, 07)","Acqua minerale Arcens, in bottiglia, frizzante, moderatamente mineralizzata (Arcens, 07)"
-76007,AGB,FALSE,"Mineral sparkling water (Ardesy), bottled, strongly mineralized","Eau minérale Ardesy, embouteillée, gazeuse, fortement minéralisée (Ardes, 63)","Acqua minerale Ardesy, in bottiglia, frizzante, altamente mineralizzata (Ardes, 63)"
-76008,AGB,FALSE,"Mineral sparkling water (Auvergne), bottled, strongly mineralized","Eau minérale Auvergne, embouteillée, gazeuse, fortement minéralisée (Cornillon, 38)","Acqua minerale Auvergne, in bottiglia, frizzante, altamente mineralizzata (Cornillon, 38)"
-76062,AGB,FALSE,"Mineral still water (Avra), bottled, lightly mineralized","Eau minérale Avra, embouteillée, non gazeuse, faiblement minéralisée (Grèce)","Acqua minerale Avra, in bottiglia, non gassata, a basso contenuto di minerali (Grecia)"
-76061,AGB,FALSE,"Mineral sparkling water (Badoit), bottled, averagely mineralized","Eau minérale Badoit, embouteillée, gazeuse, moyennement minéralisée (St-Galmier, 42)","Acqua minerale Badoit, in bottiglia, frizzante, moderatamente mineralizzata (St-Galmier, 42)"
-76063,AGB,FALSE,"Mineral still water (Beckerich), bottled, lightly mineralized","Eau minérale Beckerich, embouteillée, non gazeuse, faiblement minéralisée (Luxembourg)","Acqua minerale Beckerich, in bottiglia, non gassata, a basso contenuto di minerali (Lussemburgo)"
-76081,AGB,FALSE,"Mineral still water (Biovive), bottled, lightly mineralized","Eau minérale Biovive, embouteillée, non gazeuse, faiblement minéralisée (Dax, 40)","Acqua minerale Biovive, in bottiglia, non gassata, a basso contenuto di minerali (Dax, 40)"
-76064,AGB,FALSE,"Mineral still water (Caramulo), bottled, very lightly mineralized","Eau minérale Caramulo, embouteillée, non gazeuse, très faiblement minéralisée (Portugal)","Acqua minerale Caramulo, in bottiglia, non gassata, a bassissimo contenuto di minerali (Portogallo)"
-76100,AGB,FALSE,"Water, mineral, carbonated ou non-carbonated, CAROLA","Eau minérale Carola, embouteillée, gazeuse ou non gazeuse, moyennement minéralisée (Ribeauville, 68)","Acqua minerale Carola, in bottiglia, frizzante o non gassata, moderatamente mineralizzata (Ribeauville, 68)"
-76010,AGB,FALSE,"Mineral still water (Celtic), bottled, very lightly mineralized","Eau minérale Celtic, embouteillée, gazeuse ou non gazeuse, très faiblement minéralisée (Niederbronn, 67)","Acqua minerale Celtic, in bottiglia, frizzante o non gassata, a bassissimo contenuto di minerali (Niederbronn, 67)"
-76011,AGB,FALSE,"Mineral still water (Chambon), bottled, lightly mineralized","Eau minérale Chambon, embouteillée, non gazeuse, faiblement minéralisée (Chambon, 45)","Acqua minerale Chambon, in bottiglia, non gassata, a basso contenuto di minerali (Chambon, 45)"
-76012,AGB,FALSE,"Mineral still water (Chantemerle), bottled, lightly mineralized","Eau minérale Chantemerle, embouteillée, non gazeuse, faiblement minéralisée (Le Pestrin, 07)","Acqua minerale Chantemerle, in bottiglia, non gassata, a basso contenuto di minerali (Le Pestrin, 07)"
-76013,AGB,FALSE,"Mineral sparkling water (Chateauneuf), bottled, strongly mineralized","Eau minérale Chateauneuf, embouteillée, gazeuse, fortement minéralisée (Chateauneuf, 63)","Acqua minerale Chateauneuf, in bottiglia, frizzante, altamente mineralizzata (Chateauneuf, 63)"
-76014,AGB,FALSE,"Mineral sparkling water (Chateldon), bottled, strongly mineralized","Eau minérale Chateldon, embouteillée, gazeuse, fortement minéralisée (Chateldon, 63)","Acqua minerale Chateldon, in bottiglia, frizzante, altamente mineralizzata (Chateldon, 63)"
-76065,AGB,FALSE,"Mineral still water (Chaudfontaine), bottled, lightly mineralized","Eau minérale Chaudfontaine, embouteillée, non gazeuse, faiblement minéralisée (Belgique)","Acqua minerale Chaudfontaine, in bottiglia, non gassata, a basso contenuto di minerali (Belgio)"
-76066,AGB,FALSE,"Mineral still water (Christinen Brunnen), bottled, averagely mineralized","Eau minérale Christinen Brunnen, embouteillée, non gazeuse, moyennement minéralisée (Allemagne)","Acqua minerale Christinen Brunnen, in bottiglia, non gassata, moderatamente mineralizzata (Germania)"
-76083,AGB,FALSE,"Mineral sparkling water (Cilaos), bottled, strongly mineralized","Eau minérale Cilaos, embouteillée, gazeuse, fortement minéralisée (Cilaos, 974)","Acqua minerale Cilaos, in bottiglia, frizzante, altamente mineralizzata (Cilaos, 974)"
-76015,AGB,FALSE,"Mineral still water (Clos de l'Abbaye), bottled, averagely mineralized","Eau minérale Clos de l'Abbaye, embouteillée, non gazeuse, moyennement minéralisée (St-Amand, 59)","Acqua minerale Clos de l'Abbaye, in bottiglia, non gassata, moderatamente mineralizzata (St-Amand, 59)"
-76016,AGB,FALSE,"Mineral still water (Contrex), bottled, strongly mineralized","Eau minérale Contrex, embouteillée, non gazeuse, fortement minéralisée (Contrexéville, 88)","Acqua minerale Contrex, in bottiglia, non gassata, altamente mineralizzata (Contrexéville, 88)"
-76067,AGB,FALSE,"Mineral still water (Courmayer), bottled, strongly mineralized","Eau minérale Courmayeur, embouteillée, non gazeuse, fortement minéralisée (Italie)","Acqua minerale Courmayeur, in bottiglia, non gassata, altamente mineralizzata (Italia)"
-76017,AGB,FALSE,"Mineral still water (Dax), bottled, averagely mineralized","Eau minérale Dax, embouteillée, non gazeuse, moyennement minéralisée (Dax, 40)","Acqua minerale Dax, in bottiglia, non gassata, moderatamente mineralizzata (Dax, 40)"
-76019,AGB,FALSE,"Mineral still water (Didier), bottled, strongly mineralized","Eau minérale Didier, embouteillée non gazeuse, fortement minéralisée (Martinique)","Acqua minerale Didier, imbottigliata non gassata, altamente mineralizzata (Martinica)"
-76018,AGB,FALSE,"Mineral sparkling water (Didier), bottled, strongly mineralized","Eau minérale Didier, embouteillée, gazeuse, fortement minéralisée (Martinique)","Acqua minerale Didier, in bottiglia, frizzante, altamente mineralizzata (Martinica)"
-76102,AGB,FALSE,"Water, mineral, non-carbonated, EDEN","Eau minérale Eden (La Goa), embouteillée, non gazeuse, faiblement minéralisée (Suisse)","Acqua minerale Eden (La Goa), in bottiglia, non gassata, a basso contenuto di minerali (Svizzera)"
-76020,AGB,FALSE,"Mineral still water (Evian), bottled, lightly mineralized","Eau minérale Evian, embouteillée, non gazeuse, faiblement minéralisée (Evian, 74)","Acqua minerale Evian, in bottiglia, non gassata, a basso contenuto di minerali (Evian, 74)"
-76022,AGB,FALSE,"Mineral still water (Hépar), bottled, strongly mineralized","Eau minérale Hépar, embouteillée, non gazeuse, fortement minéralisée (Vittel, 88)","Acqua minerale Hépar, in bottiglia, non gassata, altamente mineralizzata (Vittel, 88)"
-76068,AGB,FALSE,"Mineral still water (Highland spring), bottled, lightly mineralized","Eau minérale Highland spring, embouteillée, non gazeuse, faiblement minéralisée (Écosse)","Acqua minerale di sorgente delle Highland, in bottiglia, non gassata, a basso contenuto di minerali (Scozia)"
-76023,AGB,FALSE,"Mineral sparkling water (Hydroxydase), bottled, strongly mineralized","Eau minérale Hydroxydase, embouteillée, gazeuse, fortement minéralisée (Le Breuil sur Couze, 63)","Acqua minerale idrossidasi, in bottiglia, frizzante, altamente mineralizzata (Le Breuil sur Couze, 63)"
-76082,AGB,FALSE,"Mineral still water (La Cairolle), bottled, strongly mineralized","Eau minérale La Cairolle, embouteillée, non gazeuse, fortement minéralisée (Les Aires, 34)","Acqua minerale La Cairolle, in bottiglia, non gassata, altamente mineralizzata (Les Aires, 34)"
-76085,AGB,FALSE,"Mineral still water (La Française), bottled, strongly mineralized","Eau minérale La Française, embouteillée, non gazeuse, fortement minéralisée (Propiac, 26)","Acqua minerale La Française, in bottiglia, non gassata, altamente mineralizzata (Propiac, 26)"
-76069,AGB,FALSE,"Mineral still water (Levissima), bottled, lightly mineralized","Eau minérale Levissima, embouteillée, non gazeuse, faiblement minéralisée (Italie)","Acqua minerale Levissima, in bottiglia, non gassata, a basso contenuto di minerali (Italia)"
-76025,AGB,FALSE,"Mineral still water (Luchon), bottled, lightly mineralized","Eau minérale Luchon, embouteillée, non gazeuse, faiblement minéralisée (Luchon, 31)","Acqua minerale Luchon, in bottiglia, non gassata, a basso contenuto di minerali (Luchon, 31)"
-76070,AGB,FALSE,"Mineral still water (Luso), bottled, very lightly mineralized","Eau minérale Luso, embouteillée, non gazeuse, très faiblement minéralisée (Portugal)","Acqua minerale Luso, in bottiglia, non gassata, a bassissimo contenuto di minerali (Portogallo)"
-76101,AGB,FALSE,"Water, mineral, non-carbonated, MONT-BLANC","Eau minérale Mont-Blanc, embouteillée, non gazeuse, faiblement minéralisée (Italie)","Acqua minerale del Monte Bianco, in bottiglia, non gassata, a basso contenuto di minerali (Italia)"
-76027,AGB,FALSE,"Mineral still water (Montcalm), bottled, very lightly mineralized","Eau minérale Montcalm, embouteillée, non gazeuse, très faiblement minéralisée (Auzat, 09)","Acqua minerale Montcalm, in bottiglia, non gassata, a bassissimo contenuto di minerali (Auzat, 09)"
-76086,AGB,FALSE,"Mineral still water (Montclar), bottled, lightly mineralized","Eau minérale Montclar, embouteillée, non gazeuse, faiblement minéralisée (Montclar, 04)","Acqua minerale Montclar, in bottiglia, non gassata, a basso contenuto di minerali (Montclar, 04)"
-76087,AGB,FALSE,"Mineral water (Mont-Roucous, bottled, very lightly mineralized","Eau minérale Mont-Roucous, embouteillée, très faiblement minéralisée (Lacaune, 81)","Acqua minerale Mont-Roucous, in bottiglia, a bassissimo contenuto di minerali (Lacaune, 81)"
-76071,AGB,FALSE,"Mineral still water (Néro), bottled, lightly mineralized","Eau minérale Néro, embouteillée, non gazeuse, faiblement minéralisée (Grèce)","Acqua minerale Néro, in bottiglia, non gassata, a basso contenuto di minerali (Grecia)"
-76088,AGB,FALSE,"Mineral sparkling water (Nessel), bottled, averagely mineralized","Eau minérale Nessel, embouteillée, gazeuse, moyennement minéralisée (Soultzmatt, 68)","Acqua minerale Nessel, in bottiglia, frizzante, moderatamente mineralizzata (Soultzmatt, 68)"
-76089,AGB,FALSE,"Mineral sparkling water (Ogeu), bottled, lightly mineralized","Eau minérale Ogeu, embouteillée, gazeuse, faiblement minéralisée (Ogeu-les-Bains, 64)","Acqua minerale Ogeu, in bottiglia, frizzante, a basso contenuto di minerali (Ogeu-les-Bains, 64)"
-76090,AGB,FALSE,"Mineral still water (Ogeu), bottled, lightly mineralized","Eau minérale Ogeu, embouteillée, non gazeuse, faiblement minéralisée (Ogeu-les-Bains, 64)","Acqua minerale Ogeu, in bottiglia, non gassata, a basso contenuto di minerali (Ogeu-les-Bains, 64)"
-76029,AGB,FALSE,"Mineral still water (Orée du bois), bottled, averagely mineralized","Eau minérale Orée du bois, embouteillée, non gazeuse, moyennement minéralisée (St-Amand, 59)","Acqua minerale Orée du bois, in bottiglia, non gassata, moderatamente mineralizzata (St-Amand, 59)"
-76030,AGB,FALSE,"Mineral sparkling water (Orezza), bottled, averagely mineralized","Eau minérale Orezza, embouteillée, gazeuse, moyennement minéralisée (Rapaggio, 20B)","Acqua minerale Orezza, in bottiglia, frizzante, moderatamente mineralizzata (Rapaggio, 20B)"
-76031,AGB,FALSE,"Mineral sparkling water (Parot), bottled, averagely mineralized","Eau minérale Parot, embouteillée, gazeuse, moyennement minéralisée (St-Romain-le-Puy, 42)","Acqua minerale Parot, in bottiglia, frizzante, moderatamente mineralizzata (St-Romain-le-Puy, 42)"
-76072,AGB,FALSE,"Mineral still water (Penacova), bottled, very lightly mineralized","Eau minérale Penacova, embouteillée, non gazeuse, très faiblement minéralisée (Portugal)","Acqua minerale Penacova, in bottiglia, non gassata, a bassissimo contenuto di minerali (Portogallo)"
-76060,AGB,FALSE,"Mineral sparkling water (Perrier), bottled, lightly mineralized","Eau minérale Perrier, embouteillée, gazeuse, faiblement minéralisée (Vergèse, 30)","Acqua minerale Perrier, in bottiglia, frizzante, a basso contenuto di minerali (Vergèse, 30)"
-76032,AGB,FALSE,"Mineral still water (Plancoet), bottled, lightly mineralized","Eau minérale Plancoet, embouteillée, gazeuse ou non gazeuse, faiblement minéralisée (Plancoet, 22)","Acqua minerale Plancoet, in bottiglia, gassata o non, a basso contenuto di minerali (Plancoet, 22)"
-76091,AGB,FALSE,"Mineral still water (Prince Noir), bottled, strongly mineralized","Eau minérale Prince Noir, embouteillée, non gazeuse, fortement minéralisée (St-Antonin-Noble-Val, 82)","Acqua minerale Prince Noir, in bottiglia, non gassata, altamente mineralizzata (St-Antonin-Noble-Val, 82)"
-76033,AGB,FALSE,"Mineral still water (Propiac), bottled, strongly mineralized","Eau minérale Propiac, embouteillée, non gazeuse, fortement minéralisée (Propiac, 26)","Acqua minerale propiac, in bottiglia, non gassata, altamente mineralizzata (Propiac, 26)"
-76034,AGB,FALSE,"Mineral sparkling water (Puits St Georges), bottled, averagely mineralized","Eau minérale Puits St-Georges, embouteillée, gazeuse, moyennement minéralisée (St-Romain-le-Puy, 42)","Acqua minerale Puits St-Georges, in bottiglia, frizzante, moderatamente mineralizzata (St-Romain-le-Puy, 42)"
-76035,AGB,FALSE,"Mineral sparkling water (Quézac), bottled, averagely mineralized","Eau minérale Quézac, embouteillée, gazeuse, moyennement minéralisée (Quézac, 48)","Acqua minerale Quézac, in bottiglia, frizzante, moderatamente mineralizzata (Quézac, 48)"
-76036,AGB,FALSE,"Mineral sparkling water (Reine des basaltes), bottled, averagely mineralized","Eau minérale Reine des basaltes, embouteillée, gazeuse, moyennement minéralisée (Asperjoc, 07)","Acqua minerale Reine des basalts, in bottiglia, frizzante, moderatamente mineralizzata (Asperjoc, 07)"
-76037,AGB,FALSE,"Mineral sparkling water (Rozana), bottled, strongly mineralized","Eau minérale Rozana, embouteillée, gazeuse, fortement minéralisée (Beauregard, 63)","Acqua minerale Rozana, in bottiglia, frizzante, altamente mineralizzata (Beauregard, 63)"
-76038,AGB,FALSE,"Mineral still water (Sail-les-Bains), bottled, lightly mineralized","Eau minérale Sail-les-Bains, embouteillée, non gazeuse, faiblement minéralisée (Sail-les-Bains, 42)","Acqua minerale Sail-les-Bains, in bottiglia, non gassata, a basso contenuto di minerali (Sail-les-Bains, 42)"
-76039,AGB,FALSE,"Mineral sparkling water (Salvetat), bottled, averagely mineralized","Eau minérale Salvetat, embouteillée, gazeuse, moyennement minéralisée (La Salvetat, 34)","Acqua minerale Salvetat, in bottiglia, frizzante, moderatamente mineralizzata (La Salvetat, 34)"
-76073,AGB,FALSE,"Mineral water (San Benedetto), bottled, lightly mineralized","Eau minérale San Benedetto, embouteillée, faiblement minéralisée (Italie)","Acqua minerale San Benedetto, in bottiglia, a basso contenuto di minerali (Italia)"
-76074,AGB,FALSE,"Mineral water (San Bernardo), bottled, very lightly mineralized","Eau minérale San Bernardo, embouteillée, très faiblement minéralisée (Italie)","Acqua minerale San Bernardo, in bottiglia, a bassissimo contenuto di minerali (Italia)"
-76075,AGB,FALSE,"Mineral sparkling water (San Pellegrino), bottled, averagely mineralized","Eau minérale San Pellegrino, embouteillée, gazeuse, moyennement minéralisée (Italie)","Acqua minerale San Pellegrino, in bottiglia, frizzante, moderatamente mineralizzata (Italia)"
-76040,AGB,FALSE,"Mineral sparkling water (Soultzmatt), bottled, averagely mineralized","Eau minérale Soultzmatt , embouteillée, gazeuse, moyennement minéralisée ( Soultzmatt, 68)","Acqua minerale Soultzmatt, in bottiglia, frizzante, moderatamente mineralizzata (Soultzmatt, 68)"
-76076,AGB,FALSE,"Mineral still water (Spa-Reine), bottled, averagely mineralized","Eau minérale Spa-Reine, embouteillée, gazeuse ou non non gazeuse, moyennement minéralisée (Belgique)","Acqua minerale Spa-Reine, in bottiglia, gassata e non, moderatamente mineralizzata (Belgio)"
-76092,AGB,FALSE,"Mineral sparkling water (St-Alban), bottled, averagely mineralized","Eau minérale St-Alban, embouteillée, gazeuse, moyennement minéralisée (St-Alban, 42)","Acqua minerale St-Alban, in bottiglia, frizzante, moderatamente mineralizzata (St-Alban, 42)"
-76043,AGB,FALSE,"Mineral still water (St-Amand), bottled, averagely mineralized","Eau minérale St-Amand, embouteillée, gazeuse ou non gazeuse, moyennement minéralisée (St-Amand, 59)","Acqua minerale St-Amand, in bottiglia, frizzante o non gassata, moderatamente mineralizzata (St-Amand, 59)"
-76044,AGB,FALSE,"Mineral still water (St-Antonin), bottled, strongly mineralized","Eau minérale St-Antonin, embouteillée, non gazeuse, fortement minéralisée (St-Antonin-Noble-Val, 82)","Acqua minerale St-Antonin, in bottiglia, non gassata, altamente mineralizzata (St-Antonin-Noble-Val, 82)"
-76046,AGB,FALSE,"Mineral sparkling water (St-Diéry), bottled, strongly mineralized","Eau minérale St-Diéry, embouteillée, gazeuse, fortement minéralisée (St-Diéry, 63)","Acqua minerale St-Diéry, in bottiglia, frizzante, altamente mineralizzata (St-Diéry, 63)"
-76093,AGB,FALSE,"Mineral sparkling water (Ste-Marguerite), bottled, averagely mineralized","Eau minérale Ste-Marguerite, embouteillée, gazeuse, moyennement minéralisée (St-Maurice, 63)","Acqua minerale Ste-Marguerite, in bottiglia, frizzante, moderatamente mineralizzata (St-Maurice, 63)"
-76094,AGB,FALSE,"Mineral sparkling water (St-Géron), bottled, averagely mineralized","Eau minérale St-Géron, embouteillée, gazeuse, moyennement minéralisée (St-Géron, 43)","Acqua minerale St-Géron, in bottiglia, frizzante, moderatamente mineralizzata (St-Géron, 43)"
-76049,AGB,FALSE,"Mineral sparkling water (St-Michel-de-Mourcairol), bottled, averagely mineralized","Eau minérale St-Michel-de-Mourcairol, embouteillée, gazeuse, moyennement minéralisée (Les Aires, 34)","Acqua minerale St-Michel-de-Mourcairol, in bottiglia, frizzante, moderatamente mineralizzata (Les Aires, 34)"
-76047,AGB,FALSE,"Mineral sparkling water (St-Yorre), bottled, strongly mineralized","Eau minérale St-Yorre, embouteillée, gazeuse, fortement minéralisée (Saint-Yorre, 03)","Acqua minerale St-Yorre, in bottiglia, frizzante, altamente mineralizzata (Saint-Yorre, 03)"
-76077,AGB,FALSE,"Mineral still water (Talians), bottled, strongly mineralized","Eau minérale Talians, embouteillée, non gazeuse, fortement minéralisée (Italie)","Acqua minerale Talians, in bottiglia, non gassata, altamente mineralizzata (Italia)"
-76050,AGB,FALSE,"Mineral still water (Thonon), bottled, lightly mineralized","Eau minérale Thonon, embouteillée, non gazeuse, faiblement minéralisée (Thonon, 74)","Acqua minerale Thonon, in bottiglia, non gassata, a basso contenuto di minerali (Thonon, 74)"
-76095,AGB,FALSE,"Mineral still water (Treignac), bottled, very lightly mineralized","Eau minérale Treignac, embouteillée, non gazeuse, très faiblement minéralisée (Treignac, 19)","Acqua minerale Treignac, in bottiglia, non gassata, a bassissimo contenuto di minerali (Treignac, 19)"
-76096,AGB,FALSE,"Mineral sparkling water (Vals), bottled, averagely mineralized","Eau minérale Vals, embouteillée, gazeuse, moyennement minéralisée (Vals-les-Bains, 07)","Acqua minerale Vals, in bottiglia, frizzante, moderatamente mineralizzata (Vals-les-Bains, 07)"
-76078,AGB,FALSE,"Mineral still water (Valvert), bottled, lightly mineralized","Eau minérale Valvert, embouteillée, non gazeuse, faiblement minéralisée (Belgique)","Acqua minerale Valvert, in bottiglia, non gassata, a basso contenuto di minerali (Belgio)"
-76097,AGB,FALSE,"Mineral still water (Vauban), bottled, averagely mineralized","Eau minérale Vauban, embouteillée, non gazeuse, moyennement minéralisée (St-Amand-les-Eaux, 59)","Acqua minerale Vauban, in bottiglia, non gassata, moderatamente mineralizzata (St-Amand-les-Eaux, 59)"
-76053,AGB,FALSE,"Mineral sparkling water (Ventadour), bottled, lightly mineralized","Eau minérale Ventadour, embouteillée, gazeuse, faiblement minéralisée (Le Pestrin, 07)","Acqua minerale Ventadour, in bottiglia, frizzante, a basso contenuto di minerali (Le Pestrin, 07)"
-76054,AGB,FALSE,"Mineral sparkling water (Vernet), bottled, lightly mineralized","Eau minérale Vernet, embouteillée, gazeuse, faiblement minéralisée (Prades, 07)","Acqua minerale Vernet, in bottiglia, frizzante, a basso contenuto di minerali (Prades, 07)"
-76024,AGB,FALSE,"Mineral sparkling water (Vernière), bottled, averagely mineralized","Eau minérale Vernière, embouteillée, gazeuse, moyennement minéralisée (Les Aires, 34)","Acqua minerale Vernière, in bottiglia, frizzante, moderatamente mineralizzata (Les Aires, 34)"
-76055,AGB,FALSE,"Mineral sparkling water (Vichy Célestins), bottled, strongly mineralized","Eau minérale Vichy Célestins, embouteillée, gazeuse, fortement minéralisée (Saint-Yorre, 03)","Acqua minerale Vichy Célestins, in bottiglia, frizzante, altamente mineralizzata (Saint-Yorre, 03)"
-76056,AGB,FALSE,"Mineral still water (Vittel), bottled, averagely mineralized","Eau minérale Vittel, embouteillée, non gazeuse, moyennement minéralisée (Vittel, 88)","Acqua minerale Vittel, in bottiglia, non gassata, moderatamente mineralizzata (Vittel, 88)"
-76058,AGB,FALSE,"Mineral sparkling water (Volvic active), bottled, lightly mineralized","Eau minérale Volvic active, embouteillée, gazeuse, faiblement minéralisée (Volvic, 63)","Acqua minerale Active Volvic, in bottiglia, frizzante, a basso contenuto di minerali (Volvic, 63)"
-76057,AGB,FALSE,"Mineral still water (Volvic), bottled, lightly mineralized","Eau minérale Volvic, embouteillée, non gazeuse, faiblement minéralisée (Volvic, 63)","Acqua minerale Volvic, in bottiglia, non gassata, a basso contenuto di minerali (Volvic, 63)"
-76059,AGB,FALSE,"Mineral still water (Wattwiller), bottled, lightly mineralized","Eau minérale Wattwiller, embouteillée, gazeuse ou non gazeuse, faiblement minéraliséee (Wattwiller, 68)","Acqua minerale Wattwiller, in bottiglia, frizzante o non gassata, a basso contenuto di minerali (Wattwiller, 68)"
 20097,AGB,TRUE,"Shallot, raw","Échalote, crue","Scalogno, crudo"
 20255,AGB,TRUE,"Shallot, cooked","Échalote, cuite","Scalogno, cotto"
 23477,AGB,FALSE,Eclair,Éclair,Eclair
@@ -863,7 +758,6 @@ Code,Type,isMain,EN,FR,IT
 36402,AGB,FALSE,"Pheasant, meat, roasted/baked","Faisan, viande, rôtie/cuite au four","Fagiano, carne, arrosto/al forno"
 19641,AGB,TRUE,"Drained soft fresh cheese, around 6% fat","Faisselle, 6% MG environ","Formaggio Faisselle, circa 6% di grassi"
 25460,AGB,FALSE,Fajitas,Fajitas,Fajitas
-25571,AGB,FALSE,Falafel,"Falafel ou Boulette de pois-chiche et/ou fève, frite","Falafel o polpette di ceci e/o fave, fritte"
 23121,AGB,FALSE,Breton pudding cake with prunes,Far aux pruneaux,Far bretone con le prugne
 9480,AGB,TRUE,"Wheat flour, self-raising",Farine de blé tendre ou froment avec levure incorporée,Farina di grano tenero con lievito
 9550,AGB,TRUE,"Wheat flour, type 110",Farine de blé tendre ou froment T110,Farina di grano tenero tipo 2 (francese T110)
@@ -1173,7 +1067,7 @@ Code,Type,isMain,EN,FR,IT
 17400,AGB,TRUE,Soy oil,Huile de soja,Olio di soia
 17420,AGB,TRUE,Sunflower oil,Huile de tournesol,Olio di semi di girasole
 17440,AGB,TRUE,"Olive oil, extra virgin",Huile d'olive vierge extra,Olio extravergine d'oliva
-16128,AGB,TRUE,Frying oil,"Huile pour friture, sans précision","Olio per friggere, generico"
+16128,AGB,TRUE,Frying oil,"Huile pour friture, sans précision",
 10035,AGB,TRUE,"Pacific oyster, raw","Huître creuse, crue","Ostrica a coppa, cruda"
 10036,AGB,TRUE,"European oyster, raw","Huître plate, crue","Ostrica piatta, cruda"
 10011,AGB,TRUE,"Oyster, raw","Huître, sans précision, crue","Ostrica, generica, cruda"
@@ -1225,9 +1119,7 @@ Code,Type,isMain,EN,FR,IT
 20986,AGB,TRUE,"Sea belt (Saccharina latissima), dried or dehydrated","Kombu royal (Saccharina latissima), séchée ou déshydratée","Alga Kombu reale (Saccharina latissima), essiccata o disidratata"
 23122,AGB,FALSE,Buttered and caramelized milk bread cake,Kouign Amann,"Kouign Amann, dolce di pasta sfoglia tipico della Bretagna"
 13549,AGB,TRUE,"Kumquat, without pips, raw","Kumquat, sans pépin, cru","Mandarino cinese, kumquat o cumquat, senza semi, crudo"
-3000,AGB,FALSE,"Baby milk, first age, powder","Lait 1er âge, poudre soluble (préparation pour nourrissons)","Latte prima età, polvere solubile (latte per lattanti)"
 19013,AGB,FALSE,"Baby milk, first milk, ready to feed","Lait 1er âge, prêt à consommer (préparation pour nourrissons)","Latte prima età, pronto da bere (latte per lattanti)"
-3002,AGB,FALSE,"Baby milk, second age, powder","Lait 2e âge, poudre soluble (préparation de suite)","Latte seconda età, polvere solubile (formula di proseguimento)"
 19014,AGB,FALSE,"Baby milk, follow on milk, ready to feed","Lait 2e âge, prêt à consommer (préparation pour nourrissons)","Latte seconda età, pronto da bere (latte per lattanti)"
 19026,AGB,TRUE,"Condensed milk, without sugar, whole","Lait concentré non sucré, entier","Latte condensato non zuccherato, intero"
 19027,AGB,TRUE,"Condensed milk, with sugar, whole","Lait concentré sucré, entier","Latte condensato zuccherato, intero"
@@ -1236,11 +1128,9 @@ Code,Type,isMain,EN,FR,IT
 19202,AGB,TRUE,"Goat milk, whole, raw","Lait de chèvre, entier, cru","Latte di capra, intero, crudo"
 19200,AGB,TRUE,"Goat milk, whole, UHT","Lait de chèvre, entier, UHT","Latte di capra, intero, UHT"
 18041,AGB,TRUE,Coconut milk or coconut cream,Lait de coco ou Crème de coco,Latte di cocco o crema di cocco
-19012,AGB,FALSE,"Baby milk, growing up milk, ready to feed","Lait de croissance infantile, liquide (aliment lacté destiné aux enfants en bas âge)","Latte per la crescita dei lattanti, liquido (alimenti a base di latte per bambini piccoli)"
 19060,AGB,TRUE,"Milk, semi-skimmed, reduced lactose","Lait demi-écrémé, à teneur réduite en lactose","Latte parzialmente scremato, a basso contenuto di lattosio"
 19042,AGB,TRUE,"Milk, semi-skimmed, pasteurised","Lait demi-écrémé, pasteurisé","Latte parzialmente scremato, pastorizzato"
 19041,AGB,TRUE,"Milk, semi-skimmed, UHT","Lait demi-écrémé, UHT","Latte parzialmente scremato, UHT"
-19049,AGB,TRUE,"Milk, semi-skimmed, vitamin fortified, UHT","Lait demi-écrémé, UHT, enrichi en vitamines","Latte parzialmente scremato, UHT, arricchito con vitamine"
 19051,AGB,TRUE,"Milk, skimmed, pasteurised","Lait écrémé, pasteurisé","Latte scremato, pastorizzato"
 19050,AGB,TRUE,"Milk, skimmed, UHT","Lait écrémé, UHT","Latte scremato, UHT"
 19678,AGB,FALSE,"Renneted milk, flavoured, refrigerated","Lait emprésuré aromatisé, rayon frais","Latte cagliato aromatizzato, banco frigo"
@@ -1304,10 +1194,7 @@ Code,Type,isMain,EN,FR,IT
 20505,AGB,FALSE,"Lentil, cooked","Lentille, cuite","Lenticchie, cotte"
 20521,AGB,TRUE,"Lentils, sprouted","Lentille, germée","Lenticchie, germogliate"
 20504,AGB,TRUE,"Lentil, dried","Lentille, sèche","Lenticchie, secche"
-11009,AGB,TRUE,Nutritional yeast,Levure alimentaire,Lievito in polvere
 11046,AGB,TRUE,Baking powder or raising agent,Levure chimique ou Poudre à lever,Lievito chimico in polvere
-11010,AGB,TRUE,"Baker's yeast, compressed","Levure de boulanger, compressée","Lievito di birra, fresco"
-11045,AGB,TRUE,"Baker's yeast, dehydrated","Levure de boulanger, déshydratée","Lievito di birra, disidratato"
 20996,AGB,TRUE,"Carragheen mosses (Chondrus crispus), dried or dehydrated","Lichen de mer ou pioca ou goémon rouge (Chondrus crispus), séché ou déshydraté","Alga carragheen o crondo crispo (Chondrus crispus), essiccato o disidratato"
 39220,AGB,FALSE,Fruit liegeois,Liégeois aux fruits,Dessert con panna e frutta (Liégeois aux fruits)
 19681,AGB,FALSE,"Custard topped with whipped cream (chocolate, coffee, caramel or vanilla custard), refrigerated","Liégeois ou viennois (chocolat, café, caramel ou vanille), rayon frais","Dessert liégeois o viennese (cioccolato, caffè, caramello o vaniglia), banco frigo"
@@ -1353,7 +1240,6 @@ Code,Type,isMain,EN,FR,IT
 20108,AGB,TRUE,"Sweet corn, on the cob, frozen, raw","Maïs doux, en épis, surgelé, cru","Mais dolce, in pannocchia, congelato, crudo"
 20233,AGB,TRUE,"Sweet corn, frozen, raw","Maïs doux, surgelé, cru","Mais dolce, congelato, crudo"
 9200,AGB,TRUE,"Corn or maize grain, raw","Maïs entier, cru","Mais, intero, crudo"
-13090,AGB,TRUE,"Mandarin, pulp, raw","Mandarine, pulpe, crue","Mandarino, polpa, crudo"
 13025_1,AGB,TRUE,"Mango by plane, pulp, raw","Mangue importée par avion, pulpe, crue","Mango importato per aereo, polpa, crudo"
 13025_2,AGB,TRUE,"Mango, pulp, raw","Mangue importée par bateau, pulpe, crue","Mango importato via mare, polpa, crudo"
 54031,AGB,TRUE,"Cassava or manioc, roots, raw","Manioc, racine crue","Manioca, radice cruda"
@@ -1392,7 +1278,6 @@ Code,Type,isMain,EN,FR,IT
 16614,AGB,TRUE,"Vegetable fat (like margarine), 80% fat, salted","Matière grasse végétale (type margarine) à 80% MG, salé","Prodotto a base di grasso vegetale (tipo margarina) all'80% di grassi, salato"
 16734,AGB,TRUE,"Vegetable fat (margarine type), spreadable, 30-40% fat, light, lightly salted","Matière grasse végétale (type margarine), à tartiner, à 30-40% MG, légère, demi-sel","Prodotto a base di grasso vegetale (tipo margarina), spalmabile, 30-40% di grassi, leggero, semisalato"
 16733,AGB,TRUE,"Vegetable fat (margarine type), spreadable, 30-40% fat, light, unsalted","Matière grasse végétale (type margarine), à tartiner, à 30-40% MG, légère, doux","Prodotto a base di grasso vegetale  (tipo margarina), spalmabile, 30-40% di grassi, leggero, dolce"
-16735,AGB,TRUE,"Vegetable fat (margarine type), spreadable, 30-40% fat, light, unsalted, with plant sterols esters","Matière grasse végétale (type margarine), à tartiner, à 30-40% MG, légère, doux, aux esters de stérol végétal","Prodotto a base di grasso vegetale  (tipo margarina), spalmabile, 30-40% di grassi, leggero, dolce, con esteri di steroli vegetali"
 16736,AGB,TRUE,"Vegetable fat (margarine type), spreadable, 30-40% fat, light, unsalted, rich in omega 3","Matière grasse végétale (type margarine), à tartiner, à 30-40% MG, légère, doux, riche en oméga 3","Prodotto a base di grasso vegetale (tipo margarina), spalmabile, 30-40% di grassi, leggero, dolce, ricco di omega 3"
 16615,AGB,TRUE,"Vegetable fat (margarine type), 80% fat, unsalted","Matière grasse végétale ou margarine, 80% MG, doux","Prodotto a base di grasso vegetale o margarina, 80% di grassi, morbido"
 11054,AGB,TRUE,Mayonnaise (70% fat and more),Mayonnaise (70% MG min.),Maionese (70% di grassi min.)
@@ -1766,7 +1651,6 @@ Code,Type,isMain,EN,FR,IT
 42603,AGB,FALSE,"Vegetable dish for baby, w meat/fish and starch, from 6-8 months","Plat légumes, avec féculent et viande/poisson, dès 6-8 mois","Piatto di verdure, con farinacei e carne/pesce, da 6-8 mesi"
 42604,AGB,FALSE,"Vegetable dish for baby, w meat/fish and starch, from 8-12 months","Plat légumes, avec féculent et viande/poisson, dès 8-12 mois","Piatto di verdure, con farinacei e carne/pesce, da 8-12 mesi"
 20248,AGB,FALSE,"Vegetable dish for baby, with starch, from 6-8 months","Plat légumes, avec féculent, dès 6-8 mois","Piatto di verdure, con farinacei, da 6-8 mesi"
-26204,AGB,TRUE,"European plaice, raw","Plie commune, crue","Passera di mare, cruda"
 20273,AGB,FALSE,"Vegetables pan-fried or stir-fried, Asian-style, frozen, raw","Poêlée de légumes assaisonnés à l'asiatiques ou wok de légumes, surgelée, crue","Verdure saltate in padella in stile asiatico o verdure saltate in padella, congelate, crude"
 20498,AGB,FALSE,"Vegetables pan-fried with mushrooms (country-style), frozen","Poêlée de légumes assaisonnés aux champignons (""champêtre""), surgelée","Verdure fritte condite con funghi (""di campagna""), surgelate"
 20274,AGB,FALSE,"Grilled vegetables pan-fried, Mediterranean-style, frozen, raw","Poêlée de légumes assaisonnés grillée, méridionale ou méditerranéenne, surgelée, crue","Verdure condite grigliate in padella, meridionali o mediterranee, surgelate, crude"
@@ -1803,7 +1687,6 @@ Code,Type,isMain,EN,FR,IT
 28502,AGB,FALSE,"Pork belly, smoked, raw","Poitrine de porc, fumée, crue","Pancetta di maiale, affumicata, cruda"
 11019,AGB,TRUE,"White pepper, powder","Poivre blanc, poudre","Pepe bianco, polvere"
 11088,AGB,TRUE,Cayenne pepper,Poivre de Cayenne ou piment de Cayenne,Pepe di Caienna
-11020,AGB,TRUE,"Grey pepper, powder","Poivre gris, poudre","Pepe grigio, polvere"
 11015,AGB,TRUE,"Black pepper, powder","Poivre noir, poudre","Pepe nero, polvere"
 20168,AGB,TRUE,"Sweet pepper, yellow, raw","Poivron jaune, cru","Peperone giallo, crudo"
 20275,AGB,TRUE,"Sweet pepper, red, canned, drained","Poivron rouge, appertisé, égoutté","Peperone rosso, in scatola, sgocciolato"
@@ -1857,7 +1740,6 @@ Code,Type,isMain,EN,FR,IT
 28105,AGB,FALSE,"Pork, rack, cooked","Porc, carré, cuit","Maiale, carrè, cotto"
 28100,AGB,TRUE,"Pork, chop, raw","Porc, côte, crue","Maiale, costata, crudo"
 28101,AGB,FALSE,"Pork, chop, grilled","Porc, côte, grillée","Maiale, costata, alla griglia"
-28478,AGB,TRUE,"Pork, rind, raw","Porc, couenne, crue","Carne di suino, cotenna, cruda"
 28302,AGB,TRUE,"Pork, loin, raw","Porc, échine, crue","Maiale, lonza, crudo"
 28451,AGB,FALSE,"Pork, loin, roasted/baked","Porc, échine, rôtie/cuite au four","Maiale, lonza, arrosto/al forno"
 28001,AGB,TRUE,"Pork, shoulder, raw","Porc, épaule, crue","Maiale, spalla, crudo"
@@ -1893,9 +1775,6 @@ Code,Type,isMain,EN,FR,IT
 20043,AGB,TRUE,"Pumpkin, canned, drained","Potiron, appertisé, égoutté","Zucca, in scatola, scolata"
 20044,AGB,FALSE,"Pumpkin, raw","Potiron, cru","Zucca, cruda"
 20096,AGB,FALSE,"Pumpkin, cooked","Potiron, cuit","Zucca, cotta"
-18101,AGB,TRUE,"Cocoa or chocolate powder, for beverages, with sugar","Poudre cacaotée ou au chocolat pour boisson, sucrée","Cacao o cioccolato in polvere da bere, zuccherato"
-18168,AGB,TRUE,"Cocoa or chocolate powder, for beverages, with sugar, fortified with vitamins","Poudre cacaotée ou au chocolat pour boisson, sucrée, enrichie en vitamines","Cacao o cioccolato in polvere da bere, zuccherato, arricchito con vitamine"
-18167,AGB,TRUE,"Cocoa or chocolate powder, for beverages, with sugar, fortified with vitamins and chemical elements","Poudre cacaotée ou au chocolat sucrée pour boisson, enrichie en vitamines et minéraux","Cacao zuccherato o cioccolato in polvere per bevande, arricchito con vitamine e minerali"
 36014,AGB,TRUE,"Chicken, stewing, leg, raw","Poule, cuisse, crue","Pollo, coscia, crudo"
 36001,AGB,TRUE,"Hen, meat only, raw","Poule, viande ,crue","Pollo, carne, crudo"
 36000,AGB,TRUE,"Hen, meat and skin, raw","Poule, viande et peau, crue","Pollo, carne e pelle, crudo"
@@ -1926,7 +1805,6 @@ Code,Type,isMain,EN,FR,IT
 36003,AGB,TRUE,"Chicken, meat, raw","Poulet, viande, crue","Pollo, carne, crudo"
 12839,AGB,TRUE,"Pouligny Saint-Pierre cheese, from goat's milk",Pouligny Saint-Pierre (fromage de chèvre),Pouligny Saint-Pierre (formaggio di capra)
 11214,AGB,TRUE,"Soy ""cream"" preparation","Préparation culinaire à base de soja, type ""crème de soja""","Preparato a base di soia, tipo “panna di soia""."
-23403,AGB,TRUE,Pizza pastry base,Préparation pour pâte à pizza,Preparazione per l'impasto della pizza
 20267,AGB,TRUE,"Spring vegetables, frozen, raw (French beans, carrots, potatoes, green peas, onions)","Printanière de légumes, surgelée, crue (haricots verts, carottes, pomme de terre, petits pois, oignons)","Verdure primaverili, surgelate, crude (fagiolini, carote, patate, piselli, cipolle)"
 23472,AGB,FALSE,"Profiteroles (chou pastry), with vanilla ice cream and chocolate sauce",Profiterole avec glace vanille et sauce chocolat,Profiteroles con gelato alla vaniglia e salsa al cioccolato
 23474,AGB,FALSE,"Profiteroles (chou pastry), with custard and chocolate sauce, refrigerated","Profiteroles (crème pâtissière et sauce chocolat), rayon frais","Profiteroles (crema e salsa al cioccolato), sezione fresca"
@@ -1944,8 +1822,6 @@ Code,Type,isMain,EN,FR,IT
 8912,AGB,FALSE,"Poultry quenelle, in sauce","Quenelle de volaille, en sauce","Quenelle di pollame, in salsa"
 8937,AGB,TRUE,"Quenelle, plain, raw","Quenelle nature, crue","Gnocchi al naturale, crudi"
 25405,AGB,FALSE,Quiche Lorraine (eggs and lardoons quiche),Quiche lorraine,Quiche Lorraine
-9341,AGB,FALSE,"Quinoa, boiled/cooked in water, unsalted","Quinoa, bouilli/cuit à l'eau, non salé","Quinoa, bollita/bollita, non salata"
-9340,AGB,TRUE,"Quinoa, raw","Quinoa, cru","Quinoa, cruda"
 12749,AGB,TRUE,"Raclette cheese, from cow's milk",Raclette (fromage),Raclette (formaggio)
 20089,AGB,TRUE,"Radish, black, raw","Radis noir, cru","Ravanello nero, crudo"
 20045,AGB,TRUE,"Radish, raw","Radis rouge, cru","Ravanello rosso, crudo"
@@ -2173,7 +2049,6 @@ Code,Type,isMain,EN,FR,IT
 30130,AGB,FALSE,"Poultry sausage, delicatessen style","Saucisse de volaille, façon charcutière","Salsiccia di pollame, stile salumeria"
 30131,AGB,FALSE,Poultry sausage,"Saucisse de volaille, type Knack","Salsiccia di pollame, tipo Knack"
 30309,AGB,FALSE,"Sausage, dried",Saucisse sèche,Salamino (Saucisse sèche)
-30118,AGB,TRUE,"Swiss sausage, intended to be cook",Saucisse suisse à cuire,Salsiccia svizzera da cuocere
 30750,AGB,TRUE,"Viennese sausage, pork and veal, raw","Saucisse viennoise, crue","Salsiccia di Vienna o wüsterl di Vienna, cruda"
 30700,AGB,TRUE,Garlic sausage,Saucisson à l'ail,Salamino all'aglio
 30707,AGB,FALSE,"Sausage in a brioche crust, cooked","Saucisson brioché, cuit","Saucisson brioché, cotto"
@@ -2298,7 +2173,6 @@ Code,Type,isMain,EN,FR,IT
 15203,AGB,TRUE,Tahini (sesame paste),Tahin ou Purée de sésame,Tahina o tahini o pasta di sesamo
 25159,AGB,FALSE,Mutton tagine,Tajine de mouton,Tajine di montone
 25204,AGB,FALSE,Chicken tagine,Tajine de poulet,Tajine di pollo
-13079,AGB,TRUE,"Tamarind, immature fruit, pulp, raw","Tamarin, fruit immature, pulpe, cru","Tamarindo, frutto non maturo, polpa, crudo"
 11043,AGB,TRUE,"Tapenade (a puree of capers, pitted black olives, anchovy and herbs, with olive oil and lemon juice",Tapenade,Tapenade (salsa di olive con aggiughe)
 4000,AGB,TRUE,"Tapioca, raw","Tapioca ou Perles du Japon, cru","Tapioca, cruda"
 8293,AGB,TRUE,"Taramasalata, prepacked","Tarama, préemballé","Tramosalata, preconfezionata"
@@ -2340,7 +2214,6 @@ Code,Type,isMain,EN,FR,IT
 18154,AGB,FALSE,"Black tea, brewed, without sugar","Thé noir, infusé, non sucré","Tè nero, preparato, non zuccherato"
 18156,AGB,FALSE,"Oolong tea, brewed, without sugar","Thé oolong, infusé, non sucré","Tè Oolong, preparato, non zuccherato"
 18155,AGB,FALSE,"Green tea, brewed, without sugar","Thé vert, infusé, non sucré","Tè verde, preparato, non zuccherato"
-26071,AGB,TRUE,"Tuna, in oil, canned, drained","Thon à l'huile, appertisé, égoutté","Tonno sott'olio, in scatola, sgocciolato"
 26181,AGB,TRUE,"Yellowfin tuna, canned in brine, drained","Thon albacore ou thon jaune, au naturel, appertisé, égoutté","Tonno pinna gialla, al naturale, in scatola, sgocciolato"
 26064,AGB,TRUE,"Yellowfin tuna, raw","Thon albacore ou thon jaune, cru","Tonno pinna gialla, crudo"
 26179,AGB,TRUE,"Albacore, in olive oil, canned, drained","Thon germon ou thon blanc, à l'huile d'olive, appertisé, égoutté","Tonno bianco o alalunga, sott'olio d'oliva, in scatola, sgocciolato"
@@ -2385,7 +2258,6 @@ Code,Type,isMain,EN,FR,IT
 20196,AGB,TRUE,"Jerusalem artichoke, raw","Topinambour, cru","Topinambur, crudo"
 20050,AGB,FALSE,"Jerusalem artichoke, cooked","Topinambour, cuit","Topinambur, cotto"
 22510,AGB,FALSE,Spanish-style tortilla with onions (omelette with potatoes and onions),Tortilla espagnole aux oignons (omelette aux pommes de terre et oignons),Tortilla spagnola con cipolle (omelette con patate e cipolle)
-7815,AGB,TRUE,"Wheat tortilla wrap, to be filled","Tortilla souple (à garnir), à base de blé","Tortilla messicana morbida (da guarnire), a base di grano"
 7813,AGB,TRUE,"Corn tortilla wrap, to be filled","Tortilla souple (à garnir), à base de maïs","Tortilla Jessica amorbida (per guarnire), a base di mais"
 15011,AGB,TRUE,Sunflower seed,"Tournesol, graine",Semi di girasole
 15045,AGB,TRUE,"Sunflower seed, grilled, salted","Tournesol, graine, grillé, salé","Girasole, semi, tostati, salati"
@@ -2438,16 +2310,9 @@ Code,Type,isMain,EN,FR,IT
 6582,AGB,FALSE,"Calf, head, boiled/cooked in water","Veau, tête, bouillie/cuite à l'eau","Vitello, testa, bollito"
 9901,AGB,FALSE,"Rice noodle, cooked, unsalted","Vermicelle de riz, cuite, non salée","Vermicelli di riso, cotti, non salati"
 9900,AGB,TRUE,"Rice noodle, dried","Vermicelle de riz, sèche","Vermicelli di riso, secchi"
-5200,AGB,TRUE,"Wine, white, 11°",Vin blanc 11°,Vino bianco 11°
 5201,AGB,TRUE,"Wine, white, sparkling",Vin blanc mousseux,Vino bianco frizzante
 5209,AGB,TRUE,"Wine, white, sparkling, flavoured",Vin blanc mousseux aromatisé,Vino bianco frizzante aromatizzato
-5211,AGB,TRUE,"Wine, white, dry, 11°",Vin blanc sec 11°,Vino bianco secco 11°
 1006,AGB,TRUE,"Wine, white, sweet",Vin doux,Vino dolce
-5206,AGB,TRUE,"Wine, rose, 11°",Vin rosé 11°,Vino rosé 11°
-5203,AGB,TRUE,"Wine, red, 10°",Vin rouge 10°,Vino rosso 10°
-5204,AGB,TRUE,"Wine, red, 11°",Vin rouge 11°,Vino rosso 11°
-5205,AGB,TRUE,"Wine, red, 12°",Vin rouge 12°,Vino rosso 12°
-5208,AGB,TRUE,"Wine, red, 13°",Vin rouge 13°,Vino rosso 13°
 11018,AGB,TRUE,Vinegar,Vinaigre,Aceto
 11091,AGB,TRUE,"Vinegar, balsamic",Vinaigre balsamique,Aceto balsamico
 11090,AGB,TRUE,"Vinegar, cider",Vinaigre de cidre,Aceto di mele
@@ -2478,8 +2343,109 @@ Code,Type,isMain,EN,FR,IT
 19594,AGB,TRUE,"Yogurt, fermented milk or dairy specialty, plain, fat free","Yaourt, lait fermenté ou spécialité laitière, nature, 0% MG","Yogurt, latte fermentato o specialità di latticini, al naturale, 0% di grassi"
 19598,AGB,TRUE,"Yogurt, fermented milk or dairy specialty, plain, w cream","Yaourt, lait fermenté ou spécialité laitière, nature, à la crème","Yogurt, latte fermentato o specialità di latticini, al naturale, con panna"
 19599,AGB,TRUE,"Yogurt, fermented milk or dairy specialty, plain, w sugar","Yaourt, lait fermenté ou spécialité laitière, nature, sucré","Yogurt, latte fermentato o specialità di latticini, al naturale, zuccherato"
-ELEU28,ENERGY,,Electricity mix - EU-28,Mix électrique - UE-28,Mix elettrico - UE-28
-ELEU27,ENERGY,,Electricity mix - EU-27 (from 2020),Mix électrique - UE-27 (dès 2020),Mix elettrico - UE-27 (dal 2020)
+11219,AGB,FALSE,Vegetable Bolognese sauce,"Sauce végétale type bolognaise, préemballée","Sugo di verdure alla bolognese, preconfezionato"
+31089,AGB,TRUE,"Syrup, agave",Sirop d'agave,Sciroppo d'agave
+31034,AGB,TRUE,"Syrup, maple",Sirop d'érable,Sciroppo d'acero
+18011,AGB,TRUE,Coconut water,"Boisson à la noix de coco, nature, préemballée","Bevanda al cocco, al naturale, preconfezionata"
+18907,AGB,TRUE,"Coconut-based drink, plain, prepacked","Boisson à la noix de coco, nature, préemballée","Bevanda al cocco, al naturale, preconfezionata"
+18152_1,AGB,TRUE,"Chicory, powder, instant, non rehydrated","Chicorée, poudre soluble, non réhydratée","Cicoria, polvere solubile, non reidratata"
+18152_2,AGB,TRUE,"Chicory, powder, instant, ready-to-drink","Chicorée, poudre soluble, réhydratée","Cicoria, polvere solubile, reidratata"
+2000,AGB,TRUE,"Pineapple juice, reconstituted from a concentrate","Jus d'ananas, à base de concentré",Succo di ananas da concentrato
+2073,AGB,TRUE,"Pineapple juice, pure juice","Jus d'ananas, pur jus","Succo di ananas, succo puro"
+2006,AGB,TRUE,"Carrot juice, pure juice","Jus de carotte, pur jus","Succo di carota, succo puro"
+2028,AGB,TRUE,"Lemon juice, pure juice","Jus de citron, pur jus","Succo di limone, succo puro"
+2023,AGB,TRUE,"Mango juice, fresh","Jus de mangue, frais","Succo di mango, fresco"
+2027,AGB,TRUE,"Grapefruit juice, pure juice","Jus de pamplemousse (pomelo), pur jus","Succo di pompelmo, succo puro"
+2016,AGB,TRUE,"Grape juice, pure juice","Jus de raisin, pur jus","Succo d'uva, succo puro"
+2053,AGB,TRUE,"Tomato juice, pure juice (average)","Jus de tomate, pur jus (aliment moyen)","Succo di pomodoro, succo puro (medio)"
+2012,AGB,TRUE,"Orange juice, reconstituted from a concentrate","Jus d'orange, à base de concentré","Succo d'arancia, da concentrato"
+2048,AGB,TRUE,"Fruit juice, mixed - apple base, standard","Jus multifruit - base pomme, standard","Succo multi-frutto - base mela, standard"
+2043,AGB,TRUE,Apricot nectar,Nectar d'abricot,Nettare di albicocca
+2366,AGB,TRUE,Banana nectar,Nectar de banane,Nettare di banana
+2370,AGB,TRUE,Mango nectar,Nectar de mangue,Nettare di mango
+2371,AGB,TRUE,Peach nectar,Nectar de pêche,Nettare di pesca
+2054,AGB,TRUE,Pear nectar,Nectar de poire,Nettare di pera
+2375,AGB,TRUE,Orange nectar,Nectar d'orange,Nettare di arancia
+5215,AGB,TRUE,"Wine, white, dry",Vin blanc sec,Vino bianco secco
+5216,AGB,TRUE,"Wine, rose",Vin rosé,Vino rosato
+5214,AGB,TRUE,"Wine, red",Vin rouge,Vino rosso
+25930,AGB,TRUE,"Broth, stock or bouillon, beef","Bouillon de boeuf, déshydraté reconstitué",Brodo di manzo disidratato ricostituito
+25947,AGB,TRUE,"Broth, stock or bouillon, poultry",Bouillon de volaille,Brodo di pollame
+25415_2,AGB,TRUE,Veggie burger,Burger végétarien,Hamburger vegetariano
+25220,AGB,TRUE,"Sauerkraut, without garnish, drained, cooked","Choucroute, sans garniture, égouttée","Crauti, sgocciolati"
+25415_1,AGB,TRUE,"Cheeseburger, double, from fast foods restaurant","Double cheeseburger, provenant de fast food","Doppio cheeseburger, da fast food"
+20914,AGB,TRUE,Soy patty or vegetable escalope,Escalope végétale ou steak à base de soja,Bistecca vegetale a a base di soia
+25234,AGB,TRUE,Cereal patty (without soybean),"Galette de céréales aux légumes (sans soja), préemballé","Bistecca di cereali alle verdure (senza soia), preconfezionata"
+25593,AGB,TRUE,"Plant-based patty or steak from wheat and soybean (vegan), prepacked","Galette ou pavé au blé et soja (convient aux véganes ou végétaliens), préemballé","Bistecca vegetale al grano e alla soia (adatto ai vegani), preconfezionata"
+25596,AGB,TRUE,"Soy-based patty, plain (vegetable steak), prepacked","Galette ou pavé au soja et légumes, préemballé","Bistecca vegetale alla soia e alle verdure, preconfezionata"
+30181,AGB,TRUE,"Soy-based minced, prepacked","Haché végétal à base de soja, préemballé","Carne macinata vegetale a base di soia, preconfezionata"
+7815_2,AGB,FALSE,"Wheat tortilla wrap, filled with soy-based, vegetarian",Wrap végétarien,"Wrap tipo tortilla di grano, riempita con prodotto alla soia, vegetariano"
+26257,AGB,TRUE,Grated carrots,"Carottes râpées, avec sauce, préemballées","Carote tritate con salsa, preconfezionate"
+13024_1,AGB,TRUE,"Mandarin, pulp, raw","Mandarine, pulpe, crue","Mandarino, polpa, crudo"
+13080,AGB,TRUE,"Tamarind, mature fruit, pulp, raw","Tamarin, fruit immature, pulpe, cru","Tamarindo, frutto acerbo, polpa, crudo"
+12112,AGB,TRUE,"Abondance cheese, from cow's milk",Abondance,Formaggio Abondance
+19037,AGB,TRUE,"Milk, semi-skimmed, vitamin D fortified, UHT","Lait demi-écrémé, UHT, enrichi en vitamines",Latte parzialmente scremato UHT arricchito di vitamine
+1027,AGB,TRUE,"Plant-based spread-cheese type, with soybean, prepacked","Spécialité végétale type fromage à tartiner, au soja, préemballée","Formaggio vegetale spalmabile, di soia, preconfezionato"
+1029_1,AGB,TRUE,"Plant-based cheese, without soybean, prepacked, sliced","Spécialité végétale type fromage en tranche, sans soja, préemballée","Formaggio vegetale spalmabile a fette, senza soia, preconfezionato"
+1029_2,AGB,TRUE,"Plant-based cheese, without soybean, prepacked, shredded","Spécialité végétale type fromage râpé, sans soja, préemballée","Formaggio vegetale grattuggiato senza soia, preconfezionato"
+17100,AGB,TRUE,Avocado oil,Huile d'avocat,Olio di avocado
+19688,AGB,FALSE,"Rum baba, prepacked","Baba au rhum, préemballé","Babà al rum, preconfezionato"
+9340_2,AGB,TRUE,"Quinoa FR, raw","Quinoa FR, cru","Quinoa FR, cruda"
+9341_2,AGB,TRUE,"Quinoa FR, boiled/cooked in water, unsalted","Quinoa FR, cuit","Quinoa FR, cotta"
+9341_1,AGB,TRUE,"Quinoa, boiled/cooked in water, unsalted","Quinoa, bouilli/cuit à l'eau, non salé","Quinoa, bollita/cotta in acqua, non salata"
+9340_1,AGB,TRUE,"Quinoa, raw","Quinoa, cru","Quinoa, cruda"
+7815_1,AGB,TRUE,"Wheat tortilla wrap, to be filled","Tortilla souple (à garnir), à base de blé","Wrap tipo tortilla, a base di grano, da riempire"
+25224,AGB,TRUE,Soy-based sliced,"Bouchées ou émincé au soja et blé (ne convient pas aux véganes ou végétaliens), préemballé","Bocconcini o macinato di soia e grano (non adatto a vegani o vegetariani), preconfezionati"
+10025,AGB,TRUE,"Crab, boiled/cooked in water","Crabe ou Tourteau, bouilli/cuit à l'eau","Granchio o polpa di granchio, bolliti/cucinati in acqua"
+10009,AGB,TRUE,"Lobster, boiled/cooked in water","Homard, bouilli/cuit à l'eau","Aragosta, bollita/cotta in acqua"
+26055,AGB,TRUE,"European plaice, raw","Plie commune, crue","Passera di mare, cruda"
+20591_1,AGB,TRUE,"Soy protein, textured, rehydrated, from soy flour",Protéine de soja texturée,Proteine di soia testurizzate
+20591_2,AGB,TRUE,"Soy protein, textured, dehydrated, from soy flour","Protéine de soja texturée, réhydratée","Proteine di soia testurizzate, reidratate"
+20337,AGB,TRUE,Plant-based sausage with tofu (vegan),"Saucisse végétale au tofu (convient aux véganes ou végétaliens), préemballée","Salsiccia vegetale di tofu (adatta a vegani o vegetariani), preconfezionata"
+25598,AGB,TRUE,Seitan,"Seitan, préemballé","Seitan, preconfezionato"
+1030,AGB,TRUE,"Plant-based ham, prepacked","Spécialité végétale type jambon cuit, préemballée","Specialità vegetale tipo prosciutto cotto, preconfezionato"
+20912,AGB,TRUE,"Tofu, smoked","Tofu fumé, préemballé","Tofu affumicato, preconfezionato"
+1031,AGB,FALSE,"Plant-based pate, prepacked","Spécialité végétale type pâté, préemballée","Paté vegetale, preconfezionato"
+8321,AGB,TRUE,"Whole duck foie gras, pasteurized","Foie gras, entier","Foie gras, intero"
+8331,AGB,TRUE,"Block duck foie gras, pasteurized","Foie gras, en bloc","Foie gras, in blocco"
+16060,AGB,TRUE,Coconut oil (coprah),"Huile ou graisse de coco (coprah), raffinée","Olio o grasso di cocco (copra), raffinato"
+18066,AGB,TRUE,Tap water,Eau du robinet,Acqua di rubinetto
+20338,AGB,FALSE,Plant-based sausage with tofu (not vegan),"Quenelle au tofu (ne convient pas aux véganes ou végétaliens), préemballée","Salsiccia di tofu (non adatto ai vegani o ai vegetariani), preconfezionato"
+25225,AGB,FALSE,Wheat-based nuggets (wo soybean),"Nuggets de blé (sans soja), préemballé","Crocchette/bocconcini (nuggets) a base di frumento (senza soia), preconfezionate"
+25226,AGB,FALSE,Soybean and wheat-based nuggets (not vegan),"Nuggets soja et blé (ne convient pas aux véganes ou végétaliens), préemballé","Crocchette/bocconcini (nuggets) a base di soia e grano (non adatte a vegani o vegetariani), preconfezionate"
+25228,AGB,FALSE,"Schnitzel, soybean and wheat-based (not vegan)",Pané soja et blé (ne convient pas aux véganes ou végétaliens),Crocchette/bocconcini (nuggets) a base di soia e grano (non adatto a vegani o vegetariani)
+25229,AGB,FALSE,"Schnitzel, soybean and wheat-based (vegan)","Bâtonnet pané soja et blé (convient aux véganes ou végétaliens), préemballée","Cotoletta impanata a base di soia e frumento (adatto a vegani o vegetariani), preconfezionato"
+25230,AGB,FALSE,"Schnitzel, soybean, wheat and cheese-based, cordon bleu-style","Escalope panée, soja, blé et fromage, type cordon bleu, préemballée","Cotoletta impanata, soia, grano e formaggio, tipo cordon bleu, preconfezionata"
+25590,AGB,FALSE,"Falafel, prepacked","Falafel ou Boulette de pois-chiche et/ou fève, préemballé","Falafel o polpette di ceci e/o fagioli, preconfezionati"
+25591,AGB,FALSE,"Plant-based patty or steak from lentil, soybean and vegetables","Galette ou pavé aux lentilles, soja et légumes, préemballé","Hamburger (solo patty) o bistecca di lenticchie, soia e verdure"
+25592,AGB,FALSE,Plant-based patty or steak from wheat (seitan) and vegetables,"Galette ou pavé au blé (seitan) et légumes, préemballé",Hamburger (solo patty) o bistecca preconfezionata di frumento  (seitan) e verdure
+25594,AGB,FALSE,Plant-based patty or steak from wheat and soybean (not vegan),"Galette ou pavé au blé et soja (ne convient pas aux véganes ou végétaliens), préemballé","Hamburger (solo patty) o bisticca a base di frumento e soia (non adatto a vegani o vegetariani), preconfezionato"
+25595,AGB,FALSE,Plant-based patty or steak from soybean and cheese,"Galette ou pavé au soja et fromage, préemballé","Hamburger (solo patty) o bistecca di soia e formaggio, preconfezionato"
+26180,AGB,TRUE,"Tuna, in sunflower oil, canned, drained","Thon à l'huile, appertisé, égoutté","Tonno sott'olio, in scatola, sgocciolato"
+13024_2,AGB,TRUE,"Clementine, pulp, raw","Clémentine, pulpe, crue","Clementina, polpa, cruda"
+13167_1,AGB,FALSE,Instant cereal (powder to be reconstituted) for baby from 4/6 months,"Céréales instantanées, poudre à reconstituer, dès 4/6 mois","Cereali istantanei, polvere da ricostituire, da 4/6 mesi"
+13167_2,AGB,FALSE,"Instant cereal for baby from 4/6 months, rehydrated with milk at consumer step","Céréales instantanées, poudre reconstituée chez le consommateur, dès 4/6 mois","Cereali istantanei, polvere da ricostituire, da 4/6 mesi"
+13168_1,AGB,FALSE,Instant cereal (powder to be reconstituted) for baby from 6 months,"Céréales instantanées, poudre à reconstituer, dès 6 mois","Cereali istantanei, polvere da ricostituire, a partire da 6 mesi"
+13168_2,AGB,FALSE,"Instant cereal for baby from 6 months, rehydrated with milk at consumer step","Céréales instantanées, poudre reconstituée chez le consommateur, dès 6 mois","Cereali istantanei, polvere ricostituita, a partire da 6 mesi"
+19012_1,AGB,FALSE,"Baby milk, growing up milk, ready to feed","Lait de croissance infantile, liquide (aliment lacté destiné aux enfants en bas âge)","Latte artificiale, liquido (formula per lattanti a base di latte)"
+19012_2,AGB,FALSE,"Baby milk, growing up milk, powder, rehydrated with water at consumer step","Lait de croissance infantile, poudre (réhydratée chez le consommateur)",Latte in polvere per lattanti (reidratato presso il consumatore)
+25227_1,AGB,FALSE,Soybean and wheat-based nuggets (vegan),"Nuggets soja et blé (convient aux véganes ou végétaliens), préemballé","Crocchette/bocconcini (nuggets) a base di soia e grano (adatte a vegani o vegetariani), preconfezionate"
+25227_2,AGB,FALSE,Soybean-based nuggets,Nuggets de soja,Crocchette/bocconcini (nuggets) a base di soia
+25232_1,AGB,FALSE,Plant-based sausage with wheat or seitan,"Saucisse végétale au blé ou seitan, préemballé","Salsiccia vegetale a base di frumento o seitan, preconfezionata"
+25232_2,AGB,FALSE,Vegetable Hot-dog sausage,Saucisse hot-dog végétale,Salsiccia vegetale per hot dog
+25233_1,AGB,FALSE,Cereal patty with cheese (without soybean),"Galette de céréales au fromage (sans soja), préemballé","Hamburger (solo patty) di cereali con formaggio (senza soia), preconfezionate"
+25233_2,AGB,FALSE,Cereal patty (without soybean),"Galette de céréales aux légumes (sans soja), préemballé","Hamburger (solo patty) di cereali con verdure (senza soia), preconfezionate"
+25589_1,AGB,FALSE,"Plant-based ball with wheat and/or soybean, prepacked","Boulette végétale au soja et/ou blé, préemballée","Poletta vegetale a base di soia e/o frumento, preconfezionato"
+25589_2,AGB,FALSE,Vegetable ball (without meat),Boulettes aux légumes (sans viande),Polpette di verdure (senza carne)
+25596_1,AGB,FALSE,"Soy-based patty, plain (vegetable steak), prepacked","Galette ou pavé au soja et légumes, préemballé","Hamburger (solo patty) o bistecca di soia e verdure, preconfezionato"
+25596_2,AGB,FALSE,"Soy-based patty, Provencal-style (vegetable steak)",Galette de soja (steak végétal) à la provençale,Hamburger (solo patty) di soia (bistecca vegetariana) stile provenzale
+25597_1,AGB,FALSE,"Plant-based patty or steak from soybean, cheese and vegetables","Galette ou pavé au soja, fromage et légumes, préemballé","Hamburger (solo patty) o bistecca di soia, formaggio e verdure, preconfezionato"
+25597_2,AGB,FALSE,Tofu patty (vegetable steak),Galette de tofu (steak végétal),Hamburger (solo patty) di tofu (bistecca vegetariana)
+3000_1,AGB,FALSE,"Baby milk, first age, powder, non rehydrated","Lait 1er âge, poudre soluble (préparation pour nourrissons)","Latte per lattanti, polvere solubile (formula per lattanti)"
+3000_2,AGB,FALSE,"Baby milk, first age, powder, rehydrated at consumer","Lait 1er âge, poudre soluble (préparation pour nourrissons), réhydratée chez le consommateur","Latte 1° età, polvere solubile (formula per lattanti), reidratato presso i locali del consumatore"
+3002_1,AGB,FALSE,"Baby milk, second age, powder, non rehydrated","Lait 2e âge, poudre soluble (préparation de suite)","Latte 2a età, polvere solubile (formula di proseguimento)"
+3002_2,AGB,FALSE,"Baby milk, second age, powder, rehydrated at consumer","Lait 2e âge, poudre soluble (préparation de suite), réhydratée chez le consommateur","Latte di 2a età, polvere solubile (formula di proseguimento), reidratato dal consumatore"
+ELEU27,ENERGY,,Electricity mix (production) - EU-27,Mix électrique (production) - UE-27,Mix elettrico (produzione) - UE-27
 ELAT,ENERGY,,Electricity mix - Austria,Mix électrique - Autriche,Mix elettrico - Austria
 ELBE,ENERGY,,Electricity mix - Belgium,Mix électrique - Belgique,Mix elettrico - Belgio
 ELBG,ENERGY,,Electricity mix - Bulgaria,Mix électrique - Bulgarie,Mix elettrico - Bulgaria
@@ -2498,7 +2464,7 @@ ELIT,ENERGY,,Electricity mix - Italy,Mix électrique - Italie,Mix elettrico - It
 ELLV,ENERGY,,Electricity mix - Latvia,Mix électrique - Lettonie,Mix elettrico - Lettonia
 ELLT,ENERGY,,Electricity mix - Lithuania,Mix électrique - Lithuanie,Mix elettrico - Lituania
 ELLU,ENERGY,,Electricity mix - Luxembourg,Mix électrique - Luxembourg,Mix elettrico - Lussemburgo
-ELMT,ENERGY,,Electricity mix - Malta,Mix électrique - Malte,Mix elettrico - Malta
+ELMT,ENERGY,,Electricity mix (production) - Malta,Mix électrique (production) - Malte,Mix elettrico (produzione) - Malta
 ELNL,ENERGY,,Electricity mix - Netherlands,Mix électrique - Pays Bas,Mix elettrico - Paesi Bassi
 ELPO,ENERGY,,Electricity mix - Poland,Mix électrique - Pologne,Mix elettrico - Polonia
 ELPT,ENERGY,,Electricity mix - Portugal,Mix électrique - Portugale,Mix elettrico - Portogallo
@@ -2512,10 +2478,10 @@ ELTR,ENERGY,,Electricity mix - Turkey,Mix électrique - Turquie,Mix elettrico - 
 ELIS,ENERGY,,Electricity mix - Island,Mix électrique - Islande,Mix elettrico - Islanda
 ELNO,ENERGY,,Electricity mix - Norway,Mix électrique - Norvège,Mix elettrico - Norvegia
 ELCH,ENERGY,,Electricity mix - Switzerland,Mix électrique - Suisse,Mix elettrico - Svizzera
-ECFR,ENERGY,,Electricity 2021 - use : residential cooking - France continentale,Électricité 2021 - usage : cuisson résidentiel - France continentale,Elettricità 2021 - uso: cucina residenziale - Francia continentale
+ECFR,ENERGY,,Electricity residential cooking - Continental France,Électricité cuisson résidentiel - France continentale,Elettricità cucina residenziale - Francia continentale
 PVFR,ENERGY,,Electricity photovoltaic - France continentale,Electricité photovoltaïque - France continentale,Elettricità da fotovoltaico - Francia continentale
-NGEU,ENERGY,,Natural gas - Europe,Gaz naturel - Europe,Gas naturale - Europa
-NGFR,ENERGY,,Natural gas- 2015 Mix - France continentale,Gaz naturel - Mix 2015 - France continentale,Gas naturale - Mix 2015 - Francia continentale
+NGEU,ENERGY,,Natural gas  - Europe,Gaz naturel - Europe,Gas naturale - Europa
+NGFR,ENERGY,,Natural gas - France continentale,Gaz naturel - France continentale,Gas naturale - Francia continentale
 ,,,Carbon footprint,Empreinte carbone,Impronta carbonica
 ,,,"Energy, Regulation EU No 1169/2011","Energie, Réglement UE N˚ 1169/2011","Energia, Regolamento UE N˚ 1169/2011"
 ,,,Protein,Protéines,Proteine
@@ -2530,3 +2496,99 @@ NGFR,ENERGY,,Natural gas- 2015 Mix - France continentale,Gaz naturel - Mix 2015 
 %SOURCE%,,,Select energy source,Séléctionner la source d'énergie,Selezionare la fonte d'energia
 %POWER%,,,Input power,Puissance consommée,Potenza assorbita
 %TIME%,,,Cooking time,Temps de cuisson,Tempo di cottura
+food_code,,,Food Code,,
+food_label,,,Food Label,,
+organic_acids,,,Organic Acids,,
+40_fatty_acids,,,4:0 Fatty Acids,,
+60_fatty_acids,,,6:0 Fatty Acids,,
+80_fatty_acids,,,8:0 Fatty Acids,,
+100_fatty_acids,,,10:0 Fatty Acids,,
+120_fatty_acids,,,12:0 Fatty Acids,,
+140_fatty_acids,,,14:0 Fatty Acids,,
+160_fatty_acids,,,16:0 Fatty Acids,,
+180_fatty_acids,,,18:0 Fatty Acids,,
+181_oleic_acid,,,18:1 Oleic Acid,,
+182_linoleic_acid,,,18:2 Linoleic Acid,,
+183_alpha-linolenic_acid,,,18:3 Alpha-Linolenic Acid,,
+204_arachidonic_acid,,,20:4 Arachidonic Acid,,
+205_epa,,,20:5 EPA,,
+206_dha,,,20:6 DHA,,
+monounsaturated_fatty_acids,,,Monounsaturated Fatty Acids,,
+polyunsaturated_fatty_acids,,,Polyunsaturated Fatty Acids,,
+saturated_fatty_acids,,,Saturated Fatty Acids,,
+alcohol,,,Alcohol,,
+starch,,,Starch,,
+beta-carotene,,,Beta-Carotene,,
+calcium,,,Calcium,,
+cholesterol,,,Cholesterol,,
+copper,,,Copper,,
+water,,,Water,,
+iron,,,Iron,,
+fiber,,,Fiber,,
+fructose,,,Fructose,,
+galactose,,,Galactose,,
+carbohydrates,,,Carbohydrates,,
+glucose,,,Glucose,,
+iodine,,,Iodine,,
+lactose,,,Lactose,,
+lipids,,,Fat,,
+magnesium,,,Magnesium,,
+maltose,,,Maltose,,
+manganese,,,Manganese,,
+energy,,,Energy,,
+energy_kj,,,Energy,,
+phosphorus,,,Phosphorus,,
+polyols,,,Polyols,,
+potassium,,,Potassium,,
+proteins,,,Proteins,,
+retinol,,,Retinol,,
+sucrose,,,Sucrose,,
+salt,,,Salt,,
+selenium,,,Selenium,,
+sodium,,,Sodium,,
+sugars,,,Sugars,,
+vitamin_b12,,,Vitamin B12,,
+vitamin_b1,,,Vitamin B1,,
+vitamin_b2,,,Vitamin B2,,
+vitamin_b3,,,Vitamin B3,,
+vitamin_b5,,,Vitamin B5,,
+vitamin_b6,,,Vitamin B6,,
+vitamin_b9,,,Vitamin B9,,
+vitamin_c,,,Vitamin C,,
+vitamin_d,,,Vitamin D,,
+vitamin_e,,,Vitamin E,,
+vitamin_k1,,,Vitamin K1,,
+vitamin_k2,,,Vitamin K2,,
+zinc,,,Zinc,,
+agb_code,,,AGB Code,,
+ciqual_code,,,CIQUAL Code,,
+food_group,,,Food Group,,
+food_subgroup,,,Food Subgroup,,
+product_name_in_french,,,Product Name in French,,
+lci_name,,,LCI Name,,
+season_code,,,Season Code,,
+airplane_code,,,Airplane Code,,
+delivery,,,Delivery,,
+packaging_material,,,Packaging Material,,
+preparation,,,Preparation,,
+dqr,,,DQR,,
+unique_ef_score,,,Unique EF Score,,
+climate_change,,,Climate Change,,
+ozone_layer_depletion,,,Ozone Layer Depletion,,
+ionizing_radiation,,,Ionizing Radiation,,
+photochemical_ozone_formation,,,Photochemical Ozone Formation,,
+fine_particles,,,Fine Particles,,
+human_health_toxicological_effects_non-carcinogens,,,Human Health Toxicological Effects Non-carcinogens,,
+human_health_toxicological_effects_carcinogens,,,Human Health Toxicological Effects Carcinogens,,
+terrestrial_and_freshwater_acidification,,,Terrestrial and Freshwater Acidification,,
+freshwater_eutrophication,,,Freshwater Eutrophication,,
+marine_eutrophication,,,Marine Eutrophication,,
+terrestrial_eutrophication,,,Terrestrial Eutrophication,,
+aquatic_ecosystems_ecotoxicity,,,Aquatic Ecosystems Ecotoxicity,,
+land_use,,,Land Use,,
+water_resource_depletion,,,Water Resource Depletion,,
+energy_resource_depletion,,,Energy Resource Depletion,,
+mineral_resource_depletion,,,Mineral Resource Depletion,,
+climate_change_biogenic,,,Climate change - biogenic emissions,,
+climate_change_biogenic,,,Climate change - fossil emissions,,
+climate_change_land_use,,,Climate change - emissions linked to land use change,,
