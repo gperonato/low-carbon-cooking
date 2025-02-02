@@ -9,13 +9,14 @@ dir_path = os.path.dirname(os.path.realpath(__file__))
 #%%
 # Add files downloaded from Electricity Maps
 em = []
+
 for file in os.listdir(os.path.join(dir_path, "electricity_maps")):
     if not file.endswith(".csv"):
         continue
     path = os.path.join(dir_path,"electricity_maps", file)
     if not os.path.exists(path):
         continue
-
+    
     df = pd.read_csv(path)
     df["code"] = "EL" + file.split("_")[0]
     df["year"] = file.split("_")[1]
@@ -23,8 +24,20 @@ for file in os.listdir(os.path.join(dir_path, "electricity_maps")):
     em.append(df)
 
 em = pd.concat(em)
-em["database"] = "Electricity Maps v. 2024-01-17"
+assert hashlib.sha256(pd.util.hash_pandas_object(em, index=True).values).hexdigest() == "8d3b05b63c48bf7e4acac46753e23d35157f9800d5fd01af2cfa3feb68b8f9fd"
+
+em = em.groupby("external_id").agg({
+    'Country': ['first'],
+    'external_id': ['first'],
+    'code': ['first'],
+    'Carbon Intensity gCO₂eq/kWh (LCA)': ['mean'],
+    'Data Source': ['first']
+}).droplevel(1, axis=1)
+
+
+em["database"] = "Electricity Maps v. 2025-01-27 - 2022-2024"
 em["type"] = "Grid electricity consumption mix (LCA)"
+em["year"] = "2022-2024"
 em = em.sort_values("Country")
 
 #%%
@@ -58,8 +71,9 @@ bc_codes = {
     37132: "NGFR",
     34720: "PVFR"
 }
+new_rows = []
 for id in bc_codes.keys():
-    ef = ef.append({
+  new_rows.append({
                     "code": bc_codes[id],
                     'location': "{} {}".format(base_carbone.loc[id, "Localisation géographique"].replace("Autre pays du monde", ""),
                                                base_carbone["Sous-localisation géographique anglais"].fillna("").loc[id]).strip(),
@@ -70,9 +84,17 @@ for id in bc_codes.keys():
                     'EF': base_carbone.loc[id,"Total poste non décomposé"],
                     "database": base_carbone.loc[id,"database"],
                     "external_id": id
-                    },
-                    ignore_index=True)
+                    })
+   
+
+ef = pd.concat([ef, pd.DataFrame(new_rows)],
+               axis=0,
+               ignore_index=True)
 
 #%%
+# Round
+ef["EF"] = ef["EF"].round(3)
+
 # Save file
 ef.to_csv(os.path.join(dir_path, "data.csv"), index=False)
+# %%
