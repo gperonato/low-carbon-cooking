@@ -1,3 +1,5 @@
+// Sample tests for the Recipe class
+
 function assert(condition, message) {
     if (!condition) {
         throw new Error(message || "Assertion failed");
@@ -21,22 +23,26 @@ try {
     myRecipe.intake = intake;
     myRecipe.units = units;
 
-
     myRecipe.addIngredient("Dried pasta, wholemeal, raw", 400)
     myRecipe.addIngredient("Olive oil, extra virgin", 2)
     myRecipe.addIngredient("Anchovy, in salt (semi-preserved)", 50)
     myRecipe.addIngredient("Romanesco cauliflower or romanesco broccoli, raw", 1000)
 
-
+    // Mise-en-place only
     myRecipe.mise_en_place()
 
-
+    // length of entered ingredients
     assert(Object.entries(myRecipe.content).length == 4)
+    // total weight
     assert(myRecipe.weight == 1452)
+    // CO2e
+    assert(myRecipe.total_content["climate_change"]["value"] > 0)
 
+    // After cooking
     myRecipe.addCookingStep("ECFR", 15, 2500)
     myRecipe.cook()
 
+    // CO2e and calories
     assert(myRecipe.total_content["climate_change"]["value"] > 0)
     assert(myRecipe.total_content["energy"]["value"] > 0)
 
