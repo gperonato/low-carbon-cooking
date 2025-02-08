@@ -225,7 +225,8 @@ const run = async () => {
 			if (webRecipe.total_content[key]["is_environment"] == true & key == "climate_change") {
 	            html += '<tr><td>' + translate_value(key,"Code",language) + '</td>' +
 	                    '<td class="text-center">' + Math.round(((value["value"]) + Number.EPSILON)*100)/100 + ' ' + value["unit"] + '</td>' +
-	                    '<td class="text-center">' + Math.round(((value["value"])/0.192 + Number.EPSILON)*100)/100 +  ' km ' + '</td>'  +
+						// Equivalent km - Passenger car with average motorization, 2018 | Base Carbone® ADEME v23.4 (27970
+	                    '<td class="text-center">' + Math.round(((value["value"])/0.231 + Number.EPSILON)*100)/100 +  ' km ' + '</td>'  +
 	                     '<td class="text-center">' + Math.round(value["benchmark"]["value"]*100)  + '%</td>' +
 	                    '</tr>';
 		     }

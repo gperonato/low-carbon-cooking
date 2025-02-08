@@ -110,7 +110,7 @@
 						<h3>Risultati</h3>
 						<table class="table table-striped">
 							<thead><tr><td><h5>Caratteristiche ambientali</h5></td>
-							<td class="text-center"><td class="text-center"><a href="#" data-toggle="tooltip" title='Auto termica (senza produzione) con motorizzazione standard in Francia, 2018 | Base Carbone® ADEME' class="text-center">Distanza equivalente in auto</a>
+							<td class="text-center"><td class="text-center"><a href="#" data-toggle="tooltip" title='Auto motorizzazione media, 2018 | Base Carbone® ADEME v23.4 (27970)' class="text-center">Distanza equivalente in auto</a>
 							<td class="text-center">Percentuale dell'<a href="#reference-food" data-toggle="tooltip" title="Clicca qui per cambiare riferimento.">alimento di paragone</a></td></tr></thead>
 							<tbody id="table-footprint">
 							</tbody>
@@ -153,17 +153,34 @@
 							Il settore alimentare è responsabile d'un quarto delle emissioni di gas a effetto serra a livello mondiale<sup><a href="#ref1">1</a></sup>.<br>Grazie al calcolatore myCookPrint, puoi stimare l'impronta carbonica di una ricetta, inclusa la produzione, la trasformazione, il trasporto fino alla cottura del cibo.
 					</p>
 					<p>
-						Il calcolatore myCookPrint utilizza due database distribuiti dal governo fancese in open data (Licence Ouverte):
+						Il calcolatore myCookPrint utilizza delle base dati distribuite dal governo fancese in open data (Licence Ouverte):
 					</p>
 					<ul>
-						<li><a href="https://doc.agribalyse.fr/documentation-en/">AGRIBALYSE®</a> (v. 3.0.1, 11.06.2021) prodotto dall'Agence de la Transition Ecologique française (ADEME) fornisce l'impronta ambientale dei prodotti alimentari più comuni; </li>
-						<li><a href="https://ciqual.anses.fr/">CIQUAL</a> (v. 28.08.2020) prodotta dall'Agence nationale de sécurité sanitaire de l'alimentation, de l'environnement et du travail (ANSES) fornisce le informazioni sulla composizione degli alimenti.</li>
+						<li><a href="https://doc.agribalyse.fr/documentation-en/">AGRIBALYSE®</a> (v. 3.2, 04.12.2024)
+							dell'Agence de la Transition Ecologique (ADEME)
+							fornisce l'impronta ambientale dei prodotti alimentari più comuni;</li>
+						<li><a href="https://ciqual.anses.fr/">CIQUAL</a> (v. 03.07.2020)
+							e <a href="https://ciqual.anses.fr/">CALNUT 2020</a> (v. 28.08.2020)
+							prodotte dall'Agence nationale de sécurité sanitaire de l'alimentation, de l'environnement et du travail (ANSES)
+							forniscono le informazioni sulla composizione degli alimenti.</li>
 					</ul>
 					<p class="lead">I risultati sono validi per i prodotti consumati in Francia, ma possono essere usati anche come indicatore di massima per altri paesi europei. 
 					</p>
-					<p>Il calcolatore utilizza inoltre i fattori d'emissione (CO2e/KWh) delle fonti energetiche fornite dall'Agenzia Europea dell'Ambiente (<a href="https://www.eea.europa.eu/ds_resolveuid/0320026e904e43729189fe8720b5e35d">CO2 Intensity of Electricity generation</a> (2017), la <a href="https://www.data.gouv.fr/fr/datasets/base-carbone-r-1/">Base carbone®</a> (v. 19.0 07/07/2021) dell'ADEME per la Francia, e l'<a href="https://www.bafu.admin.ch/bafu/en/home/topics/climate/questions-answers.html">Ufficio Federale dell'Ambiente (UFEN)</a> (2014) per la Svizzera.
-					<p>Il codice sorgente e i dati sono disponibili nella <a href="https://github.com/gperonato/low-carbon-cooking">repository Github</a> del progetto.</p>
-					<p>Notare che la traduzione in italiano degli alimenti viene fornita senza alcuna garanzia in termini di accuratezza, completezza o affidabilità, si prega di consultare la versione originale francese (o la traduzione ufficiale in inglese) in caso di dubbi.</p>
+					<p>Il calcolatore utilizza inoltre i fattori d'emissione provenienti da:
+						<ul>
+							<li><a href="https://portal.electricitymaps.com/datasets">Electricity Maps</a>
+								(27.01.2025, media dei valori annuali 2022-2024);</li>
+							<li><a href="https://www.data.gouv.fr/fr/datasets/base-carbone-r-2/">Base carbone®</a>
+								dell'Agence de la transition écologique (ADEME) (v. 23.4, 02-01-2025).</li>
+						</ul>
+					</p>
+					<p>Il codice sorgente e le pipeline di trattamento dei dati
+						sono disponibili nella <a href="https://github.com/gperonato/low-carbon-cooking">repository Github</a> del progetto.</p>
+					<p>Si prega di notare che la traduzione in italiano degli alimenti viene fornita
+						senza alcuna garanzia in termini di accuratezza, completezza o affidabilità:
+						consultare la versione originale francese
+						(o la traduzione ufficiale in inglese) in caso di dubbi.
+					</p>
 					<small><sup>1</sup><a id="ref1"></a>Poore, J., & Nemecek, T. (2018). Reducing food’s environmental impacts through producers and consumers. Science, 360(6392), 987–992. <a href="https://doi.org/10.1126/science.aaq0216">https://doi.org/10.1126/science.aaq0216</a></small>
 				</div>
 			</div>
