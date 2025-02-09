@@ -1,5 +1,5 @@
 function getNum(val) {
-	val = +parseFloat(val) || 0
+	val = +parseFloat(val) || NaN
 	return val;
 }
 
@@ -77,8 +77,17 @@ class Recipe {
 			for (const dict of [this.nutrition, this.environment]) {
 				var entries = this.add_values(name, dict)
 				for (const [key, value] of Object.entries(entries)) {
-					this.content[name][key] = {"value": getNum(value) * (this.ingredients[name]["quantity"]/1000),
-											   "source": entries["source"]}
+					let absolute_value = 0;
+					// Handle 0s
+					if (value == "") {
+						absolute_value = NaN;
+					} else if (getNum(value) > 0) {
+						absolute_value = getNum(value) * (this.ingredients[name]["quantity"]/1000);
+					}
+					this.content[name][key] = {
+						"value": absolute_value,
+						"source": entries["source"]
+					}
 				}
 			}
 		this.weight += this.ingredients[name]["quantity"]
@@ -160,10 +169,11 @@ class Recipe {
 			}
 		}
 		// Recommended intake
-		for (const [key, value] of Object.entries(this.total_content)){
-			if (value["value"] > 0 && this.intake.hasOwnProperty(key)) {
+		for (const [key, value] of Object.entries(this.intake)){
+			if (this.total_content[key]["value"] > 0) {
 				recommended = this.total_content[key]["value"]/this.intake[key]["value"]; // ratio
 				this.total_content[key]["recommended"] = recommended;
+				this.total_content[key]["recommended_source"] = this.intake[key]["source"]["title"];			
 			}
 		}
 	}
@@ -225,26 +235,36 @@ const run = async () => {
 			if (webRecipe.total_content[key]["is_environment"] == true & key == "climate_change") {
 	            html += '<tr><td>' + translate_value(key,"Code",language) + '</td>' +
 	                    '<td class="text-center">' + Math.round(((value["value"]) + Number.EPSILON)*100)/100 + ' ' + value["unit"] + '</td>' +
-						// Equivalent km - Passenger car with average motorization, 2018 | Base Carbone® ADEME v23.4 (27970
-	                    '<td class="text-center">' + Math.round(((value["value"])/0.231 + Number.EPSILON)*100)/100 +  ' km ' + '</td>'  +
-	                     '<td class="text-center">' + Math.round(value["benchmark"]["value"]*100)  + '%</td>' +
+						// Equivalent km - Passenger car with average motorization, 2018 | Base Carbone® ADEME v23.4 (27970)
+						'<td class="text-center">' + Math.round(((value["value"])/0.231 + Number.EPSILON)*100)/100 + ' km</td>'  +
+	                    '<td class="text-center">' + Math.round(value["benchmark"]["value"]*100)  + '%</td>' +
 	                    '</tr>';
 		     }
 		}
 		$('#table-footprint').html(html);
-
+		$('[data-toggle="tooltip"]').tooltip();
+		
 		$("#results").css("visibility","visible");
 		var html = '';
-		for (const [key, value] of Object.entries(webRecipe.total_content)){
-			if (webRecipe.total_content[key]["is_environment"] == false && webRecipe.total_content[key]["recommended"] != "") {
-	            html += '<tr><td>' + translate_value(key,"Code", language)  + '</td>' +
-	                    '<td class="text-center">' + Math.round((value["value"] + Number.EPSILON)*100)/100 + ' ' + value["unit"] + '</td>' +
-	                    '<td class="text-center">' + Math.round(value["recommended"]*100)  + '%</td>' +
-	                    '<td class="text-center">' + Math.round(value["benchmark"]["value"]*100)  + '%</td>' +
-	                    '</tr>';
-		     }
+		for (const [key, value] of Object.entries(webRecipe.intake)){
+			if (isFinite(webRecipe.total_content[key]["value"])) {
+				html += '<tr><td>' + translate_value(key,"Code", language)  + '</td>' +
+						'<td class="text-center">' + Math.round((webRecipe.total_content[key]["value"] + Number.EPSILON)*100)/100 + ' ' + webRecipe.total_content[key]["unit"] + '</td>' +
+						'<td class="text-center"><a href="#" style="text-decoration: none; color: inherit;" data-toggle="tooltip" title="'
+						+ webRecipe.total_content[key]["recommended_source"] + '">' 
+						+ Math.round(webRecipe.total_content[key]["recommended"]*100) + '%</a></td>' +
+						'<td class="text-center">' + Math.round(webRecipe.total_content[key]["benchmark"]["value"]*100)  + '%</td>' +
+						'</tr>';
+			} else {
+				html += '<tr><td>' + translate_value(key,"Code", language)  + '</td>' +
+						'<td class="text-center"></td>' +
+						'<td class="text-center"></td>' +
+						'<td class="text-center"></td>' +
+						'</tr>';					
+			}
 		  }
 		$('#table-nutritional').html(html);
+		$('[data-toggle="tooltip"]').tooltip();
 
 	} catch (err) {
 		console.error("Error running recipe calculation:", err);
