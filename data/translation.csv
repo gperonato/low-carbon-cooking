@@ -2527,11 +2527,12 @@ magnesium,,,Magnesium,Magnésium,Magnesio
 maltose,,,Maltose,Maltose,Maltosio
 manganese,,,Manganese,Manganèse,Manganese
 energy,,,Energy,Énergie,Energia
-energy_kj,,,Energy,Énergie,Energia
+energy_eu,,,Energy,Énergie,Energia
 phosphorus,,,Phosphorus,Phosphore,Fosforo
 polyols,,,Polyols,Polyols,Polioli
 potassium,,,Potassium,Potassium,Potassio
 proteins,,,Proteins,Protéines,Proteine
+proteins_eu,,,Proteins,Protéines,Proteine
 retinol,,,Retinol,Rétinol,Retinolo
 sucrose,,,Sucrose,Saccharose,Saccarosio
 salt,,,Salt,Sel,Sale

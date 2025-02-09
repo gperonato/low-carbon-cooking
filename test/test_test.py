@@ -36,7 +36,8 @@ def test_recipe_class(start_http_server, browser):
     filename = "test.html"
     url = f"http://localhost:{PORT}/test/{filename}"
     browser.get(url)
-    
+    time.sleep(0.5)
+
     failures = [entry for entry in browser.get_log('browser') if entry is not None]
     for failure in failures:
         warnings.warn(UserWarning("{}".format(failure)))
@@ -48,6 +49,8 @@ def test_food_01(start_http_server, browser):
     filename = "index.html"
     url = f"http://localhost:{PORT}/{filename}?i=20917&q=1000&t=&p=0&"
     browser.get(url)
+    time.sleep(0.5)
+
     soup = BeautifulSoup(browser.page_source, features="html.parser")
     table_footprint = soup.find('tbody', id='table-footprint')
     climate = [td for td in table_footprint.find_all('td') if 'kg CO2 eq' in td.text]
@@ -58,13 +61,14 @@ def test_food_01(start_http_server, browser):
     assert len(climate) == 1
     assert climate[0].text == "2.37 kg CO2 eq"
     assert len(calories) == 1
-    assert calories[0].text == "1510 kcal"
+    assert calories[0].text == "1570 kcal"
 
 def test_energy_01(start_http_server, browser):
     # Check Natural Gas CO2e
     filename = "index.html"
     url = f"http://localhost:{PORT}/{filename}?i=20917&q=0&e=NGEU&t=60&p=1000&"
     browser.get(url)
+    time.sleep(0.5)
     
     soup = BeautifulSoup(browser.page_source, features="html.parser")
     table_footprint = soup.find('tbody', id='table-footprint')

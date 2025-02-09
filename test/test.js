@@ -44,7 +44,7 @@ try {
 
     // CO2e and calories
     assert(myRecipe.total_content["climate_change"]["value"] > 0)
-    assert(myRecipe.total_content["energy"]["value"] > 0)
+    assert(myRecipe.total_content["energy_eu"]["value"] > 0)
 
 } catch (err) {
     console.error("Error running recipe calculation:", err);

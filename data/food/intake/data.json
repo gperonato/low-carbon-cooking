@@ -1,5 +1,5 @@
 {
-    "energy": {
+    "energy_eu": {
         "value": 2000,
         "unit": "kcal",
         "source": {
@@ -39,7 +39,7 @@
             "link": "https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2011:304:0018:0063:EN:PDF"
         }
     },
-    "proteins": {
+    "proteins_eu": {
         "value": 50,
         "unit": "g",
         "source": {
