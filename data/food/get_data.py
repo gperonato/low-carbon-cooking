@@ -40,11 +40,36 @@ ciqual = ciqual.loc[:,[x for x in ciqual.columns if x in calnut_pivot.columns]]
 ciqual = ciqual.replace({",":"."},regex=True)
 # Transformations
 # - --> 0
-ciqual_edited = ciqual.replace({"-":0})
+ciqual_edited = ciqual
+ciqual_edited = ciqual.replace({"-":np.nan})
 # Traces --> 0
 ciqual_edited = ciqual_edited.replace({"traces":0})
 # Lower than value --> value
 ciqual_edited = ciqual_edited.replace({"< ":""},regex=True) 
+
+# Calculate Energy when missing
+# Accept some missing fields, i.e. polyols, organic_acis and fiber
+# Note that proteins are not consistent with UE Regulation 1169/2011
+ciqual_numeric = ciqual_edited.apply(pd.to_numeric, errors="coerce")
+ciqual_numeric["energy_calc"] = \
+    ciqual_numeric.lipids * 9 \
+    + ciqual_numeric.alcohol * 7 \
+    + ciqual_numeric.proteins * 4 \
+    + (ciqual_numeric.carbohydrates - ciqual_numeric.polyols.fillna(0)) * 4 \
+    + ciqual_numeric.organic_acids.fillna(0) * 3 \
+    + ciqual_numeric.polyols.fillna(0) * 2.4 \
+    + ciqual_numeric.fiber.fillna(0) * 2
+
+# Check that the calculated energy is consistent with the original one (when existing)
+mask = ~np.isnan(ciqual_numeric['energy']) & ~np.isnan(ciqual_numeric['energy_calc'])
+ciqual_numeric["rel_diff"] = np.abs(ciqual_numeric['energy'] - ciqual_numeric['energy_calc']) / np.maximum(ciqual_numeric['energy'], ciqual_numeric['energy_calc'])
+# Max 25% difference
+assert (ciqual_numeric["rel_diff"][mask] > 0.25).sum() == 0
+# Max average 1% difference
+assert (ciqual_numeric["rel_diff"][mask].mean() > 0.01).sum() == 0
+                                                                                                
+ciqual_edited.loc[ciqual.energy == "-", "energy_kj"] = (ciqual_numeric.loc[ciqual.energy == "-", "energy_calc"] * 4.184).round(1)
+ciqual_edited.loc[ciqual.energy == "-", "energy"] = ciqual_numeric.loc[ciqual.energy == "-", "energy_calc"].round(1)
 
 # Check whether there was any edit
 is_original = (ciqual == ciqual_edited) | (ciqual.isna() & ciqual_edited.isna())
@@ -55,6 +80,11 @@ ciqual_edited = ciqual_edited*10 # 100 g to 1 kg
 # Set the source based on whether there was any edit
 ciqual_edited["source"] = "CIQUAL2020_2020_07_07"
 ciqual_edited.loc[~is_original.all(axis=1),"source"] = "CIQUAL2020_2020_07_07_edited"
+
+# Set for which rows the energy was recalculated 
+ciqual_edited["is_energy_recalculated"] = False
+ciqual_edited.loc[(ciqual['energy'] == "-") &
+                  (~ciqual_edited['energy'].isna()), 'is_energy_recalculated'] = True
 
 #%%
 # Create the nutritional datatabase combining CIQUAL and CALNUT
@@ -89,15 +119,3 @@ agribalyse_filtered["source"] = "AGRIBALYSE3.2"
 # Save files
 nutr_filtered.to_csv(os.path.join(dir_path,"nutrition.csv"),index=False)
 agribalyse_filtered.to_csv(os.path.join(dir_path,"environment.csv"),index=False)
-
-#%%
-transl4 = pd.merge(translation[["Code"]],transl3,on="Code", how="left",sort=False)
-
-transl_clean = transl4.loc[transl4.Code.isin([x for x in transl4.Code if x in list(transl3.Code)])]
-
-transl_clean2 = pd.join(transl_clean,
-                        transl4.loc[transl4.Code.isin([x for x in transl4.Code if x in list(transl3.Code)]),
-                                    axis=0)
-
-
-# %%
