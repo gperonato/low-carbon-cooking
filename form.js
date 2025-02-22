@@ -138,6 +138,15 @@ Papa.parse("../data/translation.csv", {
 						inenergysources[i] = translate_value(inenergysources[i],"Code",language);
 						}
 
+
+		// Submit when changing the reference ingredient
+		$('#reference').keypress(function(e) {
+			if (e.which == 13) {
+				formsubmit();
+				return false;
+			}
+		});
+
 	
 		// Submit when changing weight of reference ingredient
 		$('#reference-weight').keypress(function(e) {
