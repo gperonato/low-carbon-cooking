@@ -71,14 +71,14 @@ export class Recipe {
 		}
 	}
 
-	mise_en_place() {
+	miseEnPlace() {
 		this.content = {}
 		this.weight = 0;
 		// Populate content
 		for (const [name, value] of Object.entries(this.ingredients)) {
 			this.content[name] = {}
 			for (const dict of [this.nutrition, this.environment]) {
-				var entries = this.add_values(name, dict)
+				var entries = this.addValues(name, dict)
 				for (const [key, value] of Object.entries(entries)) {
 					let absolute_value = 0;
 					// Handle 0s
@@ -99,9 +99,9 @@ export class Recipe {
 		for (const [name, object] of Object.entries(this.content)){
 			for (const [key, value] of Object.entries(object)){
 				// Add the content if the object doesn't exist already and if it has a unit
-				if (! (this.total_content[key]) & this.look_up(key, "Short Name", "Unit", this.units) != ""){
+				if (! (this.total_content[key]) & this.lookUp(key, "Short Name", "Unit", this.units) != ""){
 					this.total_content[key] = {"value": 0,
-											   "unit": this.look_up(key, "Short Name", "Unit", this.units),
+											   "unit": this.lookUp(key, "Short Name", "Unit", this.units),
 											   "benchmark": {},
 											   "recommended": ""	
 											   }
@@ -120,13 +120,13 @@ export class Recipe {
 	cook() {
 		for (const step of this.cooking_steps) {
 			var energy = step["duration"]/60. * step["power"]
-			step["CO2e"] = energy * this.look_up(step["energy_source"], "code", "EF", this.energy_ef) / 1000.
+			step["CO2e"] = energy * this.lookUp(step["energy_source"], "code", "EF", this.energy_ef) / 1000.
 			this.total_content["climate_change"]["value"] += step["CO2e"] / this.servings
 			}
 		this.compare()
 	}
 
-	add_values(name, dict) {
+	addValues(name, dict) {
 		var entries = {};
 		for (let entry of dict) {
 			if (entry["lci_name"] == name) {
@@ -144,7 +144,7 @@ export class Recipe {
 		}
 	}
 
-	look_up(variable, variable_name, key, dict) {
+	lookUp(variable, variable_name, key, dict) {
 		for (let entry of dict) {
 			if (entry[variable_name] == variable) {
 					return entry[key];
@@ -152,14 +152,14 @@ export class Recipe {
 		}
 	}
 
-	set_reference(food, quantity){
+	setReference(food, quantity){
 		this.comparison["food"] = food;
 		this.comparison["quantity"] = quantity;
 	}
 	compare(){
 		var food = this.comparison["food"];
 		var quantity = this.comparison["quantity"];
-		var reference = Object.assign({}, this.add_values(food, this.nutrition), this.add_values(food, this.environment)); 
+		var reference = Object.assign({}, this.addValues(food, this.nutrition), this.addValues(food, this.environment)); 
 		var recommended = 0;
 		var comparison = "";
 		// Reference food

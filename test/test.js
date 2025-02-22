@@ -30,7 +30,7 @@ try {
     myRecipe.addIngredient("Romanesco cauliflower or romanesco broccoli, raw", 1000)
 
     // Mise-en-place only
-    myRecipe.mise_en_place()
+    myRecipe.miseEnPlace()
 
     // length of entered ingredients
     assert(Object.entries(myRecipe.content).length == 4)

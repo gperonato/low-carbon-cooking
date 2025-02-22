@@ -2,6 +2,7 @@
 
 import { Recipe, loadCSV, loadJSON } from './recipe.js';
 
+// Parse URL arguments
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const inlanguage = urlParams.getAll('l');
@@ -12,6 +13,7 @@ const incookingtime = urlParams.getAll('t');
 const inpower = urlParams.getAll('p');
 var servings = parseFloat(urlParams.get('servings')) || 1;
 
+// HTML snippets
 var ingrsnippet = `<div class="row" id="ingredients">
 	            	<div class="col-sm-7 form-group">
 	            	<input id="ingredient" type="text" class="form-control input-sm" placeholder="%INGREDIENT%" name="i" value=""/>
@@ -62,12 +64,15 @@ var cooksnippet = `<div class="row" id="cooking">
 						</div>
 			</div>`
 
+// Default values
 const default_power = 2000;
 
 if (! onlyMain){
 	var onlyMain = true;
 }
-function select_language(language){
+
+// Language selector from URL
+function selectLanguage(language){
 	var lang = language;
 	if (language == "EN") {
 		var lang = "";
@@ -77,6 +82,7 @@ function select_language(language){
 }
 
 
+// Dictionary with translations
 let dictionary = []; // Global variable to store the dictionary
 let dictionaryLoaded = false; // Flag to track if the dictionary is loaded
   
@@ -98,7 +104,8 @@ function loadDictionary() {
 	});
 };
 
-async function translate_value(value, source_language, target_language) {
+// Translate from dictionary
+async function translateValue(value, source_language, target_language) {
     if (!dictionaryLoaded) {
         await loadDictionary(); // Ensure dictionary is loaded before using it
     }
@@ -111,14 +118,19 @@ async function translate_value(value, source_language, target_language) {
     return value; // Return original value if no translation is found
 };
 
-// get onclick event from HTML
-window.formsubmit = function () {
-    formsubmit();
-};
 
-async function formsubmit() {
+// get onclick event from HTML
+window.submitForm = function () {
+    submitForm();
+};
+// Run actions when submitting form from HTML
+async function submitForm() {
+	// only if at least one ingredient
 	if ($('[name="q"]').val().length > 0 && $('[name="i"]').val().length > 0) {
+		// run the calculator
 		run();
+
+		// serialize arguments for URL
 		var recipe_arr = $("#recipeform").serializeArray();
 
 		// Serialize form values
@@ -126,7 +138,7 @@ async function formsubmit() {
 		var serialized = '';
 		const translatePromises = recipe_arr.map(async (item) => {
 			if (item.name === "i" || item.name === "e") {
-				item.value = await translate_value(item.value, language, "Code");
+				item.value = await translateValue(item.value, language, "Code");
 			}
 		});
 		
@@ -145,6 +157,7 @@ async function formsubmit() {
 
 };
 
+// Run the calculator
 async function run() {
 	try {
 		const [environment, nutrition, energy_ef, units, intake] = await Promise.all([
@@ -169,17 +182,17 @@ async function run() {
 		var quantities = $('[name="q"]');
 
 		var reference = {};
-		reference["food"] = await translate_value($('#reference').val(),language,"EN");
+		reference["food"] = await translateValue($('#reference').val(),language,"EN");
 		reference["quantity"] = $('#reference-weight').val();
 		console.log("Setting reference food:", reference["food"]);
-		webRecipe.set_reference(reference["food"],reference["quantity"]);
+		webRecipe.setReference(reference["food"],reference["quantity"]);
 
 		for (let i = 0; i < ingredients.length; i++) {
-			let ingredient = await translate_value(ingredients[i].value,language,"EN");
+			let ingredient = await translateValue(ingredients[i].value,language,"EN");
 			console.log("Adding ingredient:", ingredient)			
 			webRecipe.addIngredient(ingredient, quantities[i].value)
 		}
-		webRecipe.mise_en_place()
+		webRecipe.miseEnPlace()
 
 		var sources = $('[name="e"]');
 		var times = $('[name="t"]');
@@ -188,7 +201,7 @@ async function run() {
 
 		for (let i = 0; i < sources.length; i++) {
 			if (sources[i].value != "") {
-				let source = await translate_value(sources[i].value,language,"Code");
+				let source = await translateValue(sources[i].value,language,"Code");
 				console.log("Adding source:", source)
 				webRecipe.addCookingStep(source, times[i].value, powers[i].value)
 			}	
@@ -199,7 +212,7 @@ async function run() {
 		var html = '';
 		for (const [key, value] of Object.entries(webRecipe.total_content)){
 			if (webRecipe.total_content[key]["is_environment"] == true & key == "climate_change") {
-	            html += '<tr><td>' + await translate_value(key,"Code",language) + '</td>' +
+	            html += '<tr><td>' + await translateValue(key,"Code",language) + '</td>' +
 	                    '<td class="text-center">' + Math.round(((value["value"]) + Number.EPSILON)*100)/100 + ' ' + value["unit"] + '</td>' +
 						// Equivalent km - Passenger car with average motorization, 2018 | Base Carbone® ADEME v23.4 (27970)
 						'<td class="text-center">' + Math.round(((value["value"])/0.231 + Number.EPSILON)*100)/100 + ' km</td>'  +
@@ -214,7 +227,7 @@ async function run() {
 		var html = '';
 		for (const [key, value] of Object.entries(webRecipe.intake)){
 			if (isFinite(webRecipe.total_content[key]["value"])) {
-				html += '<tr><td>' + await translate_value(key,"Code", language)  + '</td>' +
+				html += '<tr><td>' + await translateValue(key,"Code", language)  + '</td>' +
 						'<td class="text-center">' + Math.round((webRecipe.total_content[key]["value"] + Number.EPSILON)*100)/100 + ' ' + webRecipe.total_content[key]["unit"] + '</td>' +
 						'<td class="text-center"><a href="#" style="text-decoration: none; color: inherit;" data-toggle="tooltip" title="'
 						+ webRecipe.total_content[key]["recommended_source"] + '">' 
@@ -222,7 +235,7 @@ async function run() {
 						'<td class="text-center">' + Math.round(webRecipe.total_content[key]["benchmark"]["value"]*100)  + '%</td>' +
 						'</tr>';
 			} else {
-				html += '<tr><td>' + await translate_value(key,"Code", language)  + '</td>' +
+				html += '<tr><td>' + await translateValue(key,"Code", language)  + '</td>' +
 						'<td class="text-center"></td>' +
 						'<td class="text-center"></td>' +
 						'<td class="text-center"></td>' +
@@ -237,7 +250,7 @@ async function run() {
 	  }
 };
 
-	
+// Initialize the app	
 async function init() {
 	await new Promise(resolve => {
 		if (document.readyState === "loading") {
@@ -291,12 +304,12 @@ async function init() {
 					}).autocomplete('enable');
 				}
 			}
-			formsubmit();
+			submitForm();
 			});
 
 	// Action for changing language
 	$('#language a').click(function() {
-			select_language($(this).attr('name'))
+			selectLanguage($(this).attr('name'))
 		}
 	);
 
@@ -307,17 +320,17 @@ async function init() {
 
 	// Translate url params
 	await Promise.all(iningredients.map(async (val, i) => {
-		iningredients[i] = await translate_value(val, "Code", language);
+		iningredients[i] = await translateValue(val, "Code", language);
 	}));
 	await Promise.all(inenergysources.map(async (val, i) => {
-		inenergysources[i] = await translate_value(val, "Code", language);
+		inenergysources[i] = await translateValue(val, "Code", language);
 	}));
 
 
 	// Submit when changing the reference ingredient
 	$('#reference').keypress(function(e) {
 		if (e.which == 13) {
-			formsubmit();
+			submitForm();
 			return false;
 		}
 	});
@@ -326,22 +339,22 @@ async function init() {
 	// Submit when changing weight of reference ingredient
 	$('#reference-weight').keypress(function(e) {
 		if (e.which == 13) {
-			formsubmit();
+			submitForm();
 			return false;
 		}
 	});
 
 	// Translate form
-	ingrsnippet = ingrsnippet.replace("%WEIGHT%", await translate_value("%WEIGHT%","Code",language));
-	ingrsnippet = ingrsnippet.replace("%INGREDIENT%", await translate_value("%INGREDIENT%","Code",language));
-	cooksnippet = cooksnippet.replace("%SOURCE%", await translate_value("%SOURCE%","Code",language));
-	cooksnippet = cooksnippet.replace("%TIME%", await translate_value("%TIME%","Code",language));
-	cooksnippet = cooksnippet.replace("%POWER%",await translate_value("%POWER%","Code",language));
+	ingrsnippet = ingrsnippet.replace("%WEIGHT%", await translateValue("%WEIGHT%","Code",language));
+	ingrsnippet = ingrsnippet.replace("%INGREDIENT%", await translateValue("%INGREDIENT%","Code",language));
+	cooksnippet = cooksnippet.replace("%SOURCE%", await translateValue("%SOURCE%","Code",language));
+	cooksnippet = cooksnippet.replace("%TIME%", await translateValue("%TIME%","Code",language));
+	cooksnippet = cooksnippet.replace("%POWER%",await translateValue("%POWER%","Code",language));
 
 	// Translate reference
 	$("#reference").last().autocomplete({
 		source: food_arr.map(a => a[language])
-	}).val(await translate_value("25413","Code",language)).autocomplete('enable');
+	}).val(await translateValue("25413","Code",language)).autocomplete('enable');
 
 	// Add empty field if no parameters are provided
 	if (iningredients.length == 0) {
@@ -448,7 +461,7 @@ async function init() {
 			console.log("cannot remove first cooking step")
 		}
 	});
-	formsubmit();
+	submitForm();
 
 
 };
