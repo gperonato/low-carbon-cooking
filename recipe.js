@@ -1,10 +1,13 @@
+// Recipe calculator
+
+// Utility function to coerce values to float
 function getNum(val) {
 	val = +parseFloat(val) || NaN
 	return val;
 }
 
 // Utility function to load JSON data
-const loadJSON = async (path) => {
+export const loadJSON = async (path) => {
 	try {
 	  const response = await fetch(path);
 	  if (!response.ok) {
@@ -18,7 +21,7 @@ const loadJSON = async (path) => {
   };
 
 // Utility function to load CSV using PapaParse
-const loadCSV = async (path) => {
+export const loadCSV = async (path) => {
 	return new Promise((resolve, reject) => {
 	  Papa.parse(path, {
 		download: true,
@@ -29,7 +32,7 @@ const loadCSV = async (path) => {
 	});
   };
 
-class Recipe {
+export class Recipe {
 	constructor(name) {
 		this.name = name;
 		this.environment = [];
@@ -179,130 +182,7 @@ class Recipe {
 	}
 }
 
-const run = async () => {
-	try {
-		const [environment, nutrition, energy_ef, units, intake] = await Promise.all([
-		  loadCSV("../data/food/environment.csv"),
-		  loadCSV("../data/food/nutrition.csv"),
-		  loadCSV("../data/energy/data.csv"),
-		  loadCSV("../data/food/units.csv"),
-		  loadJSON("../data/food/intake/data.json"),
-		]);
 
-		// Web recipe
-		const webRecipe = new Recipe("webRecipe");
-		webRecipe.environment = environment;
-		webRecipe.nutrition = nutrition;
-		webRecipe.energy_ef = energy_ef;
-		webRecipe.intake = intake;
-		webRecipe.units = units;
-
-
-		webRecipe.servings = servings;
-		var ingredients = $('[name="i"]');
-		var quantities = $('[name="q"]');
-
-		var reference = {};
-		reference["food"] = translate_value($('#reference').val(),language,"EN");
-		reference["quantity"] = $('#reference-weight').val();
-		console.log("Setting reference food:", reference["food"]);
-		webRecipe.set_reference(reference["food"],reference["quantity"]);
-
-		for (i = 0; i < ingredients.length; i++) {
-			ingredient = translate_value(ingredients[i].value,language,"EN");
-			console.log("Adding ingredient:", ingredient)			
-			webRecipe.addIngredient(ingredient, quantities[i].value)
-		}
-		webRecipe.mise_en_place()
-
-		var sources = $('[name="e"]');
-		var times = $('[name="t"]');
-		var powers = $('[name="p"]');
-
-
-		for (i = 0; i < sources.length; i++) {
-			if (sources[i].value != "") {
-				source = translate_value(sources[i].value,language,"Code");
-				console.log("Adding source:", source)
-				webRecipe.addCookingStep(source, times[i].value, powers[i].value)
-			}	
-		}
-		webRecipe.cook()
-		$("#results").css('display','inline');
-
-		var html = '';
-		for (const [key, value] of Object.entries(webRecipe.total_content)){
-			if (webRecipe.total_content[key]["is_environment"] == true & key == "climate_change") {
-	            html += '<tr><td>' + translate_value(key,"Code",language) + '</td>' +
-	                    '<td class="text-center">' + Math.round(((value["value"]) + Number.EPSILON)*100)/100 + ' ' + value["unit"] + '</td>' +
-						// Equivalent km - Passenger car with average motorization, 2018 | Base Carbone® ADEME v23.4 (27970)
-						'<td class="text-center">' + Math.round(((value["value"])/0.231 + Number.EPSILON)*100)/100 + ' km</td>'  +
-	                    '<td class="text-center">' + Math.round(value["benchmark"]["value"]*100)  + '%</td>' +
-	                    '</tr>';
-		     }
-		}
-		$('#table-footprint').html(html);
-		$('[data-toggle="tooltip"]').tooltip();
-		
-		$("#results").css("visibility","visible");
-		var html = '';
-		for (const [key, value] of Object.entries(webRecipe.intake)){
-			if (isFinite(webRecipe.total_content[key]["value"])) {
-				html += '<tr><td>' + translate_value(key,"Code", language)  + '</td>' +
-						'<td class="text-center">' + Math.round((webRecipe.total_content[key]["value"] + Number.EPSILON)*100)/100 + ' ' + webRecipe.total_content[key]["unit"] + '</td>' +
-						'<td class="text-center"><a href="#" style="text-decoration: none; color: inherit;" data-toggle="tooltip" title="'
-						+ webRecipe.total_content[key]["recommended_source"] + '">' 
-						+ Math.round(webRecipe.total_content[key]["recommended"]*100) + '%</a></td>' +
-						'<td class="text-center">' + Math.round(webRecipe.total_content[key]["benchmark"]["value"]*100)  + '%</td>' +
-						'</tr>';
-			} else {
-				html += '<tr><td>' + translate_value(key,"Code", language)  + '</td>' +
-						'<td class="text-center"></td>' +
-						'<td class="text-center"></td>' +
-						'<td class="text-center"></td>' +
-						'</tr>';					
-			}
-		  }
-		$('#table-nutritional').html(html);
-		$('[data-toggle="tooltip"]').tooltip();
-
-	} catch (err) {
-		console.error("Error running recipe calculation:", err);
-	  }
-	};
-
-function translate_value(value, source_language, target_language) {
-			for (t = 0; t < dictionary.length; t++) {
-				if (dictionary[t][source_language] == value) {
-						return dictionary[t][target_language]
-							}
-				}
-			return value		
-}
-
-
-function formsubmit() {
-	if ($('[name="q"]').val().length > 0 && $('[name="i"]').val().length > 0) {
-		run();
-		var recipe_arr = $("#recipeform").serializeArray();
-
-		// Serialize form values
-		// var serialized = 'l='+language+"&";
-		var serialized = '';
-		for (i = 0; i < recipe_arr.length; i++) {
-			if (recipe_arr[i]["name"] == "i" || recipe_arr[i]["name"] == "e"){
-				recipe_arr[i]["value"] = translate_value(recipe_arr[i]["value"],language,"Code");
-				}
-			serialized += recipe_arr[i]["name"] + "=" + recipe_arr[i]["value"] + "&"
-			}
-		if (servings > 1) {
-			serialized += "servings=" + servings + "&"
-		}
-		// Update URL
-		history.pushState(null, "", '?' + serialized); 
-	}
-
-}
 
 
 

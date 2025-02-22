@@ -1,4 +1,5 @@
 // Sample tests for the Recipe class
+import { Recipe, loadCSV, loadJSON } from '../recipe.js';
 
 function assert(condition, message) {
     if (!condition) {

@@ -31,5 +31,5 @@ For sample usage you can refer to the test file `test/test.js`.
 
 
 ## Web app
-A web-app provides an UI for the calculator (see `index.html` and `form.js`).
+A web-app provides an UI for the calculator (see `index.html` and `app.js`).
 The running web app is available on [www.mycookprint.com](mycookprint.com).
