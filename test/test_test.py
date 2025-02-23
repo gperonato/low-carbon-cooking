@@ -12,6 +12,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
 
 PORT = 8001
 
@@ -97,3 +98,31 @@ def test_languages(start_http_server, browser, language):
     
     assert len(climate) == 1
     assert len(calories) == 1
+
+
+def test_form(start_http_server, browser):
+
+    filename = "index.html"
+    url = f"http://localhost:{PORT}"
+    browser.get(url)
+    time.sleep(0.5)
+
+    # Locate form fields and fill them
+    browser.find_element(By.NAME, "i").send_keys("Tofu, plain")
+    browser.find_element(By.NAME, "q").send_keys("100")
+
+    # Submit the form
+    browser.find_element(By.NAME, "mise-en-place").click()
+
+    time.sleep(0.5)
+    
+    soup = BeautifulSoup(browser.page_source, features="html.parser")
+    table_footprint = soup.find('tbody', id='table-footprint')
+    climate = [td for td in table_footprint.find_all('td') if 'kg CO2 eq' in td.text]
+    table_nutrition = soup.find('tbody', id='table-nutritional')
+    calories = [td for td in table_nutrition.find_all('td') if 'kcal' in td.text]
+    
+    assert len(climate) == 1
+    assert len(calories) == 1
+
+
