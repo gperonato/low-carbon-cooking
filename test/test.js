@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2025 Giuseppe Peronato <gperonato@gmail.com>
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 // Sample tests for the Recipe class
 import { Recipe, loadCSV, loadJSON } from '../recipe.js';
 

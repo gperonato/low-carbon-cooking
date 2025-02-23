@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2021-2025 Giuseppe Peronato <gperonato@gmail.com>
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 // App for the Recipe calculator
 
 import { Recipe, loadCSV, loadJSON } from './recipe.js';

@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2021-2025 Giuseppe Peronato <gperonato@gmail.com>
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 // Recipe calculator
 
 // Utility function to coerce values to float
