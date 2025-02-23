@@ -1,0 +1,7 @@
+code,type,location,EF,source,database,external_id,year
+ELMT,Grid electricity average mix,Malta,0.872,AIE (Agence Internationale de l'Energie),Base_Carbone_V23.4,15626,2014
+ELEU27,European grid electricity average mix,Europe European Union - 27,0.42,AIE (Agence Internationale de l'Energie),Base_Carbone_V23.4,15714,2014
+ECFR,Electricity 2023 - use : residential cooking,France continentale,0.058,,Base_Carbone_V23.4,43281,2024
+NGEU,Natural gas,Europe,0.243,,Base_Carbone_V23.4,13515,2015
+NGFR,Natural gas - 2022 Mix,France continentale,0.239,,Base_Carbone_V23.4,37132,2023
+PVFR,Electricity photovoltaic,France continentale,0.044,,Base_Carbone_V23.4,34720,2021

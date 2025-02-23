@@ -163,10 +163,11 @@ async function submitForm() {
 // Run the calculator
 async function run() {
 	try {
-		const [environment, nutrition, energy_ef, units, intake] = await Promise.all([
+		const [environment, nutrition, energy1, energy2, units, intake] = await Promise.all([
 		  loadCSV("../data/food/environment.csv"),
 		  loadCSV("../data/food/nutrition.csv"),
-		  loadCSV("../data/energy/data.csv"),
+		  loadCSV("../data/energy/data_odbl.csv"),
+		  loadCSV("../data/energy/data_lo.csv"),
 		  loadCSV("../data/food/units.csv"),
 		  loadJSON("../data/food/intake/data.json"),
 		]);
@@ -175,7 +176,7 @@ async function run() {
 		const webRecipe = new Recipe("webRecipe");
 		webRecipe.environment = environment;
 		webRecipe.nutrition = nutrition;
-		webRecipe.energy_ef = energy_ef;
+		webRecipe.energy_ef = Object.assign(energy1, energy2);
 		webRecipe.intake = intake;
 		webRecipe.units = units;
 

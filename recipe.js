@@ -27,6 +27,7 @@ export const loadJSON = async (path) => {
 export const loadCSV = async (path) => {
 	return new Promise((resolve, reject) => {
 	  Papa.parse(path, {
+		skipEmptyLines: true,
 		download: true,
 		header: true,
 		complete: (results) => resolve(results.data),

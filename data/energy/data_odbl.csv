@@ -27,9 +27,3 @@ ELSI,Grid electricity consumption mix (LCA),Slovenia,0.254,Electricity Maps Esti
 ELES,Grid electricity consumption mix (LCA),Spain,0.166,entsoe.eu,Electricity Maps v. 2025-01-27 - 2022-2024,ES,2022-2024
 ELSE,Grid electricity consumption mix (LCA),Sweden,0.024,entsoe.eu,Electricity Maps v. 2025-01-27 - 2022-2024,SE,2022-2024
 ELCH,Grid electricity consumption mix (LCA),Switzerland,0.099,Electricity Maps Estimation,Electricity Maps v. 2025-01-27 - 2022-2024,CH,2022-2024
-ELMT,Grid electricity average mix,Malta,0.872,AIE (Agence Internationale de l'Energie),Base_Carbone_V23.4,15626,2014
-ELEU27,European grid electricity average mix,Europe European Union - 27,0.42,AIE (Agence Internationale de l'Energie),Base_Carbone_V23.4,15714,2014
-ECFR,Electricity 2023 - use : residential cooking,France continentale,0.058,,Base_Carbone_V23.4,43281,2024
-NGEU,Natural gas,Europe,0.243,,Base_Carbone_V23.4,13515,2015
-NGFR,Natural gas - 2022 Mix,France continentale,0.239,,Base_Carbone_V23.4,37132,2023
-PVFR,Electricity photovoltaic,France continentale,0.044,,Base_Carbone_V23.4,34720,2021

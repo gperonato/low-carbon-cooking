@@ -98,6 +98,9 @@ ef = pd.concat([ef, pd.DataFrame(new_rows)],
 # Round
 ef["EF"] = ef["EF"].round(3)
 
-# Save file
-ef.to_csv(os.path.join(dir_path, "data.csv"), index=False)
+# Save files with different licenses
+ef.loc[ef.database.str.contains("Base_Carbone"),:].to_csv(os.path.join(dir_path, "data_lo.csv"), index=False)
+ef.loc[ef.database.str.contains("Electricity Maps"),:].to_csv(os.path.join(dir_path, "data_odbl.csv"), index=False)
+
+
 # %%

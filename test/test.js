@@ -12,10 +12,11 @@ function assert(condition, message) {
 
 const run_tests = async () => {
 try {
-    const [environment, nutrition, energy_ef, units, intake] = await Promise.all([
+    const [environment, nutrition, energy1, energy2, units, intake] = await Promise.all([
       loadCSV("../data/food/environment.csv"),
       loadCSV("../data/food/nutrition.csv"),
-      loadCSV("../data/energy/data.csv"),
+      loadCSV("../data/energy/data_odbl.csv"),
+      loadCSV("../data/energy/data_lo.csv"),
       loadCSV("../data/food/units.csv"),
       loadJSON("../data/food/intake/data.json"),
     ]);
@@ -23,10 +24,10 @@ try {
     const myRecipe = new Recipe("myRecipe");
     myRecipe.environment = environment;
     myRecipe.nutrition = nutrition;
-    myRecipe.energy_ef = energy_ef;
+		myRecipe.energy_ef = Object.assign(energy1, energy2);
+    console.log(myRecipe.energy_ef)
     myRecipe.intake = intake;
     myRecipe.units = units;
-
     myRecipe.addIngredient("Dried pasta, wholemeal, raw", 400)
     myRecipe.addIngredient("Olive oil, extra virgin", 2)
     myRecipe.addIngredient("Anchovy, in salt (semi-preserved)", 50)
