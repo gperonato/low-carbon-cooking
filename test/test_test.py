@@ -79,3 +79,21 @@ def test_energy_01(start_http_server, browser):
     
     assert len(climate) == 1
     assert climate[0].text == "0.24 kg CO2 eq"
+
+
+@pytest.mark.parametrize("language", ["", "IT", "FR"])
+def test_languages(start_http_server, browser, language):
+
+    filename = "index.html"
+    url = f"http://localhost:{PORT}/{language}/{filename}?i=20917&q=0&e=NGEU&t=60&p=1000&"
+    browser.get(url)
+    time.sleep(0.5)
+    
+    soup = BeautifulSoup(browser.page_source, features="html.parser")
+    table_footprint = soup.find('tbody', id='table-footprint')
+    climate = [td for td in table_footprint.find_all('td') if 'kg CO2 eq' in td.text]
+    table_nutrition = soup.find('tbody', id='table-nutritional')
+    calories = [td for td in table_nutrition.find_all('td') if 'kcal' in td.text]
+    
+    assert len(climate) == 1
+    assert len(calories) == 1
