@@ -1,0 +1,82 @@
+﻿Short Name,Unit
+organic_acids,g
+40_fatty_acids,g
+60_fatty_acids,g
+80_fatty_acids,g
+100_fatty_acids,g
+120_fatty_acids,g
+140_fatty_acids,g
+160_fatty_acids,g
+180_fatty_acids,g
+181_oleic_acid,g
+182_linoleic_acid,g
+183_alpha-linolenic_acid,g
+204_arachidonic_acid,g
+205_epa,g
+206_dha,g
+monounsaturated_fatty_acids,g
+polyunsaturated_fatty_acids,g
+saturated_fatty_acids,g
+alcohol,g
+starch,g
+beta-carotene,mcg
+calcium,mg
+cholesterol,mg
+copper,mg
+water,g
+iron,mg
+fiber,g
+fructose,g
+galactose,g
+carbohydrates,g
+glucose,g
+iodine,mcg
+lactose,g
+lipids,g
+magnesium,mg
+maltose,g
+manganese,mg
+energy,kcal
+energy_eu,kcal
+energy_kj,kJ
+phosphorus,mg
+polyols,g
+potassium,mg
+proteins,g
+proteins_eu,g
+retinol,mcg
+sucrose,g
+salt,g
+selenium,mcg
+sodium,mg
+sugars,g
+vitamin_b12,mcg
+vitamin_b1,mg
+vitamin_b2,mg
+vitamin_b3,mg
+vitamin_b5,mg
+vitamin_b6,mg
+vitamin_b9,mcg
+vitamin_c,mg
+vitamin_d,mcg
+vitamin_e,mg
+vitamin_k1,mcg
+vitamin_k2,mcg
+zinc,mg
+unique_ef_score,mPt
+climate_change,kg CO2 eq
+ozone_layer_depletion,kg CVC11 eq
+ionizing_radiation,kBq U-235 eq
+photochemical_ozone_formation,kg NMVOC eq
+fine_particles,disease inc.
+human_health_toxicological_effects_non-carcinogens,CTUh
+human_health_toxicological_effects_carcinogens,CTUh
+terrestrial_and_freshwater_acidification,mol H+ eq
+freshwater_eutrophication,kg P eq
+marine_eutrophication,kg N eq
+terrestrial_eutrophication,mol N eq
+aquatic_ecosystems_ecotoxicity,CTUe
+land_use,Pt
+water_resource_depletion,m3 depriv.
+energy_resource_depletion,MJ
+mineral_resource_depletion,kg Sb eq

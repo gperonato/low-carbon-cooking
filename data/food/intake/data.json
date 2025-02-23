@@ -1,11 +1,82 @@
 {
-"Energy, Regulation EU No 1169/2011":{"value":2000,"unit":"kcal"},
-"Fat":{"value":70,"unit":"g"},
-"Carbohydrate":{"value":260,"unit":"g"},
-"Sugars":{"value":90,"unit":"g"},
-"Protein":{"value":50,"unit":"g"},
-"Calcium":{"value":800,"unit":"mg"},
-"Iron":{"value":14,"unit":"mg"},
-"Vitamin B12":{"value":2.5,"unit":"µg"}
+    "energy_eu": {
+        "value": 2000,
+        "unit": "kcal",
+        "source": {
+            "title": "Annex XIII of Regulation (EU) 1169/2011",
+            "link": "https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2011:304:0018:0063:EN:PDF"
+        }
+    },
+    "lipids": {
+        "value": 70,
+        "unit": "g",
+        "source": {
+            "title": "Annex XIII of Regulation (EU) 1169/2011",
+            "link": "https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2011:304:0018:0063:EN:PDF"
+        }
+    },
+    "saturated_fatty_acids": {
+        "value": 20,
+        "unit": "g",
+        "source": {
+            "title": "Annex XIII of Regulation (EU) 1169/2011",
+            "link": "https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2011:304:0018:0063:EN:PDF"
+        }
+    },
+    "carbohydrates": {
+        "value": 260,
+        "unit": "g",
+        "source": {
+            "title": "Annex XIII of Regulation (EU) 1169/2011",
+            "link": "https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2011:304:0018:0063:EN:PDF"
+        }
+    },
+    "sugars": {
+        "value": 90,
+        "unit": "g",
+        "source": {
+            "title": "Annex XIII of Regulation (EU) 1169/2011",
+            "link": "https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2011:304:0018:0063:EN:PDF"
+        }
+    },
+    "proteins_eu": {
+        "value": 50,
+        "unit": "g",
+        "source": {
+            "title": "Annex XIII of Regulation (EU) 1169/2011",
+            "link": "https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2011:304:0018:0063:EN:PDF"
+        }
+    },
+    "fiber": {
+        "value": 25,
+        "unit": "g",
+        "source": {
+            "title": "EFSA 2010",
+            "link": "https://efsa.onlinelibrary.wiley.com/doi/abs/10.2903/j.efsa.2010.1462"
+        }
+    },
+    "salt": {
+        "value": 6,
+        "unit": "g",
+        "source": {
+            "title": "Annex XIII of Regulation (EU) 1169/2011",
+            "link": "https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2011:304:0018:0063:EN:PDF"
+        }
+    },
+    "calcium": {
+        "value": 800,
+        "unit": "mg",
+        "source": {
+            "title": "Annex XIII of Regulation (EU) 1169/2011",
+            "link": "https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2011:304:0018:0063:EN:PDF"
+        }
+    },
+    "iron": {
+        "value": 14,
+        "unit": "mg",
+        "source": {
+            "title": "Annex XIII of Regulation (EU) 1169/2011",
+            "link": "https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2011:304:0018:0063:EN:PDF"
+        }
+    }
 }
-

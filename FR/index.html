@@ -91,7 +91,7 @@
 						<div>
 							<div class="form-group row">
 								<div class="col sm">
-									<button type='button' class="btn btn-secondary" onclick="formsubmit()">Mise en place</button>
+									<button type='button' class="btn btn-secondary" onclick="submitForm()">Mise en place</button>
 								</div>
 							</div>
 						</div>
@@ -103,7 +103,7 @@
 						<div>
 							<div class="form-group row">
 								<div class="col-sm-1">
-									<button type='button' class="btn btn-secondary" style="width: 120px;" onclick="formsubmit()">Cuisson</button>
+									<button type='button' class="btn btn-secondary" style="width: 120px;" onclick="submitForm()">Cuisson</button>
 								</div>
 							</div>
 						</div>
@@ -112,13 +112,13 @@
 						<h3>Résultats</h3>
 						<table class="table table-striped">
 							<thead><tr><td><h5>Environnement</h5></td>
-							<td class="text-center"><td class="text-center"><a href="#" data-toggle="tooltip" title='Voiture thermique (sans production), motorisation moyenne, France, 2018 | Base Carbone® ADEME' class="text-center">Distance équivalente en voiture</a>
-							<td class="text-center">Pourcentage de l'<a href="#reference-food" data-toggle="tooltip" title='Cliquez ici pour changer la référence.' >aliment de référence</a></td></tr></thead>
+							<td class="text-center"><td class="text-center"><a href="#" style="text-decoration: none; color: inherit;" data-toggle="tooltip" title='Voiture motorisation moyenne, 2018 | Base Carbone® ADEME v23.4 (27970)' class="text-center">Distance équivalente en voiture</a>
+							<td class="text-center">Pourcentage de l'aliment de référence</td></tr></thead>
 							<tbody id="table-footprint">
 							</tbody>
-							<thead><tr><td><h5>Nutrition</h5></td><td class="text-center"><a href="#" data-toggle="tooltip" title='Valeurs totales. A noter que pour certains aliments les valeurs maximales sont considérées, alors que les traces ne sont pas comptabilisées.' class="text-center">Quantité</a></td>
-							<td class="text-center">Pourcentage des <a href="#" data-toggle="tooltip" title='Référence normative UE (Annexe XIII du Réglemnt 1169/2011 concernant l’information des consommateurs sur les denrées alimentaires)'>apports nutrionnels conseillés</a></td>
-							<td class="text-center">Pourcentage de l'<a href="#reference-food" data-toggle="tooltip" title='Cliquez ici pour changer la référence.'>aliment de référence</a></td>
+							<thead><tr><td><h5>Nutrition</h5></td><td class="text-center"><a href="#" style="text-decoration: none; color: inherit;" data-toggle="tooltip" title='Valeurs totales. A noter que pour certains aliments les valeurs maximales sont considérées, alors que les traces ne sont pas comptabilisées.' class="text-center">Quantité</a></td>
+							<td class="text-center">Pourcentage des apports nutrionnels conseillés</td>
+							<td class="text-center">Pourcentage de l'aliment de référence</a></td>
 						</tr></thead>
 						<tbody id="table-nutritional">
 						</tbody>
@@ -155,16 +155,31 @@
 							Le secteur de l'alimentation est responsable d'un quart des emissions des gaz à éffet serre (GES) à l'échelle mondiale<sup><a href="#ref1">1</a></sup>.<br>Grâce au calculateur myCookPrint, on peut estimer l'empreinte carbone d'un répas, y compris la production, la transformation, le transport des aliments jusqu'à la préparation des mets.
 					</p>
 					<p>
-						Le calculateur myCookPrint utilise deux bases de données distribuées par le governemment français en open data (Licence Ouverte):
+						Le calculateur myCookPrint utilise des bases de données distribuées par le governemment français en open data (Licence Ouverte) :
 					</p>
 					<ul>
-						<li>la base de données <a href="https://doc.agribalyse.fr/documentation-en/">AGRIBALYSE®</a> (v. 3.0.1, 11.06.2021) produite par l'Agence de la Transition Ecologique française (ADEME) fournit l'analyse environnementale des aliments les plus comumuns; </li>
-						<li>la base de données <a href="https://ciqual.anses.fr/">CIQUAL</a> (v. 28.08.2020) produite par l'Agence nationale (française) de sécurité sanitaire de l'alimentation, de l'environnement et du travail (ANSES) fournit les informations sur la composition des aliments.</li>
+						<li><a href="https://doc.agribalyse.fr/documentation-en/">AGRIBALYSE®</a> (v. 3.2, 04.12.2024)
+							produite par l'Agence de la Transition Ecologique française (ADEME)
+							fournit l'analyse environnementale des aliments les plus comumuns ;</li>
+						<li><a href="https://ciqual.anses.fr/">CIQUAL</a> (v. 03.07.2020)
+							et <a href="https://ciqual.anses.fr/">CALNUT 2020</a> (v. 28.08.2020) 
+							produites par l'Agence nationale (française) de sécurité sanitaire de l'alimentation, 
+							de l'environnement et du travail (ANSES) fournissent les informations sur la composition des aliments.</li>
 					</ul>
-					<p class="lead">Les résultats sont valides pour des produits achetés et consommés en France. Cependant, ils peuvent être utilisés comme un premier indicateur dans d'autres pays européens. 
+					<p class="lead">Les résultats sont valides pour des produits achetés et consommés en France.
+						Cependant, ils peuvent être utilisés comme un premier indicateur dans d'autres pays européens. 
 					</p>
-					<p>Le calculateur utilise aussi les facteurs d'emissions (CO2e/KWh) des sources énergétiques fournis par l'Agence Europeenne de l'Environnement (<a href="https://www.eea.europa.eu/ds_resolveuid/0320026e904e43729189fe8720b5e35d">CO2 Intensity of Electricity generation</a> (2017), la <a href="https://www.data.gouv.fr/fr/datasets/base-carbone-r-1/">Base carbone®</a> (v. 19.0 07/07/2021) de l'ADEME pour la France, et l'<a href="https://www.bafu.admin.ch/bafu/en/home/topics/climate/questions-answers.html">Office Fédéral de l'Environnement (OFEN)</a> (2014) pour la Suisse.
-					<p>Le code source ainsi que les données sont disponibles dans <a href="https://github.com/gperonato/low-carbon-cooking">le repository Github</a> du projet.</p>
+					<p>Le calculateur utilise aussi les facteurs d'emissions des sources énergétiques
+						issus des base de données suivantes :
+						<ul>
+							<li><a href="https://portal.electricitymaps.com/datasets">Electricity Maps</a>
+								(27.01.2025, moyenne des valeurs annuelles 2022-2024) ;</li>
+							<li><a href="https://www.data.gouv.fr/fr/datasets/base-carbone-r-2/">Base carbone®</a>
+								de l'Agence (française) de la transition écologique (ADEME) (v. 23.4, 02-01-2025).</li>
+						</ul>
+					</p>
+					<p>Le code source ainsi que les pipelines de traitement des données
+						sont disponibles dans <a href="https://github.com/gperonato/low-carbon-cooking">le repository Github</a> du projet.</p>
 					<small><sup>1</sup><a id="ref1"></a>Poore, J., & Nemecek, T. (2018). Reducing food’s environmental impacts through producers and consumers. Science, 360(6392), 987–992. <a href="https://doi.org/10.1126/science.aaq0216">https://doi.org/10.1126/science.aaq0216</a></small>
 				</div>
 			</div>
@@ -179,7 +194,6 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha512-5WvZa4N7Jq3TVNCp4rjcBMlc6pT3lZ7gVxjtI6IkKW+uItSa+rFgtFljvZnCxQGj8SUX5DHraKE6Mn/4smK1Cg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.3/js/bootstrap.min.js" integrity="sha512-8qmis31OQi6hIRgvkht0s6mCOittjMa9GMqtK9hes5iEQBQE/Ca6yGE5FsW36vyipGoWQswBj/QBm2JR086Rkw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.0.2/papaparse.min.js" integrity="sha512-z2MPSoqfIIvG4xSBF385/Vlsj3z4k1KbRkAFi2Mb5JE3LhUbY+rgX6PLnKJIsdnuYplZf7HVpdy8yg0YCbC+8w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-	<script type="text/javascript" src="../recipe.js"></script>
-	<script type="text/javascript" src ="../form.js"></script>
+	<script type="module" src="../app.js"></script>
 	<script type="text/javascript" src="../libs/scrolling-nav/js/scrolling-nav.js"></script>
 </html>

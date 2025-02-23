@@ -1,279 +1,192 @@
+// SPDX-FileCopyrightText: 2021-2025 Giuseppe Peronato <gperonato@gmail.com>
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
+// Recipe calculator
+
+// Utility function to coerce values to float
 function getNum(val) {
-	val = +parseFloat(val) || 0
+	val = +parseFloat(val) || NaN
 	return val;
 }
 
-function loadJSON(path, success, error) {
-	var xhr = new XMLHttpRequest();
-	xhr.onreadystatechange = function() {
-		if (xhr.readyState === XMLHttpRequest.DONE) {
-			if (xhr.status === 200) {
-				if (success)
-					success(JSON.parse(xhr.responseText));
-			} else {
-				if (error)
-					error(xhr);
-			}
-		}
-	};
-	xhr.open("GET", path, true);
-	xhr.send();
-}
+// Utility function to load JSON data
+export const loadJSON = async (path) => {
+	try {
+	  const response = await fetch(path);
+	  if (!response.ok) {
+		throw new Error(`HTTP error! Status: ${response.status}`);
+	  }
+	  return await response.json();
+	} catch (err) {
+	  console.error(`Failed to load JSON from ${path}:`, err);
+	  throw err;
+	}
+  };
 
-function run() {
-			Papa.parse("../data/food/data.csv", {
-				download: true,
-				header:true,
-			    complete: function(results) {
-			        data = results.data;
-
-			Papa.parse("../data/energy/data.csv", {
-				download: true,
-				header:true,
-			    complete: function(results) {
-			        energy_ef = results.data;
-
-			loadJSON('../data/food/intake/data.json',
-				function(intake) {
-
-
-			class Recipe {
-				constructor(name) {
-					this.name = name;
-					this.data = data;
-					this.energy_ef = energy_ef;
-					this.intake = intake;
-					this.servings = 1;
-					this.ingredients = {};
-					this.cooking_steps = [];
-					this.total_content = {}
-					this.comparison = {"food":"Hamburger, from fast foods restaurant",
-											"quantity":220};
-				}
-
-				addIngredient(name, quantity) {
-					this.ingredients[name] = {
-						"quantity": parseInt(quantity)
-					};
-				}
-
-				addCookingStep(energy_source,duration,power) {
-					this.cooking_steps.push({"duration": duration,
-                            "energy_source": energy_source,
-                            "power": power
-					});
-				}
-
-				removeIngredient(name) {
-					delete this.ingredients[name]
-				}
-
-				addIngredients(ingredients) {
-					for (let ingredient of ingredients) {
-						this.addIngredient(ingredient[0], ingredient[1])
-					}
-				}
-
-				mise_en_place() {
-					this.content = {}
-					this.weight = 0
-					var values_to_skip = [];
-					// Populate content
-					for (const [name, value] of Object.entries(this.ingredients)) {
-						this.content[name] = {}
-						var entries = this.add_values(name)
-						for (const [key, value] of Object.entries(entries)) {
-							if (key == "Carbon footprint (kgCO2e/kg)"){
-								this.content[name]["Carbon footprint (gCO2e/g)"] = value * (this.ingredients[name]["quantity"])
-							}
-							else {
-								if (! isNaN(value)) {
-									this.content[name][key] = getNum(value) * (this.ingredients[name]["quantity"]/100.)
-								}
-								else {values_to_skip.push(key)}
-							}
-						}
-						this.weight += this.ingredients[name]["quantity"]
-					}
-					// Populate total content
-					for (const [name, object] of Object.entries(this.content)){
-						for (const [key, value] of Object.entries(object)){
-							if (! values_to_skip.includes(key)){
-									if (! this.total_content[key.split(" (")[0]] ){
-										this.total_content[key.split(" (")[0]] = {"value":0,
-										    								  	  "unit":key.split(" (")[1].split("/")[0]}										
-										}
-									this.total_content[key.split(" (")[0]]["value"] += this.content[name][key] / this.servings
-								}
-						}
-					}
-					console.log("Skipping", new Set(values_to_skip))
-					this.compare()
-				}
-
-				cook() {
-					for (const step of this.cooking_steps) {
-						var energy = step["duration"]/60. * step["power"]
-						step["CO2e"] = energy * this.find_EF(step["energy_source"])
-						this.total_content["Carbon footprint"]["value"] += step["CO2e"] / this.servings
-						}
-					this.compare()
-				}
-
-				add_values(name) {
-					var entries = {};
-					for (let entry of this.data) {
-						if (entry["LCI Name"] == name) {
-							for (const [key, value] of Object.entries(entry)) {
-								entries[key] = parseFloat(value);
-							}
-						}
-
-					}
-					return entries;
-				}
-
-				listIngredients() {
-					for (const [name, value] of Object.entries(this.ingredients)) {
-						return name;
-					}
-				}
-
-			    find_EF(energy) {
-			        for (let entry of this.energy_ef) {
-			            if (entry["Name_Location"] == energy) {
-								return parseFloat(entry["EF"]);
-							}
-			        }
-			    }
-			    set_reference(food, quantity){
-			    	this.comparison["food"] = food;
-			    	this.comparison["quantity"] = quantity;
-			    }
-			    compare(){
-			    	var food = this.comparison["food"];
-			    	var quantity = this.comparison["quantity"];
-			    	var reference = this.add_values(food);
-			    	delete reference["LCI Name"]
-			    	for (const [key, value] of Object.entries(reference)){
-			    		var name = key.split(" (")[0];
-			    		var comparison = "";
-			    		var recommended = "";
-			    		if (value > 0 && this.total_content.hasOwnProperty(name)) {
-			    			if (key == "Carbon footprint (kgCO2e/kg)"){
-			    				comparison = ((this.total_content[name]["value"] / (value*(quantity)))*100).toFixed(0).toString()+"%"
-			    			}
-			    			else{
-			    				comparison = ((this.total_content[name]["value"] / (value*(quantity/100)))*100).toFixed(0).toString()+"%"
-			    				recommended = ((this.total_content[name]["value"]/this.intake[name]["value"])*100).toFixed(0).toString() +"%"
-			    			}
-				    		this.total_content[name]["benchmark"] = {"name":food,
-				    												"weight (g)": quantity,
-				    												"value": comparison}
-				    		this.total_content[name]["recommended"] = recommended
-			    		}
-			    	}
-			    }
-			}
-
-		// Web recipe
-		let webRecipe = new Recipe("webRecipe")
-		webRecipe.servings = servings;
-		var ingredients = $('[name="i"]');
-		var quantities = $('[name="q"]');
-
-		var reference = {};
-		reference["food"] = translate_value($('#reference').val(),language,"EN");
-		reference["quantity"] = $('#reference-weight').val();
-		console.log("Setting reference food:", reference["food"]);
-		webRecipe.set_reference(reference["food"],reference["quantity"]);
-
-		for (i = 0; i < ingredients.length; i++) {
-			ingredient = translate_value(ingredients[i].value,language,"EN");
-			console.log("Adding ingredient:", ingredient)			
-			webRecipe.addIngredient(ingredient, quantities[i].value)
-		}
-		webRecipe.mise_en_place()
-
-		var sources = $('[name="e"]');
-		var times = $('[name="t"]');
-		var powers = $('[name="p"]');
-
-
-		for (i = 0; i < sources.length; i++) {
-			if (sources[i].value != "") {
-				source = translate_value(sources[i].value,language,"EN");
-				console.log("Adding source:", source)
-				webRecipe.addCookingStep(source, times[i].value, powers[i].value)
-			}	
-		}
-		webRecipe.cook()
-		$("#results").css('display','inline');
-
-		var html = '';
-		for (const [key, value] of Object.entries(webRecipe.total_content).slice(0,1)){
-		            html += '<tr><td>' + translate_value(key,"EN",language) + '</td>' +
-		                    '<td class="text-center">' + value["value"].toFixed(0) + ' ' + value["unit"] + '</td>' +
-		                    '<td class="text-center">' + (value["value"]/192).toFixed(1)  + ' km </td>' +
-		                    '<td class="text-center">' + value["benchmark"]["value"] + '</td>' +
-		                    '</tr>';
-		     }
-		$('#table-footprint').html(html);
-
-		$("#results").css("visibility","visible");
-		var html = '';
-		// console.log(webRecipe.total_content)
-		for (const [key, value] of Object.entries(webRecipe.total_content).slice(1)){
-		            html += '<tr><td>' + translate_value(key,"EN",language)  + '</td>' +
-		                    '<td class="text-center">' + value["value"].toFixed(1) + ' ' + value["unit"] + '</td>' +
-		                    '<td class="text-center">' + value["recommended"] + '</td>' +
-		                    '<td class="text-center">' + value["benchmark"]["value"] + '</td>' +
-		                    '</tr>';
-		     }
-		$('#table-nutritional').html(html);
-
-		});
-
-		}
+// Utility function to load CSV using PapaParse
+export const loadCSV = async (path) => {
+	return new Promise((resolve, reject) => {
+	  Papa.parse(path, {
+		skipEmptyLines: true,
+		download: true,
+		header: true,
+		complete: (results) => resolve(results.data),
+		error: (err) => reject(err),
+	  });
 	});
+  };
 
+export class Recipe {
+	constructor(name) {
+		this.name = name;
+		this.environment = [];
+		this.nutrition = [];
+		this.energy_ef = [];
+		this.intake = {};
+		this.units = [];
+		this.servings = 1;
+		this.ingredients = {};
+		this.cooking_steps = [];
+		this.total_content = {};
+		this.comparison = {"food":"Hamburger, from fast foods restaurant",
+								"quantity":220};
 	}
-});
 
-}
+	addIngredient(name, quantity) {
+		this.ingredients[name] = {
+			"quantity": parseInt(quantity)
+		};
+	}
 
-function translate_value(value, source_language, target_language) {
-			for (t = 0; t < dictionary.length; t++) {
-				if (dictionary[t][source_language] == value) {
-						return dictionary[t][target_language]
-							}
-				}
-			return value		
-}
+	addCookingStep(energy_source,duration,power) {
+		this.cooking_steps.push({"duration": duration,
+				"energy_source": energy_source,
+				"power": power
+		});
+	}
 
+	removeIngredient(name) {
+		delete this.ingredients[name]
+	}
 
-function formsubmit() {
-	if ($('[name="q"]').val().length > 0 && $('[name="i"]').val().length > 0) {
-		run();
-		var recipe_arr = $("#recipeform").serializeArray();
-
-		// Serialize form values
-		// var serialized = 'l='+language+"&";
-		var serialized = '';
-		for (i = 0; i < recipe_arr.length; i++) {
-			if (recipe_arr[i]["name"] == "i" || recipe_arr[i]["name"] == "e"){
-				recipe_arr[i]["value"] = translate_value(recipe_arr[i]["value"],language,"Code");
-				}
-			serialized += recipe_arr[i]["name"] + "=" + recipe_arr[i]["value"] + "&"
-			}
-		if (servings > 1) {
-			serialized += "servings=" + servings + "&"
+	addIngredients(ingredients) {
+		for (let ingredient of ingredients) {
+			this.addIngredient(ingredient[0], ingredient[1])
 		}
-		// Update URL
-		history.pushState(null, "", '?' + serialized); 
 	}
 
+	miseEnPlace() {
+		this.content = {}
+		this.weight = 0;
+		// Populate content
+		for (const [name, value] of Object.entries(this.ingredients)) {
+			this.content[name] = {}
+			for (const dict of [this.nutrition, this.environment]) {
+				var entries = this.addValues(name, dict)
+				for (const [key, value] of Object.entries(entries)) {
+					let absolute_value = 0;
+					// Handle 0s
+					if (value == "") {
+						absolute_value = NaN;
+					} else if (getNum(value) > 0) {
+						absolute_value = getNum(value) * (this.ingredients[name]["quantity"]/1000);
+					}
+					this.content[name][key] = {
+						"value": absolute_value,
+						"source": entries["source"]
+					}
+				}
+			}
+		this.weight += this.ingredients[name]["quantity"]
+		}
+		// Populate total content
+		for (const [name, object] of Object.entries(this.content)){
+			for (const [key, value] of Object.entries(object)){
+				// Add the content if the object doesn't exist already and if it has a unit
+				if (! (this.total_content[key]) & this.lookUp(key, "Short Name", "Unit", this.units) != ""){
+					this.total_content[key] = {"value": 0,
+											   "unit": this.lookUp(key, "Short Name", "Unit", this.units),
+											   "benchmark": {},
+											   "recommended": ""	
+											   }
+					var is_environment = false;
+					}
+				if (this.total_content[key]) {
+					this.total_content[key]["value"] += this.content[name][key]["value"] / this.servings;
+					if(this.content[name][key]["source"].includes("AGRIBALYSE")) {is_environment = true}
+					this.total_content[key]["is_environment"] = is_environment	
+				}
+			}
+		}
+		this.compare()
+	}
+
+	cook() {
+		for (const step of this.cooking_steps) {
+			var energy = step["duration"]/60. * step["power"]
+			step["CO2e"] = energy * this.lookUp(step["energy_source"], "code", "EF", this.energy_ef) / 1000.
+			this.total_content["climate_change"]["value"] += step["CO2e"] / this.servings
+			}
+		this.compare()
+	}
+
+	addValues(name, dict) {
+		var entries = {};
+		for (let entry of dict) {
+			if (entry["lci_name"] == name) {
+				for (const [key, value] of Object.entries(entry)) {
+					entries[key] = value;
+				}
+			}
+		}
+		return entries;
+	}
+
+	listIngredients() {
+		for (const [name, value] of Object.entries(this.ingredients)) {
+			return name;
+		}
+	}
+
+	lookUp(variable, variable_name, key, dict) {
+		for (let entry of dict) {
+			if (entry[variable_name] == variable) {
+					return entry[key];
+				}
+		}
+	}
+
+	setReference(food, quantity){
+		this.comparison["food"] = food;
+		this.comparison["quantity"] = quantity;
+	}
+	compare(){
+		var food = this.comparison["food"];
+		var quantity = this.comparison["quantity"];
+		var reference = Object.assign({}, this.addValues(food, this.nutrition), this.addValues(food, this.environment)); 
+		var recommended = 0;
+		var comparison = "";
+		// Reference food
+		for (const [key, value] of Object.entries(reference)){
+			if (this.total_content.hasOwnProperty(key)) {
+				comparison = this.total_content[key]["value"] / (getNum(value)*quantity/1000)
+				this.total_content[key]["benchmark"] = {"name":food,
+														"weight (g)": quantity,
+														"value": comparison}
+			}
+		}
+		// Recommended intake
+		for (const [key, value] of Object.entries(this.intake)){
+			if (this.total_content[key]["value"] > 0) {
+				recommended = this.total_content[key]["value"]/this.intake[key]["value"]; // ratio
+				this.total_content[key]["recommended"] = recommended;
+				this.total_content[key]["recommended_source"] = this.intake[key]["source"]["title"];			
+			}
+		}
+	}
 }
+
+
 
 
 

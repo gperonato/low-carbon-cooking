@@ -1,21 +1,35 @@
-# Low carbon cooking
+# Low-carbon cooking
 
-This repository contains a calculator based on datatabases released by French government agencies as open data (Licence Ouverte):	
- - the <a href="https://doc.agribalyse.fr/documentation-en/">AGRIBALYSE®</a> database (v. 3.0.1 2020) provided by the French Environment Protection Agency (ADEME) containing the environmental analysis of food products; </li>
- - the <a href="https://ciqual.anses.fr/">CIQUAL</a> food composition database (v. 2020) provided by the French Agency for Food, Environmental and Occupational health safety (ANSES).</li>
+This repository contains a calculator providing information on the environmental impact (carbon footprint, i.e., impact on climate change) and nutritional content of cooking recipes.
 
-Additional data regarding the carbon content of energy sources are issued from the European Environment Agency <a href="https://www.eea.europa.eu/ds_resolveuid/0320026e904e43729189fe8720b5e35d">CO2 Intensity of Electricity generation</a> (2017), the latest values from <a href="https://www.data.gouv.fr/fr/datasets/base-carbone-r-1/">ADEME's Base carbone®</a> (v 19.0 4/12/2020), and the <a href="https://www.bafu.admin.ch/bafu/en/home/topics/climate/questions-answers.html">Swiss Federal Office for the Environment</a> (2014).
+# Data sources
+
+The calculator is based on two main datasets released by the French government agencies as open data (*Licence Ouverte*):
+
+- the <a href="https://doc.agribalyse.fr/documentation-en/">AGRIBALYSE®</a> database (v. 3.2, 2024-12-04) provided by the French Agency for Ecological Transition (ADEME) containing the environmental analysis of food products; </li>
+- the <a href="https://ciqual.anses.fr/">CIQUAL</a> (v. 2020-07-03) and <a href="https://ciqual.anses.fr/">CALNUT 2020</a> (v. 2020-08-28) food composition databases provided by the French Agency for Food, Environmental and Occupational health safety (ANSES).
+
+Additional data regarding the carbon content of energy sources for cooking are issued from:
+
+- <a href="https://portal.electricitymaps.com/datasets">Electricity Maps' Carbon Intensity Data</a> (2025-01-27, mean 2022-2024 yearly values);
+- <a href="https://www.data.gouv.fr/fr/datasets/base-carbone-r-2/">Base carbone®</a> (v. 23.4, 2025-01-02) provided by the French Agency for Ecological Transition (ADEME).
 
 Note that the Italian translation of the CIQUAL database is provided without warranty of any kind, in particular in terms of accuracy or reliability: please check the original version in French (or the official English translation) in case of doubts.
 
-# Data pipeline
+## Data pipelines
 
-The data are downloaded and transformed from the original sources using a dataflows pipeline. The pipeline can be reproduced by running `data/getData.py`.
+The original datasets are downloaded and transformed from the original data sources using Python pipelines.
+The pipelines can be found in `data` along with the processed datasets.
 
 # API
 
-The calculator is based on the `Recipe` class, which is available both in Python (`recipe.py`) and Javascript (`receipe.js`)
+The calculator is based on the `Recipe` Object (see `recipe.js`).
+
+## Usage
+
+For sample usage you can refer to the test file `test/test.js`. 
 
 
 ## Web app
-See a running web app on www.mycookprint.com
+A web-app provides an UI for the calculator (see `index.html` and `app.js`).
+The running web app is available on [www.mycookprint.com](mycookprint.com).

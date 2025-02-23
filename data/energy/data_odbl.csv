@@ -1,0 +1,29 @@
+code,type,location,EF,source,database,external_id,year
+ELAT,Grid electricity consumption mix (LCA),Austria,0.178,entsoe.eu,Electricity Maps v. 2025-01-27 - 2022-2024,AT,2022-2024
+ELBE,Grid electricity consumption mix (LCA),Belgium,0.174,Electricity Maps Estimation; entsoe.eu,Electricity Maps v. 2025-01-27 - 2022-2024,BE,2022-2024
+ELBG,Grid electricity consumption mix (LCA),Bulgaria,0.433,eso.bg; Electricity Maps Estimation,Electricity Maps v. 2025-01-27 - 2022-2024,BG,2022-2024
+ELHR,Grid electricity consumption mix (LCA),Croatia,0.282,Electricity Maps Estimation; entsoe.eu,Electricity Maps v. 2025-01-27 - 2022-2024,HR,2022-2024
+ELCY,Grid electricity consumption mix (LCA),Cyprus,0.734,tsoc.org.cy; Electricity Maps Estimation,Electricity Maps v. 2025-01-27 - 2022-2024,CY,2022-2024
+ELCZ,Grid electricity consumption mix (LCA),Czechia,0.518,Electricity Maps Estimation; entsoe.eu,Electricity Maps v. 2025-01-27 - 2022-2024,CZ,2022-2024
+ELDK,Grid electricity consumption mix (LCA),Denmark,0.147,entsoe.eu,Electricity Maps v. 2025-01-27 - 2022-2024,DK,2022-2024
+ELEE,Grid electricity consumption mix (LCA),Estonia,0.335,Electricity Maps Estimation; entsoe.eu,Electricity Maps v. 2025-01-27 - 2022-2024,EE,2022-2024
+ELFI,Grid electricity consumption mix (LCA),Finland,0.097,Electricity Maps Estimation; entsoe.eu,Electricity Maps v. 2025-01-27 - 2022-2024,FI,2022-2024
+ELFR,Grid electricity consumption mix (LCA),France,0.059,Electricity Maps Estimation; opendata.reseaux-energies.fr,Electricity Maps v. 2025-01-27 - 2022-2024,FR,2022-2024
+ELDE,Grid electricity consumption mix (LCA),Germany,0.393,entsoe.eu,Electricity Maps v. 2025-01-27 - 2022-2024,DE,2022-2024
+ELGB,Grid electricity consumption mix (LCA),Great Britain,0.191,bmreports.com; Electricity Maps Estimation;  nationalgrideso.com; elexon.co.uk,Electricity Maps v. 2025-01-27 - 2022-2024,GB,2022-2024
+ELGR,Grid electricity consumption mix (LCA),Greece,0.379,Electricity Maps Estimation; entsoe.eu,Electricity Maps v. 2025-01-27 - 2022-2024,GR,2022-2024
+ELHU,Grid electricity consumption mix (LCA),Hungary,0.269,entsoe.eu,Electricity Maps v. 2025-01-27 - 2022-2024,HU,2022-2024
+ELIE,Grid electricity consumption mix (LCA),Ireland,0.402,Electricity Maps Estimation,Electricity Maps v. 2025-01-27 - 2022-2024,IE,2022-2024
+ELIT,Grid electricity consumption mix (LCA),Italy,0.334,,Electricity Maps v. 2025-01-27 - 2022-2024,IT,2022-2024
+ELLV,Grid electricity consumption mix (LCA),Latvia,0.225,entsoe.eu,Electricity Maps v. 2025-01-27 - 2022-2024,LV,2022-2024
+ELLT,Grid electricity consumption mix (LCA),Lithuania,0.197,Electricity Maps Estimation; entsoe.eu,Electricity Maps v. 2025-01-27 - 2022-2024,LT,2022-2024
+ELLU,Grid electricity consumption mix (LCA),Luxembourg,0.296,Electricity Maps Estimation; entsoe.eu,Electricity Maps v. 2025-01-27 - 2022-2024,LU,2022-2024
+ELNL,Grid electricity consumption mix (LCA),Netherlands,0.294,ned.nl,Electricity Maps v. 2025-01-27 - 2022-2024,NL,2022-2024
+ELPL,Grid electricity consumption mix (LCA),Poland,0.779,entsoe.eu,Electricity Maps v. 2025-01-27 - 2022-2024,PL,2022-2024
+ELPT,Grid electricity consumption mix (LCA),Portugal,0.161,entsoe.eu; Electricity Maps Estimation,Electricity Maps v. 2025-01-27 - 2022-2024,PT,2022-2024
+ELRO,Grid electricity consumption mix (LCA),Romania,0.335,entsoe.eu,Electricity Maps v. 2025-01-27 - 2022-2024,RO,2022-2024
+ELSK,Grid electricity consumption mix (LCA),Slovakia,0.279,Electricity Maps Estimation; entsoe.eu,Electricity Maps v. 2025-01-27 - 2022-2024,SK,2022-2024
+ELSI,Grid electricity consumption mix (LCA),Slovenia,0.254,Electricity Maps Estimation; entsoe.eu,Electricity Maps v. 2025-01-27 - 2022-2024,SI,2022-2024
+ELES,Grid electricity consumption mix (LCA),Spain,0.166,entsoe.eu,Electricity Maps v. 2025-01-27 - 2022-2024,ES,2022-2024
+ELSE,Grid electricity consumption mix (LCA),Sweden,0.024,entsoe.eu,Electricity Maps v. 2025-01-27 - 2022-2024,SE,2022-2024
+ELCH,Grid electricity consumption mix (LCA),Switzerland,0.099,Electricity Maps Estimation,Electricity Maps v. 2025-01-27 - 2022-2024,CH,2022-2024
