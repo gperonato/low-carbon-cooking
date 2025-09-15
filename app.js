@@ -18,53 +18,45 @@ var servings = parseFloat(urlParams.get('servings')) || 1;
 
 // HTML snippets
 var ingrsnippet = `<div class="row" id="ingredients">
-	            	<div class="col-sm-7 form-group">
-	            	<input id="ingredient" type="text" class="form-control input-sm" placeholder="%INGREDIENT%" name="i" value=""/>
-	            	</div>
-	            	<div class="col-sm-3 form-group">
-	            		<div class="input-group">
-							<input type="number" class="form-control input-sm"  placeholder="%WEIGHT%" name="q" min="0" value="">
-							<div class="input-group-append">
-								<span class="input-group-text"> g </span>
+						<div class="col-sm-6 form-group">
+						<input id="ingredient" type="text" class="form-control input-sm" placeholder="%INGREDIENT%" name="i" value=""/>
+						</div>
+						<div class="col-sm-6 form-group">
+							<div class="input-group">
+								<input type="number" class="form-control input-sm"  placeholder="%WEIGHT%" name="q" min="0" value="" style="text-align:right;"/>
+								<div class="input-group-append">
+									<span class="input-group-text">g</span>
+								</div>
+								<div class="input-group-append">
+									<button id="delete" class="btn btn-secondary ml-2 mr-1">-</button>
+									<button name="add-ing" class="btn btn-secondary">+</button>
+								</div>
 							</div>
 						</div>
-					</div>
-	            	<div class="col-sm-1 form-group">
-					<button id="delete" class="btn btn-secondary">-</button>
-					</div>
-							<div class="col-sm-1 form-group">
-								<button name="add-ing" class="btn btn-secondary">+</button>
-							</div>
 					</div>`
 
 var cooksnippet = `<div class="row" id="cooking">
-				<div class="col-sm-4 form-group" id="energydropdown">
+				<div class="col-md-6 form-group" id="energydropdown">
 						<select class="form-control" name="e" id="energyselect">
 						<option value="" selected disabled hidden>%SOURCE%</option>
 						</select>
 				</div>
-				<div class="col-sm-3 form-group">
+				<div class="col-md-6 form-group">
 					<div class="input-group">
-						<input type="number" class="form-control input-sm"  placeholder = "%TIME%"  name="t" min="0" value="">
+						<input type="number" class="form-control input-sm"  placeholder = "%TIME%"  name="t" min="0" value="" style="text-align:right;">
 						<div class="input-group-append">
-							<span class="input-group-text"> min </span>
+							<span class="input-group-text">min</span>
 						</div>
-					</div>
-				</div>
-				<div class="col-sm-3 form-group">
-					<div class="input-group">
-						<input type="number" class="form-control input-sm"  placeholder = "%POWER%" name="p" min="0" value="">
+						<input type="number" class="form-control input-sm ml-2"  placeholder = "%POWER%" name="p" min="0" value="" style="text-align:right;">
 						<div class="input-group-append">
-							<span class="input-group-text"> W </span>
+							<span class="input-group-text">W</span>
+						</div>
+						<div class="input-group-append">
+							<button id="delete-cooking" class="btn btn-secondary ml-2 mr-1">-</button>
+							<button name="add-cf" class="btn btn-secondary">+</button>
 						</div>
 					</div>
 				</div>				
-				<div class="col-sm-1 form-group">
-					<button id="delete-cooking" class="btn btn-secondary">-</button>
-				</div>
-					<div class="col-sm-1 form-group">
-							<button name="add-cf" class="btn btn-secondary">+</button>
-						</div>
 			</div>`
 
 // Default values
@@ -176,7 +168,7 @@ async function run() {
 		const webRecipe = new Recipe("webRecipe");
 		webRecipe.environment = environment;
 		webRecipe.nutrition = nutrition;
-		webRecipe.energy_ef = Object.assign(energy1, energy2);
+		webRecipe.energy_ef = Array.from(new Set([...energy1, ...energy2]));
 		webRecipe.intake = intake;
 		webRecipe.units = units;
 
@@ -217,10 +209,10 @@ async function run() {
 		for (const [key, value] of Object.entries(webRecipe.total_content)){
 			if (webRecipe.total_content[key]["is_environment"] == true & key == "climate_change") {
 	            html += '<tr><td>' + await translateValue(key,"Code",language) + '</td>' +
-	                    '<td class="text-center">' + Math.round(((value["value"]) + Number.EPSILON)*100)/100 + ' ' + value["unit"] + '</td>' +
+	                    '<td class="text-right">' + Math.round(((value["value"]) + Number.EPSILON)*100)/100 + '&nbsp;' + value["unit"] + '</td>' +
 						// Equivalent km - Passenger car with average motorization, 2018 | Base Carbone® ADEME v23.4 (27970)
-						'<td class="text-center">' + Math.round(((value["value"])/0.231 + Number.EPSILON)*100)/100 + ' km</td>'  +
-	                    '<td class="text-center">' + Math.round(value["benchmark"]["value"]*100)  + '%</td>' +
+						'<td class="text-right">' + Math.round(((value["value"])/0.231 + Number.EPSILON)*100)/100 + ' km</td>'  +
+	                    '<td class="text-right">' + Math.round(value["benchmark"]["value"]*100)  + '%</td>' +
 	                    '</tr>';
 		     }
 		}
@@ -232,11 +224,11 @@ async function run() {
 		for (const [key, value] of Object.entries(webRecipe.intake)){
 			if (isFinite(webRecipe.total_content[key]["value"])) {
 				html += '<tr><td>' + await translateValue(key,"Code", language)  + '</td>' +
-						'<td class="text-center">' + Math.round((webRecipe.total_content[key]["value"] + Number.EPSILON)*100)/100 + ' ' + webRecipe.total_content[key]["unit"] + '</td>' +
-						'<td class="text-center"><a href="#" style="text-decoration: none; color: inherit;" data-toggle="tooltip" title="'
+						'<td class="text-right">' + Math.round((webRecipe.total_content[key]["value"] + Number.EPSILON)*100)/100 + '&nbsp;' + webRecipe.total_content[key]["unit"] + '</td>' +
+						'<td class="text-right"><a href="#" style="text-decoration: none; color: inherit;" data-toggle="tooltip" title="'
 						+ webRecipe.total_content[key]["recommended_source"] + '">' 
 						+ Math.round(webRecipe.total_content[key]["recommended"]*100) + '%</a></td>' +
-						'<td class="text-center">' + Math.round(webRecipe.total_content[key]["benchmark"]["value"]*100)  + '%</td>' +
+						'<td class="text-right">' + Math.round(webRecipe.total_content[key]["benchmark"]["value"]*100)  + '%</td>' +
 						'</tr>';
 			} else {
 				html += '<tr><td>' + await translateValue(key,"Code", language)  + '</td>' +
@@ -373,8 +365,6 @@ async function init() {
 
 	// Add fields from parameters
 	for (var x = 0; x < iningredients.length; x++) {
-		// Hide + button from previous line
-		$("[name='add-ing']").last().hide();
 		// Add new line
 		$(wrapper).append($(ingrsnippet));
 		// Load values from parameters
@@ -395,8 +385,6 @@ async function init() {
 	}
 
 	for (var c = 0; c < inenergysources.length; c++) {
-		// Hide + button from previous line
-		$("[name='add-cf'").last().hide();
 		// Add new line
 		$(wrapper_cooking).append($(cooksnippet));
 		// Load values for dropdown
@@ -415,29 +403,31 @@ async function init() {
 	// Add fields from UI
 	$(wrapper).on("click", "[name='add-ing']", function(e) {
 		e.preventDefault();
-		// Hide + button from previous line
-		$("[name='add-ing']").last().hide();
-		// Add new line
-		$(wrapper).append($(ingrsnippet));
-		// Autocomplete
-		$(wrapper).find("[name='i']").last().autocomplete({
-			source: food_arr.map(a => a[language])
-		}).autocomplete('enable');
+		// Insert new line after the current row
+		$(this).closest('.row').after($(ingrsnippet));
+		// Autocomplete for the newly added input
+		var $newInput = $(this).closest('.row').next().find("[name='i']");
+		if (onlyMain) {
+			$newInput.autocomplete({ source: food_arr_main.map(a => a[language]) }).autocomplete('enable');
+		} else {
+			$newInput.autocomplete({ source: food_arr.map(a => a[language]) }).autocomplete('enable');
+		}
 		x++;
 	});
 
 	$(wrapper_cooking).on("click", "[name='add-cf']", function(e) {
 		e.preventDefault();
-		$("[name='add-cf']").last().hide();
-		$(wrapper_cooking).append($(cooksnippet));
-		// Add dropdown menu
+		// Insert new cooking snippet after the current row
+		$(this).closest('.row').after($(cooksnippet));
+		// Populate dropdown for the newly added select
+		var $newSelect = $(this).closest('.row').next().find('#energydropdown select');
 		for (var i = 0; i < energy_arr.length; i++) {
-			$('#energydropdown select').last().append($(document.createElement('option')).prop({
+			$newSelect.append($(document.createElement('option')).prop({
 				value: energy_arr.map(a => a[language])[i],
 				text: energy_arr.map(a => a[language])[i]
-			}))
-		};
-		$("[name='p']").last().val(default_power);
+			}));
+		}
+		$(this).closest('.row').next().find("[name='p']").val(default_power);
 		c++;
 	});
 
@@ -446,8 +436,7 @@ async function init() {
 		e.preventDefault();
 		if (x > 1) {
 			// Remove line
-			$(this).parent().parent('div').remove();
-			$("[name^='add-ing']").last().show();
+			$(this).closest('.row').remove();
 			x--;
 		} else {
 			console.log("cannot remove first ingredient")
@@ -458,8 +447,7 @@ async function init() {
 		e.preventDefault();
 		if (c > 1) {
 			// Remove line
-			$(this).parent().parent('div').remove();
-			$("[name^='add-cf']").last().show();
+			$(this).closest('.row').remove();
 			c--;
 		} else {
 			console.log("cannot remove first cooking step")
@@ -471,6 +459,6 @@ async function init() {
 };
 
 init();
-			
+
 
 

@@ -1,0 +1,26 @@
+  body, html {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+  @media (max-width: 576px) {
+    /* Ensure consistent text sizing for all UI elements on small screens */
+    body, .table, .input-group, .input-group-text, .form-control,
+	.lead,
+    .btn, p, li, a, .nav-link {
+      font-size: 16px; /* Prevent auto-zooming in */
+      line-height: 1.2;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-size: 1.15em;
+      line-height: 1.2;
+    }
+	/* Reduce spacing of rows from collapsed columns */
+    .row .form-group + .form-group {
+      margin-top: -10px;
+    }
+	/* More compact table */
+    th, td {
+      padding: 0.3em !important;
+      white-space: normal;
+    }
+  }
