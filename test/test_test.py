@@ -63,9 +63,9 @@ def test_food_01(start_http_server, browser):
     calories = [td for td in table_nutrition.find_all('td') if 'kcal' in td.text]
     
     assert len(climate) == 1
-    assert climate[0].text == "2.37 kg CO2 eq"
+    assert climate[0].text == "2.37\xa0kg CO2 eq"
     assert len(calories) == 1
-    assert calories[0].text == "1570 kcal"
+    assert calories[0].text == "1570\xa0kcal"
 
 def test_energy_01(start_http_server, browser):
     # Check Natural Gas CO2e
@@ -79,7 +79,7 @@ def test_energy_01(start_http_server, browser):
     climate = [td for td in table_footprint.find_all('td') if 'kg CO2 eq' in td.text]
     
     assert len(climate) == 1
-    assert climate[0].text == "0.24 kg CO2 eq"
+    assert climate[0].text == "0.24\xa0kg CO2 eq"
 
 
 @pytest.mark.parametrize("language", ["", "IT", "FR"])
