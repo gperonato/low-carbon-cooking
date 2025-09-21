@@ -6,7 +6,7 @@
     /* Ensure consistent text sizing for all UI elements on small screens */
     body, .table, .input-group, .input-group-text, .form-control,
 	.lead,
-    .btn, p, li, a, .nav-link {
+    .btn, p, li, .nav-link {
       font-size: 16px; /* Prevent auto-zooming in */
       line-height: 1.2;
     }
@@ -20,7 +20,7 @@
     }
 	/* More compact table */
     th, td {
-      padding: 0.3em !important;
+      padding: 0.2em !important;
       white-space: normal;
     }
   }
