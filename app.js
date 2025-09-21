@@ -148,6 +148,13 @@ async function submitForm() {
 		}
 		// Update URL
 		history.pushState(null, "", '?' + serialized); 
+
+        // scroll to results and focus it
+        const $results = $('#results');
+        if ($results.length) {
+            $('html, body').animate({ scrollTop: Math.max(0, $results.offset().top - 60) }, 400);
+            $results.attr('tabindex', '-1').focus();
+        }
 	}
 
 };
@@ -223,9 +230,11 @@ async function run() {
 		var html = '';
 		for (const [key, value] of Object.entries(webRecipe.intake)){
 			if (isFinite(webRecipe.total_content[key]["value"])) {
-				html += '<tr><td>' + await translateValue(key,"Code", language)  + '</td>' +
-						'<td class="text-right">' + Math.round((webRecipe.total_content[key]["value"] + Number.EPSILON)*100)/100 + '&nbsp;' + webRecipe.total_content[key]["unit"] + '</td>' +
-						'<td class="text-right"><a href="#" style="text-decoration: none; color: inherit;" data-toggle="tooltip" title="'
+				html += '<tr><td>' + await translateValue(key, "Code", language)  + '</td>' +
+						'<td class="text-right"><a style="text-decoration: none; color: inherit;" data-toggle="tooltip" title="'
+						+ await translateValue("%TOTAL_VALUES_DISCLAIMER%", "Code", language) + '">' +
+						Math.round((webRecipe.total_content[key]["value"] + Number.EPSILON)*100)/100 + '&nbsp;' + webRecipe.total_content[key]["unit"] + '</a></td>' +
+						'<td class="text-right"><a style="text-decoration: none; color: inherit;" data-toggle="tooltip" title="'
 						+ webRecipe.total_content[key]["recommended_source"] + '">' 
 						+ Math.round(webRecipe.total_content[key]["recommended"]*100) + '%</a></td>' +
 						'<td class="text-right">' + Math.round(webRecipe.total_content[key]["benchmark"]["value"]*100)  + '%</td>' +
