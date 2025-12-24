@@ -15,8 +15,8 @@
 	</head>
 	<body>
 		<!-- Modal -->
-		<div class="modal fade" id="settings" tabindex="-1" role="dialog" aria-labelledby="settings-label" aria-hidden="true">
-		  <div class="modal-dialog" role="document">
+		<div class="modal fade" id="settings" tabindex="-1" role="dialog" aria-labelledby="settings-label" aria-hidden="true" aria-modal="true">
+		  <div class="modal-dialog modal-lg" role="document">
 		    <div class="modal-content">
 		      <div class="modal-header">
 		        <h5 class="modal-title" id="settings-label">Settings</h5>
@@ -25,19 +25,138 @@
 		        </button>
 		      </div>
 		      <div class="modal-body">
-		      	<form>
+		      	<form id="settings-form">
+		        <div class="form-group row">
+					<label for="Electricity" class="col-sm-2 col-form-label">Electricity source</label>
+					<div class="col-sm-8">
+						<select id="electricity" class="form-control input-sm"/></select>
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="gas" class="col-sm-2 col-form-label">Gas source</label>
+		       		<div class="col-sm-8">
+			        <select id="gas" class="form-control input-sm"/></select>
+			        </div>
+			    </div>
+				<div class="form-group row">
+					<label class="col-sm-2 col-form-label">Hob</label>
+						<div class="col-sm-3">
+						  <select id="hob-size" class="form-control input-sm"/>
+						  <option value="S">Small</option>
+						  <option value="M" selected="True">Medium</option>
+						  <option value="L">Large</option></select>
+						</div>
+					<div class="col-sm-3 d-flex align-items-center"> 
+						<div class="custom-control custom-switch">
+							<input type="checkbox" class="custom-control-input" id="efficiency-toggle">
+							<label class="custom-control-label" for="efficiency-toggle">Energy-efficient</label>
+						</div>
+					</div>
+				</div>
+			    <!-- Induction -->
+			    <div class="form-group row">
+			      <label class="col-sm-2 col-form-label">Induction</label>
+			      <div class="col-sm-3">
+			        <div class="input-group">
+			          <input id="I-input-power" type="number" class="form-control input-sm" placeholder="Rated power" min="0" step="10"/>
+			          <div class="input-group-append"><span class="input-group-text">W</span></div>
+			        </div>
+			        <small class="form-text text-muted d-sm-none d-xm-block">Input rated power</small>
+			      </div>
+			      <div class="col-sm-3">
+			        <div class="input-group">
+			          <input id="I-efficiency" type="number" class="form-control input-sm" placeholder="Efficiency" min="0" max="100" step="1"/>
+			          <div class="input-group-append"><span class="input-group-text">%</span></div>
+			        </div>
+			        <small class="form-text text-muted d-sm-none d-xm-block">Efficiency of the appliance</small>
+			      </div>
+			      <div class="col-sm-4">
+			        <div class="input-group">
+			          <input id="I-boil-time" type="number" class="form-control input-sm" placeholder="Time to boil 1 liter" min="0" step="1"/>
+			          <div class="input-group-append"><span class="input-group-text">sec</span></div>
+			        </div>
+					<small class="form-text text-muted d-sm-none d-xm-block">Output power, expressed as time to boil 1 l of water at room temperature.</small>
+			      </div>
+				  	 <input hidden id="I-output-power" type="number" class="form-control input-sm"/>
+			    </div>
+			    <!-- Electric -->
+			    <div class="form-group row">
+			      <label class="col-sm-2 col-form-label">Electric</label>
+			      <div class="col-sm-3">
+			        <div class="input-group">
+			          <input id="E-input-power" type="number" class="form-control input-sm" placeholder="Rated power" min="0" step="10"/>
+			          <div class="input-group-append"><span class="input-group-text">W</span></div>
+			        </div>
+			        <small class="form-text text-muted d-sm-none d-xm-block">Input rated power</small>
+			      </div>
+			      <div class="col-sm-3">
+			        <div class="input-group">
+			          <input id="E-efficiency" type="number" class="form-control input-sm" placeholder="Efficiency" min="0" max="100" step="1"/>
+			          <div class="input-group-append"><span class="input-group-text">%</span></div>
+			        </div>
+			        <small class="form-text text-muted d-sm-none d-xm-block">Efficiency of the appliance</small>
+			      </div>
+			      <div class="col-sm-4">
+			        <div class="input-group">
+			          <input id="E-boil-time" type="number" class="form-control input-sm" placeholder="Time to boil 1 liter" step="1"/>
+			          <div class="input-group-append"><span class="input-group-text">sec</span></div>
+			        </div>
+			        <small class="form-text text-muted d-sm-none d-xm-block">Output power, expressed as time to boil 1 l of water at room temperature</small>
+			      </div>
+				  	 <input hidden id="E-output-power" type="number" class="form-control input-sm"/>
+			    </div>
+			    <!-- Gas -->
+			    <div class="form-group row">
+			      <label class="col-sm-2 col-form-label">Gas</label>
+			      <div class="col-sm-3">
+			        <div class="input-group">
+			          <input id="G-input-power" type="number" class="form-control input-sm" placeholder="Rated power" min="0" value="2500" step="10"/>
+			          <div class="input-group-append"><span class="input-group-text">W</span></div>
+			        </div>
+			        <small class="form-text text-muted d-block">Input rated power</small>
+			      </div>
+			      <div class="col-sm-3">
+			        <div class="input-group">
+			          <input id="G-efficiency" type="number" class="form-control input-sm" placeholder="Efficiency" min="0" max="100" value = "30" step="1"/>
+			          <div class="input-group-append"><span class="input-group-text">%</span></div>
+			        </div>
+			        <small class="form-text text-muted d-block">Efficiency of the appliance</small>
+			      </div>
+			      <div class="col-sm-4">
+			        <div class="input-group">
+			          <input id="G-boil-time" type="number" class="form-control input-sm" placeholder="Time to boil 1 liter" min="0" max="100" step="1"/>
+			          <div class="input-group-append"><span class="input-group-text">sec</span></div>
+			        </div>
+			        <small class="form-text text-muted d-block">Output power, expressed as time to boil 1 l of water at room temperature</small>
+			      </div>
+				  	 <input hidden id="G-output-power" type="number" class="form-control input-sm"/>
+			    </div>
+
+		        <div class="form-group row">
+		       				<label for="oven-volume" class="col-sm-2 col-form-label">Oven volume</label>
+		       				<div class="col-sm-3">
+							<div class="input-group">
+			            	<input id="oven-volume" type="number" class="form-control input-sm" value = "55"/>
+							<div class="input-group-append"><span class="input-group-text">l</span></div>
+			            	</div>
+						</div>
+			    </div>
+
 		        <div class="form-group row">
 		       				<label for="servings" class="col-sm-2 col-form-label">Servings</label>
-		       				<div class="col-sm-10">
+		       				<div class="col-sm-3">
 			            	<input id="servings" type="number" class="form-control input-sm"/>
 			            </div>
 			    </div>
-			    <div class="form-check">
-		  			<input class="form-check-input" type="checkbox" value="" id="main-ingredients">
+			    <div class="form-group row">
+					<label for="main-ingredients" class="col-sm-2 col-form-label">Ingredients</label>
+					<div class="col-sm-8 d-flex align-items-center">
+					<div class = "form-check">
+		  			<input class="form-check-input" type="checkbox" checked="true" id="main-ingredients">
 		  			<label class="form-check-label" for="main-ingredients">
 		    			List only main ingredients (filter out ready-made meals)
 		  			</label>
-				</div>
+				</div></div></div>
 				</form>
 		      </div>
 		      <div class="modal-footer">
@@ -117,14 +236,14 @@
 								<a style="text-decoration: none; color: inherit;" data-toggle="tooltip" title="Passenger car with average motorization, 2018 | Base Carbone® ADEME v23.4 (27970)">
 									Equivalent travel by car
 								</a></td>
-							<td class="text-center">Share of reference food</a></td></tr></thead>
+							<td class="text-center">Share of reference food</td></tr></thead>
 							<tbody id="table-footprint">
 							</tbody>
 							<thead><tr>
 							<td><h5>Nutrition</h5></td>
 							<td></td>
 							<td class="text-center">Share of daily reference intake</td>
-							<td class="text-center">Share of reference food</a></td>
+							<td class="text-center"></td>
 							</tr></thead>
 						<tbody id="table-nutritional">
 						</tbody>
@@ -186,9 +305,6 @@
 	</body>
 	<script type="text/javascript">
 	var language="EN";
-	$(function () {
-		$('[data-toggle="tooltip"]').tooltip()
-		})
 	</script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha512-5WvZa4N7Jq3TVNCp4rjcBMlc6pT3lZ7gVxjtI6IkKW+uItSa+rFgtFljvZnCxQGj8SUX5DHraKE6Mn/4smK1Cg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.3/js/bootstrap.min.js" integrity="sha512-8qmis31OQi6hIRgvkht0s6mCOittjMa9GMqtK9hes5iEQBQE/Ca6yGE5FsW36vyipGoWQswBj/QBm2JR086Rkw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

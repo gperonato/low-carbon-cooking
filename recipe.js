@@ -36,12 +36,118 @@ export const loadCSV = async (path) => {
 	});
   };
 
+
+
+export function ovenModel(
+	temperatureCelsius,
+	timeMinutes,
+	volumeLiters = 55,
+	roomTemperatureCelsius = 20,
+	U = 5 // overall heat transfer coefficient (W/m²·K)
+) {
+	const c = 490; 		// specific heat capacity of steel (J/kg·K)
+	const d = 7850; 	// density of steel (kg/m³)
+	const t = 3.5/1000; // thickness of oven walls (m)
+	const Vi = volumeLiters * 0.001; // cavity volume (m³)
+	const s  = Math.cbrt(Vi); // internal side (m)
+
+	const m = ((s + 2*t)**3 - s**3) * d; // mass of oven walls (kg)
+	const a = 6 * (Vi ** (2/3)); // area (m²)
+
+	const UA = a * U; // overall heat transfer (W/K)
+	const deltaT = temperatureCelsius - roomTemperatureCelsius;
+	const preHeatEnergy = c * m * deltaT / 3600000; // kWh
+
+	const maintainEnergy = UA * deltaT * (timeMinutes*60) / 3600000; // kWh
+
+	const totalEnergy = preHeatEnergy + maintainEnergy;
+	return totalEnergy;
+}
+
+
+/**
+ * Unified, physics-consistent energy model for cooking appliances.
+ *
+ * Inputs:
+ *  - timeMinutes: number (effective cooking time in minutes, AFTER preheating)
+ *  - applianceType: "Induction" | "Electric" | "Gas"
+ *                   | "Gas Oven" | "Electric Oven"  null
+ *  - powerLevel: 1–9 integer (relative power setting, optional)
+ *  - ovenTemperatureCelsius: optional number (°C, for ovens)
+ *  - inputPowerW: optional number (direct input power in W, overrides model)
+ *
+ * Output:
+ *  {
+ *    E_consumed_kWh   // Input energy from supply (kWh)
+ *  }
+ */
+export function cookingEnergyConsumption(
+	timeMinutes,
+	applianceType,
+	powerLevel,
+	ovenTemperatureCelsius,
+	inputPowerW,
+	nominal_power_appliances,
+	ovenVolume,
+) {
+
+  // Normalize appliance types
+  applianceType = applianceType.includes("oven") ? "oven " : applianceType;
+  applianceType = applianceType.substring(0, applianceType.indexOf(' '));
+
+  // Validate inputs
+  if (powerLevel === null && inputPowerW === null && applianceType !== "oven") {
+	throw new Error("Either powerLevel or inputPowerW must be provided.");
+  }
+  if (powerLevel !== null && ![1,2,3,4,5,6,7,8,9].includes(powerLevel)) {
+	throw new Error("powerLevel must be an integer between 1 and 9.");
+  }
+  if (applianceType == "oven" && ovenTemperatureCelsius === null) {
+	throw new Error("ovenTemperature must be provided for oven.");
+  }
+
+  let E_consumed_kWh;
+
+  if (applianceType != null && applianceType == "oven") {
+	// Oven
+	E_consumed_kWh = ovenModel(
+		ovenTemperatureCelsius,
+		timeMinutes,
+		ovenVolume
+	);
+  } else {
+	// Determine input power
+  	let P;
+  	if (inputPowerW !== null) {
+		P = inputPowerW;
+  	} else {
+		// Power Curve: P = Pmax * (pL/pLmax)^1.5
+		// Note: An exponent of 1.5 is used instead of 1.0 (linear) to map the 
+		// 1-9 dial to a more realistic power curve
+		// where lower settings provide finer control for simmering.
+    	P = nominal_power_appliances[applianceType.at(0)] * (powerLevel/9)**1.5;
+ 	}
+  	const tHours = timeMinutes / 60;
+
+  	// Compute energy
+  	E_consumed_kWh = (P * tHours) / 1000;
+  }
+
+  return {
+    E_consumed_kWh
+  };
+}
+
+
+
 export class Recipe {
 	constructor(name) {
 		this.name = name;
 		this.environment = [];
 		this.nutrition = [];
 		this.energy_ef = [];
+		this.nominal_power_appliances = {};
+		this.oven_volume = 55; // default oven volume in liters
 		this.intake = {};
 		this.units = [];
 		this.servings = 1;
@@ -58,10 +164,20 @@ export class Recipe {
 		};
 	}
 
-	addCookingStep(energy_source,duration,power) {
+	addCookingStep(energy_source, duration, power=null,  applianceType=null, powerLevel=null, ovenTemperature=null) {
+		let cooking = cookingEnergyConsumption(
+			duration,
+			applianceType,
+			powerLevel,
+			ovenTemperature,
+			power,
+			this.nominal_power_appliances,
+			this.oven_volume
+		)
+		let energy = cooking["E_consumed_kWh"]
 		this.cooking_steps.push({"duration": duration,
 				"energy_source": energy_source,
-				"power": power
+				"energy": energy
 		});
 	}
 
@@ -123,8 +239,7 @@ export class Recipe {
 
 	cook() {
 		for (const step of this.cooking_steps) {
-			var energy = step["duration"]/60. * step["power"]
-			step["CO2e"] = energy * this.lookUp(step["energy_source"], "code", "EF", this.energy_ef) / 1000.
+			step["CO2e"] = step["energy"] * this.lookUp(step["energy_source"], "code", "EF", this.energy_ef)
 			this.total_content["climate_change"]["value"] += step["CO2e"] / this.servings
 			}
 		this.compare()
@@ -185,10 +300,3 @@ export class Recipe {
 		}
 	}
 }
-
-
-
-
-
-
-
