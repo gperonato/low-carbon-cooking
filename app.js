@@ -18,6 +18,7 @@ const efficiency = {
 	defaults: { I: 78, E: 58, G: 30 },
 	high:     { I: 86, E: 76, G: 55 }
 };
+const default_hob_size = "M";
 var onlyMain = true;
 
 // Parse URL arguments
@@ -100,7 +101,154 @@ var cooksnippet = `<div class="row" id="cooking">
         </div>
 	</div>
 </div>`;
+var settings_snippet = `
+<div class="modal-dialog modal-lg" role="document">
+	<div class="modal-content">
+		<div class="modal-header">
+		<h5 class="modal-title" id="settings-label">%SETTINGS%</h5>
+		<button type="button" class="close" data-dismiss="modal" aria-label="%CLOSE%">
+			<span aria-hidden="true">&times;</span>
+		</button>
+		</div>
+		<div class="modal-body">
+		<form id="settings-form">
+		<div class="form-group row align-items-center">
+			<label for="Electricity" class="col-sm-2 col-form-label">%ELECTRICITY_SOURCE%</label>
+			<div class="col-sm-8">
+				<select id="electricity" class="form-control input-sm"/></select>
+			</div>
+		</div>
+		<div class="form-group row align-items-center">
+			<label for="gas" class="col-sm-2 col-form-label">%GAS_SOURCE%</label>
+			<div class="col-sm-8">
+			<select id="gas" class="form-control input-sm"/></select>
+			</div>
+		</div>
+		<div class="form-group row">
+			<label class="col-sm-2 col-form-label">%HOB%</label>
+				<div class="col-sm-3">
+					<select id="hob-size" class="form-control input-sm"/>
+				</div>
+			<div class="col-sm-4 d-flex align-items-center"> 
+				<div class="custom-control custom-switch">
+					<input type="checkbox" class="custom-control-input" id="efficiency-toggle">
+					<label class="custom-control-label" for="efficiency-toggle">%ENERGY_EFFICIENT%</label>
+				</div>
+			</div>
+		</div>
+		<!-- Induction -->
+		<div class="form-group row">
+			<label class="col-sm-2 col-form-label">%INDUCTION%</label>
+			<div class="col-sm-3">
+			<div class="input-group">
+				<input id="I-input-power" type="number" class="form-control input-sm" min="0" step="10"/>
+				<div class="input-group-append"><span class="input-group-text">W</span></div>
+			</div>
+			<small class="form-text text-muted d-sm-none d-xm-block">%INPUT_POWER%</small>
+			</div>
+			<div class="col-sm-3">
+			<div class="input-group">
+				<input id="I-efficiency" type="number" class="form-control input-sm" min="0" max="100" step="1"/>
+				<div class="input-group-append"><span class="input-group-text">%</span></div>
+			</div>
+			<small class="form-text text-muted d-sm-none d-xm-block">%EFFICIENCY%</small>
+			</div>
+			<div class="col-sm-4">
+			<div class="input-group">
+				<input id="I-boil-time" type="number" class="form-control input-sm" min="0" step="1"/>
+				<div class="input-group-append"><span class="input-group-text">sec</span></div>
+			</div>
+			<small class="form-text text-muted d-sm-none d-xm-block">%OUTPUT_POWER%</small>
+			</div>
+				<input hidden id="I-output-power" type="number" class="form-control input-sm"/>
+		</div>
+		<!-- Electric -->
+		<div class="form-group row">
+			<label class="col-sm-2 col-form-label">%ELECTRIC%</label>
+			<div class="col-sm-3">
+			<div class="input-group">
+				<input id="E-input-power" type="number" class="form-control input-sm" min="0" step="10"/>
+				<div class="input-group-append"><span class="input-group-text">W</span></div>
+			</div>
+			<small class="form-text text-muted d-sm-none d-xm-block">%INPUT_POWER%</small>
+			</div>
+			<div class="col-sm-3">
+			<div class="input-group">
+				<input id="E-efficiency" type="number" class="form-control input-sm" min="0" max="100" step="1"/>
+				<div class="input-group-append"><span class="input-group-text">%</span></div>
+			</div>
+			<small class="form-text text-muted d-sm-none d-xm-block">%EFFICIENCY%</small>
+			</div>
+			<div class="col-sm-4">
+			<div class="input-group">
+				<input id="E-boil-time" type="number" class="form-control input-sm" step="1"/>
+				<div class="input-group-append"><span class="input-group-text">sec</span></div>
+			</div>
+			<small class="form-text text-muted d-sm-none d-xm-block">%OUTPUT_POWER%</small>
+			</div>
+				<input hidden id="E-output-power" type="number" class="form-control input-sm"/>
+		</div>
+		<!-- Gas -->
+		<div class="form-group row">
+			<label class="col-sm-2 col-form-label">%GAS%</label>
+			<div class="col-sm-3">
+			<div class="input-group">
+				<input id="G-input-power" type="number" class="form-control input-sm" min="0" value="2500" step="10"/>
+				<div class="input-group-append"><span class="input-group-text">W</span></div>
+			</div>
+			<small class="form-text text-muted d-block">%INPUT_POWER%</small>
+			</div>
+			<div class="col-sm-3">
+			<div class="input-group">
+				<input id="G-efficiency" type="number" class="form-control input-sm" min="0" max="100" value = "30" step="1"/>
+				<div class="input-group-append"><span class="input-group-text">%</span></div>
+			</div>
+			<small class="form-text text-muted d-block">%EFFICIENCY%</small>
+			</div>
+			<div class="col-sm-4">
+			<div class="input-group">
+				<input id="G-boil-time" type="number" class="form-control input-sm" min="0" max="100" step="1"/>
+				<div class="input-group-append"><span class="input-group-text">sec</span></div>
+			</div>
+			<small class="form-text text-muted d-block">%OUTPUT_POWER%</small>
+			</div>
+				<input hidden id="G-output-power" type="number" class="form-control input-sm"/>
+		</div>
 
+		<div class="form-group row align-items-center">
+					<label for="oven-volume" class="col-sm-2 col-form-label">%OVEN_VOLUME%</label>
+					<div class="col-sm-3">
+					<div class="input-group">
+					<input id="oven-volume" type="number" class="form-control input-sm" value = "55"/>
+					<div class="input-group-append"><span class="input-group-text">l</span></div>
+					</div>
+				</div>
+		</div>
+
+		<div class="form-group row align-items-center">
+					<label for="servings" class="col-sm-2 col-form-label">%PORTIONS%</label>
+					<div class="col-sm-3">
+					<input id="servings" type="number" class="form-control input-sm"/>
+				</div>
+		</div>
+		<div class="form-group row">
+			<label for="main-ingredients" class="col-sm-2 col-form-label">%INGREDIENTS%</label>
+			<div class="col-sm-8 d-flex align-items-center">
+			<div class = "form-check">
+			<input class="form-check-input" type="checkbox" checked="true" id="main-ingredients">
+			<label class="form-check-label" for="main-ingredients">
+				%MAIN_INGREDIENTS%
+			</label>
+		</div></div></div>
+		</form>
+		</div>
+		<div class="modal-footer">
+		<button type="button" class="btn btn-secondary" data-dismiss="modal">%CLOSE%</button>
+		<button type="button" class="btn btn-primary" id="save-settings"  data-dismiss="modal">%SAVE%</button>
+		</div>
+	</div>
+</div>
+`;
 // Language selector from URL
 function selectLanguage(language) {
     // Treat "EN" as no prefix, otherwise use the language code
@@ -472,15 +620,34 @@ async function init() {
 			});
 	const appliances_arr = dictionary.filter(function (e) {
 				return e.Type == "APPLIANCES";
+			});
+	const hob_size_arr = dictionary.filter(function (e) {
+				return e.Type == "HOB_SIZE";
 			});	
 	const power_level_arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+	function translate_html_snippet(snippet) {
+		let translated_snippet = snippet;
+		const matches = [...translated_snippet.matchAll(/%\w+%/g)];
+		for (const match of matches) {
+			const fullTag = match[0];
+			const translated = dictionary.find(item => item["Code"] === fullTag);
+			if (translated) {
+				translated_snippet = translated_snippet.replaceAll(fullTag, translated[language]);
+			}
+		}
+		return translated_snippet;
+	}
 
 	var wrapper = $(".ingredients");
 	var wrapper_cooking = $(".cooking-steps");
 	var x = 1;
 	var c = 1;
 
-	// Action settings window
+	// Settings window
+	settings_snippet = translate_html_snippet(settings_snippet);
+	$('#settings').append(settings_snippet);
+
 	// Load values for dropdown
 	for (var i = 0; i < electricity_arr.length; i++) {
 		$('#electricity').last().append($(document.createElement('option')).prop({
@@ -494,7 +661,14 @@ async function init() {
 			text: gas_arr.map(a => a[language])[i]
 		}))
 	};
+	for (var i = 0; i < hob_size_arr.length; i++) {
+		$('#hob-size').last().append($(document.createElement('option')).prop({
+			value: hob_size_arr.map(a => a["Code"])[i],
+			text: hob_size_arr.map(a => a[language])[i]
+		}))
+	};
 	// Set initial values
+	$("#hob-size").last().val(default_hob_size);
 	$("#gas").last().val(gas);
 	$("#electricity").last().val(electricity);
 	$("#servings").last().val(servings);
@@ -540,6 +714,7 @@ async function init() {
 			$("#servings").last().val(servings);
 			$("#gas").last().val(gas);
 			$("#electricity").last().val(electricity);
+			$("#hob-size").last().val(default_hob_size);
         } else {
             console.log("Changes were saved, keeping form state.");
         }
@@ -603,11 +778,8 @@ async function init() {
 	});
 
 	// Translate form
-	ingrsnippet = ingrsnippet.replace("%WEIGHT%", await translateValue("%WEIGHT%","Code",language));
-	ingrsnippet = ingrsnippet.replace("%INGREDIENT%", await translateValue("%INGREDIENT%","Code",language));
-	cooksnippet = cooksnippet.replace("%SOURCE%", await translateValue("%SOURCE%","Code",language));
-	cooksnippet = cooksnippet.replace("%TIME%", await translateValue("%TIME%","Code",language));
-	cooksnippet = cooksnippet.replace("%POWER%",await translateValue("%POWER%","Code",language));
+	ingrsnippet = translate_html_snippet(ingrsnippet);
+	cooksnippet = translate_html_snippet(cooksnippet);
 
 	// Translate reference
 	$("#reference").last().autocomplete({

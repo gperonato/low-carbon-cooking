@@ -2527,6 +2527,26 @@ OG,APPLIANCES,,Other gas device,Autre appareil gaz,Altro metodo a gas
 %POWER%,,,Input power,Puissance consommée,Potenza assorbita
 %TIME%,,,Time,Temps,Tempo
 %TOTAL_VALUES_DISCLAIMER%,,,"Total values. Please note that for some ingredients maximal values are considered, while traces are not counted.","Valeurs totales. A noter que pour certains aliments les valeurs maximales sont considérées, alors que les traces ne sont pas comptabilisées.","Valori totali. Notare che per alcuni alimenti sono considerati i valori massimi, mentre le tracce non sono contate."
+%SETTINGS%,,,Settings,Réglages,Impostazioni
+%CLOSE%,,,Close,Fermer,Chiudi
+%SAVE%,,,Save,Enregistrer,Salva
+%ELECTRICITY_SOURCE%,,,Electricity source,Source d'électricité,Fonte di elettricità
+%GAS_SOURCE%,,,Gas source,Source de gaz,Fonte di gas
+%HOB%,,,Hob,Plaque,Piastra
+%INDUCTION%,,,Induction,Induction,Induzione
+%ELECTRIC%,,,Electric,Électrique,Elettrico
+%GAS%,,,Gas,Gaz,Gas
+S,HOB_SIZE,,Small,Petite,Piccola
+M,HOB_SIZE,,Medium,Moyenne,Media
+L,HOB_SIZE,,Large,Grande,Grande
+%ENERGY_EFFICIENT%,,,Energy efficient,Performance énergétique,Efficienza energetica
+%INPUT_POWER%,,,Input power,Puissance consommée,Potenza assorbita
+%EFFICIENCY%,,,Efficiency,Efficacité,Efficienza
+%OUTPUT_POWER%,,,"Output power, expressed as time to boil 1 liter of water","Puissance restituée, exprimée en temps pour faire bouillir 1 litre d'eau","Potenza erogata, espressa come tempo per far bollire 1 litro di acqua"
+%INGREDIENTS%,,,"Ingredients",Ingrédients,Ingredienti
+%MAIN_INGREDIENTS%,,,List only main ingredients (filter out ready-made meals),"Montrer seulement les ingrédients principaux (sans plats cuisinés)","Cerca solo tra gli ingredienti principali (nascondi i piatti pronti)"
+%OVEN_VOLUME%,,,Oven volume,Volume du four,Volume del forno
+%PORTIONS%,,,Number of portions,Nombre de portions,Numero di porzioni
 food_code,,,Food Code,,
 food_label,,,Food Label,,
 organic_acids,,,Organic Acids,Acides organiques,Acidi organici
