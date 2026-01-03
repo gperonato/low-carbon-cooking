@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: 2021-2025 Giuseppe Peronato <gperonato@gmail.com>
+// SPDX-FileCopyrightText: 2021-2026 Giuseppe Peronato <gperonato@gmail.com>
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 // Recipe calculator
@@ -37,7 +37,19 @@ export const loadCSV = async (path) => {
   };
 
 
-
+/**
+ * Oven energy consumption model
+ *
+ * Inputs:
+ *  - temperatureCelsius: number (oven temperature in °C)
+ *  - timeMinutes: number (total cooking time in minutes, after preheating)
+ *  - volumeLiters: optional number (oven cavity volume in liters, default 55L)
+ *  - roomTemperatureCelsius: optional number (room temperature in °C, default 20°C)
+ *  - U: optional number (overall heat transfer coefficient in W/m²·K, default 5 W/m²·K)
+ *
+ * Output:
+ *  - totalEnergy: number (total energy consumption in kWh, including preheating)
+ */
 export function ovenModel(
 	temperatureCelsius,
 	timeMinutes,
@@ -66,15 +78,17 @@ export function ovenModel(
 
 
 /**
- * Unified, physics-consistent energy model for cooking appliances.
+ * Cooking energy consumption model
  *
  * Inputs:
  *  - timeMinutes: number (effective cooking time in minutes, AFTER preheating)
- *  - applianceType: "Induction" | "Electric" | "Gas"
- *                   | "Gas Oven" | "Electric Oven"  null
+ *  - applianceType: "Induction cooktop" | "Electric cooktop" | "Gas cooktop"
+ *                   | "Gas oven" | "Electric oven" | null
  *  - powerLevel: 1–9 integer (relative power setting, optional)
  *  - ovenTemperatureCelsius: optional number (°C, for ovens)
  *  - inputPowerW: optional number (direct input power in W, overrides model)
+ *  - nominalPowerAppliances: object (mapping appliance types to nominal power in W)
+ *  - ovenVolume: optional number (oven cavity volume in liters, default 55L)
  *
  * Output:
  *  {
@@ -87,15 +101,27 @@ export function cookingEnergyConsumption(
 	powerLevel,
 	ovenTemperatureCelsius,
 	inputPowerW,
-	nominal_power_appliances,
+	nominalPowerAppliances,
 	ovenVolume,
 ) {
+
+  // Validate applianceType
+  if (applianceType != null && !(
+	applianceType.includes("Induction cooktop") ||
+	applianceType.includes("Electric cooktop") ||
+	applianceType.includes("Gas cooktop") ||
+	applianceType.includes("Other gas device") ||
+	applianceType.includes("Other electric device") ||
+	applianceType.includes("Gas oven") ||
+	applianceType.includes("Electric oven"))) {
+	throw new Error("Invalid applianceType provided.");
+  }
 
   // Normalize appliance types
   applianceType = applianceType.includes("oven") ? "oven " : applianceType;
   applianceType = applianceType.substring(0, applianceType.indexOf(' '));
 
-  // Validate inputs
+  // Validate other inputs
   if (powerLevel === null && inputPowerW === null && applianceType !== "oven") {
 	throw new Error("Either powerLevel or inputPowerW must be provided.");
   }
@@ -125,7 +151,7 @@ export function cookingEnergyConsumption(
 		// Note: An exponent of 1.5 is used instead of 1.0 (linear) to map the 
 		// 1-9 dial to a more realistic power curve
 		// where lower settings provide finer control for simmering.
-    	P = nominal_power_appliances[applianceType.at(0)] * (powerLevel/9)**1.5;
+    	P = nominalPowerAppliances[applianceType.at(0)] * (powerLevel/9)**1.5;
  	}
   	const tHours = timeMinutes / 60;
 

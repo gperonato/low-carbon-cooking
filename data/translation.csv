@@ -2514,17 +2514,19 @@ ECFR,ELECTRICITY,,Electricity residential cooking - Continental France,Électric
 PVFR,ELECTRICITY,,Electricity photovoltaic - France continentale,Electricité photovoltaïque - France continentale,Elettricità da fotovoltaico - Francia continentale
 NGEU,GAS,,Natural gas - Europe,Gaz naturel - Europe,Gas naturale - Europa
 NGFR,GAS,,Natural gas - France continentale,Gaz naturel - France continentale,Gas naturale - Francia continentale
-G,APPLIANCES,,Gas cooktop,Cusinière à gaz,Fornello a gas
-I,APPLIANCES,,Induction cooktop,Cuisinière à induction,Piastra a induzione
-E,APPLIANCES,,Electric cooktop,Cusinière électrique,Piastra elettrica
+G,APPLIANCES,,Gas cooktop,Plaque à gaz,Fornello a gas
+I,APPLIANCES,,Induction cooktop,Plaque à induction,Piastra a induzione
+E,APPLIANCES,,Electric cooktop,Plaque électrique,Piastra elettrica
 EO,APPLIANCES,,Electric oven,Four électrique,Forno elettrico
 GO,APPLIANCES,,Gas oven,Four à gaz,Forno a gas
-OE,APPLIANCES,,Other electric device,Autre appareil électrique,Altro metodo elettrico
-OG,APPLIANCES,,Other gas device,Autre appareil gaz,Altro metodo a gas
+OE,APPLIANCES,,Other electric device,Autre appareil électrique,Altro dispositivo elettrico
+OG,APPLIANCES,,Other gas device,Autre appareil à gaz,Altro dispositivo a gas
 %WEIGHT%,,,Weight,Poids,Peso
 %INGREDIENT%,,,Ingredient,Ingrédient,Ingrediente
 %SOURCE%,,,Select energy source,Séléctionner la source d'énergie,Selezionare la fonte d'energia
 %POWER%,,,Input power,Puissance consommée,Potenza assorbita
+%APPLIANCE%,,,Appliance,Appareil,Dispositivo
+%POWER_LEVEL%,,,Power level,Puissance,Potenza
 %TIME%,,,Time,Temps,Tempo
 %TOTAL_VALUES_DISCLAIMER%,,,"Total values. Please note that for some ingredients maximal values are considered, while traces are not counted.","Valeurs totales. A noter que pour certains aliments les valeurs maximales sont considérées, alors que les traces ne sont pas comptabilisées.","Valori totali. Notare che per alcuni alimenti sono considerati i valori massimi, mentre le tracce non sono contate."
 %SETTINGS%,,,Settings,Réglages,Impostazioni
@@ -2536,6 +2538,7 @@ OG,APPLIANCES,,Other gas device,Autre appareil gaz,Altro metodo a gas
 %INDUCTION%,,,Induction,Induction,Induzione
 %ELECTRIC%,,,Electric,Électrique,Elettrico
 %GAS%,,,Gas,Gaz,Gas
+%LEVEL%,,,Level,Niveau,Livello
 S,HOB_SIZE,,Small,Petite,Piccola
 M,HOB_SIZE,,Medium,Moyenne,Media
 L,HOB_SIZE,,Large,Grande,Grande

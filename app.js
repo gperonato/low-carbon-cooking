@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: 2021-2025 Giuseppe Peronato <gperonato@gmail.com>
+// SPDX-FileCopyrightText: 2021-2026 Giuseppe Peronato <gperonato@gmail.com>
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 // App for the Recipe calculator
@@ -16,7 +16,7 @@ const nominal_power_defaults = {
 };
 const efficiency = {
 	defaults: { I: 78, E: 58, G: 30 },
-	high:     { I: 86, E: 76, G: 55 }
+	high:     { I: 85, E: 75, G: 55 }
 };
 const default_hob_size = "M";
 var onlyMain = true;
@@ -32,6 +32,7 @@ const incookingtime = urlParams.getAll('t');
 const inpower = urlParams.getAll('p');
 const inpowerlevels = urlParams.getAll('pl');
 const inappliances = urlParams.getAll('a');
+const intemperatures = urlParams.getAll('ot');
 var nominal_power = {
 	I: parseFloat(urlParams.get('pi')),
 	E: parseFloat(urlParams.get('pe')),
@@ -68,8 +69,8 @@ var ingrsnippet = `<div class="row" id="ingredients">
 
 var cooksnippet = `<div class="row" id="cooking">
     <div class="col-md-6 form-group" id="energydropdown">
-        <select class="form-control input-sm ml-6" name="a">
-                <option value="" selected disabled hidden>Appliance</option>
+        <select class="form-control input-sm ml-6" name="a" placeholder="%APPLIANCE%">
+                <option value="" selected disabled hidden>%APPLIANCE%</option>
         </select>
     </div>
     <div class="col-md-6 form-group">
@@ -81,7 +82,7 @@ var cooksnippet = `<div class="row" id="cooking">
 
             <!-- Power level select (hidden when oven temp/input power is visible) -->
             <select class="form-control input-sm ml-3" name="pl">
-                <option value="" selected disabled hidden>Power level</option>
+                <option value="" selected disabled hidden>%POWER_LEVEL%</option>
             </select>
 
             <!-- Oven temperature input (hidden by default) -->
@@ -113,7 +114,7 @@ var settings_snippet = `
 		<div class="modal-body">
 		<form id="settings-form">
 		<div class="form-group row align-items-center">
-			<label for="Electricity" class="col-sm-2 col-form-label">%ELECTRICITY_SOURCE%</label>
+			<label for="electricity" class="col-sm-2 col-form-label">%ELECTRICITY_SOURCE%</label>
 			<div class="col-sm-8">
 				<select id="electricity" class="form-control input-sm"/></select>
 			</div>
@@ -125,7 +126,7 @@ var settings_snippet = `
 			</div>
 		</div>
 		<div class="form-group row">
-			<label class="col-sm-2 col-form-label">%HOB%</label>
+			<label for="hob-size" class="col-sm-2 col-form-label">%HOB%</label>
 				<div class="col-sm-3">
 					<select id="hob-size" class="form-control input-sm"/>
 				</div>
@@ -138,7 +139,7 @@ var settings_snippet = `
 		</div>
 		<!-- Induction -->
 		<div class="form-group row">
-			<label class="col-sm-2 col-form-label">%INDUCTION%</label>
+			<label for="I-input-power" class="col-sm-2 col-form-label">%INDUCTION%</label>
 			<div class="col-sm-3">
 			<div class="input-group">
 				<input id="I-input-power" type="number" class="form-control input-sm" min="0" step="10"/>
@@ -164,7 +165,7 @@ var settings_snippet = `
 		</div>
 		<!-- Electric -->
 		<div class="form-group row">
-			<label class="col-sm-2 col-form-label">%ELECTRIC%</label>
+			<label for="E-input-power" class="col-sm-2 col-form-label">%ELECTRIC%</label>
 			<div class="col-sm-3">
 			<div class="input-group">
 				<input id="E-input-power" type="number" class="form-control input-sm" min="0" step="10"/>
@@ -190,7 +191,7 @@ var settings_snippet = `
 		</div>
 		<!-- Gas -->
 		<div class="form-group row">
-			<label class="col-sm-2 col-form-label">%GAS%</label>
+			<label for="G-input-power" class="col-sm-2 col-form-label">%GAS%</label>
 			<div class="col-sm-3">
 			<div class="input-group">
 				<input id="G-input-power" type="number" class="form-control input-sm" min="0" value="2500" step="10"/>
@@ -249,6 +250,7 @@ var settings_snippet = `
 	</div>
 </div>
 `;
+
 // Language selector from URL
 function selectLanguage(language) {
     // Treat "EN" as no prefix, otherwise use the language code
@@ -834,7 +836,7 @@ async function init() {
 		for (var i = 0; i < power_level_arr.length; i++) {
 			$("[name='pl']").last().append($(document.createElement('option')).prop({
 				value: power_level_arr.map(a => a)[i],
-				text: "Level ".concat(power_level_arr.map(a => a)[i])
+				text: await translateValue("%LEVEL%", "Code", language) + " " + power_level_arr.map(a => a)[i]
 			}))
 		};
 		// Load values from parameters
@@ -842,6 +844,7 @@ async function init() {
 		$("[name='p']").last().val(inpower[c]);
 		$("[name='a']").last().val(inappliances[c]);
 		$("[name='pl']").last().val(inpowerlevels[c]);
+		$("[name='ot']").last().val(intemperatures[c]);
 	}
 
 	// Add fields from UI
@@ -874,7 +877,7 @@ async function init() {
 		for (var i = 0; i < power_level_arr.length; i++) {
 			$("[name='pl']").last().append($(document.createElement('option')).prop({
 				value: power_level_arr.map(a => a)[i],
-				text: "Level ".concat(power_level_arr.map(a => a)[i])
+				text: Promise.resolve(translateValue("%LEVEL%", "Code", language)).then(level => level + " " + power_level_arr.map(a => a)[i])
 			}));
 		}
 		$(this).closest('.row').next().find("[name='p']").val(default_power);
@@ -908,11 +911,9 @@ async function init() {
 	// Show/hide oven temperature based on appliance selection (delegated)
 	$(wrapper_cooking).on('change', 'select[name="a"]', function () {
 		const $row = $(this).closest('.row');
-		const selectedOption = $row.find('select[name="a"] option:selected');
-		const text = (selectedOption.text() || '').toString();
 		const val = ($row.find('select[name="a"]').val() || '').toString();
-		const isOven = /Oven/i.test(text) || /oven/i.test(val);
-		const isOther = /Other/i.test(text) || /other/i.test(val);
+		const isOven = val.endsWith('O'); // GO or EO
+		const isOther = val.startsWith('O'); // OG or OE
 
 		// --- oven show/hide behavior ---
 		if (isOven) {

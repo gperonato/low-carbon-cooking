@@ -28,6 +28,7 @@ try {
     console.log(myRecipe.energy_ef)
     myRecipe.intake = intake;
     myRecipe.units = units;
+    myRecipe.nominal_power_appliances = {I:2000};
     myRecipe.addIngredient("Dried pasta, wholemeal, raw", 400)
     myRecipe.addIngredient("Olive oil, extra virgin", 2)
     myRecipe.addIngredient("Anchovy, in salt (semi-preserved)", 50)
@@ -44,7 +45,7 @@ try {
     assert(myRecipe.total_content["climate_change"]["value"] > 0)
 
     // After cooking
-    myRecipe.addCookingStep("ECFR", 15, 2500)
+    myRecipe.addCookingStep("ECFR", 15, null, "Induction cooktop", 6, null, null)
     myRecipe.cook()
 
     // CO2e and calories
