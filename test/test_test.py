@@ -70,7 +70,7 @@ def test_food_01(start_http_server, browser):
 def test_energy_01(start_http_server, browser):
     # Check Natural Gas CO2e
     filename = "index.html"
-    url = f"http://localhost:{PORT}/{filename}?i=20917&q=0&e=NGEU&t=60&p=1000&"
+    url = f"http://localhost:{PORT}/{filename}?i=20917&q=0&a=OG&t=60&p=1000&"
     browser.get(url)
     time.sleep(0.5)
     

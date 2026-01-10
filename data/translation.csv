@@ -2445,49 +2445,111 @@
 3000_2,AGB,FALSE,"Baby milk, first age, powder, rehydrated at consumer","Lait 1er âge, poudre soluble (préparation pour nourrissons), réhydratée chez le consommateur","Latte 1° età, polvere solubile (formula per lattanti), reidratato presso i locali del consumatore"
 3002_1,AGB,FALSE,"Baby milk, second age, powder, non rehydrated","Lait 2e âge, poudre soluble (préparation de suite)","Latte 2a età, polvere solubile (formula di proseguimento)"
 3002_2,AGB,FALSE,"Baby milk, second age, powder, rehydrated at consumer","Lait 2e âge, poudre soluble (préparation de suite), réhydratée chez le consommateur","Latte di 2a età, polvere solubile (formula di proseguimento), reidratato dal consumatore"
-ELEU27,ENERGY,,Electricity mix (production) - EU-27,Mix électrique (production) - UE-27,Mix elettrico (produzione) - UE-27
-ELAT,ENERGY,,Electricity mix - Austria,Mix électrique - Autriche,Mix elettrico - Austria
-ELBE,ENERGY,,Electricity mix - Belgium,Mix électrique - Belgique,Mix elettrico - Belgio
-ELBG,ENERGY,,Electricity mix - Bulgaria,Mix électrique - Bulgarie,Mix elettrico - Bulgaria
-ELHR,ENERGY,,Electricity mix - Croatia,Mix électrique - Croatie,Mix elettrico - Croazia
-ELCY,ENERGY,,Electricity mix - Cyprus,Mix électrique - Chypre,Mix elettrico - Cipro
-ELCZ,ENERGY,,Electricity mix - Czech Republic,Mix électrique - Tchéquie,Mix elettrico - Repubblica Ceca
-ELDK,ENERGY,,Electricity mix - Denmark,Mix électrique - Danemark,Mix elettrico - Danimarca
-ELEE,ENERGY,,Electricity mix - Estonia,Mix électrique - Estonie,Mix elettrico - Estonia
-ELFI,ENERGY,,Electricity mix - Finland,Mix électrique - Finlande,Mix elettrico - Finlandia
-ELFR,ENERGY,,Electricity mix - France,Mix électrique - France,Mix elettrico - Francia
-ELDE,ENERGY,,Electricity mix - Germany,Mix électrique - Allemagne,Mix elettrico - Germania
-ELGR,ENERGY,,Electricity mix - Greece,Mix électrique - Grèce,Mix elettrico - Grecia
-ELHU,ENERGY,,Electricity mix - Hungary,Mix électrique - Hongrie,Mix elettrico - Ungheria
-ELIE,ENERGY,,Electricity mix - Ireland,Mix électrique - Irelande,Mix elettrico - Irlanda
-ELIT,ENERGY,,Electricity mix - Italy,Mix électrique - Italie,Mix elettrico - Italia
-ELLV,ENERGY,,Electricity mix - Latvia,Mix électrique - Lettonie,Mix elettrico - Lettonia
-ELLT,ENERGY,,Electricity mix - Lithuania,Mix électrique - Lithuanie,Mix elettrico - Lituania
-ELLU,ENERGY,,Electricity mix - Luxembourg,Mix électrique - Luxembourg,Mix elettrico - Lussemburgo
-ELMT,ENERGY,,Electricity mix (production) - Malta,Mix électrique (production) - Malte,Mix elettrico (produzione) - Malta
-ELNL,ENERGY,,Electricity mix - Netherlands,Mix électrique - Pays Bas,Mix elettrico - Paesi Bassi
-ELPO,ENERGY,,Electricity mix - Poland,Mix électrique - Pologne,Mix elettrico - Polonia
-ELPT,ENERGY,,Electricity mix - Portugal,Mix électrique - Portugale,Mix elettrico - Portogallo
-ELRO,ENERGY,,Electricity mix - Romania,Mix électrique - Roumanie,Mix elettrico - Romania
-ELSK,ENERGY,,Electricity mix - Slovakia,Mix électrique - Slovaquie,Mix elettrico - Slovacchia
-ELSI,ENERGY,,Electricity mix - Slovenia,Mix électrique - Slovenie,Mix elettrico - Slovenia
-ELES,ENERGY,,Electricity mix - Spain,Mix électrique - Espagne,Mix elettrico - Spagna
-ELSE,ENERGY,,Electricity mix - Sweden,Mix électrique - Suède,Mix elettrico - Svezia
-ELUK,ENERGY,,Electricity mix - United Kingdom,Mix électrique - Royaume Uni,Mix elettrico - Regno Unito
-ELTR,ENERGY,,Electricity mix - Turkey,Mix électrique - Turquie,Mix elettrico - Turchia
-ELIS,ENERGY,,Electricity mix - Island,Mix électrique - Islande,Mix elettrico - Islanda
-ELNO,ENERGY,,Electricity mix - Norway,Mix électrique - Norvège,Mix elettrico - Norvegia
-ELCH,ENERGY,,Electricity mix - Switzerland,Mix électrique - Suisse,Mix elettrico - Svizzera
-ECFR,ENERGY,,Electricity residential cooking - Continental France,Électricité cuisson résidentiel - France continentale,Elettricità cucina residenziale - Francia continentale
-PVFR,ENERGY,,Electricity photovoltaic - France continentale,Electricité photovoltaïque - France continentale,Elettricità da fotovoltaico - Francia continentale
-NGEU,ENERGY,,Natural gas  - Europe,Gaz naturel - Europe,Gas naturale - Europa
-NGFR,ENERGY,,Natural gas - France continentale,Gaz naturel - France continentale,Gas naturale - Francia continentale
+AT,COUNTRY,,Austria,Autriche,Austria
+BE,COUNTRY,,Belgium,Belgique,Belgio
+BG,COUNTRY,,Bulgaria,Bulgarie,Bulgaria
+HR,COUNTRY,,Croatia,Croatie,Croazia
+CY,COUNTRY,,Cyprus,Chypre,Cipro
+CZ,COUNTRY,,Czech Republic,Tchéquie,Repubblica Ceca
+DK,COUNTRY,,Denmark,Danemark,Danimarca
+EE,COUNTRY,,Estonia,Estonie,Estonia
+FI,COUNTRY,,Finland,Finlande,Finlandia
+FR,COUNTRY,,France,France,Francia
+DE,COUNTRY,,Germany,Allemagne,Germania
+GR,COUNTRY,,Greece,Grèce,Grecia
+HU,COUNTRY,,Hungary,Hongrie,Ungheria
+IE,COUNTRY,,Ireland,Irelande,Irlanda
+IT,COUNTRY,,Italy,Italie,Italia
+LV,COUNTRY,,Latvia,Lettonie,Lettonia
+LT,COUNTRY,,Lithuania,Lithuanie,Lituania
+LU,COUNTRY,,Luxembourg,Luxembourg,Lussemburgo
+MT,COUNTRY,,Malta,Malte,Malta
+NL,COUNTRY,,Netherlands,Pays Bas,Paesi Bassi
+PL,COUNTRY,,Poland,Pologne,Polonia
+PT,COUNTRY,,Portugal,Portugale,Portogallo
+RO,COUNTRY,,Romania,Roumanie,Romania
+SK,COUNTRY,,Slovakia,Slovaquie,Slovacchia
+SI,COUNTRY,,Slovenia,Slovenie,Slovenia
+ES,COUNTRY,,Spain,Espagne,Spagna
+SE,COUNTRY,,Sweden,Suède,Svezia
+GB,COUNTRY,,United Kingdom,Royaume Uni,Regno Unito
+TR,COUNTRY,,Turkey,Turquie,Turchia
+IS,COUNTRY,,Island,Islande,Islanda
+NO,COUNTRY,,Norway,Norvège,Norvegia
+CH,COUNTRY,,Switzerland,Suisse,Svizzera
+ELEU27,ELECTRICITY,,Electricity mix (production) - EU-27,Mix électrique (production) - UE-27,Mix elettrico (produzione) - UE-27
+ELAT,ELECTRICITY,,Electricity mix - Austria,Mix électrique - Autriche,Mix elettrico - Austria
+ELBE,ELECTRICITY,,Electricity mix - Belgium,Mix électrique - Belgique,Mix elettrico - Belgio
+ELBG,ELECTRICITY,,Electricity mix - Bulgaria,Mix électrique - Bulgarie,Mix elettrico - Bulgaria
+ELHR,ELECTRICITY,,Electricity mix - Croatia,Mix électrique - Croatie,Mix elettrico - Croazia
+ELCY,ELECTRICITY,,Electricity mix - Cyprus,Mix électrique - Chypre,Mix elettrico - Cipro
+ELCZ,ELECTRICITY,,Electricity mix - Czech Republic,Mix électrique - Tchéquie,Mix elettrico - Repubblica Ceca
+ELDK,ELECTRICITY,,Electricity mix - Denmark,Mix électrique - Danemark,Mix elettrico - Danimarca
+ELEE,ELECTRICITY,,Electricity mix - Estonia,Mix électrique - Estonie,Mix elettrico - Estonia
+ELFI,ELECTRICITY,,Electricity mix - Finland,Mix électrique - Finlande,Mix elettrico - Finlandia
+ELFR,ELECTRICITY,,Electricity mix - France,Mix électrique - France,Mix elettrico - Francia
+ELDE,ELECTRICITY,,Electricity mix - Germany,Mix électrique - Allemagne,Mix elettrico - Germania
+ELGR,ELECTRICITY,,Electricity mix - Greece,Mix électrique - Grèce,Mix elettrico - Grecia
+ELHU,ELECTRICITY,,Electricity mix - Hungary,Mix électrique - Hongrie,Mix elettrico - Ungheria
+ELIE,ELECTRICITY,,Electricity mix - Ireland,Mix électrique - Irelande,Mix elettrico - Irlanda
+ELIT,ELECTRICITY,,Electricity mix - Italy,Mix électrique - Italie,Mix elettrico - Italia
+ELLV,ELECTRICITY,,Electricity mix - Latvia,Mix électrique - Lettonie,Mix elettrico - Lettonia
+ELLT,ELECTRICITY,,Electricity mix - Lithuania,Mix électrique - Lithuanie,Mix elettrico - Lituania
+ELLU,ELECTRICITY,,Electricity mix - Luxembourg,Mix électrique - Luxembourg,Mix elettrico - Lussemburgo
+ELMT,ELECTRICITY,,Electricity mix (production) - Malta,Mix électrique (production) - Malte,Mix elettrico (produzione) - Malta
+ELNL,ELECTRICITY,,Electricity mix - Netherlands,Mix électrique - Pays Bas,Mix elettrico - Paesi Bassi
+ELPL,ELECTRICITY,,Electricity mix - Poland,Mix électrique - Pologne,Mix elettrico - Polonia
+ELPT,ELECTRICITY,,Electricity mix - Portugal,Mix électrique - Portugale,Mix elettrico - Portogallo
+ELRO,ELECTRICITY,,Electricity mix - Romania,Mix électrique - Roumanie,Mix elettrico - Romania
+ELSK,ELECTRICITY,,Electricity mix - Slovakia,Mix électrique - Slovaquie,Mix elettrico - Slovacchia
+ELSI,ELECTRICITY,,Electricity mix - Slovenia,Mix électrique - Slovenie,Mix elettrico - Slovenia
+ELES,ELECTRICITY,,Electricity mix - Spain,Mix électrique - Espagne,Mix elettrico - Spagna
+ELSE,ELECTRICITY,,Electricity mix - Sweden,Mix électrique - Suède,Mix elettrico - Svezia
+ELGB,ELECTRICITY,,Electricity mix - United Kingdom,Mix électrique - Royaume Uni,Mix elettrico - Regno Unito
+ELTR,ELECTRICITY,,Electricity mix - Turkey,Mix électrique - Turquie,Mix elettrico - Turchia
+ELIS,ELECTRICITY,,Electricity mix - Island,Mix électrique - Islande,Mix elettrico - Islanda
+ELNO,ELECTRICITY,,Electricity mix - Norway,Mix électrique - Norvège,Mix elettrico - Norvegia
+ELCH,ELECTRICITY,,Electricity mix - Switzerland,Mix électrique - Suisse,Mix elettrico - Svizzera
+ECFR,ELECTRICITY,,Electricity residential cooking - Continental France,Électricité cuisson résidentiel - France continentale,Elettricità cucina residenziale - Francia continentale
+PVFR,ELECTRICITY,,Electricity photovoltaic - France continentale,Electricité photovoltaïque - France continentale,Elettricità da fotovoltaico - Francia continentale
+NGEU,GAS,,Natural gas - Europe,Gaz naturel - Europe,Gas naturale - Europa
+NGFR,GAS,,Natural gas - France continentale,Gaz naturel - France continentale,Gas naturale - Francia continentale
+G,APPLIANCES,,Gas cooktop,Plaque à gaz,Fornello a gas
+I,APPLIANCES,,Induction cooktop,Plaque à induction,Piastra a induzione
+E,APPLIANCES,,Electric cooktop,Plaque électrique,Piastra elettrica
+EO,APPLIANCES,,Electric oven,Four électrique,Forno elettrico
+GO,APPLIANCES,,Gas oven,Four à gaz,Forno a gas
+OE,APPLIANCES,,Other electric device,Autre appareil électrique,Altro dispositivo elettrico
+OG,APPLIANCES,,Other gas device,Autre appareil à gaz,Altro dispositivo a gas
 %WEIGHT%,,,Weight,Poids,Peso
 %INGREDIENT%,,,Ingredient,Ingrédient,Ingrediente
 %SOURCE%,,,Select energy source,Séléctionner la source d'énergie,Selezionare la fonte d'energia
 %POWER%,,,Input power,Puissance consommée,Potenza assorbita
+%APPLIANCE%,,,Appliance,Appareil,Dispositivo
+%POWER_LEVEL%,,,Power level,Puissance,Potenza
 %TIME%,,,Time,Temps,Tempo
 %TOTAL_VALUES_DISCLAIMER%,,,"Total values. Please note that for some ingredients maximal values are considered, while traces are not counted.","Valeurs totales. A noter que pour certains aliments les valeurs maximales sont considérées, alors que les traces ne sont pas comptabilisées.","Valori totali. Notare che per alcuni alimenti sono considerati i valori massimi, mentre le tracce non sono contate."
+%SETTINGS%,,,Settings,Réglages,Impostazioni
+%CLOSE%,,,Close,Fermer,Chiudi
+%SAVE%,,,Save,Enregistrer,Salva
+%ELECTRICITY_SOURCE%,,,Electricity source,Source d'électricité,Fonte di elettricità
+%GAS_SOURCE%,,,Gas source,Source de gaz,Fonte di gas
+%HOB%,,,Hob,Plaque,Piastra
+%INDUCTION%,,,Induction,Induction,Induzione
+%ELECTRIC%,,,Electric,Électrique,Elettrica
+%GAS%,,,Gas,Gaz,Gas
+%LEVEL%,,,Level,Niveau,Livello
+S,HOB_SIZE,,Small,Petite,Piccola
+M,HOB_SIZE,,Medium,Moyenne,Media
+L,HOB_SIZE,,Large,Grande,Grande
+%ENERGY_EFFICIENT%,,,Energy efficient,Haute efficacité,Alta efficienza
+%INPUT_POWER%,,,Input power,Puissance consommée,Potenza assorbita
+%EFFICIENCY%,,,Efficiency,Efficacité,Efficienza
+%OUTPUT_POWER%,,,"Output power, expressed as time to boil 1 liter of water","Puissance restituée, exprimée en temps pour faire bouillir 1 litre d'eau","Potenza erogata, espressa come tempo per far bollire 1 litro di acqua"
+%INGREDIENTS%,,,"Ingredients",Ingrédients,Ingredienti
+%MAIN_INGREDIENTS%,,,List only main ingredients (filter out ready-made meals),"Montrer seulement les ingrédients principaux (sans plats cuisinés)","Cerca solo tra gli ingredienti principali (nascondi i piatti pronti)"
+%OVEN_VOLUME%,,,Oven volume,Volume du four,Volume del forno
+%PORTIONS%,,,Number of portions,Nombre de portions,Numero di porzioni
 food_code,,,Food Code,,
 food_label,,,Food Label,,
 organic_acids,,,Organic Acids,Acides organiques,Acidi organici
