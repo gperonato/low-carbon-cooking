@@ -2536,13 +2536,13 @@ OG,APPLIANCES,,Other gas device,Autre appareil à gaz,Altro dispositivo a gas
 %GAS_SOURCE%,,,Gas source,Source de gaz,Fonte di gas
 %HOB%,,,Hob,Plaque,Piastra
 %INDUCTION%,,,Induction,Induction,Induzione
-%ELECTRIC%,,,Electric,Électrique,Elettrico
+%ELECTRIC%,,,Electric,Électrique,Elettrica
 %GAS%,,,Gas,Gaz,Gas
 %LEVEL%,,,Level,Niveau,Livello
 S,HOB_SIZE,,Small,Petite,Piccola
 M,HOB_SIZE,,Medium,Moyenne,Media
 L,HOB_SIZE,,Large,Grande,Grande
-%ENERGY_EFFICIENT%,,,Energy efficient,Performance énergétique,Efficienza energetica
+%ENERGY_EFFICIENT%,,,Energy efficient,Haute efficacité,Alta efficienza
 %INPUT_POWER%,,,Input power,Puissance consommée,Potenza assorbita
 %EFFICIENCY%,,,Efficiency,Efficacité,Efficienza
 %OUTPUT_POWER%,,,"Output power, expressed as time to boil 1 liter of water","Puissance restituée, exprimée en temps pour faire bouillir 1 litre d'eau","Potenza erogata, espressa come tempo per far bollire 1 litro di acqua"
