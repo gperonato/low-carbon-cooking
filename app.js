@@ -21,10 +21,13 @@ const efficiency = {
 const default_hob_size = "M";
 var onlyMain = true;
 
+// Global configuration for supported languages
+const SUPPORTED_LANGUAGES = ['EN', 'FR', 'IT'];
+const DEFAULT_LANGUAGE = 'EN';
+
 // Parse URL arguments
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
-const inlanguage = urlParams.getAll('l');
 const iningredients = urlParams.getAll('i');
 const inquantities = urlParams.getAll('q');
 const inenergysources = urlParams.getAll('e');
@@ -251,21 +254,6 @@ var settings_snippet = `
 </div>
 `;
 
-// Language selector from URL
-function selectLanguage(language) {
-    // Treat "EN" as no prefix, otherwise use the language code
-    const langPath = (language === "EN") ? "" : language;
-
-    const host = window.location.host;
-    const protocol = window.location.protocol;
-    const search = window.location.search;
-
-    // Construct the URL: protocol + host + / + lang + search
-    const newUrl = `${protocol}//${host}/${langPath}${search}`;
-
-    window.location.assign(newUrl);
-}
-
 
 // Dictionary with translations
 let dictionary = []; // Global variable to store the dictionary
@@ -379,13 +367,13 @@ async function run() {
 		var quantities = $('[name="q"]');
 
 		var reference = {};
-		reference["food"] = await translateValue($('#reference').val(),language,"EN");
+		reference["food"] = await translateValue($('#reference').val(),language,DEFAULT_LANGUAGE);
 		reference["quantity"] = $('#reference-weight').val();
 		console.log("Setting reference food:", reference["food"]);
 		webRecipe.setReference(reference["food"],reference["quantity"]);
 
 		for (let i = 0; i < ingredients.length; i++) {
-			let ingredient = await translateValue(ingredients[i].value,language,"EN");
+			let ingredient = await translateValue(ingredients[i].value,language,DEFAULT_LANGUAGE);
 			console.log("Adding ingredient:", ingredient)			
 			webRecipe.addIngredient(ingredient, quantities[i].value)
 		}
@@ -402,7 +390,7 @@ async function run() {
 		for (let i = 0; i < appliances.length; i++) {
 			if (appliances[i].value != "") {
 				let source = electricity;
-				let applianceType = await translateValue(appliances[i].value, "Code", "EN");
+				let applianceType = await translateValue(appliances[i].value, "Code", DEFAULT_LANGUAGE);
 				if (["Gas cooktop", "Gas oven", "Other gas device"].includes(applianceType)) {
 					source = gas;
 				}
@@ -586,9 +574,70 @@ async function init() {
 				return e.Type == "COUNTRY";
 			});
 	if (countrycode == null){
-		countrycode = getCountryCode()
+		countrycode = getCountryCode();
 	}
 	console.log("Country code set to", countrycode)
+
+
+	// Language selection and redirection
+	const path = window.location.pathname;
+	const browserLang = navigator.language.substring(0, 2).toUpperCase();
+	const referer = document.referrer;
+	const isInternalNavigation = referer && referer.includes(window.location.host);
+	const search = window.location.search || '';
+
+	// Only auto-redirect if on root and external visit
+	// Redirect to browser language if it's supported (but not default)
+	if (!isInternalNavigation && path === '/' && SUPPORTED_LANGUAGES.includes(browserLang) && browserLang !== DEFAULT_LANGUAGE) {
+		window.location.replace(`/${browserLang}/${search}`);
+	}
+
+	// Action for changing language
+	$('#language .dropdown-item').click(function(e) {
+		e.preventDefault();
+		const selectedLang = $(this).attr('name');
+
+		if (selectedLang === DEFAULT_LANGUAGE) {
+			window.location.assign(`/${search}`);
+		} else {
+			window.location.assign(`/${selectedLang}/${search}`);
+		}
+	});
+
+	console.log("Language set to", language);
+
+	// SEO: Add hreflang tags and canonical
+	const protocol = window.location.protocol;
+	const host = window.location.host;
+	const baseUrl = `${protocol}//${host}`;
+
+	// Generate hreflang links dynamically from supported languages
+	const hreflangs = SUPPORTED_LANGUAGES.map(lang => ({
+		lang: lang.toLowerCase(),
+		href: (lang === DEFAULT_LANGUAGE) ? `${baseUrl}/` : `${baseUrl}/${lang}/`
+	}));
+
+	// Add x-default
+	hreflangs.push({ lang: 'x-default', href: `${baseUrl}/` });
+
+	// Append hreflang to head
+	hreflangs.forEach(item => {
+		const link = document.createElement('link');
+		link.rel = 'alternate';
+		link.hreflang = item.lang;
+		link.href = item.href;
+		document.head.appendChild(link);
+	});
+
+	// Add canonical tag
+	const canonical = document.createElement('link');
+	canonical.rel = 'canonical';
+	canonical.href = (language === DEFAULT_LANGUAGE) ? `${baseUrl}/` : `${baseUrl}/${language}/`;
+	document.head.appendChild(canonical);
+
+	// Set html lang attribute
+	document.documentElement.lang = language.toLowerCase();
+
 
 	// Init fallbacks for energy sources
 	function getDefaultEnergySources(countrycode) {
@@ -741,17 +790,6 @@ async function init() {
 	};
 
 	setupPowerSyncGroups();
-
-	// Action for changing language
-	$('#language a').click(function() {
-			selectLanguage($(this).attr('name'))
-		}
-	);
-
-	// Define language from url params (if provided)
-	if (inlanguage.length > 0){
-		language=inlanguage[0];
-	}
 
 	// Translate url params
 	await Promise.all(iningredients.map(async (val, i) => {
