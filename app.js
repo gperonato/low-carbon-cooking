@@ -22,7 +22,7 @@ const default_hob_size = "M";
 var onlyMain = true;
 
 // Global configuration for supported languages
-const SUPPORTED_LANGUAGES = ['EN', 'FR', 'IT'];
+const SUPPORTED_LANGUAGES = ['EN', 'FR', 'IT', 'DE'];
 const DEFAULT_LANGUAGE = 'EN';
 
 // Parse URL arguments
