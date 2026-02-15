@@ -596,11 +596,12 @@ async function init() {
 	$('#language .dropdown-item').click(function(e) {
 		e.preventDefault();
 		const selectedLang = $(this).attr('name');
-
+		// Preserve current URL parameters when changing language
+		const currentSearch = window.location.search;
 		if (selectedLang === DEFAULT_LANGUAGE) {
-			window.location.assign(`/${search}`);
+			window.location.assign(`/${currentSearch}`);
 		} else {
-			window.location.assign(`/${selectedLang}/${search}`);
+			window.location.assign(`/${selectedLang}/${currentSearch}`);
 		}
 	});
 
