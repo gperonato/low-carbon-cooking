@@ -15,7 +15,7 @@
 		<!-- Modal -->
 		<div class="modal fade" id="settings" tabindex="-1" role="dialog" aria-labelledby="settings-label" aria-hidden="true">
 		</div>
-				
+		
 		<!-- Navigation -->
 		<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="mainNav">
 			<div class="container">
@@ -26,26 +26,25 @@
 				<div class="collapse navbar-collapse" id="navbarResponsive">
 					<ul class="navbar-nav ml-auto">
 						<li class="nav-item">
-							<a class="nav-link js-scroll-trigger" href="#calculator">Calculateur</a>
+							<a class="nav-link js-scroll-trigger" href="#calculator">Rechner</a>
 						</li>
 						<li class="nav-item">
 							<!-- Button trigger modal -->
 									<a href ="#" class="nav-link"  data-toggle="modal" data-target="#settings" aria-haspopup="true" aria-expanded="false">
-							  		Réglages
+							  		Einstellungen
 									</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link js-scroll-trigger" href="#about">A propos</a>
+							<a class="nav-link js-scroll-trigger" href="#about">Über diese Website</a>
 						</li>
 						<li class="nav-item dropdown">
 							  <a href ="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							    Langue</a>
-							  <div class="dropdown-menu" id="language">
+							    Sprache</a>
+							  <div class="dropdown-menu dropdown-menu-right" id="language">
 							  <a class="dropdown-item" name="EN" href="#">English</a>
-							  <a class="dropdown-item" name="DE" href="#">Deutsch</a>
-							  <a class="dropdown-item" name="IT" href="#">Italiano</a>
+								<a class="dropdown-item" name="FR" href="#">Français</a>
+								<a class="dropdown-item" name="IT" href="#">Italiano</a>
 							  </div>
-						</li>
 						</li>
 					</ul>
 				</div>
@@ -53,7 +52,7 @@
 		</nav>
 		<section id="calculator">
 			<div class="container pt-4">
-				<h3>Calculateur</h3>
+				<h3>Rechner</h3>
 				<form id="recipeform">
 					<div class="ingredients">
 						<div class="row">
@@ -62,7 +61,7 @@
 						<div>
 							<div class="form-group row">
 								<div class="col-sm">
-									<button type='button' class="btn btn-secondary" onclick="submitForm()">Mise en place</button>
+									<button type='button' class="btn btn-secondary" style="width: 120px;" onclick="submitForm()">Vorbereiten</button>
 								</div>
 							</div>
 						</div>
@@ -74,30 +73,30 @@
 						<div>
 							<div class="form-group row">
 								<div class="col-sm-1">
-									<button type='button' class="btn btn-secondary" style="width: 120px;" onclick="submitForm()">Cuisson</button>
+									<button type='button' class="btn btn-secondary" style="width: 120px;" onclick="submitForm()">Zubereiten</button>
 								</div>
 							</div>
 						</div>
 					</form>
 					<div id="results" style="display: none;" class="row pt-4">
-						<h3>Résultats</h3>
+						<h3>Ergebnisse</h3>
 						<table class="table table-striped">
-							<thead><tr><td><h5>Ecologie</h5></td>
-							<td class="text-center"><td class="text-center"><a style="text-decoration: none; color: inherit;" data-toggle="tooltip" title='Voiture motorisation moyenne, 2018 | Base Carbone® ADEME v23.4 (27970)' class="text-center">Distance équivalente en voiture</a>
-							<td class="text-center">Aliment de référence</td></tr></thead>
+							<thead><tr><td><h5>Umwelt</h5></td>
+							<td class="text-center"><td class="text-center"><a style="text-decoration: none; color: inherit;" data-toggle="tooltip" title='Durchschnittliches Auto, 2018 | Base Carbone® ADEME v23.4 (27970)' class="text-center">Ent&shy;sprechende Auto&shy;fahrt</a>
+							<td class="text-center">Vergleichs&shy;lebens&shy;mittel</a></td></tr></thead>
 							<tbody id="table-footprint">
 							</tbody>
 							<thead><tr>
-							<td><h5>Nutrition</h5></td>
+							<td><h5>Ernährung</h5></td>
 							<td></td>
-							<td class="text-center">Apports nutrionnels conseillés</td>
+							<td class="text-center">Empfohlene Tages&shy;dosis</td>
 							<td class="text-center"></a></td>
 						</tr></thead>
 						<tbody id="table-nutritional">
 						</tbody>
 					</table>
 					<div class="col-sm-7 pt-4">
-						<h5><a id="reference-food"></a>Aliment de référence</h5>
+						<h5><a id="reference-food"></a>Vergleichslebensmittel</h5>
 					</div>
 					<form id="reference-form">
 						<div class="row">
@@ -123,43 +122,45 @@
 			<section id="about" class="bg-light">
 				<div class="container">
 					<div class="row pl-3 pr-3">
-						<h3>A propos</h3>
+						<h3>Über diese Website</h3>
 						<p class="lead">
-							Le secteur de l'alimentation est responsable d'un quart des emissions des gaz à éffet serre (GES) à l'échelle mondiale<sup><a href="#ref1">1</a></sup>.<br>Grâce au calculateur myCookPrint, on peut estimer l'empreinte carbone d'un répas, y compris la production, la transformation, le transport des aliments jusqu'à la préparation des mets.
+							Der Lebensmittelbereich ist für ein Viertel der Treibhausgasemissionen auf globaler Ebene verantwortlich<sup><a href="#ref1">1</a></sup>.<br>Mit dem myCookPrint-Rechner kann man den Carbonfussabdruck einer Rezeptur berechnen, einschliesslich Produktion, Verarbeitung, Transport bis zur Zubereitung des Essens.
 					</p>
 					<p>
-						Le calculateur myCookPrint utilise des bases de données distribuées par le governemment français en open data (Licence Ouverte) :
+						Der myCookPrint-Rechner verwendet offene Datenbanken, die vom französischen Staat bereitgestellt werden (Licence Ouverte):
 					</p>
 					<ul>
 						<li><a href="https://doc.agribalyse.fr/documentation-en/">AGRIBALYSE®</a> (v. 3.2, 04.12.2024)
-							produite par l'Agence de la Transition Ecologique française (ADEME)
-							fournit l'analyse environnementale des aliments les plus comumuns ;</li>
+							der Agence de la Transition Ecologique (ADEME)
+							liefert den ökologischen Fussabdruck der gängigsten Lebensmittel;</li>
 						<li><a href="https://ciqual.anses.fr/">CIQUAL</a> (v. 03.07.2020)
-							et <a href="https://ciqual.anses.fr/">CALNUT 2020</a> (v. 28.08.2020) 
-							produites par l'Agence nationale (française) de sécurité sanitaire de l'alimentation, 
-							de l'environnement et du travail (ANSES) fournissent les informations sur la composition des aliments.</li>
+							und <a href="https://ciqual.anses.fr/">CALNUT 2020</a> (v. 28.08.2020)
+							der Agence nationale de sécurité sanitaire de l'alimentation, de l'environnement et du travail (ANSES)
+							lieferen die Angaben zur Nährstoffzusammensetzung der Lebensmittel.</li>
 					</ul>
-					<p class="lead">Les résultats sont valides pour des produits achetés et consommés en France.
-						Cependant, ils peuvent être utilisés comme un premier indicateur dans d'autres pays européens. 
+					<p class="lead">Die Ergebnisse gelten für in Frankreich konsumierte Produkte, können jedoch auch als grober Indikator für andere europäische Länder herangezogen werden.
 					</p>
-					<p>Le calculateur utilise aussi les facteurs d'emissions des sources énergétiques
-						issus des base de données suivantes :
+					<p>Der myCookPrint-Rechner verwendet auch andere Datenquellen, darunter:
 						<ul>
 							<li><a href="https://portal.electricitymaps.com/datasets">Electricity Maps</a>
-								(27.01.2025, moyenne des valeurs annuelles 2022-2024) ;</li>
+								(27.01.2025, Durchschnitt der Jahreswerte 2022-2024);</li>
 							<li><a href="https://www.data.gouv.fr/fr/datasets/base-carbone-r-2/">Base carbone®</a>
-								de l'Agence (française) de la transition écologique (ADEME) (v. 23.4, 02-01-2025).</li>
+								von der Agence de la transition écologique (ADEME) (v. 23.4, 02-01-2025).</li>
 						</ul>
 					</p>
-					<p>Le code source ainsi que les pipelines de traitement des données
-						sont disponibles dans <a href="https://github.com/gperonato/low-carbon-cooking">le repository Github</a> du projet.</p>
+					<p>Der Quellcode und die Datenverarbeitungs-Pipelines
+						sind verfügbar im <a href="https://github.com/gperonato/low-carbon-cooking">Github-Repository</a> des Projekts.</p>
+					<p>Bitte beachten Sie, dass die deutsche Übersetzung der Lebensmittelangaben
+						ohne Gewähr hinsichtlich ihrer Genauigkeit, Vollständigkeit oder Zuverlässigkeit erfolgt:
+						Bei Unklarheiten konsultieren Sie bitte die französische Originalversion (oder die offizielle englische Übersetzung).
+					</p>
 					<small><sup>1</sup><a id="ref1"></a>Poore, J., & Nemecek, T. (2018). Reducing food’s environmental impacts through producers and consumers. Science, 360(6392), 987–992. <a href="https://doi.org/10.1126/science.aaq0216">https://doi.org/10.1126/science.aaq0216</a></small>
 				</div>
 			</div>
 		</section>
 	</body>
 	<script type="text/javascript">
-	var language = "FR";
+	var language = "DE";
 	$(function () {
 		$('[data-toggle="tooltip"]').tooltip()
 		})
