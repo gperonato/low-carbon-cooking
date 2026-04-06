@@ -1,0 +1,25 @@
+{
+  "name": "low-carb",
+  "version": "0.0.1",
+  "description": "This repository contains a calculator providing information on the environmental impact (carbon footprint, i.e., impact on climate change) and nutritional content of cooking recipes.",
+  "main": "api.js",
+  "directories": {
+    "data": "data"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gperonato/low-carbon-cooking.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gperonato/low-carbon-cooking/issues"
+  },
+  "homepage": "https://github.com/gperonato/low-carbon-cooking#readme",
+  "dependencies": {
+    "express": "^4.21.2",
+    "papaparse": "^5.5.2"
+  },
+  "type": "module"
+}
