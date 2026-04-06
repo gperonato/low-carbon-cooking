@@ -1,0 +1,4 @@
+.pytest_cache
+.vscode
+node_modules
+test/__pycache__

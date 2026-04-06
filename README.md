@@ -21,15 +21,19 @@ Note that the Italian translation of the CIQUAL database is provided without war
 The original datasets are downloaded and transformed from the original data sources using Python pipelines.
 The pipelines can be found in `data` along with the processed datasets.
 
-# API
+# Usage
 
 The calculator is based on the `Recipe` Object (see `recipe.js`).
 
-## Usage
-
 For sample usage you can refer to the test file `test/test.js`. 
 
-
 ## Web app
-A web-app provides an UI for the calculator (see `index.html` and `app.js`).
+A client-side web app provides an UI for the calculator (see `index.html` and `app.js`).
 The running web app is available on [www.mycookprint.com](mycookprint.com).
+
+## REST API
+An Express API is also available via
+```
+ node api.js
+```
+our using the provided Dockerfile serving a `GET /recipe` endpoint.
