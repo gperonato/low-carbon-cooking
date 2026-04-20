@@ -545,10 +545,10 @@
 20166,AGB,TRUE,"Pumpkin, pulp, raw","Citrouille, pulpe, crue","Zucca, polpa, cruda","Kürbis, Fruchtfleisch, roh"
 39216,AGB,FALSE,"Fruits batter-pudding, refrigerated","Clafoutis aux fruits, rayon frais","Clafoutis o clafouti,di frutta, da frigorifero","Obstauflauf, gekühlt"
 11052,AGB,TRUE,Cloves,Clou de girofle,Chiodo di garofano,Nelken
-1012,AGB,TRUE,Rum-based cocktail,Cocktail à base de rhum,Cocktail a base di rum,Cocktail auf Rum-Basis
-1013,AGB,TRUE,Whiskey-based cocktail,Cocktail à base de whisky,Cocktail a base di whisky,Cocktail auf Whiskey-Basis
-2008,AGB,TRUE,"Cocktail, alcohol-free (juices and syrup-based cocktail)",Cocktail sans alcool (à base de jus de fruits et de sirop),Cocktail analcolico (a base di succo di frutta e sciroppo),Alkoholfreier Cocktail (auf Saft- und Sirupbasis)
-1022,AGB,TRUE,"Cocktail, punch type, 16% alcohol","Cocktail type punch, 16% alcool","Cocktail tipo punch, 16% di alcol","Cocktail, Punschart, 16% Alkohol"
+1012,AGB,FALSE,Rum-based cocktail,Cocktail à base de rhum,Cocktail a base di rum,Cocktail auf Rum-Basis
+1013,AGB,FALSE,Whiskey-based cocktail,Cocktail à base de whisky,Cocktail a base di whisky,Cocktail auf Whiskey-Basis
+2008,AGB,FALSE,"Cocktail, alcohol-free (juices and syrup-based cocktail)",Cocktail sans alcool (à base de jus de fruits et de sirop),Cocktail analcolico (a base di succo di frutta e sciroppo),Alkoholfreier Cocktail (auf Saft- und Sirupbasis)
+1022,AGB,FALSE,"Cocktail, punch type, 16% alcohol","Cocktail type punch, 16% alcool","Cocktail tipo punch, 16% di alcol","Cocktail, Punschart, 16% Alkohol"
 20018,AGB,TRUE,"Palm heart, canned, drained","Coeur de palmier, appertisé, égoutté","Palmito o cuore di palma, in scatola, sgocciolato","Palmherz, in Dosen, abgetropft"
 40058,AGB,TRUE,"Heart, lamb, raw","Coeur, agneau, cru","Cuore, agnello, crudo","Herz, Lamm, roh"
 40059,AGB,FALSE,"Heart, lamb, cooked","Coeur, agneau, cuit","Cuore, agnello, cotto","Herz, Lamm, gekocht"
@@ -1097,22 +1097,22 @@
 28844,AGB,TRUE,Parma dry-cured ham,Jambon sec de Parme,Prosciutto crudo di Parma,Parmaschinken
 28845,AGB,TRUE,Serrano dry-cured ham,Jambon sec Serrano,Prosciutto crudo spagnolo (Serrano),Serrano-Schinken
 28802,AGB,FALSE,"Dry-cured ham, fat and rind removed","Jambon sec, découenné, dégraissé","Prosciutto crudo, senza cotenna, sgrassato","Luftgetrockneter Schinken, ohne Schwarte und fettarm"
-28960,AGB,FALSE,"Knuckle of ham, cooked","Jambonneau, cuit",Prosciutto cotto,Gekochte Schinkenkeule
+28960,AGB,FALSE,"Knuckle of ham, cooked","Jambonneau, cuit","Stinco di maiale, cotto",Gekochte Schinkenkeule
 26240,AGB,TRUE,"Big-scale sand smelt (whole small fish), to fry, raw","Joëls (petits poissons entiers) pour friture, crus","Latterino capoccione (piccolo pesce intero) da friggere, crudo","Grosser Sandfisch (ganze kleine Fische) zum Braten, roh"
 20265,AGB,TRUE,"Thinly-shredded or diced vegetables, frozen, raw","Julienne ou brunoise de légumes, surgelée, crue","Julienne o brunoise di verdure, surgelate, crude","Fein geschnittenes oder gewürfeltes Gemüse, tiefgefroren, roh"
 26130,AGB,TRUE,"Ling, raw","Julienne ou Lingue, crue","Molva blu, cruda","Seelachs, roh"
 26234,AGB,FALSE,"Ling, cooked","Julienne ou Lingue, cuite","Molva, cotta","Seelachs, gekocht"
 2013,AGB,TRUE,"Apple juice, pure juice","Jus de pomme, pur jus","Succo di mela, succo puro","Apfelsaft, reiner Saft"
 2074,AGB,TRUE,"Orange juice, home-made","Jus d'orange, maison","Succo d'arancia, fatto in casa","Orangensaft, hausgemacht"
-2011,AGB,TRUE,"Mixed fruits juice, orange based, multivitamin","Jus multifruit - base orange, multivitaminé","Succo multifrutta - base d'arancia, multivitaminico","Multifruchtsaft, auf Orangenbasis, multivitamin"
-2069,AGB,TRUE,"Mixed fruits juice, reconstituted from a concentrate, multivitamin","Jus multifruit, à base de concentré, standard","Succo multifrutta, da concentrato, standard","Multifruchtsaft, aus Konzentrat, multivitamin"
-2002,AGB,TRUE,"Mixed fruits juice, pure juice, multivitamin","Jus multifruit, pur jus, multivitaminé","Succo multifrutta, succo puro, multivitaminico","Multifruchtsaft, reiner Saft, multivitamin"
-2035,AGB,TRUE,"Mixed fruits juice, pure juice","Jus multifruit, pur jus, standard","Succo multifrutta, succo puro, standard","Multifruchtsaft, reiner Saft"
+2011,AGB,FALSE,"Mixed fruits juice, orange based, multivitamin","Jus multifruit - base orange, multivitaminé","Succo multifrutta - base d'arancia, multivitaminico","Multifruchtsaft, auf Orangenbasis, multivitamin"
+2069,AGB,FALSE,"Mixed fruits juice, reconstituted from a concentrate, multivitamin","Jus multifruit, à base de concentré, standard","Succo multifrutta, da concentrato, standard","Multifruchtsaft, aus Konzentrat, multivitamin"
+2002,AGB,FALSE,"Mixed fruits juice, pure juice, multivitamin","Jus multifruit, pur jus, multivitaminé","Succo multifrutta, succo puro, multivitaminico","Multifruchtsaft, reiner Saft, multivitamin"
+2035,AGB,FALSE,"Mixed fruits juice, pure juice","Jus multifruit, pur jus, standard","Succo multifrutta, succo puro, standard","Multifruchtsaft, reiner Saft"
 13066,AGB,TRUE,"Persimmon, pulp, raw","Kaki, pulpe, cru","Cachi, polpa, crudi","Kaki, Fruchtfleisch, roh"
 11008,AGB,TRUE,Ketchup,Ketchup,Ketchup,Ketchup
 51550,AGB,TRUE,"Khatfa (phyllo or filo pastry), prepacked","Khatfa feuille de brick, préemballée","Foglio di filo, preconfezionato","Khatfa (Filoteig), vorverpackt"
-1018,AGB,TRUE,Kir (Cocktail of white wine with red fruit liqueur),Kir (au vin blanc),Kir (cocktail con vino bianco e crema di cassis ),Kir (Cocktail aus Weisswein mit rotem Fruchtlikör)
-1019,AGB,TRUE,Champagne kir (Cocktail of champagne with red fruit liqueur),Kir royal (au champagne),Kir Royal (con champagne e crema di cassis ),Kir Royal (Cocktail aus Champagner mit rotem Fruchtlikör)
+1018,AGB,FALSE,Kir (Cocktail of white wine with red fruit liqueur),Kir (au vin blanc),Kir (cocktail con vino bianco e crema di cassis ),Kir (Cocktail aus Weisswein mit rotem Fruchtlikör)
+1019,AGB,FALSE,Champagne kir (Cocktail of champagne with red fruit liqueur),Kir royal (au champagne),Kir Royal (con champagne e crema di cassis ),Kir Royal (Cocktail aus Champagner mit rotem Fruchtlikör)
 13021,AGB,TRUE,"Kiwi fruit, pulp and seeds, raw","Kiwi, pulpe et graines, cru","Kiwi, polpa e semi, crudi","Kiwi, Fruchtfleisch und Kerne, roh"
 20991,AGB,TRUE,"Tangle (Laminaria digitata), dried or dehydrated","Kombu breton (Laminaria digitata), séchée ou déshydratée","Alba Kombu bretone (Laminaria digitata), essiccata o disidratata","Bretonisches Kombu (Laminaria digitata), getrocknet oder dehydriert"
 20990,AGB,TRUE,"Kombu or Japanese kelp (Laminaria japonica), dried or dehydrated","Kombu ou kombu japonais (Laminaria japonica), séchée ou déshydratée","Alga Kombu o kombu giapponese (Laminaria japonica), essiccata o disidratata","Kombu oder japanischer Seetang (Laminaria japonica), getrocknet oder dehydriert"
@@ -1227,10 +1227,10 @@
 23027,AGB,FALSE,Macaroon,Macaron sec,Macaron secchi,Macaroon
 20051,AGB,TRUE,"Diced mixed vegetables, canned, drained","Macédoine de légumes, appertisée, égouttée","Verdure miste, in scatola, scolate","Gemischtes Gemüse, gewürfelt, in Dosen, abgetropft"
 20271,AGB,TRUE,"Mixed diced vegetables, frozen","Macédoine de légumes, surgelée","Verdure miste, surgelate","Gemischtes Gemüse, gewürfelt, gefroren"
-13708,AGB,TRUE,"Fruit cocktail or salad, canned in light syrup, drained","Macédoine ou cocktail ou salade de fruits, au sirop léger, appertisé, égoutté","Macedonia di frutta, sciroppata, in scatola, scolata","Fruchtcocktail oder Salat, in Dosen in leichtem Sirup, abgetropft"
-13709,AGB,TRUE,"Fruit cocktail or salad, canned in light syrup, not drained","Macédoine ou cocktail ou salade de fruits, au sirop léger, appertisé, non égoutté","Macedonia di frutta, sciroppata, in scatola, non scolata","Fruchtcocktail oder Salat, in Dosen in leichtem Sirup, nicht abgetropft"
-13706,AGB,TRUE,"Fruit cocktail or salad, canned in syrup, drained","Macédoine ou cocktail ou salade de fruits, au sirop, appertisé, égoutté","Macedonia di frutta, sciroppata, in scatola, scolata","Fruchtcocktail oder Salat, in Dosen in Sirup, abgetropft"
-13707,AGB,TRUE,"Fruit cocktail or salad, canned in syrup, not drained","Macédoine ou cocktail ou salade de fruits, au sirop, appertisé, non égoutté","Macedonia di frutta, sciroppata, in scatola, non scolata","Fruchtcocktail oder Salat, in Dosen in Sirup, nicht abgetropft"
+13708,AGB,FALSE,"Fruit cocktail or salad, canned in light syrup, drained","Macédoine ou cocktail ou salade de fruits, au sirop léger, appertisé, égoutté","Macedonia di frutta, sciroppata, in scatola, scolata","Fruchtcocktail oder Salat, in Dosen in leichtem Sirup, abgetropft"
+13709,AGB,FALSE,"Fruit cocktail or salad, canned in light syrup, not drained","Macédoine ou cocktail ou salade de fruits, au sirop léger, appertisé, non égoutté","Macedonia di frutta, sciroppata, in scatola, non scolata","Fruchtcocktail oder Salat, in Dosen in leichtem Sirup, nicht abgetropft"
+13706,AGB,FALSE,"Fruit cocktail or salad, canned in syrup, drained","Macédoine ou cocktail ou salade de fruits, au sirop, appertisé, égoutté","Macedonia di frutta, sciroppata, in scatola, scolata","Fruchtcocktail oder Salat, in Dosen in Sirup, abgetropft"
+13707,AGB,FALSE,"Fruit cocktail or salad, canned in syrup, not drained","Macédoine ou cocktail ou salade de fruits, au sirop, appertisé, non égoutté","Macedonia di frutta, sciroppata, in scatola, non scolata","Fruchtcocktail oder Salat, in Dosen in Sirup, nicht abgetropft"
 20099,AGB,TRUE,"Lamb's lettuce, raw","Mâche, crue","Soncino, crudo","Feldsalat, roh"
 24631,AGB,FALSE,"Madeleine biscuit, with chocolate, prepacked","Madeleine chocolatée, préemballée","Madeleine al cioccolato, preconfezionata","Madeleine-Keks mit Schokolade, vorverpackt"
 24632,AGB,FALSE,Madeleine biscuit (cookie),"Madeleine ordinaire, préemballée","Madeleine semplice, preconfezionata",Madeleine-Keks (Keks)
@@ -2007,7 +2007,7 @@
 11100,AGB,TRUE,"Barbecue sauce, prepacked","Sauce barbecue, préemballée","Salsa BBQ, preconfezionata","Barbecuesauce, vorverpackt"
 11170,AGB,TRUE,"Basque-style sauce or tomato sauce with sweet peppers, prepacked","Sauce basquaise ou Sauce aux poivrons, préemballée","Salsa basca o salsa di peperoni, preconfezionata","Baskische Sauce oder Tomatensauce mit Paprika (CH: Peperoni), vorverpackt"
 11102,AGB,TRUE,"Bearnaise sauce, prepacked","Sauce béarnaise, préemballée","Salsa bernese, preconfezionata","Béarnaise-Sauce, vorverpackt"
-11143,AGB,TRUE,"Bechamel sauce, home-made","Sauce béchamel, maison","Besciamella, fatta in casa","Béchamelsauce, hausgemacht"
+11143,AGB,FALSE,"Bechamel sauce, home-made","Sauce béchamel, maison","Besciamella, fatta in casa","Béchamelsauce, hausgemacht"
 11101,AGB,TRUE,"Bechamel sauce, prepacked","Sauce béchamel, préemballée","Besciamella, preconfezionata","Béchamelsauce, vorverpackt"
 11120,AGB,TRUE,"Burgundy-style sauce, prepacked","Sauce bourguignonne, préemballée","Salsa Borgogna, preconfezionata","Burgundersauce, vorverpackt"
 11196,AGB,TRUE,"Burger sauce, prepacked","Sauce burger, préemballée","Salsa per hamburger, preconfezionata","Burgersauce, vorverpackt"
@@ -2034,27 +2034,27 @@
 11178,AGB,TRUE,"Tomato sauce, w olives, prepacked","Sauce tomate aux olives, préemballée","Salsa di pomodoro con olive, preconfezionata","Tomatensauce mit Oliven, vorverpackt"
 11207,AGB,TRUE,"Tomato sauce, w vegetables, prepacked","Sauce tomate aux petits légumes, préemballée","Salsa di pomodoro con verdurine, preconfezionata","Tomatensauce mit Gemüse, vorverpackt"
 11110,AGB,TRUE,"Salad dressing, (50-75% of oil), prepacked","Sauce vinaigrette (50 à 75% d'huile), préemballée","Salsa vinaigrette (50-75% di olio), preconfezionata","Vinaigrette (50–75 % Öl), vorverpackt"
-30125,AGB,FALSE,Smoked Alsatian sausage or Landjäger,Saucisse alsacienne fumée ou Gendarme,Salsiccia alsaziana affumicata o Landjäger,Geräucherte elsässische Wurst oder Landjäger
-30746,AGB,FALSE,Cocktail sausage,Saucisse cocktail,Salsiccia “cocktail”,Cocktailwurst
-30766,AGB,FALSE,Beer sausage,Saucisse de bière,Salsiccia alla birra,Bierwurst
-30176,AGB,FALSE,Liver sausage,Saucisse de foie,Salsiccia di fegato,Leberwurst
-30134,AGB,FALSE,Frankfurter sausage,Saucisse de Francfort,Salsiccia/Würstel di Francoforte,Frankfurter Wurst
-30764,AGB,FALSE,Ham sausage,Saucisse de jambon pur porc,Salsiccia di prosciutto di puro suino,Reine Schweineschinkenwurst
-30105,AGB,FALSE,Montbeliard sausage,Saucisse de Montbéliard,Salsiccia Montbeliard,Montbéliard-Wurst
-30104,AGB,FALSE,Morteaux sausage,Saucisse de Morteau,Salsiccia di Morteau,Morteau-Wurst
+30125,AGB,TRUE,Smoked Alsatian sausage or Landjäger,Saucisse alsacienne fumée ou Gendarme,Salsiccia alsaziana affumicata o Landjäger,Geräucherte elsässische Wurst oder Landjäger
+30746,AGB,TRUE,Cocktail sausage,Saucisse cocktail,Salsiccia “cocktail”,Cocktailwurst
+30766,AGB,TRUE,Beer sausage,Saucisse de bière,Salsiccia alla birra,Bierwurst
+30176,AGB,TRUE,Liver sausage,Saucisse de foie,Salsiccia di fegato,Leberwurst
+30134,AGB,TRUE,Frankfurter sausage,Saucisse de Francfort,Salsiccia/Würstel di Francoforte,Frankfurter Wurst
+30764,AGB,TRUE,Ham sausage,Saucisse de jambon pur porc,Salsiccia di prosciutto di puro suino,Reine Schweineschinkenwurst
+30105,AGB,TRUE,Montbeliard sausage,Saucisse de Montbéliard,Salsiccia Montbeliard,Montbéliard-Wurst
+30104,AGB,TRUE,Morteaux sausage,Saucisse de Morteau,Salsiccia di Morteau,Morteau-Wurst
 30108,AGB,FALSE,"Morteaux sausage, boiled/cooked in water","Saucisse de Morteau, bouillie/cuite à l'eau","Salsiccia di Morteau, bollita/cotta in acqua","Morteau-Wurst, gekocht"
-30742,AGB,FALSE,Strasbourg sausage,Saucisse de Strasbourg ou Knack,Salsiccia di Strasburgo o Knack,Strassburger Wurst oder Knack
+30742,AGB,TRUE,Strasbourg sausage,Saucisse de Strasbourg ou Knack,Salsiccia di Strasburgo o Knack,Strassburger Wurst oder Knack
 30110,AGB,TRUE,"Toulouse sausage, raw","Saucisse de Toulouse, crue","Salsiccia di Tolosa, cruda","Toulouse-Wurst, roh"
 30011,AGB,FALSE,"Toulouse sausage, cooked","Saucisse de Toulouse, cuite","Salsiccia di Tolosa, cotta","Toulouse-Wurst, gekocht"
-30130,AGB,FALSE,"Poultry sausage, delicatessen style","Saucisse de volaille, façon charcutière","Salsiccia di pollame, stile salumeria","Geflügelwurst, Feinkostart"
-30131,AGB,FALSE,Poultry sausage,"Saucisse de volaille, type Knack","Salsiccia di pollame, tipo Knack","Geflügelwurst, Knack-Typ"
-30309,AGB,FALSE,"Sausage, dried",Saucisse sèche,Salamino (Saucisse sèche),Trockene Wurst
+30130,AGB,TRUE,"Poultry sausage, delicatessen style","Saucisse de volaille, façon charcutière","Salsiccia di pollame, stile salumeria","Geflügelwurst, Feinkostart"
+30131,AGB,TRUE,Poultry sausage,"Saucisse de volaille, type Knack","Salsiccia di pollame, tipo Knack","Geflügelwurst, Knack-Typ"
+30309,AGB,TRUE,"Sausage, dried",Saucisse sèche,Salamino (Saucisse sèche),Trockene Wurst
 30750,AGB,TRUE,"Viennese sausage, pork and veal, raw","Saucisse viennoise, crue","Salsiccia di Vienna o wüsterl di Vienna, cruda","Wiener Wurst, Schwein und Kalb, roh"
 30700,AGB,TRUE,Garlic sausage,Saucisson à l'ail,Salamino all'aglio,Knoblauchwurst
 30707,AGB,FALSE,"Sausage in a brioche crust, cooked","Saucisson brioché, cuit","Saucisson brioché, cotto","Saucisson brioché, gekocht"
 30701,AGB,FALSE,"Cooked sausage, pure pork",Saucisson cuit pur porc,Salsiccia cotta di puro suino,"Gekochte Wurst, rein Schwein"
-30705,AGB,FALSE,Sausage from Paris,Saucisson de Paris,Salamino di Parigi,Pariser Wurst
-30706,AGB,FALSE,"Sausage from Paris, smoked","Saucisson de Paris, fumé","Salamino parigina, affumicata",Geräucherte Pariser Wurst
+30705,AGB,TRUE,Sausage from Paris,Saucisson de Paris,Salamino di Parigi,Pariser Wurst
+30706,AGB,TRUE,"Sausage from Paris, smoked","Saucisson de Paris, fumé","Salamino parigina, affumicata",Geräucherte Pariser Wurst
 30300,AGB,TRUE,Dry sausage,Saucisson sec,Salamino (Saucisson sec),Trockene Wurst
 30311,AGB,TRUE,Dry sausage w walnuts and/or hazelnuts,Saucisson sec aux noix et/ou noisettes,Salamino  con noci e/o nocciole,Trockene Wurst mit Walnüssen und/oder Haselnüssen
 30301,AGB,TRUE,"Dry sausage, pure pork",Saucisson sec pur porc,Salamino di puro suino,"Trockene Wurst, rein Schwein"
