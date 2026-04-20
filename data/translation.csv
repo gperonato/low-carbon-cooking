@@ -307,7 +307,7 @@
 8803,AGB,FALSE,"White pudding, truffled, raw","Boudin blanc truffé, cru","Sanguinaccio bianco (boudin) tartufato, crudo","Weisser Pudding, mit Trüffel, roh"
 8703,AGB,FALSE,"Black pudding (blood sausage), refrigerated","Boudin noir, rayon frais","Sanguinaccio (tipo black pudding), refrigerato","Blutwurst, gekühlt"
 8704,AGB,FALSE,"Black pudding (blood sausage), sautéed/pan-fried","Boudin noir, sauté/poêlé","Sanguinaccio (tipo black pudding), saltato/rosolato in padella","Blutwurst, gebraten/angebraten"
-25948,AGB,FALSE,"Broth, stock or bouillon, vegetables, dehydrated and reconstituted","Bouillon de légumes, déshydraté reconstitué","Brodo vegetale, ricostituito disidratato","Brühe, Gemüse, dehydriert und rehydriert"
+25948,AGB,TRUE,"Broth, stock or bouillon, vegetables, dehydrated and reconstituted","Bouillon de légumes, déshydraté reconstitué","Brodo vegetale, ricostituito disidratato","Brühe, Gemüse, dehydriert und rehydriert"
 32129,AGB,FALSE,"Breakfast cereals, puffed/popped corn, with honey (not fortified with vitamins and chemical elements)",Boules de maïs soufflées au miel (non enrichies en vitamines et minéraux),Palline di mais soffiate al miele (non arricchite con vitamine e minerali),"Frühstückscerealien, gepuffter Mais mit Honig (nicht mit Vitaminen und Mineralstoffen angereichert)"
 32133,AGB,FALSE,"Breakfast cereals, puffed/popped corn, with honey, fortified with vitamins and chemical elements","Boules de maïs soufflées au miel, enrichies en vitamines et minéraux","Palline di mais soffiate al miele, arricchite con vitamine e minerali","Frühstückscerealien, gepuffter Mais mit Honig, mit Vitaminen und Mineralstoffen angereichert"
 25211,AGB,FALSE,"Meat balls, beef, with tomato sauce","Boulettes au bœuf, à la sauce tomate",Polpette di manzo in salsa di pomodoro,"Fleischbällchen, Rind, mit Tomatensauce"
@@ -368,9 +368,9 @@
 7814,AGB,FALSE,"Savoury cake (with cheese, vegetables, meat, fish, poultry,etc.)","Cake salé (garniture : fromage, légumes, viande, poisson, volaille, etc.)","Torta salata (tipo plumcake salato) (guarnizione: formaggio, verdure, carne, pesce, pollame, ecc.)","Herzhafter Kuchen (mit Käse, Gemüse, Fleisch, Fisch, Geflügel etc.)"
 31092,AGB,FALSE,Melon and almond Candy on a unleavened bread layer,Calissons d'Aix en Provence,Calissons di Aix en Provence (tipo marzapane alla frutta),Melonen- und Mandelkonfekt auf ungesäuertem Brotboden
 10002,AGB,FALSE,"Squid fritter, Roman-style","Calmar ou Calamar ou encornet, à la romaine (beignet)","Calamari fritti, alla romana","Tintenfischfritter, römische Art"
-10037,AGB,TRUE,"Squid, boiled/cooked in water","Calmar ou calamar ou encornet, bouilli/cuit à l'eau","Calamari, bolliti/cotti in acqua","Tintenfisch, gekocht/gekocht in Wasser"
+10037,AGB,FALSE,"Squid, boiled/cooked in water","Calmar ou calamar ou encornet, bouilli/cuit à l'eau","Calamari, bolliti/cotti in acqua","Tintenfisch, gekocht/gekocht in Wasser"
 10001,AGB,TRUE,"Squid, raw","Calmar ou calamar ou encornet, cru","Calamari, crudi","Tintenfisch, roh"
-10084,AGB,TRUE,"Squid, fried or pan-fried with fat","Calmar ou calamar ou encornet, frit ou poêlé avec matière grasse","Calamari, fritti o saltati in padella con grasso","Tintenfisch, frittiert oder in Fett gebraten"
+10084,AGB,FALSE,"Squid, fried or pan-fried with fat","Calmar ou calamar ou encornet, frit ou poêlé avec matière grasse","Calamari, fritti o saltati in padella con grasso","Tintenfisch, frittiert oder in Fett gebraten"
 12006,AGB,TRUE,"Camembert cheese, from cow's milk, from raw milk",Camembert au lait cru,"Camembert, con latte crudo","Camembert, Kuhmilch, Rohmilch"
 12001,AGB,TRUE,"Camembert cheese, from cow's milk","Camembert, sans précision","Camembert, generico","Camembert, Kuhmilch, ohne weitere Angabe"
 25058,AGB,FALSE,"Duck with sauce (green pepper sauce, hunter-style sauce,etc.)","Canard en sauce (poivre vert, chasseur, etc.)","Anatra in salsa (pepe verde, alla cacciatora, ecc.)","Ente in Sauce (grüne Pfeffersauce, Jägersauce etc.)"
@@ -459,7 +459,7 @@
 15039,AGB,TRUE,"Chestnut, canned","Châtaigne ou Marron, appertisé","Castagne o marroni, in scatola","Kastanie, in Dosen"
 15020,AGB,FALSE,"Chestnut, boiled/cooked in water","Châtaigne, bouillie/cuite à l'eau","Castagne, bollite/bollite","Kastanie, gekocht/gekocht in Wasser"
 15024,AGB,TRUE,"Chestnut, raw","Châtaigne, crue","Castagne, cruda","Kastanie, roh"
-15021,AGB,TRUE,"Chestnut, grilled","Châtaigne, grillée","Castagne, arrostite","Kastanie, geröstet"
+15021,AGB,FALSE,"Chestnut, grilled","Châtaigne, grillée","Castagne, arrostite","Kastanie, geröstet"
 23480,AGB,FALSE,Apple turnover,Chausson aux pommes,Fagottino alle mele,Apfeltasche
 12726,AGB,TRUE,"Cheddar cheese, from cow's milk",Cheddar,Cheddar,"Cheddar Käse, Kuhmilch"
 25414,AGB,FALSE,"Cheeseburger, from fast foods restaurant","Cheeseburger, provenant de fast food","Cheeseburger, da fast food","Cheeseburger, aus Fast-Food-Restaurant"
@@ -490,15 +490,15 @@
 31084,AGB,FALSE,"Milk chocolate bar, filled with praline","Chocolat au lait fourré au praliné, tablette","Cioccolato al latte ripieno di pralina, barretta","Milchschokoladentafel, gefüllt mit Praliné"
 31020,AGB,FALSE,"Milk chocolate bar, without sugar, with sweeteners","Chocolat au lait sans sucres ajoutés, avec édulcorants, tablette","Cioccolato al latte senza zuccheri aggiunti, con edulcoranti, barretta","Milchschokoladentafel, ohne Zucker, mit Süssstoffen"
 31004,AGB,TRUE,Milk chocolate bar,"Chocolat au lait, tablette","Cioccolato al latte, barretta",Milchschokoladentafel
-31026,AGB,TRUE,"White chocolate bar, with dried fruits (nuts, almonds, raisins, praline)","Chocolat blanc aux fruits secs (noisettes, amandes, raisins, praliné) , tablette","Cioccolato bianco con frutta secca (nocciole, mandorle, uvetta, pralina), tavoletta","Weisse Schokoladentafel mit Trockenfrüchten (Nüsse, Mandeln, Rosinen, Praliné)"
+31026,AGB,FALSE,"White chocolate bar, with dried fruits (nuts, almonds, raisins, praline)","Chocolat blanc aux fruits secs (noisettes, amandes, raisins, praliné) , tablette","Cioccolato bianco con frutta secca (nocciole, mandorle, uvetta, pralina), tavoletta","Weisse Schokoladentafel mit Trockenfrüchten (Nüsse, Mandeln, Rosinen, Praliné)"
 31010,AGB,TRUE,White chocolate bar,"Chocolat blanc, tablette","Cioccolato bianco, tavoletta",Weisse Schokoladentafel
 31085,AGB,TRUE,"Dark chocolate bar, more than 40% cocoa, for cooking","Chocolat noir à 40% de cacao minimum, à pâtisser, tablette","Cioccolato fondente con il 40% minimo di cacao, da cucina, tavoletta","Dunkle Schokoladentafel, mehr als 40% Kakao, zum Backen"
 31074,AGB,TRUE,"Dark chocolate bar, more than 70% cocoa","Chocolat noir à 70% cacao minimum, extra, dégustation, tablette","Cioccolato fondente con il 70% di cacao minimo, extra, degustazione, tavoletta","Dunkle Schokoladentafel, mehr als 70% Kakao"
 31005,AGB,TRUE,"Dark chocolate bar, less than 70% cocoa","Chocolat noir à moins de 70% de cacao, à croquer, tablette","Cioccolato fondente con meno del 70% di cacao, tavoletta","Dunkle Schokoladentafel, weniger als 70% Kakao"
-31069,AGB,TRUE,"Dark chocolate bar, with fruits (orange, raspberries, pear)","Chocolat noir aux fruits (orange, framboise, poire), tablette","Cioccolato fondente ai frutti (arancia, lampone, pera), tavoletta","Dunkle Schokoladentafel mit Früchten (Orange, Himbeeren, Birne)"
-31070,AGB,TRUE,"Dark chocolate bar, with dried fruits (nuts, almonds, raisin, praline)","Chocolat noir aux fruits secs (noisettes, amandes, raisins, praline), tablette","Cioccolato fondente con frutta secca (nocciole, mandorle, uvetta, pralina), barretta","Dunkle Schokoladentafel mit Trockenfrüchten (Nüsse, Mandeln, Rosinen, Praliné)"
-31072,AGB,TRUE,"Dark chocolate, filled with mint confectionery",Chocolat noir fourrage confiseur à la menthe,Cioccolato fondente ripieno alla menta,"Dunkle Schokolade, gefüllt mit Minzkonfekt"
-31080,AGB,TRUE,"Dark chocolate bar, filled with praline","Chocolat noir fourré praliné, tablette","Cioccolato fondente ripieno di pralina, tavoletta","Dunkle Schokoladentafel, gefüllt mit Praliné"
+31069,AGB,FALSE,"Dark chocolate bar, with fruits (orange, raspberries, pear)","Chocolat noir aux fruits (orange, framboise, poire), tablette","Cioccolato fondente ai frutti (arancia, lampone, pera), tavoletta","Dunkle Schokoladentafel mit Früchten (Orange, Himbeeren, Birne)"
+31070,AGB,FALSE,"Dark chocolate bar, with dried fruits (nuts, almonds, raisin, praline)","Chocolat noir aux fruits secs (noisettes, amandes, raisins, praline), tablette","Cioccolato fondente con frutta secca (nocciole, mandorle, uvetta, pralina), barretta","Dunkle Schokoladentafel mit Trockenfrüchten (Nüsse, Mandeln, Rosinen, Praliné)"
+31072,AGB,FALSE,"Dark chocolate, filled with mint confectionery",Chocolat noir fourrage confiseur à la menthe,Cioccolato fondente ripieno alla menta,"Dunkle Schokolade, gefüllt mit Minzkonfekt"
+31080,AGB,FALSE,"Dark chocolate bar, filled with praline","Chocolat noir fourré praliné, tablette","Cioccolato fondente ripieno di pralina, tavoletta","Dunkle Schokoladentafel, gefüllt mit Praliné"
 31030,AGB,TRUE,"Dark chocolate bar, without sugar and with artificial sweeteners","Chocolat noir sans sucres ajoutés, avec édulcorants, en tablette","Cioccolato fondente senza zuccheri aggiunti, con edulcoranti, tavoletta","Dunkle Schokoladentafel, ohne Zucker, mit Süssstoffen"
 30315,AGB,TRUE,"Spicy pork sausage with red pepper, no precision",Chorizo,Chorizo,"Würzige Schweinswurst mit rotem Pfeffer, ohne weitere Angabe"
 30317,AGB,TRUE,"Spicy pork sausage with red pepper, in large slices","Chorizo supérieur, doux ou fort, type charcuterie en tranches","Chorizo Premium, tipo salumeria dolce o piccante, affettato","Würzige Schweinswurst mit rotem Pfeffer, in grossen Scheiben"
@@ -511,25 +511,25 @@
 20167,AGB,TRUE,"Chinese cabbage (nappa cabbage or bok choy), raw","Chou chinois ou pak-choi ou pé-tsai, cru","Cavolo cinese (o bok choy o pak-choi), crudo","Chinakohl (Napa-Kohl oder Pak Choi), roh"
 20077,AGB,TRUE,"Brussels sprout, canned, drained","Chou de Bruxelles, appertisé, égoutté","Cavolini o cavoletti di Bruxelles, in scatola, scolati","Rosenkohl, in Dosen, abgetropft"
 20058,AGB,TRUE,"Brussels sprout, raw","Chou de Bruxelles, cru","Cavolini o cavoletti  di Bruxelles, crudi","Rosenkohl, roh"
-20013,AGB,TRUE,"Brussels sprout, cooked","Chou de Bruxelles, cuit","Cavolini o cavoletti  di Bruxelles, cotti","Rosenkohl, gekocht"
+20013,AGB,FALSE,"Brussels sprout, cooked","Chou de Bruxelles, cuit","Cavolini o cavoletti  di Bruxelles, cotti","Rosenkohl, gekocht"
 20206,AGB,TRUE,"Brussels sprout, frozen, raw","Chou de Bruxelles, surgelé, cru","Cavolini o cavoletti  di Bruxelles, surgelati, crudi","Rosenkohl, tiefgefroren, roh"
 20207,AGB,TRUE,"Brussels sprout, frozen, cooked","Chou de Bruxelles, surgelé, cuit","Cavolini o cavoletti  di Bruxelles, surgelati, cotti","Rosenkohl, tiefgefroren, gekocht"
 25106,AGB,FALSE,Stuffed cabbage,Chou farci,Cavolo ripieno,Gefüllter Kohl
 20218,AGB,TRUE,"Curly kale, raw","Chou frisé, cru","Cavolo, crudo","Grünkohl, roh"
-20219,AGB,TRUE,"Curly kale, cooked","Chou frisé, cuit","Cavolo, cotto","Grünkohl, gekocht"
+20219,AGB,FALSE,"Curly kale, cooked","Chou frisé, cuit","Cavolo, cotto","Grünkohl, gekocht"
 20280,AGB,TRUE,"Romanesco cauliflower or romanesco broccoli, raw","Chou romanesco ou brocoli à pomme, cru","Cavolo romanesco, crudi","Romanesco Blumenkohl oder Romanesco Brokkoli, roh"
 20095,AGB,FALSE,"Red cabbage, boiled/cooked in water","Chou rouge, bouilli/cuit à l'eau","Cavolo rosso, bollito/bollito","Rotkohl, gekocht/gekocht in Wasser"
 20014,AGB,TRUE,"Red cabbage, raw","Chou rouge, cru","Cavolo rosso, crudo","Rotkohl, roh"
 20069,AGB,TRUE,"Green cabbage, raw","Chou vert, cru","Cavolo verde, crudo","Grünkohl, roh"
-20015,AGB,TRUE,"Green cabbage, boiled/cooked in water","Chou vert, cuit","Cavolo verde, cotto","Grünkohl, gekocht"
-20016,AGB,TRUE,"Sauerkraut, with garnish",Choucroute garnie,Crauti con carne (choucroute garnie o choucroute alsaziana),Sauerkraut mit Beilage
-20017,AGB,FALSE,"Sauerkraut, without garnish, drained","Choucroute, sans garniture, égouttée","Crauti, scolati","Sauerkraut ohne Beilage, abgetropft"
+20015,AGB,FALSE,"Green cabbage, boiled/cooked in water","Chou vert, cuit","Cavolo verde, cotto","Grünkohl, gekocht"
+20016,AGB,FALSE,"Sauerkraut, with garnish",Choucroute garnie,Crauti con carne (choucroute garnie o choucroute alsaziana),Sauerkraut mit Beilage
+20017,AGB,TRUE,"Sauerkraut, without garnish, drained","Choucroute, sans garniture, égouttée","Crauti, scolati","Sauerkraut ohne Beilage, abgetropft"
 20082,AGB,TRUE,"Cauliflower, raw","Chou-fleur, cru","Cavolfiore, crudo","Blumenkohl, roh"
 20122,AGB,FALSE,"Cauliflower, cooked","Chou-fleur, cuit","Cavolfiore, cotto","Blumenkohl, gekocht"
-20094,AGB,FALSE,"Cauliflower, frozen, raw","Chou-fleur, surgelé, cru","Cavolfiore, surgelato, crudo","Blumenkohl, tiefgefroren, roh"
+20094,AGB,TRUE,"Cauliflower, frozen, raw","Chou-fleur, surgelé, cru","Cavolfiore, surgelato, crudo","Blumenkohl, tiefgefroren, roh"
 20065,AGB,TRUE,"Cauliflower, frozen, cooked","Chou-fleur, surgelé, cuit","Cavolfiore, surgelato, cotto","Blumenkohl, tiefgefroren, gekocht"
 25003,AGB,FALSE,"Chou pastry, sugar coated",Chouquette,Chouquette (Piccoli bignè con zucchero),Zuckerüberzogener Windbeutel
-23467,AGB,FALSE,"Turnip cabbage, raw","Chou-rave, cru","Cavolo rapa, crudo","Kohlrabi, roh"
+23467,AGB,TRUE,"Turnip cabbage, raw","Chou-rave, cru","Cavolo rapa, crudo","Kohlrabi, roh"
 11003,AGB,TRUE,"Chive or spring onion, fresh","Ciboule ou Ciboulette, fraîche","Erba cipollina, fresca","Schnittlauch oder Frühlingszwiebel, frisch"
 5022,AGB,TRUE,Flavoured cider,Cidre aromatisé (framboise),Sidro aromatizzato (lampone),Aromatisierter Cidre (Himbeere)
 5021,AGB,TRUE,"Cider, half-dry",Cidre bouché demi-sec,Sidro tappato semisecco,Halbtrockener Cidre
@@ -590,7 +590,7 @@
 28850,AGB,TRUE,Coppa,Coppa,Coppa,Coppa
 25121,AGB,FALSE,Cockerel in red wine sauce,Coq au vin,Coq au vin (galletto o pollo marinato in vino),Hahn in Rotweinsauce
 10003,AGB,TRUE,"Scallop, with coral, raw","Coquille Saint-Jacques, noix et corail, crue","Capesante, noci e conchiglia, crude","Jakobsmuschel mit Rogen, roh"
-10004,AGB,TRUE,"Scallop, with coral, cooked","Coquille Saint-Jacques, noix et corail, cuite","Capesante, noci e conchiglia, cotte","Jakobsmuschel mit Rogen, gekocht"
+10004,AGB,FALSE,"Scallop, with coral, cooked","Coquille Saint-Jacques, noix et corail, cuite","Capesante, noci e conchiglia, cotte","Jakobsmuschel mit Rogen, gekocht"
 10045,AGB,TRUE,"Scallop, without coral, raw","Coquille Saint-Jacques, noix, crue","Capesante, solo noci, crude","Jakobsmuschel ohne Rogen, roh"
 26107,AGB,TRUE,"Brown meagre, raw","Corb, cru","Corvina, crudo","Brauner Meeresbarsch, roh"
 25089,AGB,FALSE,Escalope cordon bleu (topped with a ham slice and Gruyere sauce),Cordon bleu de volaille,Cordon bleu di pollame,Cordon bleu (mit Schinken und Gruyère-Sauce)
@@ -666,7 +666,7 @@
 20022,AGB,TRUE,"Watercress, raw","Cresson de fontaine, cru","Crescione, crudo","Brunnenkresse, roh"
 10059,AGB,TRUE,"deep water pink shrimp, raw","Crevette rose, crue","Gamberetto maggiore, crudo","Tiefseegarnele, roh"
 10021,AGB,TRUE,"Shrimp or prawn, raw","Crevette, crue","Gamberetti, crudi","Garnele, roh"
-10007,AGB,TRUE,"Shrimp or prawn, cooked","Crevette, cuite","Gamberetti, cotti","Garnele, gekocht"
+10007,AGB,FALSE,"Shrimp or prawn, cooked","Crevette, cuite","Gamberetti, cotti","Garnele, gekocht"
 10038,AGB,TRUE,"Shrimp, frozen, raw","Crevette, surgelée, crue","Gamberetti, surgelati, crudi","Garnele, tiefgefroren, roh"
 7620,AGB,FALSE,"Croissant, butter, from bakery","Croissant au beurre, artisanal","Croissant (cornetto francese) al burro, artigianale","Buttercroissant, aus Bäckerei"
 25418,AGB,FALSE,Croissant filled with ham,Croissant au jambon,Croissant (cornetto francese) con prosciutto,Croissant mit Schinkenfüllung
@@ -725,7 +725,7 @@
 1023,AGB,TRUE,"Spirit made from wine, armagnac or cognac type","Eau de vie de vin, type armagnac, cognac","Distillato di vino, tipo armagnac, cognac","Spirituose aus Wein, Armagnac- oder Cognac-Art"
 18430,AGB,FALSE,"Water, bottled",Eau embouteillée de source,Acqua in bottiglia di sorgente,"Wasser, abgefüllt"
 20097,AGB,TRUE,"Shallot, raw","Échalote, crue","Scalogno, crudo","Schalotte, roh"
-20255,AGB,TRUE,"Shallot, cooked","Échalote, cuite","Scalogno, cotto","Schalotte, gekocht"
+20255,AGB,FALSE,"Shallot, cooked","Échalote, cuite","Scalogno, cotto","Schalotte, gekocht"
 23477,AGB,FALSE,Eclair,Éclair,Eclair,Eclair
 12729,AGB,TRUE,"Edam cheese, from cow's milk",Edam,Formaggio Edam,"Edamer Käse, aus Kuhmilch"
 31064,AGB,TRUE,Saccharin sweetener,Édulcorant à la saccharine,Edulcorante alla saccarina,Saccharin-Süssstoff
@@ -1022,7 +1022,7 @@
 20126,AGB,TRUE,"Lima bean, raw","Haricot de Lima, cru","Fagiolo di Lima, crudo","Lima-Bohne, roh"
 20992,AGB,TRUE,"Sea thong (Himanthalia elongata), dried or dehydrated","Haricot de mer (Himanthalia elongata), séchée ou déshydratée","Alga spaghetti di mare (Himanthalia elongata), essiccata o disidratata","Meeresbohne (Himanthalia elongata), getrocknet oder dehydriert"
 20508,AGB,TRUE,"Flageolet bean, canned, drained","Haricot flageolet, appertisé, égouttés","Fagioli verdi flageolet, in scatola, scolati","Flageolet-Bohne, in Dosen, abgetropft"
-20513,AGB,TRUE,"Flageolet bean, cooked","Haricot flageolet, cuit","Fagioli verdi  flageolet, cotti","Flageolet-Bohne, gekocht"
+20513,AGB,FALSE,"Flageolet bean, cooked","Haricot flageolet, cuit","Fagioli verdi  flageolet, cotti","Flageolet-Bohne, gekocht"
 20537,AGB,TRUE,"flageolet bean, frozen","Haricot flageolet, surgelé","Fagioli verdi  flageolet, congelati","Flageolet-Bohne, tiefgefroren"
 20540,AGB,FALSE,"Flageolet bean, green, cooked","Haricot flageolet, vert, cuit","Fagioli verdi  flageolet, verde, cotti","Grüne Flageolet-Bohne, gekocht"
 20539,AGB,TRUE,"Flageolet bean, green, dried","Haricot flageolet, vert, sec","Fagioli verdi  flageolet, verde, secchi","Grüne Flageolet-Bohne, trocken"
@@ -1071,7 +1071,7 @@
 10035,AGB,TRUE,"Pacific oyster, raw","Huître creuse, crue","Ostrica a coppa, cruda","Pazifische Auster, roh"
 10036,AGB,TRUE,"European oyster, raw","Huître plate, crue","Ostrica piatta, cruda","Europäische Auster, roh"
 10011,AGB,TRUE,"Oyster, raw","Huître, sans précision, crue","Ostrica, generica, cruda","Auster, ohne Angabe, roh"
-53503,AGB,TRUE,"Yam or Indian potato, peeled, boiled/cooked in water","Igname, épluchée, bouillie/cuite à l'eau","Igname, sbucciato, bollito/bollito","Yamswurzel oder Indische Kartoffel, geschält, gekocht"
+53503,AGB,FALSE,"Yam or Indian potato, peeled, boiled/cooked in water","Igname, épluchée, bouillie/cuite à l'eau","Igname, sbucciato, bollito/bollito","Yamswurzel oder Indische Kartoffel, geschält, gekocht"
 53502,AGB,TRUE,"Yam or Indian potato, peeled, raw","Igname, épluchée, crue","Igname, pelato, crudo","Yamswurzel oder Indische Kartoffel, geschält, roh"
 39215,AGB,FALSE,"Floating island (meringue poached in milk and served in a light custard cream), refrigerated","Ile flottante, rayon frais","Ile flottante, banco frigo","Schwimmende Insel (Baiser in Milch pochiert, serviert in leichter Vanillecreme), gekühlt"
 28905,AGB,FALSE,Braised ham on the bone,Jambon à l'os braisé,Prosciutto brasato con osso,Geschmorte Schinkenkeule am Knochen
@@ -1205,9 +1205,9 @@
 26006,AGB,TRUE,"Alaska pollock, raw","Lieu ou colin d'Alaska, cru","Pollack dell'Alaska, crudo","Alaska-Pollack, roh"
 26152,AGB,FALSE,"Alaska pollock, smoked","Lieu ou colin d'Alaska, fumé","Pollack dell'Alaska, affumicato","Alaska-Pollack, geräuchert"
 26135,AGB,TRUE,"Common dab, raw","Limande, crue","Limanda, cruda","Scholle, roh"
-26017,AGB,FALSE,"Lemon sole, raw","Limande-sole, crue","Sogliola limanda, cruda","Zitronensole, roh"
+26017,AGB,TRUE,"Lemon sole, raw","Limande-sole, crue","Sogliola limanda, cruda","Zitronensole, roh"
 26016,AGB,FALSE,"Lemon sole, steamed","Limande-sole, cuite à la vapeur","Sogliola limanda, al vapore","Zitronensole, gedämpft"
-26057,AGB,TRUE,"Lemon sole, breaded, fried","Limande-sole, panée, frite","Sogliola limanda, impanata, fritta","Zitronensole, paniert, gebraten"
+26057,AGB,FALSE,"Lemon sole, breaded, fried","Limande-sole, panée, frite","Sogliola limanda, impanata, fritta","Zitronensole, paniert, gebraten"
 18035,AGB,TRUE,"Lemonade, without sugar, with artificial sweetener(s)","Limonade, non sucrée, avec édulcorants","Limonata, non zuccherata, con edulcoranti","Limonade, ohne Zucker, mit künstlichen Süssstoffen"
 18010,AGB,TRUE,"Lemonade, with sugar","Limonade, sucrée","Limonata, zuccherata","Limonade, mit Zucker"
 18016,AGB,TRUE,"Lemonade, with sugar and artificial sweetener(s)","Limonade, sucrée, avec édulcorants","Limonata, zuccherata, con edulcoranti","Limonade, mit Zucker und künstlichen Süssstoffen"
@@ -1243,7 +1243,7 @@
 13025_1,AGB,TRUE,"Mango by plane, pulp, raw","Mangue importée par avion, pulpe, crue","Mango importato per aereo, polpa, crudo","Mango per Flugzeug, Fruchtfleisch, roh"
 13025_2,AGB,TRUE,"Mango, pulp, raw","Mangue importée par bateau, pulpe, crue","Mango importato via mare, polpa, crudo","Mango per Schiff, Fruchtfleisch, roh"
 54031,AGB,TRUE,"Cassava or manioc, roots, raw","Manioc, racine crue","Manioca, radice cruda","Maniok, Wurzel, roh"
-54034,AGB,TRUE,"Cassava or manioc, roots, cooked","Manioc, racine cuite","Manioca, radice cotta","Maniok, Wurzel, gekocht"
+54034,AGB,FALSE,"Cassava or manioc, roots, cooked","Manioc, racine cuite","Manioca, radice cotta","Maniok, Wurzel, gekocht"
 26102,AGB,TRUE,"Atlantic chub mackerel, raw","Maquereau espagnol ou maquereau blanc ou billard, cru","Lanzardo o sgombro occhione, crudo","Atlantischer Makrelenhecht, roh"
 26123,AGB,FALSE,"Mackerel, canned in brine, drained","Maquereau, au naturel, appertisé, égoutté","Sgombro, al naturale, in scatola, sgocciolato","Makrele, in Lake, in Dosen, abgetropft"
 26051,AGB,TRUE,"Mackerel, raw","Maquereau, cru","Sgombro, crudo","Makrele, roh"
@@ -1331,8 +1331,8 @@
 26098,AGB,TRUE,"Cod, salted, dried","Morue, salée, sèche","Merluzzo, salato, essiccato","Stockfisch, gesalzen, getrocknet"
 10014,AGB,TRUE,"Mussel, common, raw","Moule commune, crue","Cozza comune, cruda","Miesmuschel, roh"
 10026,AGB,TRUE,"Mediterranean mussel, raw","Moule de Méditerranée, crue","Cozza mediterranea, cruda","Mittelmeer-Miesmuschel, roh"
-10028,AGB,FALSE,"Mussel, canned, drained","Moule, appertisée, égouttée","Cozze, in scatola, scolate","Miesmuschel, in Dosen, abgetropft"
-10013,AGB,TRUE,"Mussel, boiled/cooked in water","Moule, bouillie/cuite à l'eau","Cozze, bollite/bollite","Miesmuschel, gekocht"
+10028,AGB,TRUE,"Mussel, canned, drained","Moule, appertisée, égouttée","Cozze, in scatola, scolate","Miesmuschel, in Dosen, abgetropft"
+10013,AGB,FALSE,"Mussel, boiled/cooked in water","Moule, bouillie/cuite à l'eau","Cozze, bollite/bollite","Miesmuschel, gekocht"
 10081,AGB,FALSE,"Mussels, in Catalan-style sauce or marinade (tomatoes), canned, drained","Moules à la sauce catalane ou escabèche (tomate), appertisée, égouttée","Cozze in salsa catalana o escabèche (pomodoro), in scatola, scolate","Miesmuscheln in katalanischer Sauce oder Marinade (Tomate), in Dosen, abgetropft"
 10083,AGB,FALSE,"Mussels, filled (fat, parsley and garlic…)","Moules farcies (matière grasse, persillade…), crues","Cozze ripiene (grasso, prezzemolo, ecc.), crude","Gefüllte Miesmuscheln (Fett, Petersilie, Knoblauch…), roh"
 10082,AGB,FALSE,"Mussels, in a shallot and white wine broth",Moules marinières (oignons et vin blanc),Cozze alla marinara (cipolle e vino bianco),Miesmuscheln in Schalotten-Weisswein-Brühe
@@ -1430,10 +1430,10 @@
 36503,AGB,FALSE,"Goose, meat and skin, roasted/baked","Oie, viande et peau, rôtie/cuite au four","Oca, carne e pelle, arrosto/al forno","Gans, Fleisch und Haut, geröstet/gebacken"
 36502,AGB,FALSE,"Goose, meat, roasted/baked","Oie, viande, rôtie/cuite au four","Oca, carne, arrosto/al forno","Gans, Fleisch, geröstet/gebacken"
 20034,AGB,TRUE,"Onion, raw","Oignon, cru","Cipolla, cruda","Zwiebel, roh"
-20035,AGB,TRUE,"Onion, cooked","Oignon, cuit","Cipolla, cotta","Zwiebel, gekocht"
+20035,AGB,FALSE,"Onion, cooked","Oignon, cuit","Cipolla, cotta","Zwiebel, gekocht"
 20180,AGB,TRUE,"Onion, dried","Oignon, séché","Cipolla, essiccata","Zwiebel, getrocknet"
 20235,AGB,TRUE,"Onion, frozen, raw","Oignon, surgelé, cru","Cipolla, surgelata, cruda","Zwiebel, gefroren, roh"
-13147,AGB,TRUE,"Olive, green, stuffed (anchovy, sweet peppers, etc…)","Olives vertes, fourrées ou farcies (anchois, poivrons, etc.)","Olive verdi, ripiene (acciughe, peperoni, ecc.)","Grüne Olive, gefüllt (Anchovis, Paprika (CH: Peperoni) etc.)"
+13147,AGB,FALSE,"Olive, green, stuffed (anchovy, sweet peppers, etc…)","Olives vertes, fourrées ou farcies (anchois, poivrons, etc.)","Olive verdi, ripiene (acciughe, peperoni, ecc.)","Grüne Olive, gefüllt (Anchovis, Paprika (CH: Peperoni) etc.)"
 26171,AGB,TRUE,"Arctic char, raw","Omble chevalier, cru","Salmerino alpino, crudo","Saibling, roh"
 22506,AGB,FALSE,"Omelette, with cheese",Omelette au fromage,Omelette al formaggio,Omelett mit Käse
 22508,AGB,FALSE,"Omelette, with mushrooms",Omelette aux champignons,Omelette ai funghi,Omelett mit Pilzen
@@ -1515,7 +1515,7 @@
 25568,AGB,FALSE,"Pastilla, filled with chicken (pie)",Pastilla au poulet,Torta salata (pastilla) al pollo,"Pastilla, gefüllt mit Hähnchen (Poulet/Hendl) (Pastete)"
 1000,AGB,TRUE,Pastis (anise-flavoured spirit),Pastis,Pastis (liquore d’anice),Pastis (anis-aromatisierter Schnaps)  
 4101,AGB,TRUE,"Sweet potato, raw","Patate douce, crue","Patata dolce o patata americana, cruda","Süsskartoffel, roh"
-4102,AGB,TRUE,"Sweet potato, cooked","Patate douce, cuite","Patata dolce o patata americana, cotta","Süsskartoffel, gekocht"
+4102,AGB,FALSE,"Sweet potato, cooked","Patate douce, cuite","Patata dolce o patata americana, cotta","Süsskartoffel, gekocht"
 4103,AGB,FALSE,"Sweet potato, puree, cooked with cream","Patate douce, purée, cuisinée à la crème","Patate dolci o patate americane, purè, cotte nella panna","Süsskartoffelpüree, gekocht mit Sahne/Rahm"
 37001,AGB,TRUE,"Pizza base, raw",Pâte à pizza crue,"Pasta per pizza, non cotta","Pizzateig, roh"
 96778,AGB,FALSE,"Pizza base, cooked",Pâte à pizza cuite,"Pasta per pizza, cotta","Pizzateig, gekocht"
@@ -1539,8 +1539,8 @@
 23424,AGB,TRUE,"Puff pastry, pure butter, raw","Pâte feuilletée pur beurre, crue","Pasta sfoglia di puro burro, cruda","Blätterteig, reine Butter, roh"
 23426,AGB,FALSE,"Puff pastry, pure butter, cooked","Pâte feuilletée pur beurre, cuite","Pasta sfoglia di puro burro, cotta","Blätterteig, reine Butter, gebacken"
 23425,AGB,TRUE,"Puff pastry, pure butter, frozen, raw","Pâte feuilletée pur beurre, surgelée crue","Pasta sfoglia di puro burro, cruda surgelata","Blätterteig, reine Butter, tiefgefroren, roh"
-23422,AGB,TRUE,"Puff pastry, cooked","Pâte feuilletée, cuite","Pasta sfoglia, al forno","Blätterteig, gebacken"
-23420,AGB,FALSE,"Puff pastry, raw","Pâte feuilletée, matière grasse végétale, crue","Pasta sfoglia, grasso vegetale, cruda","Blätterteig, pflanzliches Fett, roh"
+23422,AGB,FALSE,"Puff pastry, cooked","Pâte feuilletée, cuite","Pasta sfoglia, al forno","Blätterteig, gebacken"
+23420,AGB,TRUE,"Puff pastry, raw","Pâte feuilletée, matière grasse végétale, crue","Pasta sfoglia, grasso vegetale, cruda","Blätterteig, pflanzliches Fett, roh"
 23421,AGB,TRUE,"Puff pastry, frozen, raw","Pâte feuilletée, surgelée, crue","Pasta sfoglia, surgelata, cruda","Blätterteig, tiefgefroren, roh"
 8250,AGB,FALSE,Country-style pâté with mushrooms,Pâté ou terrine aux champignons (forestier),Patè di funghi o terrine,Landhauspastete mit Pilzen  
 8211,AGB,FALSE,Country-style pâté or terrine,Pâté ou terrine de campagne,Patè di campagna o terrine,Landhauspastete oder Terrine  
@@ -1670,7 +1670,7 @@
 20516,AGB,TRUE,"Chick pea, dried","Pois chiche, sec","Ceci, secchi","Kichererbse, getrocknet"
 20216,AGB,FALSE,"Snow pea, boiled/cooked in water","Pois mange-tout ou pois gourmand, bouilli/cuit à l'eau","Taccole, bollite","Zuckerschote, gekocht/gegart in Wasser"
 20173,AGB,TRUE,"Snow pea, raw","Pois mange-tout ou pois gourmand, cru","Taccole, crude","Zuckerschote, roh"
-20243,AGB,TRUE,"Snow pea, cooked","Pois mange-tout ou pois gourmands, cuits","Taccole, cotte","Zuckerschote, gekocht"
+20243,AGB,FALSE,"Snow pea, cooked","Pois mange-tout ou pois gourmands, cuits","Taccole, cotte","Zuckerschote, gekocht"
 25145,AGB,FALSE,Fish w bordelaise sauce,Poisson blanc à la bordelaise,Pesce bianco alla bordolese,Fisch mit Bordelaise-Sauce  
 25086,AGB,FALSE,White fish with Florentine-style sauce (spinach sauce),Poisson blanc à la florentine (sauce aux épinards),Pesce bianco alla fiorentina (salsa di spinaci),Weissfisch mit Florentiner Sauce (Spinatsauce)  
 25140,AGB,FALSE,"White fish with shallots, mussels and white wine sauce","Poisson blanc à la marinière (sauce aux oignons, vin blanc, moules)","Pesce bianco marinato (salsa di cipolle, vino bianco, cozze)","Weissfisch mit Schalotten, Miesmuscheln und Weissweinsauce"
@@ -1684,7 +1684,7 @@
 26029,AGB,FALSE,"Fish, breaded, frozen, raw","Poisson pané, surgelé, cru","Pesce impanato, congelato, crudo","Fisch, paniert, tiefgefroren, roh"
 26028,AGB,FALSE,"Fish, croquette, fritter or nuggets, fried","Poisson, croquette ou beignet ou nuggets, frit","Pesce, crocchetta o polpetta o nugget, fritti","Fisch, Kroketten, Fritter oder Nuggets, frittiert"
 28550,AGB,FALSE,Pork belly salt-cured,Poitrine de porc demi-sel,Pancetta di maiale semisalata,"Schweinebauch, halbgesalzen"
-28502,AGB,FALSE,"Pork belly, smoked, raw","Poitrine de porc, fumée, crue","Pancetta di maiale, affumicata, cruda","Schweinebauch, geräuchert, roh"
+28502,AGB,TRUE,"Pork belly, smoked, raw","Poitrine de porc, fumée, crue","Pancetta di maiale, affumicata, cruda","Schweinebauch, geräuchert, roh"
 11019,AGB,TRUE,"White pepper, powder","Poivre blanc, poudre","Pepe bianco, polvere","Weisser Pfeffer, Pulver"
 11088,AGB,TRUE,Cayenne pepper,Poivre de Cayenne ou piment de Cayenne,Pepe di Caienna,Cayennepfeffer  
 11015,AGB,TRUE,"Black pepper, powder","Poivre noir, poudre","Pepe nero, polvere","Schwarzer Pfeffer, Pulver"
@@ -1693,7 +1693,7 @@
 20087,AGB,TRUE,"Sweet pepper, red, raw","Poivron rouge, cru","Peperone rosso, crudo","Roter Paprika (CH: Peperoni), roh"
 20088,AGB,FALSE,"Sweet pepper, red, cooked","Poivron rouge, cuit","Peperone rosso, cotto","Roter Paprika (CH: Peperoni), gekocht"
 20085,AGB,TRUE,"Sweet pepper, green, raw","Poivron vert, cru","Pepe verde, crudo","Grüner Paprika (CH: Peperoni), roh"
-20086,AGB,TRUE,"Sweet pepper, green, cooked","Poivron vert, cuit","Pepe verde, cotto","Grüner Paprika (CH: Peperoni), gekocht"
+20086,AGB,FALSE,"Sweet pepper, green, cooked","Poivron vert, cuit","Pepe verde, cotto","Grüner Paprika (CH: Peperoni), gekocht"
 20041,AGB,TRUE,"Sweet pepper, green, yellow or red, raw","Poivron, vert, jaune ou rouge, cru","Peperone, verde, giallo o rosso, crudo","Paprika (CH: Peperoni), grün, gelb oder rot, roh"
 9615,AGB,FALSE,"Polenta or maize semolina, cooked, unsalted","Polenta ou semoule de maïs, cuite, non salée","Polenta o farina di mais, cotta, non salata","Polenta oder Maisgriess, gekocht, ungesalzen"
 9614,AGB,TRUE,"Polenta or Maize/corn semolina, pre-cooked, dried","Polenta ou semoule de maïs, précuite, sèche","Polenta o farina di mais, precotta, secca","Polenta oder Maisgriess, vorgekocht, getrocknet"
@@ -1706,7 +1706,7 @@
 4028,AGB,FALSE,"Ware potato, boiled/cooked in water, peeled","Pomme de terre de conservation, sans peau, bouillie/cuite à l'eau","Patata, senza pelle, bollita","Lagerkartoffel, gekocht, geschält"
 4042,AGB,TRUE,"Duchesse potato, frozen, raw","Pomme de terre duchesse, surgelée, crue","Patata duchessa, congelata, cruda","Duchesse-Kartoffel, tiefgefroren, roh"
 4034,AGB,FALSE,"Duchesse potato, frozen, cooked","Pomme de terre duchesse, surgelée, cuite","Patata duchessa, congelata, cotta","Duchesse-Kartoffel, tiefgefroren, gekocht"
-4013,AGB,TRUE,"Mashed potato balls pre-fried, frozen, raw","Pomme de terre noisette, surgelée, crue","Patata noisette, surgelata, cruda","Kartoffelbällchen, vorfrittiert, tiefgefroren, roh"
+4013,AGB,FALSE,"Mashed potato balls pre-fried, frozen, raw","Pomme de terre noisette, surgelée, crue","Patata noisette, surgelata, cruda","Kartoffelbällchen, vorfrittiert, tiefgefroren, roh"
 4035,AGB,FALSE,"Mashed potato balls pre-fried, frozen, cooked","Pomme de terre noisette, surgelée, cuite","Patata noisette, congelata, cotta","Kartoffelbällchen, vorfrittiert, tiefgefroren, gekocht"
 4023,AGB,TRUE,"New potato, raw","Pomme de terre nouvelle, crue","Patata novella, cruda","Neue Kartoffel, roh"
 4029,AGB,FALSE,"Early potato, boiled/cooked in water, peeled","Pomme de terre primeur, sans peau, bouillie/cuite à l'eau","Patata novella, senza pelle, bollita","Frühkartoffel, gekocht, geschält"
@@ -1728,7 +1728,7 @@
 13039,AGB,TRUE,"Apple, pulp and peel, raw","Pomme, pulpe et peau, crue","Mela, polpa e buccia, cruda","Apfel, Fruchtfleisch und Schale, roh"
 13176,AGB,TRUE,"Apples, raw, without skin, cooked, boiled/cooked in water","Pomme, pulpe, bouillie/cuite à l'eau","Mela, polpa, bollita/bollita","Äpfel, roh, ohne Schale, gekocht, gekocht in Wasser"
 13050,AGB,TRUE,"Apple, pulp, raw","Pomme, pulpe, crue","Mela, polpa, cruda","Apfel, Fruchtfleisch, roh"
-13175,AGB,TRUE,"Apple, pulp, roasted/baked","Pomme, pulpe, rôtie/cuite au four","Mela, polpa, arrosto/al forno","Apfel, Fruchtfleisch, geröstet/gebacken"
+13175,AGB,FALSE,"Apple, pulp, roasted/baked","Pomme, pulpe, rôtie/cuite au four","Mela, polpa, arrosto/al forno","Apfel, Fruchtfleisch, geröstet/gebacken"
 13111,AGB,TRUE,"Apple, dried","Pomme, sèche","Mela, secca","Apfel, getrocknet"
 12042,AGB,TRUE,"Pont l'Evêque cheese, from cow's milk",Pont l'Évêque,Formaggio Pont l’Évêque,"Pont l'Évêque Käse, aus Kuhmilch"
 9231,AGB,FALSE,"Pop-corn or air-popped maize, unsalted","Pop-corn ou Maïs éclaté, à l'air, non salé","Popcorn, fritti all'aria, non salati","Popcorn oder luftgepopptes Mais, ungesalzen"
@@ -1773,7 +1773,7 @@
 25071,AGB,FALSE,"Pork sausage stew with cabbage, carrots and potatoes",Potée auvergnate (chou et porc),Potée auvergnate (cavolo e maiale),"Schweinewurst-Eintopf mit Kohl, Karotten und Kartoffeln"
 20132,AGB,TRUE,"Red kuri squash, pulp, raw","Potimarron, pulpe, cru","Zucca, polpa, cruda","Roter Hokkaido-Kürbis, Fruchtfleisch, roh"
 20043,AGB,TRUE,"Pumpkin, canned, drained","Potiron, appertisé, égoutté","Zucca, in scatola, scolata","Kürbis, in Dosen, abgetropft"
-20044,AGB,FALSE,"Pumpkin, raw","Potiron, cru","Zucca, cruda","Kürbis, roh"
+20044,AGB,TRUE,"Pumpkin, raw","Potiron, cru","Zucca, cruda","Kürbis, roh"
 20096,AGB,FALSE,"Pumpkin, cooked","Potiron, cuit","Zucca, cotta","Kürbis, gekocht"
 36014,AGB,TRUE,"Chicken, stewing, leg, raw","Poule, cuisse, crue","Pollo, coscia, crudo","Hähnchen (Poulet/Hendl), Schmorfleisch, Keule, roh"
 36001,AGB,TRUE,"Hen, meat only, raw","Poule, viande ,crue","Pollo, carne, crudo","Henne, nur Fleisch, roh"
@@ -1842,7 +1842,7 @@
 12045,AGB,TRUE,"Reblochon cheese, from cow's milk",Reblochon,Formaggio Reblochon,"Reblochon Käse, aus Kuhmilch"
 26162,AGB,TRUE,"Shark, raw","Requin, cru","Squalo, crudo","Hai, roh"
 13047,AGB,TRUE,"Rhubarb, stalk, raw","Rhubarbe, tige, crue","Rabarbaro, gambo, crudo","Rhabarberstiel, roh"
-13048,AGB,TRUE,"Rhubarb, stalk, cooked, with sugar","Rhubarbe, tige, cuite, sucrée","Rabarbaro, gambo, cotto, zuccherato","Rhabarberstiel, gekocht, gezuckert"
+13048,AGB,FALSE,"Rhubarb, stalk, cooked, with sugar","Rhubarbe, tige, cuite, sucrée","Rabarbaro, gambo, cotto, zuccherato","Rhabarberstiel, gekocht, gezuckert"
 1004,AGB,TRUE,Rum,Rhum,Rum,Rum
 8030,AGB,FALSE,"Rillettes, duck",Rillettes de canard,Rilette d'anatra,Entenrillettes
 8026,AGB,FALSE,"Rillettes, mackerel",Rillettes de maquereau,Rillette di sgombro,Makrelenrillettes
@@ -1900,7 +1900,7 @@
 4039,AGB,FALSE,Rostis or Potatoes cake,Rostis ou Galette de pomme de terre,Rösti di patate,Rösti oder Kartoffelkuchen
 28976,AGB,FALSE,"Salt curing roast poultry, cooked","Rôti de volaille en salaison, cuit","Arrosto di pollo sotto sale, cotto","Gesalzener Braten vom Geflügel, gekocht"
 26085,AGB,TRUE,"Surmullet or red mullet, raw","Rouget-barbet de roche, cru","Triglia, cruda","Rotbarbe, roh"
-26110,AGB,TRUE,"Surmullet or red mullet, steamed","Rouget-barbet de roche, vapeur","Triglie, al vapore","Rotbarbe, gedämpft"
+26110,AGB,FALSE,"Surmullet or red mullet, steamed","Rouget-barbet de roche, vapeur","Triglie, al vapore","Rotbarbe, gedämpft"
 26244,AGB,TRUE,"Surmullet or red mullet, fillet with skin, frozen, raw (from Thailand or Senegal)","Rouget-barbet, filet avec peau, surgelé, cru (Thaïlande, Sénégal…)","Triglia, filetto con la pelle, surgelato, crudo (Thailandia, Senegal…)","Rotbarbenfilet mit Haut, tiefgefroren, roh (aus Thailand oder Senegal)"
 8373,AGB,FALSE,Rolled escalope of pork with pistachios,Roulade de porc pistachée,Involtino di maiale al pistacchio,Schweineroulade mit Pistazien
 25419,AGB,FALSE,Spring roll,Rouleau de printemps,Involtino primavera,Frühlingsrolle
@@ -1945,7 +1945,7 @@
 20283,AGB,TRUE,"Glasswort (Salicornia sp.), fresh","Salicorne (Salicornia sp.), fraîche","Salicornia (Salicornia sp.), fresca","Queller (Salicornia sp.), frisch"
 20197,AGB,TRUE,"Salsify, black, raw","Salsifis noir, cru","Scorzonera, cruda","Schwarzer Haferwurz, roh"
 20081,AGB,TRUE,"Salsify, canned, drained","Salsifis, appertisé, égoutté","Scorzonera, in scatola, scolata","Haferwurz in Dosen, abgetropft"
-20046,AGB,TRUE,"Salsify, cooked","Salsifis, cuit","Scorzonera, cotta","Haferwurz, gekocht"
+20046,AGB,FALSE,"Salsify, cooked","Salsifis, cuit","Scorzonera, cotta","Haferwurz, gekocht"
 20237,AGB,TRUE,"Salsify, frozen, raw","Salsifis, surgelé, cru","Scorzonera, surgelata, cruda","Haferwurz, tiefgefroren, roh"
 25108,AGB,FALSE,Samosas or samoosas,Samossas ou Samoussas,Samosa,Samosas oder Samoosas
 25518,AGB,FALSE,"Sandwich made with French bread, camembert cheese and butter","Sandwich baguette, camembert, beurre","Panino baguette, camembert, burro","Sandwich mit Baguette, Camembert und Butter"
@@ -2044,7 +2044,7 @@
 30104,AGB,FALSE,Morteaux sausage,Saucisse de Morteau,Salsiccia di Morteau,Morteau-Wurst
 30108,AGB,FALSE,"Morteaux sausage, boiled/cooked in water","Saucisse de Morteau, bouillie/cuite à l'eau","Salsiccia di Morteau, bollita/cotta in acqua","Morteau-Wurst, gekocht"
 30742,AGB,FALSE,Strasbourg sausage,Saucisse de Strasbourg ou Knack,Salsiccia di Strasburgo o Knack,Strassburger Wurst oder Knack
-30110,AGB,FALSE,"Toulouse sausage, raw","Saucisse de Toulouse, crue","Salsiccia di Tolosa, cruda","Toulouse-Wurst, roh"
+30110,AGB,TRUE,"Toulouse sausage, raw","Saucisse de Toulouse, crue","Salsiccia di Tolosa, cruda","Toulouse-Wurst, roh"
 30011,AGB,FALSE,"Toulouse sausage, cooked","Saucisse de Toulouse, cuite","Salsiccia di Tolosa, cotta","Toulouse-Wurst, gekocht"
 30130,AGB,FALSE,"Poultry sausage, delicatessen style","Saucisse de volaille, façon charcutière","Salsiccia di pollame, stile salumeria","Geflügelwurst, Feinkostart"
 30131,AGB,FALSE,Poultry sausage,"Saucisse de volaille, type Knack","Salsiccia di pollame, tipo Knack","Geflügelwurst, Knack-Typ"
@@ -2205,9 +2205,9 @@
 7413,AGB,FALSE,"Biscuit, extruded and grilled, fruits filling","Tartine craquante, extrudée et grillée, fourrée aux fruits","Crostino di pane, estruso e grigliato, ripieno di frutta","Knusperbrot, extrudiert und geröstet, mit Fruchtfüllung"
 20917,AGB,TRUE,Tempeh,Tempeh,Tempeh,Tempeh
 8232,AGB,FALSE,Duck terrine,Terrine de canard,Terrina d'anatra,Ententerrine
-8292,AGB,TRUE,"Seafood terrine, with or without fish","Terrine de fruits de mer, avec ou sans poisson","Terrina di mare, con o senza pesce","Meeresfrüchte-Terrine, mit oder ohne Fisch"
+8292,AGB,FALSE,"Seafood terrine, with or without fish","Terrine de fruits de mer, avec ou sans poisson","Terrina di mare, con o senza pesce","Meeresfrüchte-Terrine, mit oder ohne Fisch"
 8242,AGB,FALSE,Rabbit terrine,Terrine de lapin,Terrina di coniglio,Kaninchen-Terrine
-8291,AGB,TRUE,Fish terrine,Terrine de poisson,Terrina di pesce,Fischterrine
+8291,AGB,FALSE,Fish terrine,Terrine de poisson,Terrina di pesce,Fischterrine
 8296,AGB,FALSE,Vegetable terrine or mousse,Terrine ou mousse de légumes,Terrina o mousse di verdure,Gemüseterrine oder -mousse
 20158,AGB,FALSE,"New Zealand spinach, cooked","Tétragone cornue, cuite","Spinacio della Nuova Zelanda, cotto","Neuseeländischer Spinat, gekocht"
 18020,AGB,FALSE,"Tea, brewed, without sugar","Thé infusé, non sucré","Tè, preparato, non zuccherato","Tee, aufgebrüht, ungesüsst"
@@ -2218,7 +2218,7 @@
 26064,AGB,TRUE,"Yellowfin tuna, raw","Thon albacore ou thon jaune, cru","Tonno pinna gialla, crudo","Albacore- oder Gelbflossenthun, roh"
 26179,AGB,TRUE,"Albacore, in olive oil, canned, drained","Thon germon ou thon blanc, à l'huile d'olive, appertisé, égoutté","Tonno bianco o alalunga, sott'olio d'oliva, in scatola, sgocciolato","Albacore, in Olivenöl, in Dosen, abgetropft"
 26076,AGB,TRUE,"Albacore, raw","Thon germon ou thon blanc, cru","Tonno bianco o alalunga, crudo","Albacore, roh"
-26077,AGB,TRUE,"Albacore, steamed under pressure","Thon germon ou thon blanc, cuit à la vapeur sous pression","Tonno bianco o alalunga, cotto a vapore sotto pressione","Albacore, unter Druck gedämpft"
+26077,AGB,FALSE,"Albacore, steamed under pressure","Thon germon ou thon blanc, cuit à la vapeur sous pression","Tonno bianco o alalunga, cotto a vapore sotto pressione","Albacore, unter Druck gedämpft"
 26068,AGB,TRUE,"Skipjack tuna, raw","Thon listao ou Bonite à ventre rayé, cru","Tonnetto striato, crudo","Skipjack-Thunfisch, roh"
 26243,AGB,TRUE,"Tuna, in Catalan-style or in tomato sauce, canned","Thon, à la catalane ou à l'escabèche (sauce tomate), appertisé","Tonno, alla catalana o escabèche (salsa di pomodoro), in scatola","Thunfisch, katalanisch oder in Tomatensauce, in Dosen"
 26039,AGB,TRUE,"Tuna, plain, canned, drained","Thon, au naturel, appertisé, égoutté","Tonno, al naturale, in scatola, sgocciolato","Thunfisch, natur, in Dosen, abgetropft"
@@ -2391,8 +2391,8 @@
 17100,AGB,TRUE,Avocado oil,Huile d'avocat,Olio di avocado,Avocadoöl
 19688,AGB,FALSE,"Rum baba, prepacked","Baba au rhum, préemballé","Babà al rum, preconfezionato","Rum-Baba, vorverpackt"
 9340_2,AGB,TRUE,"Quinoa FR, raw","Quinoa FR, cru","Quinoa FR, cruda","Quinoa FR, roh"
-9341_2,AGB,TRUE,"Quinoa FR, boiled/cooked in water, unsalted","Quinoa FR, cuit","Quinoa FR, cotta","Quinoa FR, gekocht, ungesalzen"
-9341_1,AGB,TRUE,"Quinoa, boiled/cooked in water, unsalted","Quinoa, bouilli/cuit à l'eau, non salé","Quinoa, bollita/cotta in acqua, non salata","Quinoa, gekocht, ungesalzen"
+9341_2,AGB,FALSE,"Quinoa FR, boiled/cooked in water, unsalted","Quinoa FR, cuit","Quinoa FR, cotta","Quinoa FR, gekocht, ungesalzen"
+9341_1,AGB,FALSE,"Quinoa, boiled/cooked in water, unsalted","Quinoa, bouilli/cuit à l'eau, non salé","Quinoa, bollita/cotta in acqua, non salata","Quinoa, gekocht, ungesalzen"
 9340_1,AGB,TRUE,"Quinoa, raw","Quinoa, cru","Quinoa, cruda","Quinoa, roh"
 7815_1,AGB,TRUE,"Wheat tortilla wrap, to be filled","Tortilla souple (à garnir), à base de blé","Wrap tipo tortilla, a base di grano, da riempire","Weizentortilla-Wrap, zum Füllen"
 25224,AGB,TRUE,Soy-based sliced,"Bouchées ou émincé au soja et blé (ne convient pas aux véganes ou végétaliens), préemballé","Bocconcini o macinato di soia e grano (non adatto a vegani o vegetariani), preconfezionati",Soja-Scheiben
