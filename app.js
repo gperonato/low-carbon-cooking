@@ -131,7 +131,7 @@ var settings_snippet = `
 		<div class="form-group row">
 			<label for="hob-size" class="col-sm-2 col-form-label">%HOB%</label>
 				<div class="col-sm-3">
-					<select id="hob-size" class="form-control input-sm"/>
+					<select id="hob-size" class="form-control input-sm"></select>
 				</div>
 			<div class="col-sm-4 d-flex align-items-center"> 
 				<div class="custom-control custom-switch">
